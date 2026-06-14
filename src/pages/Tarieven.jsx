@@ -1,0 +1,159 @@
+import { Link } from "react-router-dom";
+
+export default function Tarieven() {
+  return (
+    <div className="bg-white min-h-screen">
+
+      {/* Header */}
+      <section className="py-16 border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">Tarieven</h1>
+          <p className="text-gray-500 text-lg leading-relaxed">
+            Transparante prijzen, zonder verrassingen. U ontvangt altijd een volledige prijs vooraf.
+          </p>
+        </div>
+      </section>
+
+      {/* Tariefkaarten */}
+      <section className="py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+            {/* Stap 1: Intakegesprek */}
+            <div className="rounded-2xl border-2 border-primary-200 bg-primary-50 p-8 flex flex-col">
+              <div className="mb-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary-600 mb-2">Stap 1 — verplicht</p>
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Intakegesprek</h2>
+                <p className="text-sm text-gray-500">Videocall van 30 minuten</p>
+              </div>
+              <div className="mb-6">
+                <span className="text-4xl font-black text-primary-700">€50</span>
+                <span className="text-gray-400 text-sm ml-1">excl. btw</span>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
+                {["Eerste gesprek over uw situatie", "Brede analyse van uw dossier", "Algemene vragen beantwoord", "Wordt afgetrokken bij verdere begeleiding"].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://calendly.com/mijngezinshereniging"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
+              >
+                Direct inboeken
+              </a>
+            </div>
+
+            {/* Stap 2: Begeleiding A tot Z */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col">
+              <div className="mb-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Stap 2</p>
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Begeleiding van A tot Z</h2>
+                <p className="text-sm text-gray-500">Bij uw aanvraag</p>
+              </div>
+              <div className="mb-4">
+                <span className="text-4xl font-black text-gray-900">€450</span>
+                <span className="text-gray-400 text-sm mx-2">tot</span>
+                <span className="text-4xl font-black text-gray-900">€800</span>
+                <span className="text-gray-400 text-sm ml-1">excl. btw</span>
+              </div>
+              <p className="text-xs text-gray-400 mb-6">De prijs hangt af van de complexiteit van uw situatie.</p>
+              <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
+                {["Schriftelijk juridisch advies", "Volledige documentencheck", "Voorbereiding van uw aanvraag", "Volledige prijs vooraf, geen verrassingen"].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/contact"
+                className="block w-full text-center border border-gray-300 hover:border-primary-400 hover:bg-primary-50 text-gray-700 hover:text-primary-700 font-semibold py-3 rounded-xl transition-colors text-sm"
+              >
+                Neem contact op
+              </Link>
+            </div>
+
+            {/* Stap 3: Hoger beroep */}
+            <div className="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col">
+              <div className="mb-6">
+                <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-2">Stap 3</p>
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Hoger beroep</h2>
+                <p className="text-sm text-gray-500">Tegen een weigeringsbeslissing</p>
+              </div>
+              <div className="mb-6">
+                <span className="text-2xl font-bold text-gray-900">Prijs op aanvraag</span>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
+                {["Beoordeling van de weigeringsbeslissing", "Opmaak beroepschrift", "Vertegenwoordiging bij de Raad voor Vreemdelingenbetwistingen"].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/contact"
+                className="block w-full text-center border border-gray-300 hover:border-primary-400 hover:bg-primary-50 text-gray-700 hover:text-primary-700 font-semibold py-3 rounded-xl transition-colors text-sm"
+              >
+                Neem contact op
+              </Link>
+            </div>
+          </div>
+
+          {/* Toelichting */}
+          <div className="mt-10 bg-gray-50 rounded-2xl p-6 sm:p-8 text-sm text-gray-600 leading-relaxed space-y-3 text-justify">
+            <p>
+              Na het intakegesprek ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor het intakegesprek betaalde, wordt hiervan afgetrokken.
+            </p>
+            <p>
+              Wij dienen geen aanvragen in namens u. Wij adviseren u en controleren uw documenten zodat uw aanvraag zo sterk mogelijk staat.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-14 bg-primary-50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Veelgestelde vragen over tarieven</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Kan ik de €50 van het intakegesprek recupereren?",
+                a: "Ja. Kiest u daarna voor volledige begeleiding, dan wordt de €50 afgetrokken van het eindbedrag.",
+              },
+              {
+                q: "Wanneer weet ik wat de exacte prijs wordt?",
+                a: "Na het intakegesprek ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
+              },
+              {
+                q: "Waarom is het intakegesprek verplicht?",
+                a: "Gezinshereniging is maatwerk. Om u correct te kunnen adviseren, moeten wij uw situatie volledig begrijpen. Dat vraagt een persoonlijk gesprek. Zonder dat beeld is het niet mogelijk om verdere begeleiding op te starten.",
+              },
+              {
+                q: "Is mijn situatie vertrouwelijk?",
+                a: "Alles wat u deelt valt onder het beroepsgeheim van de advocaat. Uw gegevens worden nooit gedeeld zonder uw uitdrukkelijke toestemming.",
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="border-l-2 border-primary-200 pl-4">
+                <h4 className="font-semibold text-gray-900 text-sm mb-1">{faq.q}</h4>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
