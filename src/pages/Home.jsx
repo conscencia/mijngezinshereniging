@@ -178,7 +178,7 @@ export default function Home() {
             {/* Tool rechts */}
             <div className="w-full lg:w-1/2">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Kom ik in aanmerking?</h2>
-              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">Beantwoord een paar vragen en ontdek direct uw situatie. Anoniem, in minder dan 3 minuten.</p>
+              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">Beantwoord een paar vragen en ontdek binnen een aantal minuten of u in aanmerking komt voor gezinshereniging.</p>
 
               <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
                 <div className="flex items-center gap-2 mb-6">
