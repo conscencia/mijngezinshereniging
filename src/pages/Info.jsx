@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     q: "Kan een advocaat een visum of gezinsherenigingsaanvraag voor mij indienen?",
-    a: "Nee. Een advocaat kan uw aanvraag niet namens u indienen. De aanvraag moet u zelf indienen: bij de Belgische ambassade in het land van uw gezinslid, of rechtstreeks bij de Dienst Vreemdelingenzaken. Wat een advocaat wél voor u doet: uw dossier volledig voorbereiden, uw documenten grondig nalezen en u begeleiden zodat uw aanvraag zo sterk mogelijk staat op het moment dat u deze indient.",
+    a: "Nee. Een advocaat kan uw aanvraag niet namens u indienen. De aanvraag moet u zelf indienen: bij de Belgische ambassade in het land van uw gezinslid, bij de gemeente of stad waar u bent ingeschreven, of bij de Dienst Vreemdelingenzaken. Wat een advocaat wél voor u doet: uw dossier volledig voorbereiden, uw documenten grondig nalezen en u begeleiden zodat uw aanvraag zo sterk mogelijk staat op het moment dat u deze indient.",
   },
 ];
 
