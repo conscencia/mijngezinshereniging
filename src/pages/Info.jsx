@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 const tabs = [
   { id: "voorwaarden", label: "Voorwaarden" },
@@ -95,23 +96,29 @@ const faqs = [
   },
 ];
 
-function FaqItem({ q, a }) {
-  const [open, setOpen] = useState(false);
+function FaqAccordion({ items }) {
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <button
-        className="w-full text-left px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="font-semibold text-gray-900 text-sm sm:text-base pr-4">{q}</span>
-        <svg className={`w-5 h-5 text-primary-500 flex-shrink-0 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
-      {open && (
-        <div className="px-6 py-4 bg-gray-50 text-gray-600 text-sm leading-relaxed border-t border-gray-100 text-justify">{a}</div>
-      )}
-    </div>
+    <AccordionPrimitive.Root type="single" collapsible className="w-full">
+      {items.map((item, i) => (
+        <AccordionPrimitive.Item
+          key={i}
+          value={String(i)}
+          className="border-b border-gray-200 last:border-b-0"
+        >
+          <AccordionPrimitive.Header className="flex">
+            <AccordionPrimitive.Trigger className="group flex flex-1 items-center justify-between py-4 text-left text-sm font-semibold text-gray-900 hover:text-primary-700 transition-colors [&[data-state=open]>svg]:rotate-180">
+              <span className="pr-4">{item.q}</span>
+              <svg className="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </AccordionPrimitive.Trigger>
+          </AccordionPrimitive.Header>
+          <AccordionPrimitive.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
+            <div className="pb-4 pt-1 text-sm text-gray-600 leading-relaxed text-justify">{item.a}</div>
+          </AccordionPrimitive.Content>
+        </AccordionPrimitive.Item>
+      ))}
+    </AccordionPrimitive.Root>
   );
 }
 
@@ -482,21 +489,25 @@ export default function Info() {
 
         {/* FAQ */}
         {activeTab === "faq" && (
-          <div id="faq" className="space-y-6">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Veelgestelde vragen</h2>
-              <p className="text-gray-500 text-base text-justify">De meest gestelde vragen over gezinshereniging in België, helder beantwoord.</p>
+          <div id="faq" className="grid gap-10 md:grid-cols-5 md:gap-16">
+            <div className="md:col-span-2">
+              <h2 className="text-2xl font-bold text-gray-900 mb-3">Veelgestelde vragen</h2>
+              <p className="text-gray-500 text-sm leading-relaxed text-justify">De meest gestelde vragen over gezinshereniging in België, helder beantwoord.</p>
+              <div className="hidden md:block mt-8">
+                <p className="text-gray-500 text-sm mb-3">Staat uw vraag er niet bij?</p>
+                <Link to="/contact" className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors text-sm">
+                  Neem contact op
+                </Link>
+              </div>
             </div>
-            <div className="space-y-3">
-              {faqs.map(faq => (
-                <FaqItem key={faq.q} {...faq} />
-              ))}
-            </div>
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-4">Neem vandaag nog contact op.</p>
-              <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
-                Stel uw vraag
-              </Link>
+            <div className="md:col-span-3">
+              <FaqAccordion items={faqs} />
+              <div className="md:hidden mt-8 text-center">
+                <p className="text-gray-500 text-sm mb-3">Staat uw vraag er niet bij?</p>
+                <Link to="/contact" className="inline-block bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-2.5 rounded-xl transition-colors text-sm">
+                  Neem contact op
+                </Link>
+              </div>
             </div>
           </div>
         )}
