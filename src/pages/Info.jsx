@@ -493,7 +493,7 @@ export default function Info() {
               ))}
             </div>
             <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-4">Neem vandaag nog contact op.</p>
+              <p className="text-primary-800 font-medium mb-4">Staat uw vraag er niet tussen?</p>
               <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
                 Stel uw vraag
               </Link>
