@@ -226,29 +226,25 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: "💬",
                 title: "Algemeen gesprek",
                 desc: "In een videocall van 30 minuten bespreken wij uw situatie en geven wij u een eerlijk beeld van uw mogelijkheden.",
               },
               {
-                icon: "📋",
                 title: "Begeleiding van A tot Z",
                 sub: "Beslist u een aanvraag in te dienen?",
                 desc: "Wij adviseren u doorheen de volledige procedure, van voorbereiding tot beslissing.",
               },
               {
-                icon: "🔍",
                 title: "Documentencheck",
                 desc: "Wij controleren uw dossier grondig en geven concrete tips over welke stukken u toevoegt en welke niet.",
               },
               {
-                icon: "⚖️",
                 title: "Behoefteanalyse en beroep",
                 desc: "Te weinig inkomen? Wij stellen een behoefteanalyse op. Werd u geweigerd? Wij tekenen hoger beroep aan.",
               },
             ].map((s) => (
               <div key={s.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <div className="text-2xl mb-4">{s.icon}</div>
+                <div className="w-8 h-1 bg-primary-500 rounded-full mb-4"></div>
                 <h3 className="font-bold text-gray-900 mb-1 text-base">{s.title}</h3>
                 {s.sub && <p className="text-primary-600 text-xs font-medium mb-2">{s.sub}</p>}
                 <p className="text-gray-500 text-sm leading-relaxed text-justify">{s.desc}</p>
