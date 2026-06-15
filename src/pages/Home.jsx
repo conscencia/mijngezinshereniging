@@ -266,17 +266,17 @@ export default function Home() {
       <section className="py-14 bg-primary-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Weet u niet zeker of u in aanmerking komt?
+            Wenst u een persoonlijk advies?
           </h2>
           <p className="text-green-100 text-base mb-8 leading-relaxed">
-            Doe de situatiecheck en ontdek uw mogelijkheden, of neem contact op voor een persoonlijk gesprek met onze advocaat.
+            Neem contact op voor een gesprek met onze advocaat, of doe eerst de situatiecheck om uw mogelijkheden te verkennen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/tool" className="bg-white text-primary-700 hover:bg-gray-50 font-bold px-8 py-3.5 rounded-xl transition-colors">
-              Situatiecheck starten
-            </Link>
-            <Link to="/contact" className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
+            <Link to="/contact" className="bg-white text-primary-700 hover:bg-gray-50 font-bold px-8 py-3.5 rounded-xl transition-colors">
               Neem contact op
+            </Link>
+            <Link to="/tool" className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
+              Situatiecheck starten
             </Link>
           </div>
         </div>
