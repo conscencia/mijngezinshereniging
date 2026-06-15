@@ -269,7 +269,7 @@ export default function Home() {
             Wenst u een persoonlijk advies?
           </h2>
           <p className="text-green-100 text-base mb-8 leading-relaxed">
-            Neem contact op voor een gesprek met onze advocaat, of doe eerst de situatiecheck om uw mogelijkheden te verkennen.
+            Neem contact op met een vraag of boek direct uw intakegesprek van 30 minuten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-white text-primary-700 hover:bg-gray-50 font-bold px-8 py-3.5 rounded-xl transition-colors">
