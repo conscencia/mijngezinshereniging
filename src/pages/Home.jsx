@@ -227,7 +227,7 @@ export default function Home() {
             {[
               {
                 title: "Algemeen gesprek",
-                desc: "In een videocall van 30 minuten bespreken wij uw situatie en geven wij u een eerlijk beeld van uw mogelijkheden.",
+                desc: "In een videocall van 30 minuten bespreken wij uw situatie en geven wij u een eerlijk beeld van uw mogelijkheden en slaagkansen.",
               },
               {
                 title: "Begeleiding van A tot Z",
