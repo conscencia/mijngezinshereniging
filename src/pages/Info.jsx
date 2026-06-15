@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "Wat is een schijnhuwelijk en hoe wordt dit onderzocht?",
-    a: "Een schijnhuwelijk is een huwelijk waarbij het minstens één van beide partners niet om een echt samenleven te doen is, maar enkel om een verblijfsvoordeel te verkrijgen. DVZ en het parket kunnen een onderzoek instellen. Daarbij kunnen u en uw partner apart worden bevraagd over uw relatie, uw dagelijks leven en uw toekomstplannen. Een schijnhuwelijk kan leiden tot weigering van de aanvraag en heeft ook strafrechtelijke gevolgen.",
+    a: "Een schijnhuwelijk is een huwelijk waarbij het minstens één van beide partners niet om een echt samenleven te doen is, maar enkel om een verblijfsvoordeel te verkrijgen. DVZ en het parket kunnen een onderzoek instellen. Daarbij kunnen u en uw partner apart worden bevraagd over uw relatie, uw dagelijks leven en uw toekomstplannen. Een schijnhuwelijk kan leiden tot weigering van de aanvraag en kan ook strafrechtelijke gevolgen hebben.",
   },
   {
     q: "Kan ik als zelfstandige gezinshereniging aanvragen?",
