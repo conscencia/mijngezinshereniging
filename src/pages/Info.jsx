@@ -198,8 +198,8 @@ export default function Info() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Kinderen</h3>
               <div className="space-y-2">
                 {[
-                  { icon: "✅", text: "Minderjarigen (0–18 jaar) — meest haalbaar" },
-                  { icon: "✅", text: "Economisch afhankelijke kinderen (18–25) die studeren" },
+                  { icon: "✅", text: "Minderjarigen (0 tot 18 jaar), meest haalbaar" },
+                  { icon: "✅", text: "Economisch afhankelijke kinderen (18 tot 25) die studeren" },
                   { icon: "⚠️", text: "U moet kunnen aantonen dat u voor het kind kunt zorgen (financieel en huisvesting)" },
                   { icon: "⚠️", text: "Als de andere ouder gezag heeft, kan dit complicaties geven" },
                 ].map((item, i) => (
@@ -216,7 +216,7 @@ export default function Info() {
               <div className="space-y-2">
                 {[
                   { icon: "❌", text: "Alleen mogelijk in uitzonderlijke humanitaire omstandigheden" },
-                  { icon: "❌", text: "Zeer strenge voorwaarden — zelden toegekend" },
+                  { icon: "❌", text: "Zeer strenge voorwaarden, zelden toegekend" },
                   { icon: "⚠️", text: "U moet bewijzen dat u de enige persoon bent die voor de ouder kan zorgen" },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "❌" ? "bg-red-50" : "bg-yellow-50"}`}>
@@ -252,7 +252,7 @@ export default function Info() {
                 {[
                   {
                     step: "1",
-                    title: "Voorbereiding (2–3 maanden)",
+                    title: "Voorbereiding (2 tot 3 maanden)",
                     color: "bg-blue-500",
                     items: [
                       "Bewijs van relatie (huwelijksakte / verklaring samenwoning)",
@@ -276,7 +276,7 @@ export default function Info() {
                   },
                   {
                     step: "3",
-                    title: "Beoordeling door DVZ (3–6 maanden)",
+                    title: "Beoordeling door DVZ (3 tot 6 maanden)",
                     color: "bg-yellow-500",
                     items: [
                       "DVZ controleert alle ingediende documenten",
@@ -393,7 +393,7 @@ export default function Info() {
 
             {/* Bedragen */}
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
-              <h3 className="font-bold text-yellow-900 mb-1">💰 Inkomensgrens — vanaf 18 augustus 2027</h3>
+              <h3 className="font-bold text-yellow-900 mb-1">💰 Inkomensgrens, vanaf 18 augustus 2027</h3>
               <p className="text-yellow-800 text-sm mb-4 leading-relaxed">
                 Vanaf 18 augustus 2027 geldt een nieuw referentiebedrag gebaseerd op het <strong>Gewaarborgd Gemiddeld Minimum Maandinkomen (GGMMI)</strong>.
               </p>

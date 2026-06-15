@@ -70,7 +70,7 @@ export default function Privacy() {
 
             <div>
               <h3 className="text-base font-bold text-gray-900 mb-2">7. Klacht indienen</h3>
-              <p>U kunt een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA): Drukpersstraat 35, 1000 Brussel — contact@apd-gba.be</p>
+              <p>U kunt een klacht indienen bij de Gegevensbeschermingsautoriteit (GBA): Drukpersstraat 35, 1000 Brussel, contact@apd-gba.be</p>
             </div>
 
             <div>

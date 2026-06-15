@@ -89,7 +89,7 @@ export default function Contact() {
                   <li>
                     <span className="font-semibold text-gray-800">Telefoon: </span>
                     <a href="tel:+3250673206" className="hover:text-primary-600 transition-colors">+32 50 67 32 06</a>
-                    <span className="text-gray-400 ml-1 text-xs">· ma–vr 9:00–18:00</span>
+                    <span className="text-gray-400 ml-1 text-xs">· ma t/m vr, 9:00 tot 18:00</span>
                   </li>
                   <li>
                     <span className="font-semibold text-gray-800">WhatsApp: </span>
@@ -204,7 +204,7 @@ export default function Contact() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                         </svg>
                         <p className="text-sm text-gray-500">Klik om bestanden te selecteren</p>
-                        <p className="text-xs text-gray-400 mt-1">PDF, JPG, PNG — max. 10 MB per bestand</p>
+                        <p className="text-xs text-gray-400 mt-1">PDF, JPG, PNG (max. 10 MB per bestand)</p>
                         <input ref={fileRef} type="file" multiple accept=".pdf,.jpg,.jpeg,.png" onChange={handleFiles} className="hidden" />
                       </div>
                       {bestanden.length > 0 && (

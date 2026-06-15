@@ -125,7 +125,7 @@ function calculateResult(answers) {
     return {
       status: "oranje",
       emoji: "🟡",
-      title: "Mogelijk — uw ouder heeft rechten op basis van Europees recht",
+      title: "Mogelijk: uw ouder heeft rechten op basis van Europees recht",
       summary: "Als minderjarig Belgisch kind heeft uw niet-EU-ouder een afgeleid verblijfsrecht wanneer u zo sterk afhankelijk bent van uw ouder dat weigering van zijn of haar verblijf u zou dwingen het volledige grondgebied van de Europese Unie te verlaten (art. 20 VWEU). De Belgische Verblijfswet voorziet dit niet uitdrukkelijk, maar het Europees Unierecht heeft voorrang.",
       points: [
         { icon: "✅", text: "Er geldt geen inkomenseis: voor de ouder van een minderjarig Belgisch kind is er geen minimum bestaansmiddelen vereist." },
@@ -159,7 +159,7 @@ function calculateResult(answers) {
         },
         {
           icon: "📋",
-          title: "Artikel 9bis — bijzondere omstandigheden",
+          title: "Artikel 9bis: bijzondere omstandigheden",
           text: "Via artikel 9bis van de Verblijfswet kan verblijf worden aangevraagd op basis van buitengewone omstandigheden. Een advocaat beoordeelt of dit in uw situatie toepasbaar is.",
         },
         {
@@ -192,7 +192,7 @@ function calculateResult(answers) {
         },
         {
           icon: "📋",
-          title: "Artikel 9bis — bijzondere omstandigheden",
+          title: "Artikel 9bis: bijzondere omstandigheden",
           text: "Via artikel 9bis van de Verblijfswet kan verblijf worden aangevraagd op basis van buitengewone omstandigheden. Een advocaat beoordeelt of dit in uw situatie toepasbaar is.",
         },
         {
@@ -241,11 +241,11 @@ function calculateResult(answers) {
     return {
       status: "oranje",
       emoji: "🟡",
-      title: "Mogelijk — maar u moet 'ten laste' bewijzen",
+      title: "Mogelijk, maar u moet 'ten laste' bewijzen",
       summary: "Voor een meerderjarig kind gelden andere regels dan voor minderjarige kinderen. Uw kind moet aantoonbaar 'ten laste' zijn: materieel afhankelijk van u in zijn of haar land van herkomst.",
       points: [
         { icon: "📌", text: "'Ten laste' betekent dat uw kind voor zijn/haar basisbehoeften (huur, voeding) afhankelijk is van uw financiële steun in het buitenland." },
-        { icon: inkomen === "werk-voldoende" ? "✅" : "⚠️", text: inkomen === "werk-voldoende" ? "Uw inkomen lijkt voldoende — dat is een goede basis." : inkomen === "werk-twijfel" ? "Uw inkomen is een aandachtspunt: het moet aantoonbaar boven €2.173,88 netto/maand liggen." : inkomen === "werkloosheidsuitkering" ? "Uw werkloosheidsuitkering telt mee als u actief werk zoekt — laat dit goed documenteren." : "Uw inkomen als zelfstandige wordt beoordeeld via de belastingbrief van de laatste 3 jaar." },
+        { icon: inkomen === "werk-voldoende" ? "✅" : "⚠️", text: inkomen === "werk-voldoende" ? "Uw inkomen lijkt voldoende, dat is een goede basis." : inkomen === "werk-twijfel" ? "Uw inkomen is een aandachtspunt: het moet aantoonbaar boven €2.173,88 netto/maand liggen." : inkomen === "werkloosheidsuitkering" ? "Uw werkloosheidsuitkering telt mee als u actief werk zoekt. Laat dit goed documenteren." : "Uw inkomen als zelfstandige wordt beoordeeld via de belastingbrief van de laatste 3 jaar." },
         { icon: "📋", text: "U moet concrete bewijzen aanleveren van de afhankelijkheid: geldoverschrijvingen, verklaringen, bewijs dat uw kind geen eigen inkomen heeft in het buitenland." },
         { icon: "💡", text: "Een advocaat helpt u beoordelen of uw kind aan de 'ten laste'-definitie voldoet en welke bewijsstukken het sterkst staan." },
       ],
@@ -260,11 +260,11 @@ function calculateResult(answers) {
       return {
         status: "oranje",
         emoji: "🟡",
-        title: "Mogelijk — maar de voogdijsituatie is een aandachtspunt",
+        title: "Mogelijk, maar de voogdijsituatie is een aandachtspunt",
         summary: "Als de andere ouder voornamelijk de zorg heeft, is de kans op weigering groter. DVZ vereist bewijs van uw ouderlijk gezag of een schriftelijke toestemming van de andere ouder.",
         points: [
           { icon: "⚠️", text: "DVZ vereist ofwel uw ouderlijk gezag, ofwel een gelegaliseerde schriftelijke toestemming van de andere ouder die erkent dat het kind naar België komt." },
-          { icon: "✅", text: "Goed nieuws: er is geen inkomenseis — voor een minderjarig kind dat alleen overkomt, hoeft u geen minimuminkomen aan te tonen." },
+          { icon: "✅", text: "Er is geen inkomenseis: voor een minderjarig kind dat alleen overkomt, hoeft u geen minimuminkomen aan te tonen." },
           { icon: "📋", text: "Een gelegaliseerde geboorteakte en eventueel een rechterlijk besluit over het ouderlijk gezag versterken uw dossier sterk." },
         ],
         alternatives: [],
@@ -278,9 +278,9 @@ function calculateResult(answers) {
       summary: "Voor een minderjarig kind dat alleen overkomt, is er géén inkomenseis. Op basis van uw antwoorden voldoet u aan de basisvoorwaarden.",
       points: [
         { icon: "✅", text: "Geen inkomenseis: als het enkel om uw minderjarig kind gaat, hoeft u geen minimuminkomen aan te tonen bij DVZ." },
-        { icon: "✅", text: kindVoogdij === "ik-alleen" ? "U heeft het ouderlijk gezag — dat is de sterkste positie voor uw aanvraag." : "Bij co-ouderschap is een gelegaliseerde schriftelijke toestemming van de andere ouder vereist." },
+        { icon: "✅", text: kindVoogdij === "ik-alleen" ? "U heeft het ouderlijk gezag, dat is de sterkste positie voor uw aanvraag." : "Bij co-ouderschap is een gelegaliseerde schriftelijke toestemming van de andere ouder vereist." },
         { icon: "📋", text: "U heeft wel een bewijs van afstamming nodig (geboorteakte, gelegaliseerd en vertaald) en een bewijs van huisvesting en ziekteverzekering." },
-        { icon: "💡", text: "Laat uw dossier nakijken om fouten te voorkomen — een ontbrekend of fout document kan uw aanvraag ernstig vertragen." },
+        { icon: "💡", text: "Laat uw dossier nakijken om fouten te voorkomen. Een ontbrekend of fout document kan uw aanvraag ernstig vertragen." },
       ],
       alternatives: [],
       cta: "Laat uw dossier vrijblijvend nakijken door een advocaat",
@@ -292,8 +292,8 @@ function calculateResult(answers) {
     return {
       status: "oranje",
       emoji: "🟡",
-      title: "Uw inkomen is een aandachtspunt — maar geen automatische weigering",
-      summary: "Leefloon en OCMW-uitkering tellen niet mee voor gezinshereniging. Dat betekent niet dat u automatisch geweigerd wordt — via een behoefteanalyse zijn er mogelijkheden. Laat uw situatie bekijken.",
+      title: "Uw inkomen is een aandachtspunt, maar geen automatische weigering",
+      summary: "Leefloon en OCMW-uitkering tellen niet mee voor gezinshereniging. Dat betekent niet dat u automatisch geweigerd wordt. Via een behoefteanalyse zijn er mogelijkheden. Laat uw situatie bekijken.",
       points: [
         { icon: "⚠️", text: "Leefloon en OCMW-uitkering tellen NIET mee als bewijs van voldoende inkomen bij DVZ." },
         { icon: "📌", text: "DVZ weigert niet automatisch: via een individuele behoefteanalyse (arrest Chakroun) kunt u op andere manieren aantonen dat uw gezin niet ten laste van de overheid valt." },
@@ -330,10 +330,10 @@ function calculateResult(answers) {
     return {
       status: "oranje",
       emoji: "🟡",
-      title: "Werkloosheidsuitkering telt mee — maar aandacht is nodig",
+      title: "Werkloosheidsuitkering telt mee, maar aandacht is nodig",
       summary: "Een werkloosheidsuitkering telt in principe mee als inkomen voor gezinshereniging, op voorwaarde dat u aantoonbaar actief werk zoekt. DVZ beoordeelt dit echter nauwkeurig.",
       points: [
-        { icon: "✅", text: "Een werkloosheidsuitkering telt mee bij DVZ — maar enkel als u aantoonbaar actief werk zoekt (inschrijving VDAB/Forem, bewijs van sollicitaties)." },
+        { icon: "✅", text: "Een werkloosheidsuitkering telt mee bij DVZ, maar enkel als u aantoonbaar actief werk zoekt (inschrijving VDAB/Forem, bewijs van sollicitaties)." },
         { icon: "⚠️", text: "De uitkering moet boven de inkomensgrens van €2.173,88 netto/maand liggen. Ligt ze daaronder, dan gelden dezelfde regels als bij onvoldoende inkomen." },
         { icon: "📌", text: "DVZ kijkt ook naar de stabiliteit en duurzaamheid van uw inkomen. Een dalend bedrag of korte periode van uitkering kan een negatief signaal zijn." },
         { icon: "💡", text: "Een behoefteanalyse kan helpen als uw uitkering net niet voldoende is. Laat uw situatie beoordelen." },
@@ -386,7 +386,7 @@ function calculateResult(answers) {
     return {
       status: "oranje",
       emoji: "🟡",
-      title: "Mogelijk in aanmerking — uw inkomen is het aandachtspunt",
+      title: "Mogelijk in aanmerking, uw inkomen is het aandachtspunt",
       summary: "Op basis van uw antwoorden kunt u mogelijk in aanmerking komen. DVZ kijkt heel nauwkeurig naar uw inkomen. Een screening door een advocaat is sterk aangeraden.",
       points: [
         { icon: "⚠️", text: inkomen === "zelfstandige" ? "Als zelfstandige toont u uw inkomen aan via de belastingbrief van de laatste 3 jaar. Uw netto belastbaar inkomen wordt beoordeeld." : "Uw inkomen moet aantoonbaar boven €2.173,88 netto/maand liggen." },
@@ -408,7 +408,7 @@ function calculateResult(answers) {
     summary: "Goed nieuws! Op basis van uw antwoorden voldoet u aan de basisvoorwaarden voor gezinshereniging in België.",
     points: [
       { icon: "✅", text: "Uw inkomen lijkt voldoende (boven €2.173,88 netto/maand)." },
-      { icon: "✅", text: (gezinslid === "partner" || gezinslid === "partner-niet-gehuwd") ? "U bent beiden 18 jaar of ouder — leeftijdseis is in orde." : "Het type gezinslid valt binnen de toegestane categorieën." },
+      { icon: "✅", text: (gezinslid === "partner" || gezinslid === "partner-niet-gehuwd") ? "U bent beiden 18 jaar of ouder, leeftijdseis is in orde." : "Het type gezinslid valt binnen de toegestane categorieën." },
       { icon: "⚠️", text: "DVZ controleert uw dossier heel grondig. Een ontbrekend document of fout in uw loonfiche kan leiden tot weigering." },
       { icon: "💡", text: "Laat uw dossier eerst vrijblijvend nakijken om vermijdbare fouten te voorkomen." },
       ...(kindVoogdij === "ex" ? [{ icon: "⚠️", text: "Aandachtspunt: de voogdijsituatie van uw kind vereist extra documentatie (toestemming andere ouder)." }] : []),
@@ -585,7 +585,7 @@ function ContactForm({ result, answers }) {
         type="submit"
         className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
       >
-        Gegevens versturen — wij nemen contact op
+        Gegevens versturen, wij nemen contact op
       </button>
     </form>
   );
@@ -828,7 +828,7 @@ export default function Tool() {
                 {/* Optie 1: gegevens achterlaten */}
                 <div className={`rounded-xl border-2 p-5 transition-all ${showForm ? "border-primary-500 bg-primary-50" : "border-gray-200 hover:border-primary-300"}`}>
                   <div className="font-bold text-gray-900 mb-1 text-sm">Gegevens achterlaten</div>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Laat uw gegevens achter — wij nemen zo snel mogelijk contact op.</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Laat uw gegevens achter. Wij nemen zo snel mogelijk contact op.</p>
                   {!showForm ? (
                     <button
                       onClick={() => setShowForm(true)}
@@ -844,12 +844,12 @@ export default function Tool() {
                 {/* Optie 2: gesprek inplannen */}
                 <div className="rounded-xl border-2 border-gray-200 hover:border-primary-300 p-5 transition-all">
                   <div className="font-bold text-gray-900 mb-1 text-sm">Gesprek inplannen</div>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€50 excl. BTW</strong> — direct inboeken.</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€50 excl. BTW</strong>. Direct inboeken.</p>
                   <a
                     href={`mailto:advocaat@mijngezinshereniging.be?subject=Gesprek inplannen gezinshereniging&body=Ik wil graag een videocall van 30 minuten inplannen (€50 excl. BTW).%0A%0AMijn situatie:%0A- Nationaliteit: ${answers.nationaliteit || ""}%0A- Gezinslid: ${answers.gezinslid || ""}`}
                     className="block w-full text-center bg-white border-2 border-primary-600 text-primary-700 hover:bg-primary-50 font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
-                    Gesprek inplannen — €50 excl. BTW
+                    Gesprek inplannen (€50 excl. BTW)
                   </a>
                 </div>
               </div>
@@ -857,7 +857,7 @@ export default function Tool() {
               {/* Inline form */}
               {showForm && (
                 <div className="px-6 pb-6 border-t border-gray-100 pt-5">
-                  <p className="text-sm text-gray-500 mb-4">Vul uw gegevens in — wij nemen vandaag nog contact op.</p>
+                  <p className="text-sm text-gray-500 mb-4">Vul uw gegevens in. Wij nemen vandaag nog contact op.</p>
                   <ContactForm result={result} answers={answers} />
                 </div>
               )}

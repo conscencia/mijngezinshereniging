@@ -56,7 +56,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 <div>
                   <a href="tel:+3250673206" className="hover:text-white transition-colors">+32 50 67 32 06</a>
-                  <div className="text-xs text-gray-500">Ma-vr 9:00–18:00</div>
+                  <div className="text-xs text-gray-500">Ma t/m vr, 9:00 tot 18:00</div>
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -82,7 +82,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} MijnGezinshereniging.be — Alle rechten voorbehouden</p>
+          <p>© {new Date().getFullYear()} MijnGezinshereniging.be. Alle rechten voorbehouden.</p>
           <div className="flex gap-4">
             <Link to="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
             <Link to="/privacy#av" className="hover:text-gray-300 transition-colors">Algemene Voorwaarden</Link>
