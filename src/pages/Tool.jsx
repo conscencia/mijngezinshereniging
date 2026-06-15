@@ -31,7 +31,8 @@ const QUESTIONS = {
     next: (answers) => {
       if (answers.gezinslid === "partner" || answers.gezinslid === "partner-niet-gehuwd") return "leeftijd";
       if (answers.gezinslid === "kind-min") return "kind-voogdij";
-      if (answers.gezinslid === "ouder" || answers.gezinslid === "ander-familielid") return null;
+      if (answers.gezinslid === "ouder") return "bent-u-minderjarig";
+      if (answers.gezinslid === "ander-familielid") return null;
       return "inkomen"; // kind-18
     },
   },
@@ -58,6 +59,17 @@ const QUESTIONS = {
       { value: "ex", label: "De andere ouder heeft voornamelijk de zorg", icon: "⚠️" },
     ],
     next: () => "kind-extra",
+  },
+  "bent-u-minderjarig": {
+    id: "bent-u-minderjarig",
+    label: "Stap 3",
+    title: "Bent u jonger dan 18 jaar?",
+    help: "De regels zijn heel anders naargelang uw leeftijd. Als u minderjarig Belgisch kind bent, heeft uw niet-EU-ouder mogelijk een verblijfsrecht op basis van Europees Unierecht (art. 20 VWEU), ook al voorziet de Belgische Verblijfswet dit niet uitdrukkelijk.",
+    options: [
+      { value: "ja", label: "Ja, ik ben jonger dan 18 jaar", icon: "👶" },
+      { value: "nee", label: "Nee, ik ben 18 jaar of ouder", icon: "🧑" },
+    ],
+    next: () => null,
   },
   "kind-extra": {
     id: "kind-extra",
@@ -88,7 +100,7 @@ const QUESTIONS = {
 
 function getExpectedSteps(answers) {
   if (!answers.gezinslid) return 5;
-  if (answers.gezinslid === "ouder") return 2;
+  if (answers.gezinslid === "ouder") return 3;
   if (answers.gezinslid === "kind-18") return 3;
   if (answers.gezinslid === "partner" || answers.gezinslid === "partner-niet-gehuwd") return 4;
   if (answers.gezinslid === "kind-min") {
@@ -104,10 +116,30 @@ function calculateResult(answers) {
     leeftijd,
     "kind-voogdij": kindVoogdij,
     "kind-extra": kindExtra,
+    "bent-u-minderjarig": bentUMinderjarig,
     inkomen,
   } = answers;
 
-  // ── Ouder/grootouder: geen wettelijk recht op gezinshereniging ──
+  // ── Ouder: minderjarig Belgisch kind wiens niet-EU-ouder wil overkomen ──
+  if (gezinslid === "ouder" && bentUMinderjarig === "ja") {
+    return {
+      status: "oranje",
+      emoji: "🟡",
+      title: "Mogelijk — uw ouder heeft rechten op basis van Europees recht",
+      summary: "Als minderjarig Belgisch kind heeft uw niet-EU-ouder een afgeleid verblijfsrecht wanneer u zo sterk afhankelijk bent van uw ouder dat weigering van zijn of haar verblijf u zou dwingen het volledige grondgebied van de Europese Unie te verlaten (art. 20 VWEU). De Belgische Verblijfswet voorziet dit niet uitdrukkelijk, maar het Europees Unierecht heeft voorrang.",
+      points: [
+        { icon: "✅", text: "Er geldt geen inkomenseis: voor de ouder van een minderjarig Belgisch kind is er geen minimum bestaansmiddelen vereist." },
+        { icon: "📋", text: "Uw ouder moet een identiteitsbewijs voorleggen, een bewijs van afstamming (geboorteakte, eventueel gelegaliseerd en vertaald) en bewijs van ouderlijk gezag en daadwerkelijke zorg." },
+        { icon: "⚠️", text: "DVZ beoordeelt de afhankelijkheidsverhouding: uw leeftijd, uw emotionele band met elk van uw ouders, wie de zorg draagt, en of u gedwongen zou zijn de EU te verlaten als uw ouder geen verblijfsrecht krijgt." },
+        { icon: "💡", text: "Woont u samen met uw ouder, dan geldt een weerlegbaar vermoeden van afhankelijkheid. Dat is de sterkste positie voor de aanvraag." },
+        { icon: "💶", text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag bij DVZ of de ambassade." },
+      ],
+      alternatives: [],
+      cta: "Laat uw situatie beoordelen door een advocaat",
+    };
+  }
+
+  // ── Ouder/grootouder meerderjarig: geen wettelijk recht op gezinshereniging ──
   if (gezinslid === "ouder") {
     return {
       status: "rood",
@@ -116,7 +148,7 @@ function calculateResult(answers) {
       summary: "De Belgische Verblijfswet geeft (groot)ouders van een Belg geen recht op gezinshereniging. De wet voorziet dit recht enkel voor echtgenoten, partners en kinderen.",
       points: [
         { icon: "❌", text: "Er is geen wettelijk recht op gezinshereniging voor (groot)ouders. DVZ zal een klassieke aanvraag weigeren." },
-        { icon: "📌", text: "Uitzonderlijk kan artikel 20 VWEU (Europees Unierecht) een oplossing bieden — maar dit vereist een bewezen afhankelijkheidsrelatie en is zeldzaam." },
+        { icon: "📌", text: "Bent u de meerderjarige ouder van een meerderjarig kind? Dan biedt artikel 9bis of een humanitair visum soms een alternatief. Een advocaat beoordeelt uw situatie." },
         { icon: "💡", text: "In humanitaire gevallen (ernstige ziekte, noodsituatie) bestaan er andere wegen. Een advocaat beoordeelt welke weg voor uw situatie het meest kansrijk is." },
       ],
       alternatives: [
