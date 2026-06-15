@@ -220,26 +220,26 @@ export default function Home() {
       <section className="py-14 bg-primary-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Hoe werkt het?</h2>
-            <p className="text-gray-500 text-base">Van eerste vraag tot goedgekeurd dossier</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Wat wij voor u doen</h2>
+            <p className="text-gray-500 text-base">Van eerste vraag tot ingediend dossier</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: "1", title: "Situatiecheck invullen", desc: "Beantwoord een paar vragen over uw situatie. Duurt minder dan 3 minuten." },
-              { step: "2", title: "Resultaat bekijken", desc: "U ziet meteen of u in aanmerking komt, met uitleg over uw situatie." },
-              { step: "3", title: "Gesprek inplannen", desc: "Boek een videocall van 30 minuten om uw dossier te bespreken." },
-              { step: "4", title: "Dossier voorbereiden", desc: "Wij controleren uw documenten en bereiden uw aanvraag professioneel voor." },
+              { step: "1", title: "Algemeen gesprek", desc: "In een videocall van 30 minuten bespreken wij uw situatie en geven wij u een eerlijk beeld van uw mogelijkheden." },
+              { step: "2", title: "Begeleiding van A tot Z", desc: "Wij adviseren u stap voor stap doorheen de volledige procedure, van aanvraag tot beslissing." },
+              { step: "3", title: "Documentencheck", desc: "Wij controleren uw dossier grondig en geven concrete tips over welke stukken u toevoegt en welke niet." },
+              { step: "4", title: "Behoefteanalyse en beroep", desc: "Te weinig inkomen? Wij stellen een behoefteanalyse op. Werd u geweigerd? Wij tekenen hoger beroep aan." },
             ].map((s) => (
               <div key={s.step} className="relative">
                 <div className="w-10 h-10 bg-primary-600 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-4">{s.step}</div>
                 <h3 className="font-bold text-gray-900 mb-2 text-base">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{s.desc}</p>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link to="/tool" className="bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-xl transition-colors inline-block">
-              Kom ik in aanmerking?
+            <Link to="/tarieven" className="bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-xl transition-colors inline-block">
+              Bekijk onze tarieven
             </Link>
           </div>
         </div>
