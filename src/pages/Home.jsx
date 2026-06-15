@@ -161,34 +161,58 @@ export default function Home() {
       </section>
 
       {/* TOOL TEASER */}
-      <section className="py-14 bg-primary-100/40">
+      <section className="py-14 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="max-w-2xl mx-auto text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Kom ik in aanmerking?</h2>
-            <p className="text-gray-500 text-base leading-relaxed">Beantwoord een paar vragen en ontdek direct uw situatie.</p>
-          </div>
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 max-w-xl mx-auto">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="flex gap-1.5 flex-1">
-                {[1,2,3,4].map(i => (
-                  <div key={i} className={`h-1.5 rounded-full flex-1 ${i === 1 ? "bg-primary-500" : "bg-gray-200"}`}></div>
-                ))}
-              </div>
-              <span className="text-xs text-gray-400">Stap 1 van 4</span>
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+
+            {/* Foto links */}
+            <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex-shrink-0" style={{ maxHeight: "480px" }}>
+              <img
+                src="/trouwen-header.jpg"
+                alt="Gezin"
+                className="w-full h-full object-cover"
+                style={{ maxHeight: "480px" }}
+              />
             </div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-base">Wat is uw nationaliteit of statuut in België?</h3>
-            <div className="space-y-2 mb-6">
-              {["Ik ben Belg", "Ik ben EU-burger (of EER)", "Niet-EU nationaliteit met verblijfskaart", "Erkend vluchteling of subsidiair beschermd"].map((opt) => (
-                <div key={opt} className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg text-sm text-gray-600">
-                  <div className="w-3.5 h-3.5 border-2 border-gray-300 rounded-full flex-shrink-0"></div>
-                  {opt}
+
+            {/* Tool rechts */}
+            <div className="w-full lg:w-1/2">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Kom ik in aanmerking?</h2>
+              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">Beantwoord een paar vragen en ontdek direct uw situatie. Anoniem, in minder dan 3 minuten.</p>
+
+              <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="flex gap-1.5 flex-1">
+                    {[1,2,3,4].map(i => (
+                      <div key={i} className={`h-1.5 rounded-full flex-1 ${i === 1 ? "bg-primary-500" : "bg-gray-200"}`}></div>
+                    ))}
+                  </div>
+                  <span className="text-xs text-gray-400">Stap 1 van 4</span>
                 </div>
-              ))}
+                <h3 className="font-semibold text-gray-900 mb-4 text-base">Wat is uw nationaliteit of statuut in België?</h3>
+                <div className="space-y-2 mb-6">
+                  {[
+                    { label: "Ik ben Belg", value: "belg" },
+                    { label: "Ik ben EU-burger (of EER)", value: "eu" },
+                    { label: "Niet-EU nationaliteit met verblijfskaart", value: "niet-eu" },
+                    { label: "Erkend vluchteling of subsidiair beschermd", value: "vluchteling" },
+                  ].map((opt) => (
+                    <button
+                      key={opt.value}
+                      onClick={() => navigate("/tool", { state: { nationaliteit: opt.value } })}
+                      className="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg text-sm text-gray-600 bg-white hover:border-primary-400 hover:bg-primary-50 hover:text-primary-800 transition-all text-left"
+                    >
+                      <div className="w-3.5 h-3.5 border-2 border-gray-300 rounded-full flex-shrink-0"></div>
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+                <button onClick={() => navigate("/tool")} className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-xl transition-colors text-sm">
+                  Kom ik in aanmerking?
+                </button>
+                <p className="text-xs text-gray-400 text-center mt-3">Anoniem · 3 minuten · Geen verplichtingen</p>
+              </div>
             </div>
-            <button onClick={() => navigate("/tool")} className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-xl transition-colors text-sm">
-              Kom ik in aanmerking?
-            </button>
-            <p className="text-xs text-gray-400 text-center mt-3">Anoniem · 3 minuten · Geen verplichtingen</p>
           </div>
         </div>
       </section>

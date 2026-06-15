@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const QUESTIONS = {
   nationaliteit: {
@@ -560,10 +560,13 @@ function ContactForm({ result, answers }) {
 }
 
 export default function Tool() {
-  const [currentQ, setCurrentQ] = useState("nationaliteit");
-  const [answers, setAnswers] = useState({});
+  const location = useLocation();
+  const preNationaliteit = location.state?.nationaliteit ?? null;
+
+  const [currentQ, setCurrentQ] = useState(preNationaliteit ? "gezinslid" : "nationaliteit");
+  const [answers, setAnswers] = useState(preNationaliteit ? { nationaliteit: preNationaliteit } : {});
   const [selected, setSelected] = useState(null);
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState(preNationaliteit ? ["nationaliteit"] : []);
   const [result, setResult] = useState(null);
   const [showForm, setShowForm] = useState(false);
 

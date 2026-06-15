@@ -22,7 +22,7 @@ export default function Tarieven() {
             {/* Stap 1: Intakegesprek */}
             <div className="rounded-2xl border-2 border-primary-200 bg-primary-50 p-8 flex flex-col">
               <div className="mb-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-primary-600 mb-2">Stap 1 — verplicht</p>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary-600 mb-2">Stap 1, verplicht</p>
                 <h2 className="text-xl font-bold text-gray-900 mb-1">Intakegesprek</h2>
                 <p className="text-sm text-gray-500">Videocall van 30 minuten</p>
               </div>
