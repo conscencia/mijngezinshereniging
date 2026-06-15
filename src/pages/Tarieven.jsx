@@ -14,8 +14,20 @@ export default function Tarieven() {
         </div>
       </section>
 
+      {/* Pro-deo melding */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10">
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl px-6 py-4 flex items-start gap-3">
+          <svg className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="text-blue-800 text-sm leading-relaxed">
+            <strong>Heeft u beperkte financiële middelen?</strong> Laat dit gerust weten. Wij bekijken samen of u eventueel in aanmerking komt voor gratis rechtsbijstand (pro-deo).
+          </p>
+        </div>
+      </div>
+
       {/* Tariefkaarten */}
-      <section className="py-16">
+      <section className="py-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
