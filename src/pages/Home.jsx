@@ -210,7 +210,6 @@ export default function Home() {
                 <button onClick={() => navigate("/tool")} className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-xl transition-colors text-sm">
                   Kom ik in aanmerking?
                 </button>
-                <p className="text-xs text-gray-400 text-center mt-3">Anoniem · 3 minuten · Geen verplichtingen</p>
               </div>
             </div>
           </div>
