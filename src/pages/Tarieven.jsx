@@ -22,8 +22,8 @@ export default function Tarieven() {
             {/* Stap 1: Intakegesprek */}
             <div className="rounded-2xl border-2 border-primary-200 bg-primary-50 p-8 flex flex-col">
               <div className="mb-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-primary-600 mb-2">Stap 1, verplicht</p>
-                <h2 className="text-xl font-bold text-gray-900 mb-1">Intakegesprek</h2>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary-600 mb-2">Stap 1</p>
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Consultatie</h2>
                 <p className="text-sm text-gray-500">Videocall van 30 minuten</p>
               </div>
               <div className="mb-6">
@@ -31,7 +31,7 @@ export default function Tarieven() {
                 <span className="text-gray-400 text-sm ml-1">excl. btw</span>
               </div>
               <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
-                {["Eerste gesprek over uw situatie", "Brede analyse van uw dossier", "Algemene vragen beantwoord", "Wordt afgetrokken bij verdere begeleiding"].map((item) => (
+                {["Bespreking van uw situatie en slaagkansen", "Brede analyse van uw mogelijkheden", "Algemene vragen beantwoord", "Wordt afgetrokken bij verdere begeleiding"].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -114,7 +114,7 @@ export default function Tarieven() {
           {/* Toelichting */}
           <div className="mt-10 bg-gray-50 rounded-2xl p-6 sm:p-8 text-sm text-gray-600 leading-relaxed space-y-3 text-justify">
             <p>
-              Na het intakegesprek ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor het intakegesprek betaalde, wordt hiervan afgetrokken.
+              Na het consultatie ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor het consultatie betaalde, wordt hiervan afgetrokken.
             </p>
             <p>
               Wij dienen geen aanvragen in namens u. Wij adviseren u en controleren uw documenten zodat uw aanvraag zo sterk mogelijk staat.
@@ -130,16 +130,16 @@ export default function Tarieven() {
           <div className="space-y-5">
             {[
               {
-                q: "Kan ik de €50 van het intakegesprek recupereren?",
+                q: "Kan ik de €50 van het consultatie recupereren?",
                 a: "Ja. Kiest u daarna voor volledige begeleiding, dan wordt de €50 afgetrokken van het eindbedrag.",
               },
               {
                 q: "Wanneer weet ik wat de exacte prijs wordt?",
-                a: "Na het intakegesprek ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
+                a: "Na het consultatie ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
               },
               {
-                q: "Waarom is het intakegesprek verplicht?",
-                a: "Gezinshereniging is maatwerk. Om u correct te kunnen adviseren, moeten wij uw situatie volledig begrijpen. Dat vraagt een persoonlijk gesprek. Zonder dat beeld is het niet mogelijk om verdere begeleiding op te starten.",
+                q: "Waarom start u met een consultatie?",
+                a: "Gezinshereniging is maatwerk. Om u correct te kunnen adviseren, moeten wij uw situatie volledig begrijpen. Dat vraagt een persoonlijk gesprek. Zonder dat beeld is het niet mogelijk om gerichte begeleiding op te starten.",
               },
               {
                 q: "Is mijn situatie vertrouwelijk?",
