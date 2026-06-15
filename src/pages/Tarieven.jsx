@@ -16,12 +16,12 @@ export default function Tarieven() {
 
       {/* Pro-deo melding */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10">
-        <div className="bg-blue-50 border border-blue-200 rounded-2xl px-6 py-4 flex items-start gap-3">
-          <svg className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 flex items-start gap-3">
+          <svg className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <p className="text-blue-800 text-sm leading-relaxed">
-            <strong>Heeft u beperkte financiële middelen?</strong> Laat dit gerust weten. Wij bekijken samen of u eventueel in aanmerking komt voor gratis rechtsbijstand (pro-deo).
+          <p className="text-gray-600 text-sm leading-relaxed">
+            <strong>Heeft u beperkte financiële middelen?</strong> Laat dit gerust weten. Wij bekijken samen of u eventueel in aanmerking komt voor gratis juridische bijstand (pro-deo).
           </p>
         </div>
       </div>
@@ -132,7 +132,7 @@ export default function Tarieven() {
           {/* Toelichting */}
           <div className="mt-10 bg-gray-50 rounded-2xl p-6 sm:p-8 text-sm text-gray-600 leading-relaxed space-y-3 text-justify">
             <p>
-              Na het consultatie ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor het consultatie betaalde, wordt hiervan afgetrokken.
+              Na de consultatie ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor de consultatie betaalde, wordt hiervan afgetrokken.
             </p>
             <p>
               Wij dienen geen aanvragen in namens u. Wij adviseren u en controleren uw documenten zodat uw aanvraag zo sterk mogelijk staat.
@@ -148,12 +148,12 @@ export default function Tarieven() {
           <div className="space-y-5">
             {[
               {
-                q: "Kan ik de €50 van het consultatie recupereren?",
+                q: "Kan ik de €50 van de consultatie recupereren?",
                 a: "Ja. Kiest u daarna voor volledige begeleiding, dan wordt de €50 afgetrokken van het eindbedrag.",
               },
               {
                 q: "Wanneer weet ik wat de exacte prijs wordt?",
-                a: "Na het consultatie ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
+                a: "Na de consultatie ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
               },
               {
                 q: "Waarom start u met een consultatie?",
