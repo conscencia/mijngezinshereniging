@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "Wat is de meerwaarde van professionele begeleiding?",
-    a: "Gezinshereniging is complex en de informatie die online circuleert is niet altijd correct of van toepassing op uw situatie. Een advocaat helpt u het bos door de bomen te zien. Fouten in een dossier kunnen soms niet meer worden rechtgezet en maken een weigering ook in de toekomst onvermijdelijk. Professionele begeleiding geeft geen garantie op goedkeuring, maar verhoogt de slaagkansen van bij het begin.",
+    a: "Gezinshereniging is complex en de informatie die online circuleert is niet altijd correct of van toepassing op uw situatie. Een advocaat kent de valkuilen en helpt u die vermijden. Veelvoorkomende problemen zijn: ontbrekende of verkeerd gelegaliseerde documenten, een onvolledige bewijsvoering van de familieband, een verkeerde berekening van het inkomen, of een dossier dat te mager is om standhouden bij DVZ. Fouten kunnen soms niet meer worden rechtgezet en maken een weigering ook in de toekomst moeilijker te vermijden. Een advocaat bekijkt ook hoe u uw aanvraag kracht bijzet: welke stukken u beter toevoegt, hoe u uw inkomenssituatie het sterkst omschrijft, en welke documenten net beter weggelaten worden. Professionele begeleiding geeft geen garantie op goedkeuring, maar verhoogt de slaagkansen aanzienlijk van bij het begin.",
   },
   {
     q: "Wat kost een intakegesprek?",
