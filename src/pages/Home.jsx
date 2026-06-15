@@ -168,7 +168,7 @@ export default function Home() {
             {/* Foto links */}
             <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex-shrink-0" style={{ maxHeight: "480px" }}>
               <img
-                src="/trouwen-header.jpg"
+                src="/gezin.jpg"
                 alt="Gezin"
                 className="w-full h-full object-cover"
                 style={{ maxHeight: "480px" }}
