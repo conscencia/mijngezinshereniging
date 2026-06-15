@@ -44,10 +44,16 @@ export default function Tarieven() {
                 href="https://calendly.com/mijngezinshereniging"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm"
+                className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm mb-3"
               >
                 Direct inboeken
               </a>
+              <Link
+                to="/contact"
+                className="block w-full text-center text-primary-600 hover:text-primary-700 text-sm font-medium"
+              >
+                Of neem contact op
+              </Link>
             </div>
 
             {/* Stap 2: Begeleiding A tot Z */}
