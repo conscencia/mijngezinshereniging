@@ -275,9 +275,9 @@ export default function Home() {
             <Link to="/contact" className="bg-white text-primary-700 hover:bg-gray-50 font-bold px-8 py-3.5 rounded-xl transition-colors">
               Neem contact op
             </Link>
-            <Link to="/tool" className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
-              Situatiecheck starten
-            </Link>
+            <a href="https://calendly.com/mijngezinshereniging" target="_blank" rel="noopener noreferrer" className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
+              Intakegesprek inboeken
+            </a>
           </div>
         </div>
       </section>
