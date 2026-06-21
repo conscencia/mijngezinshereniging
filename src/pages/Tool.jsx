@@ -13,7 +13,64 @@ const QUESTIONS = {
       { value: "niet-eu", label: "Niet-EU nationaliteit met geldige verblijfskaart", icon: "🪪" },
       { value: "vluchteling", label: "Erkend vluchteling of subsidiair beschermd", icon: "🔰" },
     ],
-    next: () => "gezinslid",
+    next: (answers) => {
+      if (answers.nationaliteit === "niet-eu") return null;
+      if (answers.nationaliteit === "vluchteling") return null;
+      if (answers.nationaliteit === "belg") return "belg-type";
+      if (answers.nationaliteit === "eu") return "eu-type";
+      return "gezinslid";
+    },
+  },
+  "belg-type": {
+    id: "belg-type",
+    label: "Stap 2",
+    title: "Heeft u ooit gebruik gemaakt van uw recht op vrij verkeer in de EU?",
+    help: "Dit onderscheid is juridisch cruciaal. Een Belg die gewoond of gewerkt heeft in een andere EU-lidstaat ('actieve Belg') valt onder Europees Unierecht (art. 40bis Vw.) en heeft gunstiger regels dan een Belg die altijd in België bleef ('statische Belg', art. 40ter Vw.).",
+    options: [
+      { value: "statisch", label: "Nee, ik heb altijd in België gewoond en nooit duurzaam in een andere EU-lidstaat gewerkt of gestudeerd", icon: "🏠" },
+      { value: "actief", label: "Ja, ik heb gewoond, gewerkt of gestudeerd in een andere EU-lidstaat", icon: "🇪🇺" },
+    ],
+    next: (answers) => answers["belg-type"] === "actief" ? "eu-type" : "gezinslid",
+  },
+  "eu-type": {
+    id: "eu-type",
+    label: "Uw statuut",
+    title: "Wat is uw huidige situatie in België?",
+    help: "Dit onderscheid is juridisch cruciaal. Werknemers, zelfstandigen en werkzoekenden genieten de ruimste rechten (art. 40/40bis Verblijfswet). Studenten en beschikkers hebben beperkingen, o.a. voor het overkomen van (groot)ouders.",
+    options: [
+      { value: "economisch-actief", label: "Ik werk, ben zelfstandige of zoek actief werk in België", icon: "💼" },
+      { value: "student", label: "Ik studeer in België (ingeschreven aan een erkende instelling)", icon: "🎓" },
+      { value: "beschikker", label: "Ik beschik over voldoende eigen middelen (gepensioneerd, rentenier, ...)", icon: "🏦" },
+    ],
+    next: () => "gezinslid-eu",
+  },
+  "gezinslid-eu": {
+    id: "gezinslid-eu",
+    label: "Stap 3",
+    title: "Wie wilt u naar België halen?",
+    help: "Als EU-burger of actieve Belg valt u onder de Burgerschapsrichtlijn (art. 40/40bis Verblijfswet). Er geldt in principe GEEN inkomenseis voor uw echtgeno(o)t(e) of minderjarige kinderen.",
+    options: [
+      { value: "eu-partner", label: "Mijn echtgeno(o)t(e) of gelijkgestelde partner (al gehuwd of gelijkgesteld)", icon: "💑" },
+      { value: "eu-geregistreerd", label: "Mijn wettelijk geregistreerde partner (niet gehuwd)", icon: "📝" },
+      { value: "eu-kind", label: "Mijn (stief)kind (minderjarig of meerderjarig ten laste)", icon: "👶" },
+      { value: "eu-ouder", label: "Mijn (schoon)grootouder (ten laste van mij of mijn partner)", icon: "👴" },
+      { value: "eu-ander", label: "Ander familielid (broer, zus, feitelijke partner, ...)", icon: "👥" },
+    ],
+    next: (answers) => {
+      if (answers["gezinslid-eu"] === "eu-partner") return "eu-leeftijd";
+      return null;
+    },
+  },
+  "eu-leeftijd": {
+    id: "eu-leeftijd",
+    label: "Stap 4",
+    title: "Bent u beiden minstens 18 jaar oud?",
+    help: "Beide partners moeten minstens 18 jaar oud zijn op het moment van de aanvraag. Dit geldt ook voor EU-burgers en actieve Belgen.",
+    options: [
+      { value: "ja", label: "Ja, wij zijn beiden 18 jaar of ouder", icon: "✅" },
+      { value: "nee", label: "Nee, een van ons is jonger dan 18 jaar", icon: "⚠️" },
+    ],
+    next: () => null,
   },
   gezinslid: {
     id: "gezinslid",
@@ -99,26 +156,210 @@ const QUESTIONS = {
 };
 
 function getExpectedSteps(answers) {
-  if (!answers.gezinslid) return 5;
-  if (answers.gezinslid === "ouder") return 3;
-  if (answers.gezinslid === "kind-18") return 3;
-  if (answers.gezinslid === "partner" || answers.gezinslid === "partner-niet-gehuwd") return 4;
-  if (answers.gezinslid === "kind-min") {
-    if (answers["kind-extra"] === "alleen-kind") return 4;
-    return 5;
+  const nat = answers.nationaliteit;
+  if (nat === "niet-eu" || nat === "vluchteling") return 1;
+  if (nat === "eu" || answers["belg-type"] === "actief") {
+    const extraBelg = nat === "belg" ? 1 : 0;
+    if (!answers["gezinslid-eu"]) return 3 + extraBelg;
+    if (answers["gezinslid-eu"] === "eu-partner") return 4 + extraBelg;
+    return 3 + extraBelg;
   }
-  return 4;
+  const extra = nat === "belg" ? 1 : 0;
+  if (!answers.gezinslid) return 4 + extra;
+  if (answers.gezinslid === "ouder") return 3 + extra;
+  if (answers.gezinslid === "kind-18") return 3 + extra;
+  if (answers.gezinslid === "partner" || answers.gezinslid === "partner-niet-gehuwd") return 4 + extra;
+  if (answers.gezinslid === "kind-min") {
+    if (answers["kind-extra"] === "alleen-kind") return 4 + extra;
+    return 5 + extra;
+  }
+  return 4 + extra;
 }
 
 function calculateResult(answers) {
   const {
+    nationaliteit,
+    "belg-type": belgType,
+    "eu-type": euType,
     gezinslid,
+    "gezinslid-eu": gezinslidEu,
+    "eu-leeftijd": euLeeftijd,
     leeftijd,
     "kind-voogdij": kindVoogdij,
     "kind-extra": kindExtra,
     "bent-u-minderjarig": bentUMinderjarig,
     inkomen,
   } = answers;
+
+  // ── Erkend vluchteling of subsidiair beschermde: te complex voor de tool ──
+  if (nationaliteit === "vluchteling") {
+    return {
+      status: "oranje",
+      emoji: "🟡",
+      title: "Uw situatie vereist persoonlijk advies",
+      summary: "Als erkend vluchteling of subsidiair beschermde heeft u in principe recht op gezinshereniging, maar de voorwaarden en procedure zijn sterk afhankelijk van uw specifiek beschermingsstatuut, de termijn van uw aanvraag en de gezinssamenstelling. Een persoonlijk gesprek is aangewezen.",
+      points: [
+        { icon: "📋", text: "Erkend vluchtelingen en subsidiair beschermden genieten specifieke regels op basis van de Verblijfswet en internationale verdragen (Vluchtelingenverdrag, art. 8 EVRM)." },
+        { icon: "⚠️", text: "De termijn waarbinnen u de aanvraag indient na erkenning is cruciaal: te laat indienen kan uw rechten beperken." },
+        { icon: "💡", text: "De precieze voorwaarden (inkomens- en huisvestingsvereisten, welke familieleden u kunt laten overkomen) verschillen per statuut. Een advocaat beoordeelt uw volledige situatie." },
+      ],
+      alternatives: [],
+      cta: "Bespreek uw situatie met een advocaat",
+    };
+  }
+
+  // ── Derdelander in België: te complex voor de tool ──
+  if (nationaliteit === "niet-eu") {
+    return {
+      status: "oranje",
+      emoji: "🟡",
+      title: "Uw situatie vereist persoonlijk advies",
+      summary: "Als derdelander met verblijfskaart in België zijn de regels voor gezinshereniging afhankelijk van uw specifiek verblijfsstatuut. Er zijn heel veel hypotheses mogelijk en de voorwaarden verschillen sterk per geval. Een persoonlijk gesprek is aangewezen.",
+      points: [
+        { icon: "📋", text: "De regels hangen af van uw specifieke verblijfskaart: type A, B, C, D, F of F+ leidt tot heel andere voorwaarden en termijnen." },
+        { icon: "⚠️", text: "Er geldt doorgaans een inkomenseis (€2.173,88 netto/maand), maar de precieze berekeningswijze verschilt naargelang uw verblijfsstatuut." },
+        { icon: "💡", text: "Sommige derdelanders vallen onder gunstiger Europese regels. Dit moet geval per geval worden beoordeeld door een advocaat." },
+      ],
+      alternatives: [],
+      cta: "Bespreek uw situatie met een advocaat",
+    };
+  }
+
+  // ── EU pad: actieve Belg of EU-burger ──
+  if (gezinslidEu) {
+    const isStudent = euType === "student";
+    const isBeschikker = euType === "beschikker";
+    const extraVereisten = isStudent || isBeschikker
+      ? [{ icon: "⚠️", text: isStudent ? "Als EU-student moet u ook bewijzen dat u over voldoende bestaansmiddelen beschikt en dat uw partner een ziekteverzekering heeft die alle risico's in België dekt." : "Als beschikker moet u bewijzen dat u over voldoende eigen middelen beschikt en dat uw partner beschikt over een ziekteverzekering die alle risico's in België dekt." }]
+      : [];
+
+    if (gezinslidEu === "eu-partner") {
+      if (euLeeftijd === "nee") {
+        return {
+          status: "rood",
+          emoji: "🔴",
+          title: "Op dit moment komt u niet in aanmerking",
+          summary: "Voor gezinshereniging als koppel moeten beide partners minstens 18 jaar oud zijn op het moment van de aanvraag. Dit geldt ook voor EU-burgers en actieve Belgen.",
+          points: [
+            { icon: "❌", text: "Een of beide partners is jonger dan 18 jaar. Dit is een absolute wettelijke minimumleeftijd." },
+            { icon: "📌", text: "Zodra de jongste partner 18 is, kunt u de aanvraag indienen." },
+          ],
+          alternatives: [
+            { icon: "⏳", title: "Wachten tot u beiden 18 bent", text: "Zodra de jongste partner 18 is, kunt u de aanvraag indienen. Dit is de eenvoudigste en meest zekere oplossing." },
+          ],
+          cta: "Bespreek uw opties vrijblijvend met een advocaat",
+        };
+      }
+      return {
+        status: "groen",
+        emoji: "🟢",
+        title: "U komt waarschijnlijk in aanmerking",
+        summary: "Als EU-burger of actieve Belg heeft u het recht uw echtgeno(o)t(e) of gelijkgestelde partner naar België te halen op basis van de Burgerschapsrichtlijn (art. 40/40bis Verblijfswet). Er is GEEN klassieke inkomenseis.",
+        points: [
+          { icon: "✅", text: "Geen klassieke inkomenseis: de Burgerschapsrichtlijn legt geen minimumbedrag op. U moet wel aantonen dat u geen onredelijke belasting vormt voor de Belgische sociale bijstandsstelsels." },
+          { icon: "✅", text: "U bent beiden 18 jaar of ouder. Aan de leeftijdseis is voldaan." },
+          { icon: "📋", text: "Vereist: geldig paspoort van uw partner, huwelijksakte (gelegaliseerd, vertaald en eventueel erkend in België), bewijs van uw verblijfsrecht in België (EU-kaart of bijlage 19)." },
+          ...extraVereisten,
+          { icon: "⚠️", text: "DVZ controleert op schijnhuwelijk. Een sterk dossier met bewijs van uw relatie (foto's, communicatie, gezamenlijk verblijf) is sterk aanbevolen." },
+          { icon: "💶", text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag." },
+        ],
+        alternatives: [],
+        cta: "Laat uw dossier nakijken door een advocaat",
+      };
+    }
+
+    if (gezinslidEu === "eu-geregistreerd") {
+      return {
+        status: "oranje",
+        emoji: "🟡",
+        title: "Mogelijk in aanmerking, maar bewijs van duurzame relatie is vereist",
+        summary: "Een wettelijk geregistreerde partner van een EU-burger of actieve Belg heeft recht op gezinshereniging mits bewijs van een duurzame en stabiele relatie. Er is GEEN inkomenseis, maar DVZ hanteert strenge bewijscriteria.",
+        points: [
+          { icon: "✅", text: "Geen inkomenseis op basis van de Burgerschapsrichtlijn." },
+          { icon: "📋", text: "Bewijs van duurzame en stabiele relatie vereist: minstens 1 jaar onafgebroken samenwonen, OF minstens 2 jaar kennen met minimaal 3 ontmoetingen van samen 45 dagen, OF een gemeenschappelijk kind." },
+          { icon: "📋", text: "Vereist: akte van geregistreerd partnerschap (gelegaliseerd en vertaald), bewijs van het verblijfsrecht van de EU-burger in België." },
+          ...extraVereisten,
+          { icon: "⚠️", text: "DVZ beoordeelt of uw relatie voldoende duurzaam en stabiel is. De bewijslast ligt volledig bij u." },
+          { icon: "💶", text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag." },
+        ],
+        alternatives: [],
+        cta: "Laat uw situatie beoordelen door een advocaat",
+      };
+    }
+
+    if (gezinslidEu === "eu-kind") {
+      return {
+        status: "groen",
+        emoji: "🟢",
+        title: "U komt waarschijnlijk in aanmerking",
+        summary: "Kinderen van EU-burgers of actieve Belgen hebben recht op gezinshereniging op basis van de Burgerschapsrichtlijn. Er is GEEN inkomenseis voor minderjarige kinderen.",
+        points: [
+          { icon: "✅", text: "Geen inkomenseis voor minderjarige (stief)kinderen. Voor meerderjarige kinderen moet u aantonen dat ze 'ten laste' zijn (financieel afhankelijk van u in hun herkomstland)." },
+          { icon: "📋", text: "Vereist: geboorteakte of adoptieakte (gelegaliseerd, vertaald en erkend in België), bewijs van uw verblijfsrecht in België (EU-kaart of bijlage 19)." },
+          ...extraVereisten,
+          { icon: "⚠️", text: "Bij co-ouderschap is een gelegaliseerde schriftelijke toestemming van de andere ouder vereist." },
+          { icon: "💡", text: "Een ontbrekend of fout document kan uw aanvraag ernstig vertragen. Laat uw dossier eerst nakijken." },
+          { icon: "💶", text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag." },
+        ],
+        alternatives: [],
+        cta: "Laat uw dossier nakijken door een advocaat",
+      };
+    }
+
+    if (gezinslidEu === "eu-ouder") {
+      if (isStudent) {
+        return {
+          status: "rood",
+          emoji: "🔴",
+          title: "Geen recht op gezinshereniging als EU-student",
+          summary: "Als EU-student heeft u géén recht om uw (groot)ouder naar België te halen. De Burgerschapsrichtlijn beperkt dit recht voor studenten tot de echtgeno(o)t(e), geregistreerde partner en (stief)kinderen.",
+          points: [
+            { icon: "❌", text: "EU-studenten hebben uitdrukkelijk géén recht op gezinshereniging met (groot)ouders. Dit is een bewuste beperking in de Verblijfswet (art. 40bis Vw.)." },
+            { icon: "📌", text: "Bent u na uw studies economisch actief geworden (werknemer, zelfstandige)? Dan gelden er andere, ruimere regels." },
+            { icon: "💡", text: "In uitzonderlijke situaties kan een humanitair visum of art. 20 VWEU een alternatief bieden. Een advocaat beoordeelt uw specifieke situatie." },
+          ],
+          alternatives: [
+            { icon: "💼", title: "Na uw studies: economisch actief statuut", text: "Van zodra u werkt of als zelfstandige actief bent, heeft u wel het recht om (groot)ouders over te laten komen (mits ten-laste-bewijs)." },
+            { icon: "🤝", title: "Humanitair visum (type D)", text: "In bijzondere omstandigheden (ernstige ziekte, noodsituatie) kan een humanitair visum worden aangevraagd bij de Belgische ambassade. Dit is een discretionaire beslissing." },
+          ],
+          cta: "Bespreek uw situatie met een advocaat",
+        };
+      }
+      return {
+        status: "oranje",
+        emoji: "🟡",
+        title: "Mogelijk in aanmerking als uw (groot)ouder ten laste is",
+        summary: "Een (schoon)grootouder van een EU-burger of actieve Belg heeft recht op gezinshereniging als hij of zij aantoonbaar 'ten laste' is. Dit is een financiële afhankelijkheid in het herkomstland.",
+        points: [
+          { icon: "📋", text: "'Ten laste' betekent dat uw (groot)ouder voor zijn of haar basisbehoeften financieel afhankelijk was van uw steun in het land van herkomst. Bewijs hiervan is verplicht." },
+          { icon: "📋", text: "Vereist: bewijs van afstamming (geboorteakte, gelegaliseerd en vertaald), bewijs van ten-laste-zijn (bankuittreksels van geldoverschrijvingen, verklaringen van bevoegde overheden), bewijs van uw verblijfsrecht in België." },
+          ...extraVereisten,
+          { icon: "⚠️", text: "DVZ beoordeelt de financiële afhankelijkheid strikt. Een louter emotionele band of de wens tot samenwonen volstaat niet." },
+          { icon: "💶", text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag." },
+        ],
+        alternatives: [],
+        cta: "Laat uw situatie beoordelen door een advocaat",
+      };
+    }
+
+    if (gezinslidEu === "eu-ander") {
+      return {
+        status: "oranje",
+        emoji: "🟡",
+        title: "Uw situatie is complex: de wet voorziet vier uitzonderingsgronden",
+        summary: "Andere familieleden van EU-burgers (broers, zussen, neven, nichten, feitelijke partners zonder registratie...) hebben géén automatisch recht op gezinshereniging. Toch zijn er vier situaties waarin verblijf mogelijk is. DVZ beoordeelt dit geval per geval.",
+        points: [
+          { icon: "📋", text: "Categorie 1: u heeft een deugdelijk bewezen duurzame relatie met de EU-burger en komt niet in aanmerking als geregistreerde partner (bewijs: minstens 1 jaar samenwonen of 2 jaar kennen met regelmatig contact)." },
+          { icon: "📋", text: "Categorie 2: u bent in het herkomstland financieel ten laste van de EU-burger (bewijs van financiële afhankelijkheid voor uw basisbehoeften)." },
+          { icon: "📋", text: "Categorie 3: u maakte deel uit van het gezin van de EU-burger in het herkomstland (aantoonbaar nauwe, duurzame en persoonlijke band)." },
+          { icon: "📋", text: "Categorie 4: u heeft ernstige gezondheidsproblemen en heeft de persoonlijke zorg van de EU-burger nodig." },
+          { icon: "⚠️", text: "DVZ heeft een ruime beoordelingsbevoegdheid. Juridisch advies is sterk aanbevolen om uw kansen correct in te schatten." },
+        ],
+        alternatives: [],
+        cta: "Laat uw situatie beoordelen door een advocaat",
+      };
+    }
+  }
 
   // ── Ouder: minderjarig Belgisch kind wiens niet-EU-ouder wil overkomen ──
   if (gezinslid === "ouder" && bentUMinderjarig === "ja") {

@@ -177,40 +177,19 @@ export default function Home() {
 
             {/* Tool rechts */}
             <div className="w-full lg:w-1/2">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Kom ik in aanmerking?</h2>
-              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">Beantwoord een paar vragen en ontdek binnen een aantal minuten of u in aanmerking komt voor gezinshereniging.</p>
-
-              <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8">
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="flex gap-1.5 flex-1">
-                    {[1,2,3,4].map(i => (
-                      <div key={i} className={`h-1.5 rounded-full flex-1 ${i === 1 ? "bg-primary-500" : "bg-gray-200"}`}></div>
-                    ))}
-                  </div>
-                  <span className="text-xs text-gray-400">Stap 1 van 4</span>
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-4 text-base">Wat is uw nationaliteit of statuut in België?</h3>
-                <div className="space-y-2 mb-6">
-                  {[
-                    { label: "Ik ben Belg", value: "belg" },
-                    { label: "Ik ben EU-burger (of EER)", value: "eu" },
-                    { label: "Niet-EU nationaliteit met verblijfskaart", value: "niet-eu" },
-                    { label: "Erkend vluchteling of subsidiair beschermd", value: "vluchteling" },
-                  ].map((opt) => (
-                    <button
-                      key={opt.value}
-                      onClick={() => navigate("/tool", { state: { nationaliteit: opt.value } })}
-                      className="w-full flex items-center gap-3 p-3 border border-gray-200 rounded-lg text-sm text-gray-600 bg-white hover:border-primary-400 hover:bg-primary-50 hover:text-primary-800 transition-all text-left"
-                    >
-                      <div className="w-3.5 h-3.5 border-2 border-gray-300 rounded-full flex-shrink-0"></div>
-                      {opt.label}
-                    </button>
-                  ))}
-                </div>
-                <button onClick={() => navigate("/tool")} className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-xl transition-colors text-sm">
-                  Kom ik in aanmerking?
-                </button>
-              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Bent u een Belg of EU-burger?</h2>
+              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">
+                Doe hier de check of u in aanmerking komt voor gezinshereniging. Binnen enkele minuten een eerste beeld van uw situatie.
+              </p>
+              <button
+                onClick={() => navigate("/tool")}
+                className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-4 rounded-xl transition-colors text-base group"
+              >
+                Doe de check
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

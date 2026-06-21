@@ -1,5 +1,6 @@
 ﻿import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -76,6 +77,7 @@ export default function Navigation() {
             >
               Contact
             </Link>
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Hamburger */}
@@ -105,7 +107,7 @@ export default function Navigation() {
             <Link to="/blog" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Blog</Link>
             <Link to="/over-ons" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Over ons</Link>
             <Link to="/tarieven" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Tarieven</Link>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2">
               <Link
                 to="/contact"
                 className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
@@ -113,6 +115,9 @@ export default function Navigation() {
               >
                 Contact
               </Link>
+              <div className="flex justify-center pt-1">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}
