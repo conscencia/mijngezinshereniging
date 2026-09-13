@@ -39,11 +39,11 @@ export default function Tarieven() {
                 <p className="text-sm text-gray-500">Videocall van 30 minuten</p>
               </div>
               <div className="mb-6">
-                <span className="text-4xl font-black text-primary-700">€50</span>
+                <span className="text-4xl font-black text-primary-700">€75</span>
                 <span className="text-gray-400 text-sm ml-1">excl. btw</span>
               </div>
               <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
-                {["Bespreking van uw situatie en slaagkansen", "Brede analyse van uw mogelijkheden", "Algemene vragen beantwoord", "Wordt afgetrokken bij verdere begeleiding"].map((item) => (
+                {["Bespreking van uw situatie en slaagkansen", "Brede analyse van uw mogelijkheden", "Algemene vragen beantwoord", "U krijgt een vaste prijs voor uw dossier"].map((item) => (
                   <li key={item} className="flex items-start gap-2">
                     <svg className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -76,12 +76,9 @@ export default function Tarieven() {
                 <p className="text-sm text-gray-500">Bij uw aanvraag</p>
               </div>
               <div className="mb-4">
-                <span className="text-4xl font-black text-gray-900">€450</span>
-                <span className="text-gray-400 text-sm mx-2">tot</span>
-                <span className="text-4xl font-black text-gray-900">€800</span>
-                <span className="text-gray-400 text-sm ml-1">excl. btw</span>
+                <span className="text-4xl font-black text-gray-900">Vaste prijs</span>
               </div>
-              <p className="text-xs text-gray-400 mb-6">De prijs hangt af van de complexiteit van uw situatie.</p>
+              <p className="text-xs text-gray-400 mb-6">We spreken tijdens de consultatie één vast bedrag af voor uw volledige dossier. Is een vaste prijs niet mogelijk, dan geldt een uurtarief van €125 excl. btw.</p>
               <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
                 {["Schriftelijk juridisch advies", "Volledige documentencheck", "Voorbereiding van uw aanvraag", "Volledige prijs vooraf, geen verrassingen"].map((item) => (
                   <li key={item} className="flex items-start gap-2">
@@ -108,7 +105,7 @@ export default function Tarieven() {
                 <p className="text-sm text-gray-500">Tegen een weigeringsbeslissing</p>
               </div>
               <div className="mb-6">
-                <span className="text-2xl font-bold text-gray-900">Prijs op aanvraag</span>
+                <span className="text-2xl font-bold text-gray-900">Vaste prijs op maat</span>
               </div>
               <ul className="space-y-2 text-sm text-gray-600 mb-8 flex-1">
                 {["Beoordeling van de weigeringsbeslissing", "Opmaak beroepschrift", "Vertegenwoordiging bij de Raad voor Vreemdelingenbetwistingen"].map((item) => (
@@ -132,7 +129,7 @@ export default function Tarieven() {
           {/* Toelichting */}
           <div className="mt-10 bg-gray-50 rounded-2xl p-6 sm:p-8 text-sm text-gray-600 leading-relaxed space-y-3 text-justify">
             <p>
-              Na de consultatie ontvangt u een duidelijke volledige prijs op maat van uw dossier. Het bedrag van €50 dat u voor de consultatie betaalde, wordt hiervan afgetrokken.
+              Tijdens de consultatie van €75 excl. btw spreken we een vaste prijs af voor uw volledige dossier, zodat u exact weet waar u aan toe bent. Is een vaste prijs niet mogelijk, dan rekenen we af aan €125 excl. btw per uur.
             </p>
             <p>
               Wij dienen geen aanvragen in namens u. Wij adviseren u en controleren uw documenten zodat uw aanvraag zo sterk mogelijk staat.
@@ -148,12 +145,12 @@ export default function Tarieven() {
           <div className="space-y-5">
             {[
               {
-                q: "Kan ik de €50 van de consultatie recupereren?",
-                a: "Ja. Kiest u daarna voor volledige begeleiding, dan wordt de €50 afgetrokken van het eindbedrag.",
+                q: "Wat kost een consultatie?",
+                a: "Een consultatie van 30 minuten kost €75 excl. btw. We bekijken samen uw situatie en spreken een vaste prijs af voor uw dossier.",
               },
               {
                 q: "Wanneer weet ik wat de exacte prijs wordt?",
-                a: "Na de consultatie ontvangt u een schriftelijke volledige prijs op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
+                a: "Tijdens de consultatie spreken we een vaste prijs af op basis van uw specifieke situatie. U beslist zelf of u verdergaat.",
               },
               {
                 q: "Waarom start u met een consultatie?",

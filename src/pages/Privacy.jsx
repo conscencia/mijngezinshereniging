@@ -100,10 +100,9 @@ export default function Privacy() {
             <div>
               <h3 className="text-base font-bold text-gray-900 mb-2">3. Tarieven</h3>
               <ul className="list-disc list-inside space-y-1">
-                <li>Intake gesprek (30 min, video of fysiek): €50 excl. btw</li>
-                <li>Eenvoudig dossier: €500 excl. btw</li>
-                <li>Complex dossier (zelfstandige, co-ouderschap, behoefteanalyse, meerdere gezinsleden, eerder geweigerd dossier of moeilijke documenten): €700 excl. btw</li>
-                <li>De €50 van het intake gesprek wordt afgetrokken van het pakket</li>
+                <li>Consultatie (30 min, video of fysiek): €75 excl. btw</li>
+                <li>Begeleiding van uw dossier: vaste prijs, afgesproken tijdens de consultatie</li>
+                <li>Is een vaste prijs niet mogelijk: uurtarief van €125 excl. btw</li>
                 <li>Beide pakketten omvatten schriftelijk advies, volledige documentencheck en voorbereiding van de aanvraag gezinshereniging</li>
               </ul>
               <p className="mt-2">Alle tarieven zijn exclusief BTW tenzij anders vermeld. Gerechtskosten en retributies zijn niet inbegrepen.</p>

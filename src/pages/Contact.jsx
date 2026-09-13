@@ -73,7 +73,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
-                    Direct inboeken (€50)
+                    Direct inboeken (€75)
                   </a>
                 </div>
                 <div className="mt-4 text-center lg:text-left">

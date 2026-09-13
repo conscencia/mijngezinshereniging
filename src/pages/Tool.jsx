@@ -1085,12 +1085,12 @@ export default function Tool() {
                 {/* Optie 2: gesprek inplannen */}
                 <div className="rounded-xl border-2 border-gray-200 hover:border-primary-300 p-5 transition-all">
                   <div className="font-bold text-gray-900 mb-1 text-sm">Gesprek inplannen</div>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€50 excl. BTW</strong>. Direct inboeken.</p>
+                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€75 excl. btw</strong>. Direct inboeken.</p>
                   <a
-                    href={`mailto:advocaat@mijngezinshereniging.be?subject=Gesprek inplannen gezinshereniging&body=Ik wil graag een videocall van 30 minuten inplannen (€50 excl. BTW).%0A%0AMijn situatie:%0A- Nationaliteit: ${answers.nationaliteit || ""}%0A- Gezinslid: ${answers.gezinslid || ""}`}
+                    href={`mailto:advocaat@mijngezinshereniging.be?subject=Gesprek inplannen gezinshereniging&body=Ik wil graag een videocall van 30 minuten inplannen (€75 excl. btw).%0A%0AMijn situatie:%0A- Nationaliteit: ${answers.nationaliteit || ""}%0A- Gezinslid: ${answers.gezinslid || ""}`}
                     className="block w-full text-center bg-white border-2 border-primary-600 text-primary-700 hover:bg-primary-50 font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
-                    Gesprek inplannen (€50 excl. BTW)
+                    Gesprek inplannen (€75 excl. btw)
                   </a>
                 </div>
               </div>

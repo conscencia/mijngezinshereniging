@@ -87,7 +87,7 @@ const faqs = [
   },
   {
     q: "Wat kost een intakegesprek?",
-    a: <>Een videocall van 30 minuten kost €50 excl. btw. Dat bedrag wordt afgetrokken als u daarna kiest voor verdere begeleiding. Bekijk het volledige overzicht op de pagina <Link to="/tarieven" className="text-primary-600 underline hover:text-primary-700">Tarieven</Link>.</>,
+    a: <>Een videocall van 30 minuten kost €75 excl. btw. Daarin spreken we ook een vaste prijs af voor uw volledige dossier. Bekijk het volledige overzicht op de pagina <Link to="/tarieven" className="text-primary-600 underline hover:text-primary-700">Tarieven</Link>.</>,
   },
   {
     q: "Kan een advocaat een visum of gezinsherenigingsaanvraag voor mij indienen?",
