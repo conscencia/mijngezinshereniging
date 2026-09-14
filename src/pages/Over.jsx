@@ -70,16 +70,16 @@ export default function Over() {
               <div className="w-12 h-1 rounded-full bg-primary-500 mb-6" />
               <div className="space-y-4 text-sm text-gray-600 leading-relaxed text-justify">
                 <p>
-                  Familie- en migratierecht is voor ons geen abstract rechtsdomein. Het gaat over mensen die hun partner missen, over ouders die hun kinderen niet kunnen knuffelen, over gezinnen die verspreid leven over landen en grenzen. Soms jarenlang.
+                  Misschien woont uw partner nog in het buitenland. Of ziet u uw kinderen of ouders alleen via een scherm. Wij weten hoe zwaar dat wachten is, soms maanden, soms jaren.
                 </p>
                 <p>
-                  Als advocaten met diepgaande kennis van familie- en migratierecht zien wij dagelijks hoe complex en ontmoedigend de Belgische procedures kunnen zijn. Dossiers worden geweigerd om formele redenen die vermijdbaar waren. Mensen geven op. Niet omdat hun situatie hopeloos is, maar omdat ze het systeem niet begrijpen.
+                  De regels voor gezinshereniging in België zijn streng en niet altijd duidelijk. Een document dat ontbreekt, een fout formulier of een inkomen dat net te laag lijkt: vaak is dat genoeg voor een weigering. Veel mensen geven dan op. Niet omdat hun situatie hopeloos is, maar omdat niemand hen de regels goed heeft uitgelegd.
                 </p>
                 <p>
-                  Die kloof willen wij dichten. MijnGezinshereniging.be is ons antwoord: een toegankelijk, betrouwbaar aanspreekpunt voor alles rond gezinshereniging in België, met concrete stappen, een eerlijke prijs en een duidelijk verwachtingskader.
+                  Daarom is er MijnGezinshereniging.be. Wij leggen u in eenvoudige woorden uit wat u nodig heeft en wat u moet doen, stap voor stap. U weet vooraf wat het kost en wat u kunt verwachten. Zo staat uw aanvraag zo sterk mogelijk.
                 </p>
                 <p>
-                  Wij werken online voor heel België. Een consultatie op kantoor is steeds mogelijk in Oost- en West-Vlaanderen.
+                  Waar u ook woont in België: een gesprek kan online. Liever iemand in levenden lijve spreken? Dat kan op kantoor in Oost- en West-Vlaanderen.
                 </p>
               </div>
               <Link
