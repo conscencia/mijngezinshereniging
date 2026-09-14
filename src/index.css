@@ -117,3 +117,146 @@ html {
     display: none;
   }
 }
+
+
+/* ════════════════════════════════════════════════════════════════
+   JONES-stijl + Apple-principes (materiaal, respons, typografie)
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  --olive-deep: #333D24; --olive: #4D5A3A; --moss: #7A8450; --moss-soft: #A8AD82;
+  --vanilla: #FBF3DE; --paper: #F3ECD9; --rust: #A15C38; --rust-deep: #7C4429; --ink: #2B2A22;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+body { font-weight: 300; line-height: 1.65; color: var(--ink); }
+p { text-wrap: pretty; }
+strong, b { font-weight: 500; }
+@layer base { h1, h2, h3 { color: var(--olive-deep); text-wrap: balance; } }
+h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--rust-deep); }
+.font-black, .font-extrabold { font-family: 'Fraunces', Georgia, serif; font-weight: 600 !important; letter-spacing: -0.02em; }
+.text-green-100, .text-green-200 { color: #E9E4CC !important; }
+
+/* Typografie */
+.mg-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rust-deep); margin-bottom: 14px; }
+.mg-eyebrow-light { color: var(--moss-soft); }
+.mg-display { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.03em; }
+.mg-display em { color: #E7B08E; }
+.mg-h2 { font-family: 'Fraunces', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--olive-deep); }
+.mg-cta .mg-h2, .mg-pagehead h1, .mg-pagehead h2 { color: var(--vanilla); }
+.mg-cta .mg-h2 em { color: #E7B08E; }
+.mg-lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); line-height: 1.65; font-weight: 300; }
+.mg-body { font-size: 0.98rem; line-height: 1.75; color: #55513F; }
+.mg-textlink { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--olive-deep); text-decoration: none; }
+.mg-textlink span { display: inline-block; color: var(--rust); transition: transform 250ms var(--ease-out); }
+@media (hover: hover) { .mg-textlink:hover span { transform: translateX(4px); } }
+
+/* Knoppen: directe drukfeedback */
+.mg-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; padding: 0 30px; border-radius: 999px; font-family: 'Jost', sans-serif; font-size: 0.74rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: transform 100ms ease-out, background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.mg-btn:active { transform: scale(0.97); }
+.mg-btn-sm { min-height: 40px; padding: 0 20px; font-size: 0.68rem; }
+.mg-btn-rust { background: var(--rust); color: var(--vanilla); box-shadow: 0 1px 2px rgba(124,68,41,0.25), 0 6px 18px rgba(161,92,56,0.22); }
+.mg-btn-olive { background: var(--olive-deep); color: var(--vanilla); }
+.mg-btn-ghost { background: rgba(251,243,222,0.08); color: var(--vanilla); border-color: rgba(251,243,222,0.45); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+@media (hover: hover) {
+  .mg-btn-rust:hover { background: var(--rust-deep); }
+  .mg-btn-olive:hover { background: var(--olive); }
+  .mg-btn-ghost:hover { background: rgba(251,243,222,0.16); border-color: var(--vanilla); }
+}
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+
+/* Bestaande Tailwind-knoppen op andere pagina's dezelfde uitstraling geven */
+a[class~="bg-primary-500"], a[class~="bg-primary-600"], a[class~="bg-primary-700"],
+button[class~="bg-primary-500"], button[class~="bg-primary-600"], button[class~="bg-primary-700"] {
+  background-color: var(--rust) !important; color: var(--vanilla) !important; border-radius: 999px !important;
+  font-size: 0.74rem !important; font-weight: 500 !important; letter-spacing: 0.14em; text-transform: uppercase;
+  transition: transform 100ms ease-out, background-color 200ms ease;
+}
+a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[class~="bg-primary-500"]:active, button[class~="bg-primary-600"]:active, button[class~="bg-primary-700"]:active { transform: scale(0.97); }
+@media (hover: hover) {
+  a[class~="bg-primary-500"]:hover, a[class~="bg-primary-600"]:hover, a[class~="bg-primary-700"]:hover,
+  button[class~="bg-primary-500"]:hover, button[class~="bg-primary-600"]:hover, button[class~="bg-primary-700"]:hover { background-color: var(--rust-deep) !important; }
+}
+.bg-amber-700 { background-color: var(--rust) !important; }
+.text-amber-700 { color: var(--rust-deep) !important; }
+
+/* Navigatie: zwevende glaslaag */
+.mg-nav { position: sticky; top: 0; z-index: 50; background: rgba(251,243,222,0.78); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); transition: box-shadow 250ms ease; }
+.mg-nav.is-scrolled { box-shadow: 0 1px 0 rgba(51,61,36,0.08), 0 8px 24px rgba(43,42,34,0.06); }
+.mg-wordmark { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.28rem; letter-spacing: -0.02em; color: var(--olive-deep); text-decoration: none; white-space: nowrap; }
+.mg-wordmark em { font-style: italic; font-weight: 400; color: var(--rust-deep); }
+.mg-wordmark-light { color: var(--vanilla); font-size: 1.4rem; }
+.mg-wordmark-light em { color: #E7B08E; }
+.mg-navlink { font-size: 0.7rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--olive-deep); opacity: 0.78; text-decoration: none; padding: 6px 0; border-bottom: 1.5px solid transparent; background: none; cursor: pointer; transition: opacity 150ms ease, border-color 200ms ease; }
+@media (hover: hover) { .mg-navlink:hover { opacity: 1; } }
+.mg-navlink.is-current { opacity: 1; border-bottom-color: var(--rust); }
+.mg-dropdown { position: absolute; top: calc(100% + 8px); left: -16px; min-width: 220px; padding: 8px; border-radius: 16px; background: rgba(251,243,222,0.92); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); box-shadow: 0 2px 4px rgba(43,42,34,0.05), 0 16px 40px rgba(43,42,34,0.14); transform-origin: 40px top; opacity: 0; transform: translateY(-4px) scale(0.98); pointer-events: none; transition: opacity 180ms ease, transform 260ms var(--ease-out); }
+.mg-dropdown.is-open { opacity: 1; transform: none; pointer-events: auto; }
+.mg-dropdown-link { display: block; padding: 10px 14px; border-radius: 10px; font-size: 0.9rem; color: var(--ink); text-decoration: none; transition: background-color 150ms ease; }
+@media (hover: hover) { .mg-dropdown-link:hover { background: rgba(77,90,58,0.08); } }
+.mg-iconbtn { width: 44px; height: 44px; display: grid; place-items: center; border: none; background: none; color: var(--olive-deep); border-radius: 999px; }
+.mg-iconbtn:active { transform: scale(0.94); }
+.mg-mobilemenu { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms var(--ease-out); }
+.mg-mobilemenu > div { overflow: hidden; }
+.mg-mobilemenu.is-open { grid-template-rows: 1fr; }
+.mg-mobilelink { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; font-weight: 500; color: var(--olive-deep); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(51,61,36,0.08); }
+.mg-mobilelink.is-current em, .mg-mobilelink.is-current { color: var(--rust-deep); }
+
+/* Hero */
+.mg-hero { min-height: min(86vh, 760px); }
+.mg-hero-video { filter: grayscale(0.35) contrast(1.02); }
+.mg-hero-shade { background: linear-gradient(90deg, rgba(51,61,36,0.94) 0%, rgba(51,61,36,0.8) 45%, rgba(51,61,36,0.45) 100%); }
+
+/* Kaarten: redactioneel, zonder icoontjes */
+.mg-card { display: flex; flex-direction: column; padding: 30px 28px 26px; border-radius: 16px; background: var(--olive-deep); color: var(--vanilla); text-decoration: none; box-shadow: 0 1px 2px rgba(20,24,12,0.08), 0 10px 30px rgba(20,24,12,0.12); transition: transform 400ms var(--ease-out), background-color 250ms ease; -webkit-tap-highlight-color: transparent; }
+.mg-card:active { transform: scale(0.98); }
+@media (hover: hover) { .mg-card:hover { transform: translateY(-4px); background: var(--olive); } .mg-card:hover .mg-card-more span { transform: translateX(4px); } }
+.mg-card-num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--rust); }
+.mg-card-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--vanilla); margin: 10px 0 14px; }
+.mg-card-line { display: block; width: 28px; height: 1px; background: var(--moss-soft); margin-bottom: 14px; }
+.mg-card-text { font-size: 0.9rem; line-height: 1.65; color: rgba(251,243,222,0.82); flex-grow: 1; }
+.mg-card-more { margin-top: 20px; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-soft); }
+.mg-card-more span { display: inline-block; transition: transform 250ms var(--ease-out); }
+
+.mg-photo { border-radius: 16px; overflow: hidden; box-shadow: 0 2px 4px rgba(43,42,34,0.05), 0 12px 32px rgba(43,42,34,0.10); }
+
+/* Stappen */
+.mg-step { border-top: 1px solid rgba(51,61,36,0.16); padding-top: 22px; }
+.mg-step-num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 1rem; color: var(--rust); }
+.mg-step-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; margin: 8px 0 10px; }
+.mg-step-sub { font-size: 0.8rem; color: var(--rust-deep); margin-bottom: 6px; }
+
+/* Veelgestelde vragen */
+.mg-faq { border-top: 1px solid rgba(51,61,36,0.14); }
+.mg-faq:last-child { border-bottom: 1px solid rgba(51,61,36,0.14); }
+.mg-faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Fraunces', Georgia, serif; font-size: 1.12rem; font-weight: 500; color: var(--olive-deep); }
+.mg-faq-plus { font-family: 'Jost', sans-serif; font-weight: 300; font-size: 1.6rem; line-height: 1; color: var(--rust); transition: transform 300ms var(--ease-out); }
+.mg-faq-plus.is-open { transform: rotate(45deg); }
+.mg-faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms var(--ease-out); }
+.mg-faq-a > div { overflow: hidden; }
+.mg-faq-a.is-open { grid-template-rows: 1fr; }
+.mg-faq-a p { padding: 0 40px 22px 0; font-size: 0.96rem; line-height: 1.75; color: #55513F; }
+
+/* Afsluitende oproep, paginakoppen, footer */
+.mg-cta { background: var(--olive-deep); color: var(--vanilla); }
+.mg-pagehead { background: var(--olive-deep); }
+.mg-footer { background: var(--olive-deep); color: var(--vanilla); }
+.mg-footer-h { font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--moss-soft); margin-bottom: 4px; }
+.mg-footer-text { font-size: 0.9rem; line-height: 1.7; color: rgba(251,243,222,0.72); max-width: 32ch; }
+.mg-footer-link { font-size: 0.92rem; color: rgba(251,243,222,0.86); text-decoration: none; transition: color 150ms ease; }
+@media (hover: hover) { .mg-footer-link:hover { color: var(--vanilla); text-decoration: underline; text-underline-offset: 3px; } }
+
+.mg-bullet-ok { background: var(--olive) !important; }
+.mg-bullet { width: 7px; height: 7px; border-radius: 50%; background: var(--rust); margin-top: 0.62em; flex-shrink: 0; }
+.mg-check { width: 54px; height: 54px; border-radius: 50%; background: var(--olive); position: relative; margin: 0 auto 16px; }
+.mg-check::after { content: ""; position: absolute; left: 19px; top: 14px; width: 13px; height: 22px; border-right: 2.5px solid var(--vanilla); border-bottom: 2.5px solid var(--vanilla); transform: rotate(45deg); }
+
+/* Toegankelijkheid */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .mg-btn:active, .mg-card:active, .mg-iconbtn:active { transform: none; }
+  .mg-card:hover { transform: none; }
+  .mg-dropdown, .mg-mobilemenu, .mg-faq-a { transition: none; }
+  .mg-hero-video { display: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .mg-nav, .mg-dropdown { background: var(--vanilla); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}

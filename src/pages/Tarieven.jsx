@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BOOKING_URL } from "../config";
 
 export default function Tarieven() {
   return (
@@ -53,7 +54,7 @@ export default function Tarieven() {
                 ))}
               </ul>
               <a
-                href="https://calendly.com/mijngezinshereniging"
+                href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-xl transition-colors text-sm mb-3"

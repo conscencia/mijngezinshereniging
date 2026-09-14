@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Privacy() {
   return (
     <div className="bg-primary-50 min-h-screen">
-      <div className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <div className="mg-pagehead text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 text-center">
           <h1 className="text-2xl sm:text-3xl font-bold mb-2">Privacy & Juridische Informatie</h1>
           <p className="text-green-100 text-sm">Laatste update: juni 2026</p>

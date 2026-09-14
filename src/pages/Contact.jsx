@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { BOOKING_URL } from "../config";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -68,7 +69,7 @@ export default function Contact() {
                     Boek rechtstreeks een videocall van 30 minuten. Betaling gebeurt bij bevestiging.
                   </p>
                   <a
-                    href="https://calendly.com/mijngezinshereniging"
+                    href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"

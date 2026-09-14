@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Scroller } from "../components/ui/Scroller";
+import { BOOKING_URL } from "../config";
 
 const faqs = [
   {
@@ -21,19 +22,12 @@ const faqs = [
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
-      <button
-        className="w-full text-left px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
-        onClick={() => setOpen(!open)}
-      >
-        <span className="font-semibold text-gray-900 text-sm sm:text-base">{q}</span>
-        <svg className={`w-5 h-5 text-primary-500 flex-shrink-0 ml-3 transition-transform ${open ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+    <div className="mg-faq">
+      <button type="button" className="mg-faq-q" onClick={() => setOpen(!open)} aria-expanded={open}>
+        <span>{q}</span>
+        <span className={`mg-faq-plus ${open ? "is-open" : ""}`} aria-hidden="true">+</span>
       </button>
-      {open && (
-        <div className="px-6 py-4 bg-gray-50 text-gray-600 text-sm leading-relaxed border-t border-gray-100">{a}</div>
-      )}
+      <div className={`mg-faq-a ${open ? "is-open" : ""}`}><div><p>{a}</p></div></div>
     </div>
   );
 }
@@ -43,55 +37,36 @@ export default function Home() {
 
   return (
     <div>
-      {/* HERO — video achtergrond */}
-      <section className="relative text-white overflow-hidden flex items-center" style={{ minHeight: "620px" }}>
-        {/* Achtergrondvideo — sla uw videobestand op als public/hero.mp4 */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
+      {/* HERO */}
+      <section className="relative text-white overflow-hidden flex items-center mg-hero">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover mg-hero-video">
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        {/* Groen overlay voor leesbaarheid */}
-        <div className="absolute inset-0 bg-primary-900/65" />
-
-        {/* Content */}
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
+        <div className="absolute inset-0 mg-hero-shade" />
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 py-24 sm:py-32">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1.5 text-sm font-medium mb-6">
-              <span className="w-2 h-2 bg-green-300 rounded-full"></span>
-              Juridisch advies · Actief in heel Vlaanderen
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Samen zijn met{" "}
-              <span className="text-green-300">uw dierbaren?</span>
+            <p className="mg-eyebrow mg-eyebrow-light">Gezinshereniging in België</p>
+            <h1 className="mg-display text-white">
+              Samen zijn met <em>uw dierbaren</em>
             </h1>
-            <p className="text-lg text-green-100 leading-relaxed mb-8">
-              Uw kinderen of ouders naar België halen, trouwen met iemand uit het buitenland of een verblijfsvergunning regelen: wij begeleiden u van A tot Z.
+            <p className="mg-lead text-primary-50 mt-6 max-w-xl">
+              Uw partner, kinderen of ouders naar België laten overkomen. Wij leggen u uit wat er nodig is en begeleiden u stap voor stap.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 mb-6">
-              <Link to="/contact" className="border-2 border-white/40 hover:border-white text-white font-semibold px-7 py-3.5 rounded-xl text-center transition-colors text-base">
-                Vraag hier meer advies
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-3 mt-10">
+              <Link to="/tool" className="mg-btn mg-btn-rust">Doe de situatiecheck</Link>
+              <Link to="/contact" className="mg-btn mg-btn-ghost">Stel uw vraag</Link>
             </div>
-            <p className="text-sm text-green-200">
-              Eerst zelf nagaan of u in aanmerking komt voor gezinshereniging?{" "}
-              <Link to="/tool" className="underline underline-offset-2 hover:text-white transition-colors font-semibold">Doe hier onze check</Link>
-              {" "}Binnen twee minuten een antwoord.
-            </p>
+            <p className="text-sm text-primary-100/80 mt-6">Binnen twee minuten een eerste antwoord.</p>
           </div>
         </div>
       </section>
 
-
       {/* DIENSTEN */}
-      <section className="py-14 bg-primary-100/40">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Waarmee kunnen wij u helpen?</h2>
+      <section className="py-24 bg-primary-50">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="mb-12">
+            <p className="mg-eyebrow">Onze hulp</p>
+            <h2 className="mg-h2">Waarmee kunnen wij u <em>helpen</em>?</h2>
           </div>
           <Scroller overflow="x" width="100%" withButtons>
             <div className="flex gap-5 pb-2">
@@ -145,14 +120,13 @@ export default function Home() {
                   cta: "Neem contact op",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></>,
                 },
-              ].map((d) => (
-                <Link key={d.title} to={d.link} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-primary-200 transition-all group flex-shrink-0 w-72">
-                  <div className="w-11 h-11 bg-primary-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary-100 transition-colors">
-                    <svg className="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">{d.svg}</svg>
-                  </div>
-                  <h3 className="font-bold text-gray-900 text-sm mb-2">{d.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">{d.desc}</p>
-                  <span className="text-xs font-semibold text-primary-600 group-hover:text-primary-700 transition-colors">{d.cta} →</span>
+              ].map((d, i) => (
+                <Link key={d.title} to={d.link} className="mg-card flex-shrink-0 w-72">
+                  <span className="mg-card-num">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mg-card-title">{d.title}</h3>
+                  <span className="mg-card-line" />
+                  <p className="mg-card-text">{d.desc}</p>
+                  <span className="mg-card-more">{d.cta} <span aria-hidden="true">&rarr;</span></span>
                 </Link>
               ))}
             </div>
@@ -161,12 +135,12 @@ export default function Home() {
       </section>
 
       {/* TOOL TEASER */}
-      <section className="py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
 
             {/* Foto links */}
-            <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-md flex-shrink-0" style={{ maxHeight: "480px" }}>
+            <div className="w-full lg:w-1/2 mg-photo flex-shrink-0" style={{ maxHeight: "480px" }}>
               <img
                 src="/gezin.jpg"
                 alt="Gezin"
@@ -177,18 +151,13 @@ export default function Home() {
 
             {/* Tool rechts */}
             <div className="w-full lg:w-1/2">
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Bent u een Belg of EU-burger?</h2>
-              <p className="text-gray-500 text-base leading-relaxed mb-8 text-justify">
+              <p className="mg-eyebrow">Situatiecheck</p>
+              <h2 className="mg-h2">Komt u in aanmerking voor <em>gezinshereniging</em>?</h2>
+              <p className="mg-body mt-5 mb-9 text-justify">
                 Doe hier de check of u in aanmerking komt voor gezinshereniging. Binnen enkele minuten een eerste beeld van uw situatie.
               </p>
-              <button
-                onClick={() => navigate("/tool")}
-                className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-4 rounded-xl transition-colors text-base group"
-              >
-                Doe de check
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+              <button type="button" onClick={() => navigate("/tool")} className="mg-btn mg-btn-olive">
+                Doe de check <span aria-hidden="true">&rarr;</span>
               </button>
             </div>
           </div>
@@ -196,13 +165,13 @@ export default function Home() {
       </section>
 
       {/* HOE WERKT HET */}
-      <section className="py-14 bg-primary-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Wat wij voor u doen</h2>
-            <p className="text-gray-500 text-base">Van eerste vraag tot ingediend dossier</p>
+      <section className="py-24 bg-primary-50">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="mb-14">
+            <p className="mg-eyebrow">Van eerste vraag tot ingediend dossier</p>
+            <h2 className="mg-h2">Wat wij voor u <em>doen</em></h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
             {[
               {
                 title: "Algemeen gesprek",
@@ -221,56 +190,48 @@ export default function Home() {
                 title: "Behoefteanalyse en beroep",
                 desc: "Te weinig inkomen? Wij stellen een behoefteanalyse op. Werd u geweigerd? Wij tekenen hoger beroep aan.",
               },
-            ].map((s) => (
-              <div key={s.title} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                <div className="w-8 h-1 bg-primary-500 rounded-full mb-4"></div>
-                <h3 className="font-bold text-gray-900 mb-1 text-base">{s.title}</h3>
-                {s.sub && <p className="text-primary-600 text-xs font-medium mb-2">{s.sub}</p>}
-                <p className="text-gray-500 text-sm leading-relaxed text-justify">{s.desc}</p>
+            ].map((s, i) => (
+              <div key={s.title} className="mg-step">
+                <span className="mg-step-num">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mg-step-title">{s.title}</h3>
+                {s.sub && <p className="mg-step-sub">{s.sub}</p>}
+                <p className="mg-body">{s.desc}</p>
               </div>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link to="/tarieven" className="bg-primary-600 hover:bg-primary-700 text-white font-bold px-8 py-3.5 rounded-xl transition-colors inline-block">
-              Bekijk onze tarieven
-            </Link>
+          <div className="mt-14">
+            <Link to="/tarieven" className="mg-btn mg-btn-olive">Bekijk onze tarieven</Link>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-14 bg-primary-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Veelgestelde vragen</h2>
+      <section className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="mb-10">
+            <p className="mg-eyebrow">Goed om te weten</p>
+            <h2 className="mg-h2">Veelgestelde <em>vragen</em></h2>
           </div>
-          <div className="space-y-3">
+          <div>
             {faqs.map((faq) => <FaqItem key={faq.q} {...faq} />)}
           </div>
-          <div className="text-center mt-6">
-            <Link to="/informatie#faq" className="text-primary-600 font-semibold hover:text-primary-700 text-sm">
-              Alle vragen bekijken →
-            </Link>
+          <div className="mt-8">
+            <Link to="/informatie#faq" className="mg-textlink">Alle vragen bekijken <span aria-hidden="true">&rarr;</span></Link>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-14 bg-primary-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Wenst u een persoonlijk advies?
-          </h2>
-          <p className="text-green-100 text-base mb-8 leading-relaxed">
-            Neem contact op met een vraag of boek direct uw intakegesprek van 30 minuten.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-white text-primary-700 hover:bg-gray-50 font-bold px-8 py-3.5 rounded-xl transition-colors">
-              Neem contact op
-            </Link>
-            <a href="https://calendly.com/mijngezinshereniging" target="_blank" rel="noopener noreferrer" className="border-2 border-white/50 hover:border-white text-white font-semibold px-8 py-3.5 rounded-xl transition-colors">
-              Intakegesprek inboeken
-            </a>
+      <section className="py-24 mg-cta">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+          <div className="max-w-2xl">
+            <p className="mg-eyebrow mg-eyebrow-light">Persoonlijk advies</p>
+            <h2 className="mg-h2 text-white">Klaar om uw situatie te <em>bespreken</em>?</h2>
+            <p className="mg-lead text-primary-100 mt-5">Stel eerst uw vraag, of plan meteen een gesprek van 30 minuten.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-btn mg-btn-rust">Plan een gesprek</a>
+            <Link to="/contact" className="mg-btn mg-btn-ghost">Stel uw vraag</Link>
           </div>
         </div>
       </section>

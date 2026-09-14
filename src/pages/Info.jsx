@@ -128,7 +128,7 @@ export default function Info() {
   return (
     <div className="bg-primary-50 min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <div className="mg-pagehead text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-center">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
             Alles wat u moet weten over gezinshereniging in België
@@ -191,7 +191,7 @@ export default function Info() {
                   { ok: null, text: "Ziekteverzekering voor het gezinslid", warn: true },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.warn ? "bg-yellow-50" : "bg-green-50"}`}>
-                    <span className="text-lg flex-shrink-0">{item.warn ? "⚠️" : "✅"}</span>
+                    <span className={`mg-bullet ${item.warn ? "" : "mg-bullet-ok"}`} aria-hidden="true"></span>
                     <span className="text-gray-700 text-sm">{item.text}</span>
                   </div>
                 ))}
@@ -208,7 +208,7 @@ export default function Info() {
                   { icon: "⚠️", text: "Als de andere ouder gezag heeft, kan dit complicaties geven" },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "✅" ? "bg-green-50" : "bg-yellow-50"}`}>
-                    <span className="text-lg flex-shrink-0">{item.icon}</span>
+                    <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
                     <span className="text-gray-700 text-sm">{item.text}</span>
                   </div>
                 ))}
@@ -224,7 +224,7 @@ export default function Info() {
                   { icon: "⚠️", text: "U moet bewijzen dat u de enige persoon bent die voor de ouder kan zorgen" },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "❌" ? "bg-red-50" : "bg-yellow-50"}`}>
-                    <span className="text-lg flex-shrink-0">{item.icon}</span>
+                    <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
                     <span className="text-gray-700 text-sm">{item.text}</span>
                   </div>
                 ))}

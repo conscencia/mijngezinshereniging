@@ -22,7 +22,7 @@ export default function Blog() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header */}
-      <div className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <div className="mg-pagehead text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">Alles over gezinshereniging</h1>
           <p className="text-green-100 text-base max-w-xl mx-auto">

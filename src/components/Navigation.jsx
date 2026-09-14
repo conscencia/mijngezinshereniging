@@ -1,129 +1,104 @@
-﻿import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+
+const LINKS = [
+  { to: "/tool", label: "Situatiecheck" },
+  { to: "/informatie", label: "Informatie" },
+  { to: "/over-ons", label: "Over ons" },
+  { to: "/tarieven", label: "Tarieven" },
+];
+
+const INFO = [
+  { to: "/informatie#voorwaarden", label: "Voorwaarden" },
+  { to: "/informatie#procedure", label: "Procedure" },
+  { to: "/informatie#inkomenseis", label: "Inkomenseis" },
+  { to: "/informatie#faq", label: "Veelgestelde vragen" },
+  { to: "/blog", label: "Blog" },
+];
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 4);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => { setMenuOpen(false); setInfoOpen(false); }, [pathname]);
 
   const isActive = (path) => pathname === path;
 
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5">
-            <span className="w-1 h-6 rounded-full bg-primary-500 flex-shrink-0" />
-            <span className="font-black tracking-tight text-xl text-gray-900 leading-none">
-              mijn<span className="text-primary-600">gezins</span>hereniging
-            </span>
+    <nav className={`mg-nav ${scrolled ? "is-scrolled" : ""}`}>
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <div className="flex items-center justify-between h-[72px]">
+          <Link to="/" className="mg-wordmark" aria-label="MijnGezinshereniging.be, naar de startpagina">
+            mijn<em>gezinshereniging</em>
           </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6">
-            <Link
-              to="/"
-              className={`text-sm font-medium transition-colors ${isActive("/") ? "text-primary-600" : "text-gray-600 hover:text-primary-600"}`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/tool"
-              className={`text-sm font-medium transition-colors ${isActive("/tool") ? "text-primary-600" : "text-gray-600 hover:text-primary-600"}`}
-            >
-              Situatiecheck
-            </Link>
-
-            {/* Dropdown Informatie */}
-            <div className="relative" onMouseLeave={() => setInfoOpen(false)}>
-              <button
-                onMouseEnter={() => setInfoOpen(true)}
-                onClick={() => setInfoOpen(!infoOpen)}
-                className={`text-sm font-medium transition-colors flex items-center gap-1 ${isActive("/informatie") ? "text-primary-600" : "text-gray-600 hover:text-primary-600"}`}
-              >
-                Informatie
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {infoOpen && (
-                <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-2">
-                  <Link to="/informatie#voorwaarden" className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600" onClick={() => setInfoOpen(false)}>Voorwaarden</Link>
-                  <Link to="/informatie#procedure" className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600" onClick={() => setInfoOpen(false)}>Procedure</Link>
-                  <Link to="/informatie#inkomenseis" className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600" onClick={() => setInfoOpen(false)}>Inkomenseis</Link>
-                  <Link to="/informatie#faq" className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600" onClick={() => setInfoOpen(false)}>FAQ</Link>
-                  <Link to="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600" onClick={() => setInfoOpen(false)}>Blog</Link>
+          <div className="hidden md:flex items-center gap-8">
+            {LINKS.map((l) =>
+              l.to === "/informatie" ? (
+                <div key={l.to} className="relative" onMouseLeave={() => setInfoOpen(false)}>
+                  <button
+                    type="button"
+                    onMouseEnter={() => setInfoOpen(true)}
+                    onClick={() => setInfoOpen(!infoOpen)}
+                    aria-expanded={infoOpen}
+                    className={`mg-navlink flex items-center gap-1.5 ${isActive("/informatie") ? "is-current" : ""}`}
+                  >
+                    Informatie
+                    <svg className={`w-3 h-3 transition-transform duration-300 ${infoOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div className={`mg-dropdown ${infoOpen ? "is-open" : ""}`}>
+                    {INFO.map((i) => (
+                      <Link key={i.to} to={i.to} className="mg-dropdown-link" onClick={() => setInfoOpen(false)}>{i.label}</Link>
+                    ))}
+                  </div>
                 </div>
-              )}
-            </div>
-
-            <Link
-              to="/over-ons"
-              className={`text-sm font-medium transition-colors ${isActive("/over-ons") ? "text-primary-600" : "text-gray-600 hover:text-primary-600"}`}
-            >
-              Over ons
-            </Link>
-            <Link
-              to="/tarieven"
-              className={`text-sm font-medium transition-colors ${isActive("/tarieven") ? "text-primary-600" : "text-gray-600 hover:text-primary-600"}`}
-            >
-              Tarieven
-            </Link>
-            <Link
-              to="/contact"
-              className="bg-primary-500 hover:bg-primary-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
-            >
-              Contact
-            </Link>
+              ) : (
+                <Link key={l.to} to={l.to} className={`mg-navlink ${isActive(l.to) ? "is-current" : ""}`}>{l.label}</Link>
+              )
+            )}
             <LanguageSwitcher />
+            <Link to="/contact" className="mg-btn mg-btn-rust mg-btn-sm">Contact</Link>
           </div>
 
-          {/* Mobile Hamburger */}
           <button
-            className="md:hidden p-2 text-gray-600"
+            type="button"
+            className="md:hidden mg-iconbtn"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu openen"
+            aria-label={menuOpen ? "Menu sluiten" : "Menu openen"}
+            aria-expanded={menuOpen}
           >
-            {menuOpen ? (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              {menuOpen
+                ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M6 18L18 6M6 6l12 12" />
+                : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M4 8h16M4 16h16" />}
+            </svg>
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden border-t border-gray-100 py-4 space-y-1">
-            <Link to="/" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Home</Link>
-            <Link to="/tool" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Situatiecheck</Link>
-            <Link to="/informatie" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Informatie</Link>
-            <Link to="/blog" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Blog</Link>
-            <Link to="/over-ons" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Over ons</Link>
-            <Link to="/tarieven" className="block px-2 py-2 text-sm font-medium text-gray-700 hover:text-primary-600" onClick={() => setMenuOpen(false)}>Tarieven</Link>
-            <div className="pt-2 flex flex-col gap-2">
-              <Link
-                to="/contact"
-                className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
-                onClick={() => setMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <div className="flex justify-center pt-1">
-                <LanguageSwitcher />
-              </div>
+        <div className={`md:hidden mg-mobilemenu ${menuOpen ? "is-open" : ""}`}>
+          <div className="flex flex-col py-4">
+            {[{ to: "/", label: "Home" }, ...LINKS, { to: "/blog", label: "Blog" }].map((l) => (
+              <Link key={l.to} to={l.to} className={`mg-mobilelink ${isActive(l.to) ? "is-current" : ""}`}>{l.label}</Link>
+            ))}
+            <div className="flex items-center justify-between gap-4 pt-5">
+              <LanguageSwitcher />
+              <Link to="/contact" className="mg-btn mg-btn-rust mg-btn-sm">Contact</Link>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
 }
-
-

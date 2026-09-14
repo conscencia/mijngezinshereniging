@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { BOOKING_URL } from "../config";
 
 const QUESTIONS = {
   nationaliteit: {
@@ -711,7 +712,7 @@ function ContactForm({ result, answers }) {
   if (submitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">✅</div>
+        <div className="mg-check" aria-hidden="true"></div>
         <h3 className="text-xl font-bold text-green-800 mb-2">Dank u! Wij nemen vandaag nog contact op.</h3>
         <p className="text-green-700 text-sm leading-relaxed">
           Uw aanvraag is ontvangen. Een van onze advocaten neemt zo snel mogelijk contact met u op voor een vrijblijvende dossierbeoordeling.
@@ -1087,7 +1088,7 @@ export default function Tool() {
                   <div className="font-bold text-gray-900 mb-1 text-sm">Gesprek inplannen</div>
                   <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€75 excl. btw</strong>. Direct inboeken.</p>
                   <a
-                    href={`mailto:advocaat@mijngezinshereniging.be?subject=Gesprek inplannen gezinshereniging&body=Ik wil graag een videocall van 30 minuten inplannen (€75 excl. btw).%0A%0AMijn situatie:%0A- Nationaliteit: ${answers.nationaliteit || ""}%0A- Gezinslid: ${answers.gezinslid || ""}`}
+                    href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
                     className="block w-full text-center bg-white border-2 border-primary-600 text-primary-700 hover:bg-primary-50 font-semibold py-2.5 rounded-lg transition-colors text-sm"
                   >
                     Gesprek inplannen (€75 excl. btw)
