@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,7 +19,7 @@ body {
 
 @layer base {
   h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
     font-optical-sizing: auto;
     letter-spacing: -0.01em;
   }
@@ -133,15 +133,15 @@ p { text-wrap: pretty; }
 strong, b { font-weight: 500; }
 @layer base { h1, h2, h3 { color: var(--olive-deep); text-wrap: balance; } }
 h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--rust-deep); }
-.font-black, .font-extrabold { font-family: 'Playfair Display', Georgia, serif; font-weight: 600 !important; letter-spacing: -0.02em; }
+.font-black, .font-extrabold { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600 !important; letter-spacing: -0.02em; }
 .text-green-100, .text-green-200 { color: #E9E4CC !important; }
 
 /* Typografie */
 .mg-eyebrow { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rust-deep); margin-bottom: 14px; }
 .mg-eyebrow-light { color: var(--moss-soft); }
-.mg-display { font-family: 'Playfair Display', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.03em; }
+.mg-display { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.03em; }
 .mg-display em { color: #E7B08E; }
-.mg-h2 { font-family: 'Playfair Display', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--olive-deep); }
+.mg-h2 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--olive-deep); }
 .mg-cta .mg-h2, .mg-pagehead h1, .mg-pagehead h2 { color: var(--vanilla); }
 .mg-cta .mg-h2 em { color: #E7B08E; }
 .mg-lead { font-size: clamp(1.05rem, 1.6vw, 1.2rem); line-height: 1.65; font-weight: 300; }
@@ -182,7 +182,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 /* Navigatie: zwevende glaslaag */
 .mg-nav { position: sticky; top: 0; z-index: 50; background: rgba(251,243,222,0.78); -webkit-backdrop-filter: blur(20px) saturate(160%); backdrop-filter: blur(20px) saturate(160%); transition: box-shadow 250ms ease; }
 .mg-nav.is-scrolled { box-shadow: 0 1px 0 rgba(51,61,36,0.08), 0 8px 24px rgba(43,42,34,0.06); }
-.mg-wordmark { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.28rem; letter-spacing: -0.02em; color: var(--olive-deep); text-decoration: none; white-space: nowrap; }
+.mg-wordmark { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.28rem; letter-spacing: -0.02em; color: var(--olive-deep); text-decoration: none; white-space: nowrap; }
 .mg-wordmark em { font-style: italic; font-weight: 400; color: var(--rust-deep); }
 .mg-wordmark-light { color: var(--vanilla); font-size: 1.4rem; }
 .mg-wordmark-light em { color: #E7B08E; }
@@ -199,7 +199,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-mobilemenu > div { overflow: hidden; transition: padding 320ms var(--ease-out); }
 .mg-mobilemenu:not(.is-open) > div { padding-top: 0; padding-bottom: 0; }
 .mg-mobilemenu.is-open { grid-template-rows: 1fr; }
-.mg-mobilelink { font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; font-weight: 500; color: var(--olive-deep); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(51,61,36,0.08); }
+.mg-mobilelink { font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 1.35rem; font-weight: 500; color: var(--olive-deep); text-decoration: none; padding: 10px 0; border-bottom: 1px solid rgba(51,61,36,0.08); }
 .mg-mobilelink.is-current em, .mg-mobilelink.is-current { color: var(--rust-deep); }
 
 /* Hero */
@@ -211,8 +211,8 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-card { display: flex; flex-direction: column; padding: 30px 28px 26px; border-radius: 16px; background: var(--olive-deep); color: var(--vanilla); text-decoration: none; box-shadow: 0 1px 2px rgba(20,24,12,0.08), 0 10px 30px rgba(20,24,12,0.12); transition: transform 400ms var(--ease-out), background-color 250ms ease; -webkit-tap-highlight-color: transparent; }
 .mg-card:active { transform: scale(0.98); }
 @media (hover: hover) { .mg-card:hover { transform: translateY(-4px); background: var(--olive); } .mg-card:hover .mg-card-more span { transform: translateX(4px); } }
-.mg-card-num { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--rust); }
-.mg-card-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--vanilla); margin: 10px 0 14px; min-height: 2.4em; display: flex; align-items: flex-end; }
+.mg-card-num { font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: italic; font-size: 0.95rem; color: var(--rust); }
+.mg-card-title { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--vanilla); margin: 10px 0 14px; min-height: 2.4em; display: flex; align-items: flex-end; }
 .mg-card-line { display: block; width: 28px; height: 1px; background: var(--moss-soft); margin-bottom: 14px; }
 .mg-card-text { font-size: 0.9rem; line-height: 1.65; color: rgba(251,243,222,0.82); flex-grow: 1; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .mg-card-more { margin-top: 20px; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-soft); }
@@ -222,14 +222,14 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 
 /* Stappen */
 .mg-step { border-top: 1px solid rgba(51,61,36,0.16); padding-top: 22px; }
-.mg-step-num { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1rem; color: var(--rust); }
-.mg-step-title { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; margin: 8px 0 10px; }
+.mg-step-num { font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: italic; font-size: 1rem; color: var(--rust); }
+.mg-step-title { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; margin: 8px 0 10px; }
 .mg-step-sub { font-size: 0.8rem; color: var(--rust-deep); margin-bottom: 6px; }
 
 /* Veelgestelde vragen */
 .mg-faq { border-top: 1px solid rgba(51,61,36,0.14); }
 .mg-faq:last-child { border-bottom: 1px solid rgba(51,61,36,0.14); }
-.mg-faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Playfair Display', Georgia, serif; font-size: 1.12rem; font-weight: 500; color: var(--olive-deep); }
+.mg-faq-q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 22px 0; background: none; border: none; text-align: left; cursor: pointer; font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 1.12rem; font-weight: 500; color: var(--olive-deep); }
 .mg-faq-plus { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 300; font-size: 1.6rem; line-height: 1; color: var(--rust); transition: transform 300ms var(--ease-out); }
 .mg-faq-plus.is-open { transform: rotate(45deg); }
 .mg-faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 320ms var(--ease-out); }
@@ -241,16 +241,16 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-justify, .text-justify { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 
 /* Situatiecheck */
-.mg-tool-h1 { font-family: 'Playfair Display', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.55rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; }
+.mg-tool-h1 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.55rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; }
 .mg-tool-h1 em { font-style: italic; font-weight: 400; color: #E7B08E; }
-.mg-q-title { font-family: 'Playfair Display', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.45rem, 2.6vw, 2.1rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--olive-deep); }
-.mg-q-sub { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 1.25rem; line-height: 1.3; color: var(--olive-deep); }
+.mg-q-title { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.45rem, 2.6vw, 2.1rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--olive-deep); }
+.mg-q-sub { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 500; font-size: 1.25rem; line-height: 1.3; color: var(--olive-deep); }
 .mg-progress { height: 2px; background: rgba(51,61,36,0.12); overflow: hidden; }
 .mg-progress span { display: block; height: 100%; background: var(--rust); transition: width 420ms var(--ease-out); }
 .mg-options { border-top: 1px solid rgba(51,61,36,0.14); }
 .mg-option { width: 100%; min-height: 56px; display: grid; grid-template-columns: 1.75rem 1fr auto; align-items: center; gap: 14px; padding: 15px 12px 15px 4px; background: transparent; border: none; border-bottom: 1px solid rgba(51,61,36,0.14); text-align: left; cursor: pointer; color: var(--ink); transition: background-color 180ms ease, transform 100ms ease-out; -webkit-tap-highlight-color: transparent; }
 .mg-option:active { transform: scale(0.99); }
-.mg-option-num { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 1.05rem; color: var(--moss); }
+.mg-option-num { font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: italic; font-size: 1.05rem; color: var(--moss); }
 .mg-option-label { font-size: 1rem; line-height: 1.5; font-weight: 400; }
 .mg-option-dot { width: 18px; height: 18px; border-radius: 999px; border: 1px solid rgba(51,61,36,0.35); box-shadow: inset 0 0 0 3px var(--vanilla); transition: background-color 180ms ease, border-color 180ms ease; }
 .mg-option.is-selected { background: rgba(161,92,56,0.07); }
@@ -359,7 +359,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .bk-card { background: var(--vanilla); border-radius: 22px; padding: 36px 36px 30px; box-shadow: 0 2px 4px rgba(43,42,34,0.05), 0 18px 40px rgba(43,42,34,0.12); animation: resultIn 350ms var(--ease-out) both; }
 @media (max-width: 700px) { .bk-card { padding: 26px 20px 22px; } }
 .bk-center { text-align: left; }
-.bk-title { font-family: 'Playfair Display', Georgia, serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.4rem, 2.4vw, 1.8rem); letter-spacing: -0.015em; line-height: 1.12; color: var(--olive-deep); margin-top: 8px; }
+.bk-title { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.4rem, 2.4vw, 1.8rem); letter-spacing: -0.015em; line-height: 1.12; color: var(--olive-deep); margin-top: 8px; }
 .bk-card .result-kicker { color: var(--rust-deep); opacity: 1; }
 .bk-muted { font-size: 0.9rem; opacity: 0.7; margin-top: 10px; }
 .bk-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
@@ -372,7 +372,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .bk-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; margin-top: 26px; }
 .bk-day { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 0 10px; border-radius: 14px; border: 1px solid rgba(51,61,36,0.12); background: var(--paper); color: var(--olive-deep); cursor: pointer; font-family: 'Poppins', 'Segoe UI', sans-serif; transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 100ms ease-out; -webkit-tap-highlight-color: transparent; }
 .bk-dow { font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
-.bk-num { font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; font-weight: 600; line-height: 1; }
+.bk-num { font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 1.25rem; font-weight: 600; line-height: 1; }
 .bk-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--rust); }
 .bk-dot.is-empty { background: transparent; }
 .bk-day:disabled { background: transparent; border-color: transparent; opacity: 0.35; cursor: default; }
@@ -383,7 +383,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 @media (max-width: 460px) { .bk-days { gap: 4px; } .bk-day { border-radius: 10px; padding: 10px 0 8px; } .bk-num { font-size: 1.05rem; } }
 .bk-times-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(51,61,36,0.1); }
 .bk-times-head .bk-muted { margin-top: 0; font-size: 0.8rem; }
-.bk-sub { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: 1.05rem; color: var(--olive-deep); }
+.bk-sub { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 500; font-size: 1.05rem; color: var(--olive-deep); }
 .bk-sub::first-letter { text-transform: uppercase; }
 .bk-times { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 10px; margin-top: 16px; }
 .bk-time { padding: 13px 0; border-radius: 999px; border: 1px solid rgba(51,61,36,0.2); background: transparent; color: var(--olive-deep); font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 0.95rem; cursor: pointer; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 100ms ease-out; -webkit-tap-highlight-color: transparent; }
@@ -398,7 +398,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .bk-loading { margin-top: 18px; }
 .bk-back { background: none; border: none; cursor: pointer; padding: 0; font-family: 'Poppins', 'Segoe UI', sans-serif; margin-bottom: 22px; }
 .bk-summary { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin: 18px 0 6px; padding: 16px 20px; border-radius: 14px; background: var(--paper); }
-.bk-summary-date { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; color: var(--olive-deep); }
+.bk-summary-date { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; color: var(--olive-deep); }
 .bk-summary-date::first-letter { text-transform: uppercase; }
 .bk-summary-time { color: var(--rust-deep); font-size: 0.95rem; }
 .bk-form { display: flex; flex-direction: column; gap: 18px; margin-top: 18px; }
@@ -413,7 +413,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .bk-split { display: grid; grid-template-columns: 1fr; gap: 26px; margin-top: 22px; }
 @media (min-width: 1200px) { .bk-split { grid-template-columns: 1.15fr 0.85fr; gap: 30px; } .bk-slots { border-left: 1px solid rgba(51,61,36,0.1); padding-left: 28px; } .bk-slots .bk-times-head { margin-top: 0; padding-top: 0; border-top: none; flex-direction: column; align-items: flex-start; gap: 2px; } .bk-slots .bk-times { grid-template-columns: 1fr 1fr; max-height: 340px; overflow-y: auto; padding-right: 4px; } .bk-slots .bk-empty { margin-top: 4px; } }
 .bk-cal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-.bk-month-name { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.1rem; color: var(--olive-deep); }
+.bk-month-name { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--olive-deep); }
 .bk-month-name::first-letter { text-transform: uppercase; }
 .bk-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; transition: opacity 200ms ease; }
 .bk-grid.is-loading { opacity: 0.4; }
@@ -457,7 +457,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-btn-xs { min-height: 36px; padding: 0 14px; font-size: 0.62rem; letter-spacing: 0.12em; }
 .mg-steps-list { list-style: none; counter-reset: stap; padding: 0; margin: 0; border-top: 1px solid rgba(51,61,36,0.14); }
 .mg-steps-list li { counter-increment: stap; position: relative; padding: 16px 0 16px 44px; border-bottom: 1px solid rgba(51,61,36,0.14); font-size: 0.98rem; line-height: 1.65; color: #55513F; }
-.mg-steps-list li::before { content: counter(stap, decimal-leading-zero); position: absolute; left: 0; top: 16px; font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--rust); }
+.mg-steps-list li::before { content: counter(stap, decimal-leading-zero); position: absolute; left: 0; top: 16px; font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: italic; color: var(--rust); }
 .mg-steps-list strong { color: var(--olive-deep); font-weight: 500; }
 
 /* Juridische pagina's */
@@ -466,7 +466,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-legal-nav a.is-current { color: var(--rust-deep); font-weight: 500; }
 @media (hover: hover) { .mg-legal-nav a:hover { color: var(--rust-deep); } }
 .mg-legal > .mg-lead { color: #55513F; text-align: left; }
-.mg-legal h2 { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--olive-deep); margin: 2.6rem 0 0.8rem; }
+.mg-legal h2 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--olive-deep); margin: 2.6rem 0 0.8rem; }
 .mg-legal p, .mg-legal li { font-size: 0.98rem; line-height: 1.75; color: #55513F; }
 .mg-legal p + p { margin-top: 0.8rem; }
 .mg-legal ul { list-style: none; padding: 0; margin: 0.6rem 0 0.8rem; }
@@ -474,25 +474,23 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-legal li::before { content: ""; position: absolute; left: 2px; top: 1.2rem; width: 10px; height: 1px; background: var(--rust); }
 .mg-legal h3 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust-deep); margin: 1.6rem 0 0.4rem; }
 
-/* ── Typografie volgens moodboard: dunne kapitalen (Italiana) + vet cursief (Playfair Display), tekst in Poppins ── */
-:root { --font-thin: 'Italiana', 'Didot', 'Bodoni 72', Georgia, serif; --font-bold: 'Playfair Display', Georgia, serif; }
+
+/* ── Typografie: speels en neutraal, alles in Poppins (zoals het moodboard-visitekaartje) ── */
+h1, h2, h3, h4 { font-style: normal; }
+h1 em, h2 em, h3 em, h4 em { font-style: normal; font-weight: inherit; }
+:root { --font-thin: 'Poppins', 'Segoe UI', sans-serif; --font-bold: 'Poppins', 'Segoe UI', sans-serif; }
 body { font-weight: 300; }
-.mg-display, .mg-h2, .mg-tool-h1 {
-  font-family: var(--font-thin); font-weight: 400; text-transform: uppercase; letter-spacing: 0.02em; font-optical-sizing: auto;
+.mg-display, .mg-h2, .mg-tool-h1 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 700; text-transform: none; letter-spacing: -0.035em; }
+.mg-display { font-size: clamp(2.4rem, 5.6vw, 4.3rem); line-height: 1.02; }
+.mg-h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.08; }
+.mg-tool-h1 { font-size: clamp(1.5rem, 3.2vw, 2.3rem); line-height: 1.1; }
+.mg-display em, .mg-h2 em, .mg-tool-h1 em { font-style: normal; font-weight: 700; }
+.mg-wordmark { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 400; font-size: 1.22rem; letter-spacing: -0.03em; text-transform: none; line-height: 1; }
+.mg-wordmark em { font-style: normal; font-weight: 700; color: var(--rust-deep); letter-spacing: -0.03em; }
+.mg-wordmark-light em { color: #E7B08E; }
+.mg-card-title, .mg-step-title, .mg-q-title, .mg-q-sub, .mg-legal h2, .bk-title, .bk-month-name, .bk-summary-date, .mg-faq-q, .mg-mobilelink, .bk-num, .bk-sub {
+  font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; letter-spacing: -0.02em;
 }
-.mg-display { line-height: 1.02; }
-.mg-h2 { line-height: 1.08; }
-.mg-tool-h1 { line-height: 1.08; }
-.mg-display em, .mg-h2 em, .mg-tool-h1 em {
-  font-family: var(--font-bold); font-style: italic; font-weight: 900; letter-spacing: 0; text-transform: uppercase;
-}
-.mg-wordmark { font-family: var(--font-thin); font-weight: 400; text-transform: uppercase; letter-spacing: 0.06em; font-size: 1.5rem; line-height: 1; }
-.mg-wordmark em { font-size: 0.86em; }
-.mg-wordmark em { font-family: var(--font-bold); font-style: italic; font-weight: 800; text-transform: none; letter-spacing: -0.01em; margin-left: 0.12em; }
-.mg-card-title, .mg-step-title, .mg-q-title, .mg-q-sub, .mg-legal h2, .bk-title, .bk-month-name, .bk-summary-date, .mg-faq-q, .mg-mobilelink {
-  font-family: var(--font-bold); font-weight: 700; letter-spacing: -0.01em;
-}
-.mg-card-num, .mg-step-num, .mg-option-num, .mg-steps-list li::before { font-family: var(--font-bold); font-weight: 600; }
-.mg-eyebrow, .mg-label, .mg-answers-q, .mg-status, .mg-textlink, .mg-btn, .mg-navlink { font-family: 'Poppins', 'Segoe UI', sans-serif; }
+.mg-card-num, .mg-step-num, .mg-option-num, .mg-steps-list li::before { font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: normal; font-weight: 600; }
 .mg-eyebrow { font-weight: 500; letter-spacing: 0.26em; }
 .mg-btn { font-weight: 600; letter-spacing: 0.14em; }
