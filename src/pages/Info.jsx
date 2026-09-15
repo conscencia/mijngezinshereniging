@@ -199,10 +199,10 @@ export default function Info() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Kinderen</h3>
               <ul className="mg-points">
                 {[
-                  { icon: "✅", text: "Minderjarige kinderen: geen inkomenseis als enkel kinderen overkomen, geen retributie" },
-                  { icon: "✅", text: "Kinderen van 18 jaar of ouder: mogelijk als ze in het herkomstland ten laste zijn van u (bij een EU-burger vanaf 21 jaar)" },
-                  { icon: "⚠️", text: "U heeft het ouderlijk gezag nodig. Bij gedeeld gezag: schriftelijke toestemming van de andere ouder" },
-                  { icon: "⚠️", text: "Bewijs van huisvesting en ziekteverzekering" },
+                  { text: "Minderjarige kinderen: geen inkomenseis als enkel kinderen overkomen, geen retributie" },
+                  { text: "Kinderen van 18 jaar of ouder: mogelijk als ze in het herkomstland ten laste zijn van u (bij een EU-burger vanaf 21 jaar)" },
+                  { text: "U heeft het ouderlijk gezag nodig. Bij gedeeld gezag: schriftelijke toestemming van de andere ouder" },
+                  { text: "Bewijs van huisvesting en ziekteverzekering" },
                 ].map((item, i) => (
                   <li key={i}>{item.text}</li>
                 ))}
@@ -213,10 +213,10 @@ export default function Info() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">3. (Groot)ouders</h3>
               <ul className="mg-points">
                 {[
-                  { icon: "❌", text: "Meerderjarige Belg: geen recht op gezinshereniging met (groot)ouders" },
-                  { icon: "✅", text: "Vader of moeder van een minderjarig Belgisch kind: wel mogelijk" },
-                  { icon: "⚠️", text: "EU-burger die werkt in België: (groot)ouder die ten laste is, kan in aanmerking komen" },
-                  { icon: "⚠️", text: "In andere gevallen soms een humanitair visum, zonder automatisch recht" },
+                  { text: "Meerderjarige Belg: geen recht op gezinshereniging met (groot)ouders" },
+                  { text: "Vader of moeder van een minderjarig Belgisch kind: wel mogelijk" },
+                  { text: "EU-burger die werkt in België: (groot)ouder die ten laste is, kan in aanmerking komen" },
+                  { text: "In andere gevallen soms een humanitair visum, zonder automatisch recht" },
                 ].map((item, i) => (
                   <li key={i}>{item.text}</li>
                 ))}
