@@ -192,6 +192,10 @@ export const legal = {
       [
        "p",
        "De juridische dienstverlening via MijnGezinshereniging.be wordt verleend door een advocaat die ingeschreven is bij een Nederlandstalige balie in België en lid is van de Orde van Vlaamse Balies. Vóór u een opdracht geeft, ontvangt u schriftelijk de volledige identificatiegegevens van de advocaat, zoals naam, kantooradres, ondernemingsnummer en balie."
+      ],
+      [
+       "p",
+       "De advocaat draagt de Belgische beroepstitel van advocaat en is onderworpen aan de deontologische regels van de Orde van Vlaamse Balies, die u kunt raadplegen op www.advocaat.be, en aan de regels van de balie waarbij de advocaat is ingeschreven."
       ]
      ]
     ],
@@ -200,16 +204,20 @@ export const legal = {
      [
       [
        "p",
-       "Deze voorwaarden zijn van toepassing op elke afspraak, elk advies en elke opdracht. Andere voorwaarden gelden alleen als wij die uitdrukkelijk en schriftelijk aanvaarden. Is een bepaling ongeldig, dan blijven de andere bepalingen gewoon gelden."
+       "Deze algemene voorwaarden gelden voor elke afspraak, elk advies en elke opdracht van de advocaat achter MijnGezinshereniging.be, tenzij schriftelijk anders is afgesproken. Is een bepaling ongeldig, dan blijven de andere bepalingen gewoon gelden."
+      ],
+      [
+       "p",
+       "De situatiecheck en de artikels op deze website geven algemene informatie. Ze zijn geen juridisch advies en vervangen geen persoonlijk gesprek. Door de website te gebruiken, de situatiecheck in te vullen of een bericht te sturen, ontstaat er nog geen opdracht aan een advocaat."
       ]
      ]
     ],
     [
-     "3. Website en eerste contact",
+     "3. Totstandkoming van de overeenkomst",
      [
       [
        "p",
-       "De situatiecheck en de artikels op deze website geven algemene informatie. Ze zijn geen juridisch advies en vervangen geen persoonlijk gesprek. Door de website te gebruiken, de situatiecheck in te vullen of een bericht te sturen, ontstaat er nog geen opdracht aan een advocaat."
+       "Voor een eerste gesprek komt de overeenkomst tot stand zodra u de afspraak bevestigt. Voor de verdere begeleiding komt de overeenkomst tot stand wanneer u het voorstel met de afgesproken prijs schriftelijk aanvaardt, bijvoorbeeld per e-mail."
       ],
       [
        "p",
@@ -218,86 +226,102 @@ export const legal = {
      ]
     ],
     [
-     "4. Wanneer komt de overeenkomst tot stand?",
+     "4. Ereloon en kosten",
      [
       [
        "p",
-       "Voor een eerste gesprek komt de overeenkomst tot stand zodra u de afspraak bevestigt. Voor de verdere begeleiding komt de overeenkomst tot stand wanneer u het voorstel met de afgesproken prijs schriftelijk aanvaardt, bijvoorbeeld per e-mail."
-      ]
-     ]
-    ],
-    [
-     "5. Herroepingsrecht voor consumenten",
-     [
-      [
-       "p",
-       "Sluit u als consument een overeenkomst op afstand, bijvoorbeeld via de online agenda of per e-mail, dan heeft u 14 dagen om de overeenkomst zonder opgave van reden te herroepen. U doet dat met een duidelijke verklaring per e-mail."
+       "Het standaard ereloon bedraagt 125 euro per uur exclusief btw, waarbij 21% btw wordt toegevoegd zoals wettelijk bepaald. Het uurtarief kan worden aangepast op basis van specifieke factoren zoals de spoedeisendheid of de complexiteit van de zaak. Een aanpassing wordt altijd vooraf schriftelijk met u afgesproken."
       ],
-      [
-       "p",
-       "Vraagt u uitdrukkelijk om de dienstverlening al binnen die termijn te laten starten, bijvoorbeeld een gesprek binnen 14 dagen, dan betaalt u bij herroeping een bedrag in verhouding tot wat al gepresteerd is. Is de dienst volledig uitgevoerd met uw uitdrukkelijke toestemming, dan vervalt het herroepingsrecht."
-      ]
-     ]
-    ],
-    [
-     "6. Wat mag u van ons verwachten?",
-     [
-      [
-       "p",
-       "De advocaat verbindt zich ertoe uw belangen zo goed mogelijk te behartigen. Dat is een inspanningsverbintenis: een bepaald resultaat, zoals een goedkeuring door de Dienst Vreemdelingenzaken, kan niet gegarandeerd worden. De beslissing ligt altijd bij de bevoegde overheid of rechter."
-      ],
-      [
-       "p",
-       "Wij houden u op de hoogte van het verloop van uw dossier. De aanvraag zelf dient u in principe persoonlijk in bij de gemeente, de ambassade of de bevoegde dienst; wij bereiden die samen met u voor."
-      ]
-     ]
-    ],
-    [
-     "7. Wat verwachten wij van u?",
-     [
-      [
-       "p",
-       "U bezorgt ons tijdig juiste en volledige informatie en alle stukken die voor uw dossier van belang zijn. Ontvangt u een beslissing, een brief of een oproeping, stuur die dan meteen door, want vaak lopen er korte termijnen. Documenten bezorgt u per e-mail via advocaat@mijngezinshereniging.be."
-      ],
-      [
-       "p",
-       "Wij zijn niet aansprakelijk voor gevolgen van onjuiste, onvolledige of laattijdig bezorgde informatie."
-      ]
-     ]
-    ],
-    [
-     "8. Tarieven en kosten",
-     [
       [
        "ul",
        [
         "Een eerste videogesprek van 30 minuten kost 75 euro exclusief btw (90,75 euro inclusief 21% btw).",
-        "Voor de begeleiding van uw dossier spreken we zoveel mogelijk vooraf een vaste prijs af. Die prijs wordt schriftelijk bevestigd voor we beginnen.",
-        "Is een vaste prijs niet mogelijk, dan werken we met een uurtarief van 125 euro exclusief btw."
+        "Voor de begeleiding van uw dossier spreken we zoveel mogelijk vooraf een vaste prijs af. Die prijs wordt schriftelijk bevestigd voor we beginnen."
        ]
       ],
       [
        "p",
-       "Het uurtarief kan hoger liggen als een zaak bijzonder dringend of complex is, of als ze buiten de gewone werkuren behandeld moet worden. Dat wordt altijd vooraf met u besproken."
+       "Werken wij met een uurtarief, dan krijgt u bij de start een raming van het verwachte aantal uren en de kosten. Tijdens de behandeling ontvangt u op regelmatige tijdstippen een tussentijdse staat met de gepresteerde uren, zodat u altijd weet waar u staat."
       ],
       [
        "p",
-       "Er wordt geen afzonderlijke dossierkost aangerekend. Naast het ereloon worden wel de volgende uitgaven apart aangerekend:"
+       "Naast het ereloon worden kosten en uitgaven apart in rekening gebracht. Er wordt geen forfaitaire dossierkost aangerekend. Wel worden aangerekend: reiskosten aan 0,50 euro per kilometer (niet voor videogesprekken), en overige uitgaven zoals koeriers, aangetekende zendingen, vertalingen, retributies, rolrechten en expertises, tegen kostprijs."
+      ]
+     ]
+    ],
+    [
+     "5. Voorschotten en eindafrekening",
+     [
+      [
+       "p",
+       "Bij het begin van een zaak en tijdens de behandeling kunnen voorschotten (provisies) worden gevraagd. De hoogte van het voorschot wordt vastgesteld op basis van de verwachte werkzaamheden en kosten. Dit zijn vooruitbetalingen op de uiteindelijke kosten en erelonen. Bij de afronding van de zaak worden deze voorschotten verrekend met het eindsaldo."
+      ],
+      [
+       "p",
+       "Bij afsluiting van uw dossier ontvangt u een gedetailleerde en transparante kostenstaat."
+      ]
+     ]
+    ],
+    [
+     "6. Betaling",
+     [
+      [
+       "p",
+       "Onze facturen zijn betaalbaar binnen 14 dagen op de bankrekening vermeld op de factuur. Bent u het niet eens met een factuur, laat het ons dan binnen 14 dagen na ontvangst schriftelijk en gemotiveerd weten."
+      ],
+      [
+       "h",
+       "Ten aanzien van consumenten"
+      ],
+      [
+       "p",
+       "In geval van wanbetaling van het geheel of een gedeelte van de facturen en/of ereloonnota's zijn de bepalingen van boek XIX van het Wetboek van economisch recht van toepassing. De advocaat stuurt de cliënt dan eerst een kosteloze herinnering om het verschuldigde bedrag te voldoen binnen 14 kalenderdagen. Op eenvoudig verzoek bezorgt de advocaat u alle bewijsstukken van de schuld en de informatie over hoe u die kunt betwisten."
+      ],
+      [
+       "p",
+       "Bij gebreke van tijdige betaling binnen deze wachttermijn is een nalatigheidsinterest verschuldigd, berekend tegen de referentie-interestvoet vermeerderd met acht procentpunten zoals vermeld in artikel 5, tweede lid, van de wet van 2 augustus 2002 betreffende de bestrijding van de betalingsachterstand bij handelstransacties, op de nog te betalen som en te rekenen vanaf de kalenderdag die volgt op de dag waarop de herinnering werd verzonden."
+      ],
+      [
+       "p",
+       "Bij gebreke van tijdige betaling is tevens een forfaitaire schadevergoeding verschuldigd op de openstaande hoofdsom van:"
       ],
       [
        "ul",
        [
-        "verplaatsingen, bijvoorbeeld naar een zitting: 0,50 euro per kilometer (niet voor videogesprekken);",
-        "kosten van derden, zoals retributies, legalisaties, vertalingen, DNA-onderzoek, rolrechten, gerechtsdeurwaarders, aangetekende zendingen en koeriers: tegen kostprijs."
+        "20 euro als het verschuldigde saldo lager dan of gelijk aan 150 euro is;",
+        "30 euro vermeerderd met 10% van het verschuldigde bedrag op de schijf tussen 150,01 en 500 euro, als het verschuldigde saldo tussen 150,01 en 500 euro ligt;",
+        "65 euro vermeerderd met 5% van het verschuldigde bedrag op de schijf boven 500 euro, met een maximum van 2.000 euro, als het verschuldigde saldo hoger is dan 500 euro."
        ]
       ],
       [
-       "p",
-       "Bij de start en tijdens de behandeling van uw dossier kunnen wij een voorschot (provisie) vragen. Het bedrag hangt af van het verwachte werk en de verwachte kosten. Voorschotten worden verrekend in de eindafrekening."
+       "h",
+       "Ten aanzien van professionelen en ondernemingen"
       ],
       [
        "p",
-       "Bij het afsluiten van uw dossier ontvangt u een gedetailleerde en duidelijke eindafrekening van het ereloon, de kosten en de betaalde voorschotten."
+       "Bij gebreke van tijdige betaling is van rechtswege en zonder ingebrekestelling een nalatigheidsinterest van 10% per jaar verschuldigd vanaf de vervaldag, evenals een forfaitaire schadevergoeding van 10% van de hoofdsom met een minimum van 65 euro."
+      ]
+     ]
+    ],
+    [
+     "7. Betalingsachterstand",
+     [
+      [
+       "p",
+       "Elke betalingsachterstand geeft de advocaat het recht om de lopende dossierbehandelingen te schorsen tot de betalingsachterstand is ingehaald. De advocaat verwittigt u daarvan vooraf en zorgt ervoor dat uw belangen, zoals lopende termijnen, niet in gevaar komen. Het niet betalen van één factuur op de vervaldag maakt automatisch alle openstaande facturen opeisbaar, ongeacht hun vervaldag."
+      ]
+     ]
+    ],
+    [
+     "8. Herroepingsrecht voor consumenten",
+     [
+      [
+       "p",
+       "Sluit u als consument een overeenkomst op afstand, bijvoorbeeld via de online agenda of per e-mail, dan heeft u 14 dagen om de overeenkomst zonder opgave van reden te herroepen (artikel VI.47 van het Wetboek van economisch recht). U doet dat met een duidelijke verklaring per e-mail."
+      ],
+      [
+       "p",
+       "Vraagt u uitdrukkelijk om de dienstverlening al binnen die termijn te laten starten, bijvoorbeeld een gesprek binnen 14 dagen, dan betaalt u bij herroeping een bedrag in verhouding tot wat al gepresteerd is. Is de dienst met uw uitdrukkelijke toestemming volledig uitgevoerd, dan vervalt het herroepingsrecht."
       ]
      ]
     ],
@@ -311,105 +335,134 @@ export const legal = {
      ]
     ],
     [
-     "10. Betaling",
+     "10. Wat mag u van ons verwachten?",
      [
       [
        "p",
-       "Facturen zijn betaalbaar binnen 14 dagen na de factuurdatum, op de rekening die op de factuur vermeld staat. Heeft u een opmerking over een factuur, laat het ons dan binnen 14 dagen schriftelijk en gemotiveerd weten."
+       "De advocaat verbindt zich ertoe uw belangen zo goed mogelijk te behartigen. Dat is een inspanningsverbintenis: een bepaald resultaat, zoals een goedkeuring door de Dienst Vreemdelingenzaken, kan niet gegarandeerd worden. De beslissing ligt altijd bij de bevoegde overheid of rechter."
       ],
       [
        "p",
-       "Bent u consument en betaalt u een factuur geheel of gedeeltelijk niet op tijd, dan zijn de regels van boek XIX van het Wetboek van economisch recht van toepassing. U ontvangt eerst een kosteloze herinnering met een termijn van 14 kalenderdagen om te betalen. Betaalt u niet binnen die termijn, dan zijn verschuldigd:"
-      ],
-      [
-       "ul",
-       [
-        "een nalatigheidsinterest op het openstaande bedrag, berekend tegen de referentie-interestvoet vermeerderd met acht procentpunten (artikel 5, tweede lid, van de wet van 2 augustus 2002 betreffende de bestrijding van de betalingsachterstand bij handelstransacties), vanaf de dag na het verstrijken van de termijn in de herinnering;",
-        "een forfaitaire schadevergoeding van 20 euro als het openstaande bedrag 150 euro of minder is; 30 euro vermeerderd met 10% van het bedrag tussen 150,01 en 500 euro als het openstaande bedrag tussen 150,01 en 500 euro ligt; of 65 euro vermeerderd met 5% van het bedrag boven 500 euro, met een maximum van 2.000 euro, als het openstaande bedrag hoger is dan 500 euro."
-       ]
-      ],
-      [
-       "p",
-       "Bent u een onderneming of handelt u beroepsmatig, dan is bij niet-tijdige betaling van rechtswege en zonder ingebrekestelling een nalatigheidsinterest van 10% per jaar verschuldigd vanaf de vervaldag, en een forfaitaire schadevergoeding van 10% van het openstaande bedrag met een minimum van 65 euro."
-      ],
-      [
-       "p",
-       "Bij een betalingsachterstand mag de advocaat het werk in uw lopende dossiers opschorten tot de achterstand is ingehaald. U wordt daarvan vooraf verwittigd, zodat uw belangen en lopende termijnen niet in gevaar komen. Wordt een factuur niet op de vervaldag betaald, dan worden ook alle andere openstaande facturen onmiddellijk opeisbaar."
+       "Wij houden u op de hoogte van het verloop van uw dossier. De aanvraag zelf dient u in principe persoonlijk in bij de gemeente, de ambassade of de bevoegde dienst; wij bereiden die samen met u voor."
       ]
      ]
     ],
     [
-     "11. Beroepsaansprakelijkheid",
+     "11. Wat verwachten wij van u?",
      [
       [
        "p",
-       "De beroepsaansprakelijkheid van de advocaat is verzekerd via de collectieve polis die de Orde van Vlaamse Balies voor haar leden afsluit. De gegevens van de verzekeraar en de verzekerde bedragen krijgt u op eenvoudig verzoek."
+       "U bezorgt ons tijdig juiste en volledige informatie en alle stukken die voor uw dossier van belang zijn. Ontvangt u een beslissing, een brief of een oproeping, stuur die dan meteen door, want vaak lopen er korte termijnen. Documenten bezorgt u per e-mail via advocaat@mijngezinshereniging.be."
       ],
       [
        "p",
-       "De aansprakelijkheid voor een beroepsfout is beperkt tot het bedrag dat de verzekering in dat geval uitkeert, vermeerderd met de eventuele vrijstelling. Deze beperking geldt niet bij opzet of in de gevallen waarin de wet een beperking niet toelaat."
+       "Wij zijn niet aansprakelijk voor gevolgen van onjuiste, onvolledige of laattijdig bezorgde informatie."
       ]
      ]
     ],
     [
-     "12. Beroepsgeheim en vertrouwelijkheid",
+     "12. Juridische tweedelijnsbijstand en rechtsbijstandsverzekering",
      [
       [
        "p",
-       "Alles wat u ons toevertrouwt, valt onder het beroepsgeheim van de advocaat. E-mail is niet volledig beveiligd; wilt u gevoelige stukken op een andere manier bezorgen, laat het ons dan weten."
-      ]
-     ]
-    ],
-    [
-     "13. Intellectuele eigendom",
-     [
-      [
-       "p",
-       "Adviezen, brieven en andere documenten die wij voor u opstellen, zijn bestemd voor uw eigen gebruik in uw dossier. U mag ze niet verspreiden of voor andere doeleinden gebruiken zonder onze toestemming. De teksten op de website mogen niet zonder toestemming worden overgenomen."
-      ]
-     ]
-    ],
-    [
-     "14. Einde van de opdracht",
-     [
-      [
-       "p",
-       "U en de advocaat kunnen de opdracht op elk moment beëindigen. De advocaat doet dat op een manier die uw belangen niet schaadt, bijvoorbeeld door rekening te houden met lopende termijnen. De prestaties en kosten tot het einde van de opdracht blijven verschuldigd."
-      ]
-     ]
-    ],
-    [
-     "15. Archief",
-     [
-      [
-       "p",
-       "Na het einde van de opdracht wordt uw dossier 5 jaar bewaard. Originele stukken krijgt u op verzoek terug. Daarna mag het dossier vernietigd worden."
-      ]
-     ]
-    ],
-    [
-     "16. Klachten en geschillen",
-     [
-      [
-       "p",
-       "Heeft u een klacht, laat het ons dan eerst weten per e-mail via advocaat@mijngezinshereniging.be. Wij zoeken samen met u naar een oplossing."
+       "Heeft u een beperkt inkomen, dan komt u mogelijk in aanmerking voor juridische tweedelijnsbijstand (pro deo). Uw advocaat wordt dan geheel of gedeeltelijk betaald door de overheid. Meer informatie vindt u bij het Bureau voor Juridische Bijstand van uw balie."
       ],
       [
        "p",
-       "Voor een geschil over het ereloon kunt u een beroep doen op de ereloonbemiddeling of -arbitrage van de balie waarbij de advocaat is ingeschreven. Klachten over de deontologie van de advocaat kunt u richten aan de stafhouder van de balie waarbij de advocaat is ingeschreven."
-      ],
-      [
-       "p",
-       "Op de overeenkomst is het Belgisch recht van toepassing. Geschillen worden voorgelegd aan de rechtbank die volgens de wet bevoegd is."
+       "Heeft u een rechtsbijstandsverzekering, bijvoorbeeld via uw familiale verzekering, ga dan na of die de kosten dekt en meld uw dossier tijdig aan bij uw verzekeraar."
       ]
      ]
     ],
     [
-     "17. Deontologische regels",
+     "13. Bemiddeling en minnelijke oplossing",
      [
       [
        "p",
-       "De advocaat is gebonden aan de deontologische regels van de Orde van Vlaamse Balies (www.advocaat.be) en van de balie waarbij hij of zij is ingeschreven. Die regels kunnen strenger zijn dan deze voorwaarden en gaan dan voor."
+       "Waar dat zinvol is, informeert de advocaat u over bemiddeling, verzoening en andere manieren om een geschil minnelijk op te lossen (artikel 444 van het Gerechtelijk Wetboek)."
+      ]
+     ]
+    ],
+    [
+     "14. Beroepsaansprakelijkheid",
+     [
+      [
+       "p",
+       "De beroepsaansprakelijkheid van de advocaat is verzekerd via de collectieve polis van de Orde van Vlaamse Balies (polis LXX034899 bij Amlin Insurance SE), voor een bedrag van 2.500.000 euro per schadegeval. Een kopie van de polisvoorwaarden krijgt u op eenvoudig verzoek."
+      ],
+      [
+       "p",
+       "Is voor uw zaak een hogere dekking wenselijk, dan kan tegen betaling van een bijkomende premie een aanvullende verzekering worden afgesloten. Zonder aanvullende verzekering is de aansprakelijkheid voor een beroepsfout beperkt tot het bedrag dat de verzekering uitkeert. Deze beperking geldt niet bij opzet of waar de wet een beperking niet toelaat."
+      ]
+     ]
+    ],
+    [
+     "15. Beroepsgeheim en communicatie",
+     [
+      [
+       "p",
+       "Alles wat u ons toevertrouwt, valt onder het beroepsgeheim van de advocaat. Wij communiceren in principe per e-mail. E-mail is niet volledig beveiligd; wilt u gevoelige stukken op een andere manier bezorgen, laat het ons dan weten."
+      ]
+     ]
+    ],
+    [
+     "16. Intellectuele eigendom",
+     [
+      [
+       "p",
+       "Adviezen, brieven en andere documenten die wij voor u opstellen, zijn bestemd voor uw eigen gebruik in uw dossier. U mag ze niet verspreiden of voor andere doeleinden gebruiken zonder onze toestemming."
+      ]
+     ]
+    ],
+    [
+     "17. Einde van de opdracht",
+     [
+      [
+       "p",
+       "U kunt de opdracht op elk moment beëindigen. De advocaat kan de opdracht ook beëindigen, op een manier die uw belangen niet schaadt, bijvoorbeeld door rekening te houden met lopende termijnen. De prestaties en kosten tot het einde van de opdracht blijven verschuldigd. Uw dossierstukken worden op verzoek aan u of uw nieuwe advocaat bezorgd."
+      ]
+     ]
+    ],
+    [
+     "18. Archief",
+     [
+      [
+       "p",
+       "Na het einde van de opdracht wordt uw dossier 5 jaar bewaard. Originele stukken krijgt u in principe terug. Daarna mag het dossier vernietigd worden."
+      ]
+     ]
+    ],
+    [
+     "19. Klachten",
+     [
+      [
+       "p",
+       "Heeft u een klacht over onze dienstverlening of over een factuur, laat het ons dan eerst weten per e-mail via advocaat@mijngezinshereniging.be. Wij zoeken samen met u naar een oplossing."
+      ],
+      [
+       "p",
+       "Bent u consument, dan kunt u ook kosteloos terecht bij de Ombudsdienst Consumentengeschillen Advocatuur, Staatsbladstraat 8, 1000 Brussel, oca@ligeca.be, via het klachtenformulier op oca.ligeca.be."
+      ],
+      [
+       "p",
+       "Klachten over de naleving van de beroepsregels kunt u richten aan de stafhouder van de balie waarbij de advocaat is ingeschreven. Voor een geschil over het ereloon kunt u de stafhouder ook om een niet-bindend taxatieadvies vragen."
+      ]
+     ]
+    ],
+    [
+     "20. Toepasselijk recht en bevoegde rechtbank",
+     [
+      [
+       "p",
+       "De relatie tussen de advocaat en de cliënt wordt beheerst door het Belgisch recht. Enkel de rechtbanken te Gent zijn bevoegd om kennis te nemen van eventuele geschillen, onverminderd de dwingende wettelijke regels die consumenten beschermen."
+      ]
+     ]
+    ],
+    [
+     "21. Wijziging van deze voorwaarden",
+     [
+      [
+       "p",
+       "Wij kunnen deze voorwaarden aanpassen. Voor een lopende opdracht gelden de voorwaarden die u aanvaard heeft, tenzij u met een wijziging instemt."
       ]
      ]
     ]

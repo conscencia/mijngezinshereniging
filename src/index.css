@@ -472,3 +472,4 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-legal ul { list-style: none; padding: 0; margin: 0.6rem 0 0.8rem; }
 .mg-legal li { position: relative; padding: 6px 0 6px 24px; }
 .mg-legal li::before { content: ""; position: absolute; left: 2px; top: 1.2rem; width: 10px; height: 1px; background: var(--rust); }
+.mg-legal h3 { font-family: 'Jost', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust-deep); margin: 1.6rem 0 0.4rem; }

@@ -41,8 +41,8 @@ export default function Legal({ doc }) {
               <section key={title}>
                 <h2>{title}</h2>
                 {blocks.map(([kind, val], i) =>
-                  kind === "p"
-                    ? <p key={i}>{val}</p>
+                  kind === "p" ? <p key={i}>{val}</p>
+                    : kind === "h" ? <h3 key={i}>{val}</h3>
                     : <ul key={i}>{val.map((x) => <li key={x}>{x}</li>)}</ul>
                 )}
               </section>
