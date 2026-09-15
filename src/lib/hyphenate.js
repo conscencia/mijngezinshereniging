@@ -11,7 +11,7 @@ let observer = null;
 let scheduled = false;
 
 function shouldSkip(el) {
-  return !el || el.closest(".notranslate, [translate='no'], input, textarea, select, button, a[href^='mailto:'], a[href^='tel:']");
+  return !el || el.closest(".mg-lead, .mg-display, .notranslate, [translate='no'], input, textarea, select, button, a[href^='mailto:'], a[href^='tel:']");
 }
 
 function processNode(node) {

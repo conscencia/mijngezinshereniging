@@ -442,7 +442,7 @@ function calculateResult(answers) {
         points: [
           { text: "Leefloon en OCMW-uitkering tellen niet mee als bewijs van voldoende inkomen bij DVZ." },
           { text: "Naast inkomen moet u ook aantonen dat uw kind 'ten laste' is: materieel afhankelijk van uw steun in het buitenland." },
-          { text: "Via een behoefteanalyse kunt u uw volledige financiële situatie toelichten. De bewijslast ligt volledig bij u." },
+          { text: "Via een behoefteanalyse kunt u uw volledige financiële situatie toelichten. Lever daarom zelf meteen alle bewijzen aan." },
         ],
         alternatives: [
           {
@@ -584,7 +584,7 @@ function calculateResult(answers) {
       points: [
         { text: "Leefloon en OCMW-uitkering tellen niet mee als bewijs van voldoende inkomen bij DVZ." },
         { text: "DVZ weigert niet automatisch: via een individuele behoefteanalyse (arrest Chakroun) kunt u op andere manieren aantonen dat uw gezin niet ten laste van de overheid valt." },
-        { text: "Bij een behoefteanalyse kijkt DVZ naar uw volledige situatie: inkomsten, vaste uitgaven, toekomstige inkomsten, alimentatie, co-ouderschap, enz. De bewijslast ligt volledig bij u." },
+        { text: "Bij een behoefteanalyse kijkt DVZ naar uw volledige situatie: inkomsten, vaste uitgaven, toekomstige inkomsten, alimentatie, co-ouderschap, enz. Lever daarom zelf meteen alle bewijzen aan." },
         ...(kindVoogdij === "ex" ? [{ text: "Extra aandachtspunt: de voogdijsituatie van uw kind vereist ook aandacht (toestemming andere ouder)." }] : []),
       ],
       alternatives: [
@@ -637,7 +637,7 @@ function calculateResult(answers) {
         { text: "Ligt uw inkomen net onder de grens? Dat is geen automatische weigering. Via een individuele behoefteanalyse kunt u uw volledige situatie toelichten." },
         { text: (gezinslid === "partner" || gezinslid === "partner-niet-gehuwd") ? "Uw leeftijd en relatie lijken in orde te zijn." : "Het type gezinslid is in principe toegestaan." },
         { text: "Er is een retributie van €218 verschuldigd bij het indienen van de aanvraag." },
-        { text: "Bij een behoefteanalyse kijkt DVZ naar al uw inkomsten én uitgaven. De bewijslast ligt volledig bij u als aanvrager." },
+        { text: "Bij een behoefteanalyse kijkt DVZ naar al uw inkomsten én uitgaven. Lever daarom zelf meteen alle bewijzen aan." },
         ...(kindVoogdij === "ex" ? [{ text: "Extra aandachtspunt: de voogdijsituatie van uw kind vereist ook aandacht (toestemming andere ouder)." }] : []),
       ],
       alternatives: [],
