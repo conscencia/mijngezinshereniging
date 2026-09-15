@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           <div className="flex flex-col gap-3">
-            <Link to="/" className="mg-wordmark mg-wordmark-light">mijn<em>gezinshereniging</em></Link>
+            <Link to="/" translate="no" className="mg-wordmark mg-wordmark-light notranslate">mijn<em>gezinshereniging</em></Link>
             <p className="mg-footer-text">Heldere uitleg en persoonlijke begeleiding bij gezinshereniging in België.</p>
           </div>
           <div className="flex flex-col gap-2">
@@ -21,11 +21,11 @@ export default function Footer() {
             <p className="mg-footer-h">Contact</p>
             <Link to="/contact" className="mg-footer-link">Stel uw vraag</Link>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-footer-link">Plan een gesprek</a>
-            <a href="mailto:advocaat@mijngezinshereniging.be" className="mg-footer-link break-all">advocaat@mijngezinshereniging.be</a>
+            <a href="mailto:advocaat@mijngezinshereniging.be" translate="no" className="mg-footer-link break-all notranslate">advocaat@mijngezinshereniging.be</a>
           </div>
         </div>
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-primary-300">
-          <p>© {new Date().getFullYear()} MijnGezinshereniging.be</p>
+          <p>© {new Date().getFullYear()} <span translate="no" className="notranslate">MijnGezinshereniging.be</span></p>
           <div className="flex gap-5">
             <Link to="/privacy" className="mg-footer-link">Privacy</Link>
             <Link to="/privacy#av" className="mg-footer-link">Algemene voorwaarden</Link>

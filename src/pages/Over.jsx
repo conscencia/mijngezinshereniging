@@ -11,7 +11,7 @@ export default function Over() {
           <p className="mg-eyebrow mg-eyebrow-light">Over ons</p>
           <h1 className="mg-display text-white max-w-3xl">Juridische hulp die u <em>begrijpt</em></h1>
           <p className="mg-lead text-primary-100 mt-6 max-w-2xl">
-            MijnGezinshereniging.be maakt juridisch advies over gezinshereniging toegankelijk, in eenvoudige woorden en zonder drempels.
+            <span translate="no" className="notranslate">MijnGezinshereniging.be</span> maakt juridisch advies over gezinshereniging toegankelijk, in eenvoudige woorden en zonder drempels.
           </p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function Over() {
                   De regels voor gezinshereniging in België zijn streng en niet altijd duidelijk. Een document dat ontbreekt, een fout formulier of een inkomen dat net te laag lijkt: vaak is dat genoeg voor een weigering. Veel mensen geven dan op. Niet omdat hun situatie hopeloos is, maar omdat niemand hen de regels goed heeft uitgelegd.
                 </p>
                 <p>
-                  Daarom is er MijnGezinshereniging.be. Wij leggen u in eenvoudige woorden uit wat u nodig heeft en wat u moet doen, stap voor stap. U weet vooraf wat het kost en wat u kunt verwachten. Zo staat uw aanvraag zo sterk mogelijk.
+                  Daarom is er <span translate="no" className="notranslate">MijnGezinshereniging.be</span>. Wij leggen u in eenvoudige woorden uit wat u nodig heeft en wat u moet doen, stap voor stap. U weet vooraf wat het kost en wat u kunt verwachten. Zo staat uw aanvraag zo sterk mogelijk.
                 </p>
                 <p>
                   Waar u ook woont in België: een gesprek kan online. Liever iemand in levenden lijve spreken? Dat kan op kantoor in Oost- en West-Vlaanderen.

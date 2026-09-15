@@ -55,7 +55,7 @@ function renderBlock(block, i) {
         <ul key={i} className="space-y-1 mt-1">
           {block.items.map((item, j) => (
             <li key={j} className="flex items-start gap-2 text-gray-600 text-base">
-              <span className="text-primary-500 mt-1">→</span>
+              <span className="text-primary-500" aria-hidden="true">&mdash;</span>
               <span>{parseInline(item)}</span>
             </li>
           ))}
@@ -73,12 +73,9 @@ function renderBlock(block, i) {
 
     case "list":
       return (
-        <ul key={i} className="space-y-2 mt-1">
+        <ul key={i} className="mg-points mt-1">
           {block.items.map((item, j) => (
-            <li key={j} className="flex items-start gap-3 text-gray-700 text-base">
-              <span className="text-primary-500 font-bold mt-0.5">✓</span>
-              <span>{parseInline(item)}</span>
-            </li>
+            <li key={j}>{parseInline(item)}</li>
           ))}
         </ul>
       );

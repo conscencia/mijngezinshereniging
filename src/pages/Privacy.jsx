@@ -19,7 +19,7 @@ export default function Privacy() {
           <div className="space-y-6 text-gray-600 text-sm leading-relaxed">
             <div>
               <h3 className="text-base font-bold text-gray-900 mb-2">1. Verwerkingsverantwoordelijke</h3>
-              <p>MijnGezinshereniging.be is een website van het advocaatnkantoor gevestigd te Holstraat 89A, 8790 Waregem, België. Contactadres: advocaat@mijngezinshereniging.be.</p>
+              <p><span translate="no" className="notranslate">MijnGezinshereniging.be</span> is een website van het advocatenkantoor gevestigd te <span translate="no" className="notranslate">Holstraat 89A, 8790 Waregem</span>, België. Contactadres: <span translate="no" className="notranslate">advocaat@mijngezinshereniging.be</span>.</p>
             </div>
 
             <div>
@@ -65,7 +65,7 @@ export default function Privacy() {
                 <li>Overdraagbaarheid van gegevens</li>
                 <li>Bezwaar tegen verwerking</li>
               </ul>
-              <p className="mt-2">Verzoeken kunt u richten aan: advocaat@mijngezinshereniging.be</p>
+              <p className="mt-2">Verzoeken kunt u richten aan: <span translate="no" className="notranslate">advocaat@mijngezinshereniging.be</span></p>
             </div>
 
             <div>
@@ -89,7 +89,7 @@ export default function Privacy() {
           <div className="space-y-6 text-gray-600 text-sm leading-relaxed">
             <div>
               <h3 className="text-base font-bold text-gray-900 mb-2">1. Toepassingsgebied</h3>
-              <p>Deze algemene voorwaarden zijn van toepassing op alle diensten aangeboden door MijnGezinshereniging.be en het verbonden advocaatnkantoor.</p>
+              <p>Deze algemene voorwaarden zijn van toepassing op alle diensten aangeboden door <span translate="no" className="notranslate">MijnGezinshereniging.be</span> en het verbonden advocatenkantoor.</p>
             </div>
 
             <div>

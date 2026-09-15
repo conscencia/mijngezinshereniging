@@ -129,6 +129,7 @@ html {
 }
 body { font-weight: 300; line-height: 1.65; color: var(--ink); }
 p { text-wrap: pretty; }
+@layer base { p, li, dd { text-align: justify; -webkit-hyphens: auto; hyphens: auto; } }
 strong, b { font-weight: 500; }
 @layer base { h1, h2, h3 { color: var(--olive-deep); text-wrap: balance; } }
 h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--rust-deep); }
@@ -210,9 +211,9 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-card:active { transform: scale(0.98); }
 @media (hover: hover) { .mg-card:hover { transform: translateY(-4px); background: var(--olive); } .mg-card:hover .mg-card-more span { transform: translateX(4px); } }
 .mg-card-num { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-size: 0.95rem; color: var(--rust); }
-.mg-card-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--vanilla); margin: 10px 0 14px; }
+.mg-card-title { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--vanilla); margin: 10px 0 14px; min-height: 2.4em; display: flex; align-items: flex-end; }
 .mg-card-line { display: block; width: 28px; height: 1px; background: var(--moss-soft); margin-bottom: 14px; }
-.mg-card-text { font-size: 0.9rem; line-height: 1.65; color: rgba(251,243,222,0.82); flex-grow: 1; }
+.mg-card-text { font-size: 0.9rem; line-height: 1.65; color: rgba(251,243,222,0.82); flex-grow: 1; text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
 .mg-card-more { margin-top: 20px; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss-soft); }
 .mg-card-more span { display: inline-block; transition: transform 250ms var(--ease-out); }
 
@@ -315,3 +316,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 @media (prefers-reduced-transparency: reduce) {
   .mg-nav, .mg-dropdown { background: var(--vanilla); -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
+
+/* Uitlijning: titels in rijen van kaarten en stappen even hoog, zodat de tekst eronder op dezelfde lijn begint */
+@media (min-width: 1024px) { .mg-step-title { min-height: 2.4em; display: flex; align-items: flex-end; } }
+

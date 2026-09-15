@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { setHyphenation } from "../lib/hyphenate.js";
 
 const LANGS = [
   { code: "nl", label: "NL", title: "Nederlands" },
@@ -14,13 +15,14 @@ export default function LanguageSwitcher() {
   const switchLang = (code) => {
     const select = document.querySelector(".goog-te-combo");
     if (!select) return;
+    setHyphenation(code === "nl");
     select.value = code === "nl" ? "" : code;
     select.dispatchEvent(new Event("change"));
     setCurrent(code);
   };
 
   return (
-    <div className="flex items-center gap-0.5 border border-gray-200 rounded-lg px-1 py-0.5">
+    <div translate="no" className="notranslate flex items-center gap-0.5 border border-gray-200 rounded-lg px-1 py-0.5">
       {LANGS.map((lang) => (
         <button
           key={lang.code}

@@ -38,7 +38,7 @@ export default function Navigation() {
     <nav className={`mg-nav ${scrolled ? "is-scrolled" : ""}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between h-[72px]">
-          <Link to="/" className="mg-wordmark" aria-label="MijnGezinshereniging.be, naar de startpagina">
+          <Link to="/" translate="no" className="mg-wordmark notranslate" aria-label="MijnGezinshereniging.be, naar de startpagina">
             mijn<em>gezinshereniging</em>
           </Link>
 

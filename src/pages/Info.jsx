@@ -342,7 +342,7 @@ export default function Info() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-green-50 border border-green-200 rounded-2xl p-6">
                 <h3 className="font-bold text-green-900 mb-4 flex items-center gap-2">
-                  <span className="text-xl">✅</span> Wat telt WEL mee
+                  Wat telt wel mee
                 </h3>
                 <ul className="space-y-2 text-sm text-green-800">
                   {[
@@ -365,7 +365,7 @@ export default function Info() {
 
               <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
                 <h3 className="font-bold text-red-900 mb-4 flex items-center gap-2">
-                  <span className="text-xl">❌</span> Wat telt NIET mee
+                  Wat telt niet mee
                 </h3>
                 <ul className="space-y-2 text-sm text-red-800">
                   {[
@@ -427,7 +427,7 @@ export default function Info() {
             {/* Behoefteanalyse */}
             <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
               <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
-                <span className="text-xl">📋</span> Inkomen onder de grens? Er is een alternatief: de behoefteanalyse
+                Inkomen onder de grens? Dan is er de behoefteanalyse
               </h3>
               <p className="text-blue-800 text-sm leading-relaxed text-justify mb-4">
                 Een inkomen onder de inkomensgrens is <strong>geen automatische weigering</strong>. U kunt een <strong>behoefteanalyse</strong> indienen waarbij u aantoont dat uw gezin niet ten laste zal vallen van de overheid.

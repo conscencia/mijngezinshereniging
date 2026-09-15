@@ -179,8 +179,7 @@ export default function Home() {
               },
               {
                 title: "Begeleiding van A tot Z",
-                sub: "Beslist u een aanvraag in te dienen?",
-                desc: "Wij adviseren u doorheen de volledige procedure, van voorbereiding tot beslissing.",
+                desc: "Beslist u een aanvraag in te dienen? Dan adviseren wij u doorheen de volledige procedure, van voorbereiding tot beslissing.",
               },
               {
                 title: "Documentencheck",
@@ -194,7 +193,6 @@ export default function Home() {
               <div key={s.title} className="mg-step">
                 <span className="mg-step-num">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mg-step-title">{s.title}</h3>
-                {s.sub && <p className="mg-step-sub">{s.sub}</p>}
                 <p className="mg-body">{s.desc}</p>
               </div>
             ))}

@@ -89,7 +89,7 @@ export default function Contact() {
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li>
                     <span className="font-semibold text-gray-800">Telefoon: </span>
-                    <a href="tel:+3250673206" className="hover:text-primary-600 transition-colors">+32 50 67 32 06</a>
+                    <a href="tel:+3250673206" translate="no" className="notranslate hover:text-primary-600 transition-colors">+32 50 67 32 06</a>
                     <span className="text-gray-400 ml-1 text-xs">· ma t/m vr, 9:00 tot 18:00</span>
                   </li>
                   <li>
@@ -98,11 +98,11 @@ export default function Contact() {
                   </li>
                   <li>
                     <span className="font-semibold text-gray-800">E-mail: </span>
-                    <a href="mailto:advocaat@mijngezinshereniging.be" className="underline hover:text-primary-600 transition-colors break-all">advocaat@mijngezinshereniging.be</a>
+                    <a href="mailto:advocaat@mijngezinshereniging.be" translate="no" className="notranslate underline hover:text-primary-600 transition-colors break-all">advocaat@mijngezinshereniging.be</a>
                   </li>
                   <li>
                     <span className="font-semibold text-gray-800">Kantoor: </span>
-                    Holstraat 89A, 8790 Waregem
+                    <span translate="no" className="notranslate">Holstraat 89A, 8790 Waregem</span>
                   </li>
                 </ul>
               </div>
