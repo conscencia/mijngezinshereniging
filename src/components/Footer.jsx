@@ -25,9 +25,11 @@ export default function Footer() {
         </div>
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-primary-300">
           <p>© {new Date().getFullYear()} <span translate="no" className="notranslate">MijnGezinshereniging.be</span></p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link to="/privacy" className="mg-footer-link">Privacy</Link>
-            <Link to="/privacy#av" className="mg-footer-link">Algemene voorwaarden</Link>
+            <Link to="/algemene-voorwaarden" className="mg-footer-link">Algemene voorwaarden</Link>
+            <Link to="/cookies" className="mg-footer-link">Cookies</Link>
+            <Link to="/witwaspreventie" className="mg-footer-link">Witwaspreventie</Link>
           </div>
         </div>
       </div>

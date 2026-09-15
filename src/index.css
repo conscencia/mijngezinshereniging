@@ -459,3 +459,16 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-steps-list li { counter-increment: stap; position: relative; padding: 16px 0 16px 44px; border-bottom: 1px solid rgba(51,61,36,0.14); font-size: 0.98rem; line-height: 1.65; color: #55513F; }
 .mg-steps-list li::before { content: counter(stap, decimal-leading-zero); position: absolute; left: 0; top: 16px; font-family: 'Fraunces', Georgia, serif; font-style: italic; color: var(--rust); }
 .mg-steps-list strong { color: var(--olive-deep); font-weight: 500; }
+
+/* Juridische pagina's */
+.mg-legal-nav { list-style: none; padding: 0; margin: 0; border-top: 1px solid rgba(51,61,36,0.14); }
+.mg-legal-nav a { display: block; padding: 12px 0; border-bottom: 1px solid rgba(51,61,36,0.14); font-size: 0.95rem; color: var(--olive-deep); text-decoration: none; }
+.mg-legal-nav a.is-current { color: var(--rust-deep); font-weight: 500; }
+@media (hover: hover) { .mg-legal-nav a:hover { color: var(--rust-deep); } }
+.mg-legal > .mg-lead { color: #55513F; }
+.mg-legal h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--olive-deep); margin: 2.6rem 0 0.8rem; }
+.mg-legal p, .mg-legal li { font-size: 0.98rem; line-height: 1.75; color: #55513F; }
+.mg-legal p + p { margin-top: 0.8rem; }
+.mg-legal ul { list-style: none; padding: 0; margin: 0.6rem 0 0.8rem; }
+.mg-legal li { position: relative; padding: 6px 0 6px 24px; }
+.mg-legal li::before { content: ""; position: absolute; left: 2px; top: 1.2rem; width: 10px; height: 1px; background: var(--rust); }

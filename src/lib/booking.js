@@ -3,6 +3,7 @@
 /* eslint-disable */
 export function startBooking(embed, CAL_LINK, opts){
     var videoOnly = !!(opts && opts.videoOnly);
+    var allowSlot = opts && typeof opts.allowSlot === 'function' ? opts.allowSlot : null;
     if (!embed || !CAL_LINK || embed.dataset.bkStarted) return;
     embed.dataset.bkStarted = '1';
 
@@ -48,7 +49,7 @@ export function startBooking(embed, CAL_LINK, opts){
         .then(function(r){ return r.json(); })
         .then(function(j){
           if (!j || !j.data) throw new Error('geen data');
-          Object.keys(j.data).forEach(function(k){ if (j.data[k] && j.data[k].length) state.days[k] = j.data[k]; });
+          Object.keys(j.data).forEach(function(k){ var list = (j.data[k] || []).filter(function(sl){ return !allowSlot || allowSlot(sl.start); }); if (list.length) state.days[k] = list; });
           state.loaded[key] = true;
         });
     }

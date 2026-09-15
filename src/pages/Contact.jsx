@@ -57,7 +57,7 @@ export default function Contact() {
                   Hoe kunnen<br />wij u helpen?
                 </h1>
                 <p className="text-gray-500 text-base leading-relaxed">
-                  Stel uw vraag of plan een gesprek. Wij nemen zo snel mogelijk contact op.
+                  Stel uw vraag of plan een videogesprek. U krijgt zo snel mogelijk een antwoord per e-mail.
                 </p>
               </div>
 
@@ -65,7 +65,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Intakegesprek inboeken</h3>
                 <div className="rounded-xl border-2 border-primary-200 bg-primary-50 p-5">
                   <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    Kies zelf een moment voor een gesprek van 30 minuten (€75 excl. btw).
+                    Kies zelf een moment voor een videogesprek van 30 minuten (€75 excl. btw). Gesprekken zijn mogelijk op weekdagen tussen 19 en 20 uur en in het weekend.
                   </p>
                   <Link to="/afspraak" className="mg-btn mg-btn-rust w-full">Maak een afspraak</Link>
                 </div>
@@ -80,21 +80,8 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contactgegevens</h3>
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li>
-                    <span className="font-semibold text-gray-800">Telefoon: </span>
-                    <a href="tel:+3250673206" translate="no" className="notranslate hover:text-primary-600 transition-colors">+32 50 67 32 06</a>
-                    <span className="text-gray-400 ml-1 text-xs">· ma t/m vr, 9:00 tot 18:00</span>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">WhatsApp: </span>
-                    <a href="https://wa.me/3250673206" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600 transition-colors">Direct chatten</a>
-                  </li>
-                  <li>
                     <span className="font-semibold text-gray-800">E-mail: </span>
                     <a href="mailto:advocaat@mijngezinshereniging.be" translate="no" className="notranslate underline hover:text-primary-600 transition-colors break-all">advocaat@mijngezinshereniging.be</a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-gray-800">Kantoor: </span>
-                    <span translate="no" className="notranslate">Holstraat 89A, 8790 Waregem</span>
                   </li>
                 </ul>
               </div>

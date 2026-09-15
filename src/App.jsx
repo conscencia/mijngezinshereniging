@@ -7,7 +7,7 @@ import Info from "./pages/Info";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import Privacy from "./pages/Privacy";
+import Legal from "./pages/Legal";
 import Over from "./pages/Over";
 import Tarieven from "./pages/Tarieven";
 import Afspraak from "./pages/Afspraak";
@@ -27,7 +27,10 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/privacy" element={<Legal doc="privacy" />} />
+            <Route path="/algemene-voorwaarden" element={<Legal doc="voorwaarden" />} />
+            <Route path="/cookies" element={<Legal doc="cookies" />} />
+            <Route path="/witwaspreventie" element={<Legal doc="witwas" />} />
             <Route path="/over-ons" element={<Over />} />
             <Route path="/tarieven" element={<Tarieven />} />
             <Route path="/afspraak" element={<Afspraak />} />
