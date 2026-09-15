@@ -2,11 +2,12 @@
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gezinshereniging in België — juridisch advies en begeleiding. Doe de situatiecheck en ontdek uw mogelijkheden." />
+    <meta name="description" content="Gezinshereniging in België: heldere uitleg over de voorwaarden, de inkomenseis en de procedure. Doe de gratis situatiecheck of plan een videogesprek met een advocaat." />
     <meta name="keywords" content="gezinshereniging, België, DVZ, verblijfsrecht, advocaat, artikel 40ter" />
-    <title>MijnGezinshereniging.be — Breng uw gezin naar België</title>
+    <title>Gezinshereniging in België | mijngezinshereniging.be</title>
     <style>
       .goog-te-banner-frame { display: none !important; }
       .goog-te-gadget { display: none !important; }
@@ -15,6 +16,17 @@
   </head>
   <body>
     <div id="google_translate_element" style="display:none"></div>
+    <!-- Verborgen kopieën voor Netlify Forms: de velden moeten overeenkomen met src/pages/Contact.jsx en Tool.jsx -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" hidden>
+      <input name="bot-field" /><input name="naam" /><input name="voornaam" /><input name="telefoon" /><input name="email" />
+      <input name="onderwerp" /><input name="fase" /><textarea name="vraag"></textarea><input name="privacy" />
+      <input type="file" name="bijlage1" /><input type="file" name="bijlage2" /><input type="file" name="bijlage3" />
+    </form>
+    <form name="situatiecheck" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input name="bot-field" /><input name="naam" /><input name="voornaam" /><input name="email" /><input name="telefoon" />
+      <input name="fase" /><textarea name="toelichting"></textarea><input name="privacy" />
+      <input name="resultaat" /><textarea name="antwoorden"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>

@@ -494,3 +494,15 @@ body { font-weight: 300; }
 .mg-card-num, .mg-step-num, .mg-option-num, .mg-steps-list li::before { font-family: 'Poppins', 'Segoe UI', sans-serif; font-style: normal; font-weight: 600; }
 .mg-eyebrow { font-weight: 500; letter-spacing: 0.26em; }
 .mg-btn { font-weight: 600; letter-spacing: 0.14em; }
+
+/* Pijltjes onder de kaarten */
+.mg-scroll-btn { width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; border: 1px solid rgba(51,61,36,0.18); background: var(--vanilla); color: var(--olive-deep); cursor: pointer; transition: background-color 180ms ease, opacity 180ms ease, transform 100ms ease-out; }
+@media (hover: hover) { .mg-scroll-btn:not(:disabled):hover { background: #fff; } }
+.mg-scroll-btn:not(:disabled):active { transform: scale(0.94); }
+.mg-scroll-btn:disabled { opacity: 0.35; cursor: default; }
+
+/* Menu Informatie: onzichtbare brug over de tussenruimte, zodat het menu niet sluit als de muis naar beneden gaat */
+.mg-dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+
+/* Stappen van de procedure: één kleur */
+.mg-proc-num { background: var(--olive); color: #fff; }

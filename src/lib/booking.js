@@ -4,12 +4,12 @@
 export function startBooking(embed, CAL_LINK, opts){
     var videoOnly = !!(opts && opts.videoOnly);
     var allowSlot = opts && typeof opts.allowSlot === 'function' ? opts.allowSlot : null;
+    var lastDate = opts && opts.lastDate ? opts.lastDate : null; // 'JJJJ-MM-DD': laatste dag waarop geboekt kan worden
     if (!embed || !CAL_LINK || embed.dataset.bkStarted) return;
     embed.dataset.bkStarted = '1';
 
     var parts = CAL_LINK.split('/'), USER = parts[0], SLUG = parts[1];
     var TZ = 'Europe/Brussels', API = 'https://api.cal.com/v2';
-    var fallbackUrl = 'https://cal.com/' + CAL_LINK;
     var state = { event: null, days: {}, loaded: {}, month: null, day: null, slot: null, loading: false };
 
     var fmtDayShort = new Intl.DateTimeFormat('nl-BE', { weekday: 'short', timeZone: TZ });
@@ -25,8 +25,8 @@ export function startBooking(embed, CAL_LINK, opts){
 
     function fallbackHtml(msg){
       return '<div class="bk-card bk-center"><p class="result-kicker">Agenda</p><h3 class="bk-title">' + msg + '</h3>' +
-        '<p class="bk-muted">U kunt ook rechtstreeks boeken of uw voorkeursmoment doorgeven via het contactformulier.</p>' +
-        '<div class="result-actions"><a class="mg-btn mg-btn-rust" href="' + fallbackUrl + '" target="_blank" rel="noopener">Open de agenda</a><a class="mg-btn mg-btn-outline" href="/contact">Contactformulier</a></div></div>';
+        '<p class="bk-muted">Geef uw voorkeursmoment door via het contactformulier, dan nemen wij contact met u op.</p>' +
+        '<div class="result-actions"><a class="mg-btn mg-btn-rust" href="/contact">Naar het contactformulier</a></div></div>';
     }
 
     embed.classList.add('is-custom');
@@ -37,6 +37,10 @@ export function startBooking(embed, CAL_LINK, opts){
     var todayKey = ymd(today);
     var firstMonth = new Date(today.getFullYear(), today.getMonth(), 1);
     var MAX_MONTHS = 6;
+    if (lastDate) {
+      var lp = lastDate.split('-');
+      MAX_MONTHS = Math.max(1, Math.min(MAX_MONTHS, (+lp[0] - firstMonth.getFullYear()) * 12 + (+lp[1] - 1 - firstMonth.getMonth()) + 1));
+    }
     var monthKey = function(d){ return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0'); };
 
     function loadMonth(m){
@@ -49,7 +53,7 @@ export function startBooking(embed, CAL_LINK, opts){
         .then(function(r){ return r.json(); })
         .then(function(j){
           if (!j || !j.data) throw new Error('geen data');
-          Object.keys(j.data).forEach(function(k){ var list = (j.data[k] || []).filter(function(sl){ return !allowSlot || allowSlot(sl.start); }); if (list.length) state.days[k] = list; });
+          Object.keys(j.data).forEach(function(k){ if (lastDate && k > lastDate) return; var list = (j.data[k] || []).filter(function(sl){ return !allowSlot || allowSlot(sl.start); }); if (list.length) state.days[k] = list; });
           state.loaded[key] = true;
         });
     }
@@ -161,7 +165,7 @@ export function startBooking(embed, CAL_LINK, opts){
         '<div class="field-row"><label class="field"><span class="field-label">Voornaam <em>*</em></span><input name="voornaam" autocomplete="given-name" required value="' + (prev ? esc(prev.voornaam) : '') + '"></label>' +
         '<label class="field"><span class="field-label">Achternaam <em>*</em></span><input name="achternaam" autocomplete="family-name" required value="' + (prev ? esc(prev.achternaam) : '') + '"></label></div>' +
         '<div class="field-row"><label class="field"><span class="field-label">E-mail <em>*</em></span><input type="email" name="email" autocomplete="email" required value="' + (prev ? esc(prev.email) : '') + '"></label>' +
-        '<label class="field"><span class="field-label">Telefoon <span class="field-opt">(optioneel)</span></span><input type="tel" name="telefoon" autocomplete="tel" value="' + (prev && prev.telefoon ? esc(prev.telefoon) : '') + '"></label></div>';
+        '<label class="field"><span class="field-label">Telefoon <span class="field-opt">(optioneel)</span></span><input type="tel" name="telefoon" inputmode="tel" autocomplete="tel" placeholder="+32470123456" value="' + (prev && prev.telefoon ? esc(prev.telefoon) : '') + '"></label></div>';
       if (locs.length > 1) {
         html += '<fieldset class="bk-locs"><legend class="field-label">Hoe wilt u het gesprek voeren? <em>*</em></legend>';
         locs.forEach(function(o, k){ html += '<label class="opt"><input type="radio" name="locatie" value="' + o.idx + '"' + (k === 0 ? ' checked' : '') + '> ' + o.label + '</label>'; });
@@ -187,6 +191,13 @@ export function startBooking(embed, CAL_LINK, opts){
       }
       form.addEventListener('change', syncAddr); syncAddr();
       form.addEventListener('submit', function(e){ e.preventDefault(); submitBooking(form, locs); });
+      // Telefoon: enkel cijfers, met eventueel een + vooraan
+      var telInput = form.querySelector('input[name="telefoon"]');
+      if (telInput) telInput.addEventListener('input', function(){
+        var v = telInput.value, plus = v.trim().charAt(0) === '+' ? '+' : '';
+        var clean = plus + v.replace(/\D/g, '').slice(0, 15);
+        if (clean !== v) telInput.value = clean;
+      });
     }
 
     function normPhone(v){
@@ -210,7 +221,9 @@ export function startBooking(embed, CAL_LINK, opts){
       var fd = new FormData(form);
       var desc = fd.get('omschrijving').trim();
       var telRaw = (fd.get('telefoon') || '').trim(), tel = telRaw ? normPhone(telRaw) : null;
-      if (telRaw && !tel) desc += '\n\nTelefoon: ' + telRaw;
+      // Heeft het afspraaktype geen telefoonveld, dan komt het nummer in de omschrijving
+      var hasPhoneField = (state.event.bookingFields || []).some(function(x){ return x.slug === 'attendeePhoneNumber' && !x.hidden; });
+      if (telRaw && (!tel || !hasPhoneField)) { desc += (desc ? '\n\n' : '') + 'Telefoon: ' + (tel || telRaw); tel = null; }
       var body = {
         start: new Date(state.slot.start).toISOString(),
         eventTypeSlug: SLUG, username: USER,
@@ -239,7 +252,7 @@ export function startBooking(embed, CAL_LINK, opts){
           renderDone(body, o, x.j.data);
         })
         .catch(function(e){
-          err.innerHTML = 'Boeken lukte niet' + (e.message ? ' (' + esc(e.message) + ')' : '') + '. Kies een ander moment of <a href="' + fallbackUrl + '" target="_blank" rel="noopener">boek rechtstreeks in de agenda</a>.';
+          err.innerHTML = 'Boeken lukte niet' + (e.message ? ' (' + esc(e.message) + ')' : '') + '. Kies een ander moment of <a href="/contact">geef uw voorkeursmoment door via het contactformulier</a>.';
           err.hidden = false; btn.disabled = false; btn.textContent = 'Bevestig afspraak';
         });
     }

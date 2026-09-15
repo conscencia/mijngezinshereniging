@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { cleanPhone, isValidPhone } from "../lib/phone";
+import { sendForm } from "../lib/sendForm";
 
 const QUESTIONS = {
   nationaliteit: {
@@ -627,7 +629,7 @@ function calculateResult(answers) {
       title: "Mogelijk in aanmerking, uw inkomen is het aandachtspunt",
       summary: "Op basis van uw antwoorden komt u mogelijk in aanmerking. DVZ kijkt wel heel nauwkeurig naar uw inkomen.",
       points: [
-        { text: inkomen === "zelfstandige" ? "Als zelfstandige toont u uw inkomen aan met specifieke fiscale en sociale documenten. Loonfiches die u zelf als zaakvoerder uitreikt, volstaan op zich niet." : "Het referentiebedrag is €2.217,47 netto per maand. Ook het stabiele inkomen van uw partner kan meetellen." },
+        { text: inkomen === "zelfstandige" ? "Als zelfstandige toont u uw inkomen aan met specifieke fiscale en sociale documenten. DVZ publiceert een overzicht van de vereiste stukken." : "Het referentiebedrag is €2.217,47 netto per maand. Ook het stabiele inkomen van uw partner kan meetellen." },
         { text: "Ligt uw inkomen onder dat bedrag? Dan mag DVZ niet automatisch weigeren en moet eerst bekeken worden wat uw gezin nodig heeft." },
         { text: (gezinslid === "partner" || gezinslid === "partner-niet-gehuwd") ? "Uw leeftijd en relatie lijken in orde." : "Voor dit gezinslid is gezinshereniging in principe mogelijk." },
         { text: "U betaalt een retributie van €218 wanneer u de aanvraag indient." },
@@ -697,6 +699,9 @@ function ContactForm({ result, answers }) {
   const [form, setForm] = useState({ naam: "", voornaam: "", email: "", telefoon: "", fase: "", toelichting: "", privacy: false });
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState("");
+  const [botField, setBotField] = useState("");
 
   const validate = () => {
     const e = {};
@@ -704,21 +709,40 @@ function ContactForm({ result, answers }) {
     if (!form.voornaam.trim()) e.voornaam = "Vul uw voornaam in";
     if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = "Vul een geldig e-mailadres in";
     if (!form.telefoon.trim()) e.telefoon = "Vul uw telefoonnummer in";
+    else if (!isValidPhone(form.telefoon)) e.telefoon = "Vul een geldig telefoonnummer in, enkel cijfers";
     if (!form.fase) e.fase = "Kies een optie";
     if (!form.privacy) e.privacy = "Ga akkoord met het privacybeleid om verder te gaan";
     return e;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
 
-    const data = { ...form, result: result.status, answers, timestamp: new Date().toISOString() };
-    localStorage.setItem("mgz_lead_" + Date.now(), JSON.stringify(data));
-    console.log("[MijnGezinshereniging] Nieuw lead:", data);
-    setSubmitted(true);
+    // Antwoorden leesbaar maken: vraag en gekozen antwoord in plaats van interne codes
+    const antwoorden = Object.entries(answers).map(([id, value]) => {
+      const q = QUESTIONS[id];
+      const option = q?.options?.find((o) => o.value === value);
+      return `${q?.title || id}: ${option?.label || value}`;
+    }).join("\n");
+
+    setSending(true);
+    setSendError("");
+    try {
+      await sendForm("situatiecheck", {
+        naam: form.naam, voornaam: form.voornaam, email: form.email, telefoon: form.telefoon,
+        fase: form.fase, toelichting: form.toelichting, privacy: "akkoord",
+        resultaat: `${STATUS_LABELS[result.status] || result.status}: ${result.title}`,
+        antwoorden, "bot-field": botField,
+      });
+      setSubmitted(true);
+    } catch (err) {
+      setSendError("Uw gegevens konden niet verstuurd worden. Probeer het opnieuw, of mail naar");
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -742,7 +766,8 @@ function ContactForm({ result, answers }) {
   const set = (key) => (e) => setForm({ ...form, [key]: e.target.value });
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+    <form name="situatiecheck" onSubmit={handleSubmit} className="space-y-6" noValidate>
+      <p hidden><label>Niet invullen: <input name="bot-field" value={botField} onChange={(e) => setBotField(e.target.value)} tabIndex={-1} autoComplete="off" /></label></p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <Field label="Naam" error={errors.naam}>
           <input type="text" autoComplete="family-name" value={form.naam} onChange={set("naam")} className={`mg-input ${errors.naam ? "is-invalid" : ""}`} />
@@ -754,7 +779,7 @@ function ContactForm({ result, answers }) {
           <input type="email" autoComplete="email" value={form.email} onChange={set("email")} className={`mg-input ${errors.email ? "is-invalid" : ""}`} />
         </Field>
         <Field label="Telefoonnummer" error={errors.telefoon}>
-          <input type="tel" autoComplete="tel" value={form.telefoon} onChange={set("telefoon")} className={`mg-input ${errors.telefoon ? "is-invalid" : ""}`} placeholder="+32" />
+          <input type="tel" inputMode="tel" autoComplete="tel" value={form.telefoon} onChange={(e) => setForm((f) => ({ ...f, telefoon: cleanPhone(e.target.value) }))} className={`mg-input ${errors.telefoon ? "is-invalid" : ""}`} placeholder="+32470123456" />
         </Field>
       </div>
 
@@ -788,7 +813,8 @@ function ContactForm({ result, answers }) {
       </div>
 
       <p className="mg-disclaimer">Uw vraag wordt behandeld door een advocaat ingeschreven aan de balie West-Vlaanderen. U ontvangt de volledige gegevens van de advocaat in de eerste reactie, vóór er een opdracht is.</p>
-      <button type="submit" className="mg-btn mg-btn-rust">Verstuur mijn gegevens</button>
+      {sendError && <p className="mg-field-error" role="alert">{sendError} <a href="mailto:info@mijngezinshereniging.be" translate="no" className="notranslate underline">info@mijngezinshereniging.be</a>.</p>}
+      <button type="submit" className="mg-btn mg-btn-rust" disabled={sending}>{sending ? "Bezig met versturen…" : "Verstuur mijn gegevens"}</button>
     </form>
   );
 }
@@ -953,6 +979,9 @@ export default function Tool() {
                 <ul className="mg-points mt-6">
                   {result.points.map((p, i) => <li key={i}>{p.text}</li>)}
                 </ul>
+                {[result.summary, ...result.points.map((p) => p.text), ...(result.alternatives || []).map((a) => a.text)].some((t) => typeof t === "string" && t.includes("DVZ")) && (
+                  <p className="mg-disclaimer mt-6">DVZ is de Dienst Vreemdelingenzaken: de federale overheidsdienst die beslist over uw aanvraag.</p>
+                )}
 
                 {result.alternatives && result.alternatives.length > 0 && (
                   <>

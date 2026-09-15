@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="mg-footer-h">Contact</p>
             <Link to="/contact" className="mg-footer-link">Stel uw vraag</Link>
             <Link to="/afspraak" className="mg-footer-link">Maak een afspraak</Link>
-            <a href="mailto:advocaat@mijngezinshereniging.be" translate="no" className="mg-footer-link break-all notranslate">advocaat@mijngezinshereniging.be</a>
+            <a href="mailto:info@mijngezinshereniging.be" translate="no" className="mg-footer-link break-all notranslate">info@mijngezinshereniging.be</a>
           </div>
         </div>
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-primary-300">

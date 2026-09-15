@@ -30,7 +30,7 @@ export const legal = {
        "ul",
        [
         "De advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, ingeschreven aan de balie West-Vlaanderen",
-        "E-mail: advocaat@mijngezinshereniging.be"
+        "E-mail: info@mijngezinshereniging.be"
        ]
       ],
       [
@@ -44,7 +44,7 @@ export const legal = {
       [
        "ul",
        [
-        "Per e-mail: advocaat@mijngezinshereniging.be, met onderwerp \"Privacy\""
+        "Per e-mail: info@mijngezinshereniging.be, met onderwerp \"Privacy\""
        ]
       ]
      ]
@@ -105,7 +105,7 @@ export const legal = {
         "Rechtsgrond: de uitvoering van precontractuele maatregelen op uw verzoek (artikel 6.1.b AVG) en het gerechtvaardigd belang om vragen te beantwoorden (artikel 6.1.f AVG).",
         "Hoe verkregen: rechtstreeks van u.",
         "Bewaartermijn: tot 1 jaar na het laatste contact indien er geen opdracht volgt; daarna gelden de bewaartermijnen van het dossier.",
-        "Met wie gedeeld: IT-dienstverleners, waaronder de aanbieder van het e-mailsysteem, de hostingpartner van de website en Cal.com, Inc. (afsprakenagenda)."
+        "Met wie gedeeld: IT-dienstverleners, waaronder de aanbieder van het e-mailsysteem, Netlify, Inc. (hosting van de website en ontvangst van de formulieren, met eventuele bijlagen) en Cal.com, Inc. (afsprakenagenda)."
        ]
       ],
       [
@@ -188,7 +188,7 @@ export const legal = {
       ],
       [
        "p",
-       "Sommige verwerkers, zoals Cal.com, Inc., zijn gevestigd buiten de Europese Economische Ruimte. Persoonsgegevens worden slechts buiten de Europese Economische Ruimte doorgegeven met passende waarborgen overeenkomstig hoofdstuk V van de AVG, zoals een adequaatheidsbesluit of standaardcontractbepalingen van de Europese Commissie."
+       "Sommige verwerkers, zoals Netlify, Inc. en Cal.com, Inc., zijn gevestigd buiten de Europese Economische Ruimte. Persoonsgegevens worden slechts buiten de Europese Economische Ruimte doorgegeven met passende waarborgen overeenkomstig hoofdstuk V van de AVG, zoals een adequaatheidsbesluit of standaardcontractbepalingen van de Europese Commissie."
       ]
      ]
     ],
@@ -416,7 +416,7 @@ export const legal = {
      [
       [
        "p",
-       "6.1. Wordt de overeenkomst met een consument op afstand gesloten, zoals via de online agenda of per e-mail, dan beschikt de consument over een termijn van 14 kalenderdagen om de overeenkomst zonder opgave van reden te herroepen, overeenkomstig artikel VI.47 van het Wetboek van economisch recht. De herroeping gebeurt door een ondubbelzinnige verklaring per e-mail aan advocaat@mijngezinshereniging.be."
+       "6.1. Wordt de overeenkomst met een consument op afstand gesloten, zoals via de online agenda of per e-mail, dan beschikt de consument over een termijn van 14 kalenderdagen om de overeenkomst zonder opgave van reden te herroepen, overeenkomstig artikel VI.47 van het Wetboek van economisch recht. De herroeping gebeurt door een ondubbelzinnige verklaring per e-mail aan info@mijngezinshereniging.be."
       ],
       [
        "p",
@@ -526,7 +526,7 @@ export const legal = {
      [
       [
        "p",
-       "12.1. Klachten over de dienstverlening of over een staat van kosten en ereloon kunnen worden gericht aan de advocaat per e-mail via advocaat@mijngezinshereniging.be."
+       "12.1. Klachten over de dienstverlening of over een staat van kosten en ereloon kunnen worden gericht aan de advocaat per e-mail via info@mijngezinshereniging.be."
       ],
       [
        "p",
@@ -692,7 +692,7 @@ export const legal = {
        "ul",
        [
         "De advocaat achter MijnGezinshereniging.be",
-        "E-mail: advocaat@mijngezinshereniging.be"
+        "E-mail: info@mijngezinshereniging.be"
        ]
       ],
       [

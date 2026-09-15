@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { CAL_LINK } from "../config";
 import { startBooking } from "../lib/booking";
 
-// Voorlopig enkel gesprekken op weekdagen tussen 19 en 20 uur, en in het weekend (Belgische tijd).
+// Voorlopig enkel gesprekken in het weekend, op dinsdag en donderdag tussen 19 en 21 uur,
+// en op de andere weekdagen tussen 19 en 20 uur (Belgische tijd). Boeken kan tot en met LAST_DATE.
+const LAST_DATE = "2026-10-31";
+
 function isConsultMoment(startIso) {
   const parts = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Brussels", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
     .formatToParts(new Date(startIso));
@@ -11,14 +14,15 @@ function isConsultMoment(startIso) {
   const weekday = get("weekday");
   if (weekday === "Sat" || weekday === "Sun") return true;
   const minutes = Number(get("hour")) * 60 + Number(get("minute"));
-  return minutes >= 19 * 60 && minutes + 30 <= 20 * 60;
+  const end = weekday === "Tue" || weekday === "Thu" ? 21 * 60 : 20 * 60;
+  return minutes >= 19 * 60 && minutes + 30 <= end;
 }
 
 export default function Afspraak() {
   const embedRef = useRef(null);
 
   useEffect(() => {
-    startBooking(embedRef.current, CAL_LINK, { videoOnly: true, allowSlot: isConsultMoment });
+    startBooking(embedRef.current, CAL_LINK, { videoOnly: true, allowSlot: isConsultMoment, lastDate: LAST_DATE });
   }, []);
 
   return (
@@ -44,7 +48,7 @@ export default function Afspraak() {
               <li><strong>U krijgt een bevestiging</strong> per e-mail, met de link naar het videogesprek.</li>
             </ol>
             <p className="mg-body mg-justify mt-8">
-              In een videogesprek van 30 minuten bekijken we uw situatie en uw kansen. U heeft enkel een smartphone, tablet of computer met internet nodig. Beslist u daarna om verder te gaan, dan spreken we een vaste prijs af voor uw dossier.
+              In een videogesprek van 30 minuten bekijken we uw situatie en uw kansen. Beslist u daarna om verder te gaan, dan spreken we een vaste prijs af voor uw dossier.
             </p>
             <p className="mg-disclaimer mt-6">
               Liever eerst een vraag stellen? Gebruik dan het <Link to="/contact" className="underline underline-offset-2">contactformulier</Link>.

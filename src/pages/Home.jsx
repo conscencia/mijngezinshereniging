@@ -5,15 +5,15 @@ import { Scroller } from "../components/ui/Scroller";
 const faqs = [
   {
     q: "Hoeveel inkomen moet ik hebben voor gezinshereniging?",
-    a: "De inkomensgrens bedraagt in 2026 €2.173,88 netto per maand (120% leefloon voor persoon met gezin ten laste). Loon uit werk en werkloosheidsuitkering (als u actief werk zoekt) tellen mee. Leefloon en OCMW-steun tellen niet mee.",
+    a: "Voor familie van een Belg is het referentiebedrag vandaag €2.217,47 netto per maand (120% van het leefloon voor een persoon met gezin ten laste). Voor sommige aanvragen geldt al een hoger bedrag van €2.456,97. Loon uit werk telt mee, net als een werkloosheidsuitkering als u actief werk zoekt. Leefloon, OCMW-steun en kindergeld tellen niet mee.",
   },
   {
     q: "Hoe lang duurt een aanvraag voor gezinshereniging?",
-    a: "Gemiddeld 3 tot 6 maanden. De Dienst Vreemdelingenzaken (DVZ) beslist binnen deze termijn. Bij onvolledige dossiers kan dit langer duren. Een goed voorbereid dossier verkort de doorlooptijd aanzienlijk.",
+    a: "De Dienst Vreemdelingenzaken (DVZ) beslist over uw aanvraag. Voor familie van een Belg geldt een termijn van 6 maanden. Voor familie van een derdelander die een visum aanvraagt, is dat 9 maanden, in complexe dossiers te verlengen tot maximaal 15 maanden. Een volledig dossier helpt vertraging te vermijden.",
   },
   {
     q: "Wat als mijn aanvraag wordt geweigerd?",
-    a: "U kunt binnen 30 dagen beroep aantekenen bij de Raad voor Vreemdelingenbetwistingen. Met professionele juridische begeleiding kan uw dossier herbekeken en sterker ingediend worden. Een weigering is geen eindpunt.",
+    a: "U kunt binnen 30 dagen beroep instellen bij de Raad voor Vreemdelingenbetwistingen. Die termijn is strikt. Soms is een nieuwe, beter onderbouwde aanvraag de betere weg. Een weigering is dus niet altijd een eindpunt.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Home() {
               <Link to="/tool" className="mg-btn mg-btn-rust">Doe de situatiecheck</Link>
               <Link to="/contact" className="mg-btn mg-btn-ghost">Stel uw vraag</Link>
             </div>
-            <p className="text-sm text-primary-100/80 mt-6">Binnen twee minuten een eerste antwoord.</p>
+            <p className="text-sm text-primary-100/80 mt-6">De situatiecheck duurt ongeveer twee minuten.</p>
           </div>
         </div>
       </section>
@@ -73,54 +73,54 @@ export default function Home() {
                 {
                   title: "Gezinshereniging",
                   desc: "Herenigen met een geliefde in België? Welke voorwaarden gelden er? Wat als mijn inkomen net niet volstaat? Hoe lang duurt de procedure? Juridisch advies en bijstand bij elke stap.",
-                  link: "/informatie",
-                  cta: "Meer informatie",
+                  link: "/contact?onderwerp=gezinshereniging",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></>,
                 },
                 {
                   title: "Huwen met een buitenlandse partner",
+                  slug: "huwelijk",
                   desc: "Welke documenten heb ik nodig? Wat is een apostille en hoe vraag ik die aan? Waar voer ik de huwelijksprocedure? Moet mijn partner naar België komen voor het huwelijk?",
-                  link: "/contact",
-                  cta: "Meer informatie",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></>,
                 },
                 {
                   title: "Visumaanvraag",
+                  slug: "visum",
                   desc: "Welk visum is er nodig voor mijn situatie? Vraag ik dit aan in het buitenland of in België? Hoe lang duurt een visumaanvraag? Wat als het visum geweigerd wordt?",
-                  link: "/contact",
-                  cta: "Meer informatie",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></>,
                 },
                 {
                   title: "Weigering van een aanvraag",
+                  slug: "weigering",
                   desc: "Uw aanvraag werd geweigerd. Wat nu? Wat zijn de slaagkansen van een beroep? Hoe lang heeft u de tijd om beroep aan te tekenen? Welke procedure volgt u bij de Raad voor Vreemdelingenbetwistingen?",
-                  link: "/contact",
-                  cta: "Meer informatie",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></>,
                 },
                 {
                   title: "Weigering erkenning huwelijk",
+                  slug: "erkenning-huwelijk",
                   desc: "België erkent niet elk buitenlands huwelijk automatisch. Wat als uw huwelijk geweigerd wordt? Welke gronden worden gebruikt? Hoe tekent u beroep aan en wat zijn uw kansen?",
-                  link: "/contact",
-                  cta: "Meer informatie",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></>,
                 },
                 {
                   title: "Weigering wettelijke samenwoning",
+                  slug: "wettelijke-samenwoning",
                   desc: "Uw aanvraag voor wettelijke samenwoning werd geweigerd of niet erkend? Wat zijn uw rechten? Welke stappen kunt u zetten en binnen welke termijn?",
-                  link: "/contact",
-                  cta: "Meer informatie",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></>,
                 },
                 {
                   title: "Iets anders?",
+                  slug: "anders",
                   desc: "Ziet u uw situatie niet meteen staan maar is het familie of migratie gerelateerd? Neem gerust contact op.",
-                  link: "/contact",
-                  cta: "Neem contact op",
+                  cta: "Stel uw vraag",
                   svg: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></>,
                 },
               ].map((d, i) => (
-                <Link key={d.title} to={d.link} className="mg-card flex-shrink-0 w-72">
+                <Link key={d.title} to={d.link || `/contact?onderwerp=${d.slug}`} className="mg-card flex-shrink-0 w-72">
                   <span className="mg-card-num">{String(i + 1).padStart(2, "0")}</span>
                   <h3 className="mg-card-title">{d.title}</h3>
                   <span className="mg-card-line" />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -22,7 +22,13 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  const closeTimer = useRef(null);
+
+  // Het menu blijft nog even open als de muis het kort verlaat.
+  const openInfo = () => { clearTimeout(closeTimer.current); setInfoOpen(true); };
+  const closeInfoSoon = () => { clearTimeout(closeTimer.current); closeTimer.current = setTimeout(() => setInfoOpen(false), 350); };
+  useEffect(() => () => clearTimeout(closeTimer.current), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -31,7 +37,7 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setMenuOpen(false); setInfoOpen(false); }, [pathname]);
+  useEffect(() => { setMenuOpen(false); setInfoOpen(false); }, [pathname, hash]);
 
   const isActive = (path) => pathname === path;
 
@@ -46,10 +52,9 @@ export default function Navigation() {
           <div className="hidden xl:flex items-center gap-6 shrink-0">
             {LINKS.map((l) =>
               l.to === "/informatie" ? (
-                <div key={l.to} className="relative" onMouseLeave={() => setInfoOpen(false)}>
+                <div key={l.to} className="relative" onMouseEnter={openInfo} onMouseLeave={closeInfoSoon}>
                   <button
                     type="button"
-                    onMouseEnter={() => setInfoOpen(true)}
                     onClick={() => setInfoOpen(!infoOpen)}
                     aria-expanded={infoOpen}
                     className={`mg-navlink flex items-center gap-1.5 ${isActive("/informatie") ? "is-current" : ""}`}

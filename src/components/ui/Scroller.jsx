@@ -25,43 +25,15 @@ export const Scroller = ({
   const [showLeftOverlay, setShowLeftOverlay] = useState(false);
   const [showRightOverlay, setShowRightOverlay] = useState(false);
   const itemsRef = useRef([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastScrollByWheel, setLastScrollByWheel] = useState(false);
 
-  const scrollToIndex = (index) => {
-    if (index >= 0 && index < items.length) {
-      setCurrentIndex(index);
-      itemsRef.current[index]?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "start",
-      });
-    }
-  };
-
+  // Schuift telkens één kaart op (breedte van de eerste kaart plus de tussenruimte).
   const handleButtonClick = (direction) => {
-    if (!lastScrollByWheel) {
-      scrollToIndex(direction === "next" ? currentIndex + 1 : currentIndex - 1);
-    } else {
-      let nearestIndex = currentIndex;
-      for (let i = 0; i < itemsRef.current.length; i++) {
-        const rect = itemsRef.current[i]?.getBoundingClientRect();
-        if (direction === "next") {
-          if (rect && rect.left > 0) {
-            nearestIndex = i < itemsRef.current.length ? i + 1 : itemsRef.current.length;
-            break;
-          }
-        } else {
-          if (rect && rect.left > 0) {
-            nearestIndex = i > 0 ? i - 1 : 0;
-            break;
-          }
-        }
-      }
-      setCurrentIndex(nearestIndex);
-      scrollToIndex(nearestIndex);
-    }
-    setLastScrollByWheel(false);
+    const el = containerRef.current;
+    if (!el) return;
+    const card = el.querySelector(".mg-card") || el.firstElementChild;
+    const gap = 20;
+    const stepWidth = card ? card.getBoundingClientRect().width + gap : el.clientWidth * 0.8;
+    el.scrollBy({ left: direction === "next" ? stepWidth : -stepWidth, behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -74,8 +46,9 @@ export const Scroller = ({
     };
     handleScroll();
     const element = containerRef.current;
-    element?.addEventListener("scroll", handleScroll);
-    return () => element?.removeEventListener("scroll", handleScroll);
+    element?.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => { element?.removeEventListener("scroll", handleScroll); window.removeEventListener("resize", handleScroll); };
   }, []);
 
   return (
@@ -83,7 +56,6 @@ export const Scroller = ({
       <div
         className={clsx("flex hide-scrollbar overflow-x-auto flex-row", childrenContainerClassName)}
         ref={containerRef}
-        onWheel={() => setLastScrollByWheel(true)}
       >
         {items.map((child, index) => (
           <div key={index} ref={(el) => (itemsRef.current[index] = el)}>
@@ -95,16 +67,20 @@ export const Scroller = ({
       {withButtons && (
         <div className="flex gap-2 justify-center z-10">
           <button
-            aria-label="vorige"
+            type="button"
+            aria-label="Vorige"
             onClick={() => handleButtonClick("prev")}
-            className="w-8 h-8 rounded-full bg-white border border-gray-200 hover:bg-gray-50 flex items-center justify-center shadow-sm transition-colors text-gray-700"
+            disabled={!showLeftOverlay}
+            className="mg-scroll-btn"
           >
             <ArrowLeft />
           </button>
           <button
-            aria-label="volgende"
+            type="button"
+            aria-label="Volgende"
             onClick={() => handleButtonClick("next")}
-            className="w-8 h-8 rounded-full bg-white border border-gray-200 hover:bg-gray-50 flex items-center justify-center shadow-sm transition-colors text-gray-700"
+            disabled={!showRightOverlay}
+            className="mg-scroll-btn"
           >
             <ArrowRight />
           </button>

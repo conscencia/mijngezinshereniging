@@ -152,7 +152,7 @@ export default function Tarieven() {
               },
               {
                 q: "Is mijn situatie vertrouwelijk?",
-                a: "Alles wat u deelt valt onder het beroepsgeheim van de advocaat. Uw gegevens worden nooit gedeeld zonder uw uitdrukkelijke toestemming.",
+                a: "Wat u aan een advocaat toevertrouwt, valt onder het beroepsgeheim. Uw gegevens worden enkel gedeeld voor zover dat nodig is voor uw dossier of wettelijk verplicht is. Meer daarover leest u in de privacyverklaring.",
               },
             ].map((faq) => (
               <div key={faq.q} className="border-l-2 border-primary-200 pl-4">
