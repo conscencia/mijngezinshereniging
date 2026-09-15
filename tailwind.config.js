@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-// Huisstijl afgestemd op JONES advocaten (olijf, vanille, roest; Fraunces + Jost)
+// Huisstijl afgestemd op JONES advocaten (olijf, vanille, roest; Italiana + Playfair Display + Poppins)
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -53,8 +53,8 @@ export default {
       },
       borderRadius: { lg: "12px", xl: "14px", "2xl": "16px" },
       fontFamily: {
-        sans: ["Jost", "Segoe UI", "sans-serif"],
-        serif: ["Fraunces", "Georgia", "serif"],
+        sans: ["Poppins", "Segoe UI", "sans-serif"],
+        serif: ["Playfair Display", "Georgia", "serif"],
       },
     },
   },
