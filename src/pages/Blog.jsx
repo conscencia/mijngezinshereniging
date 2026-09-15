@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { articles } from "../data/articles";
 
-const categories = ["Alle", "Tips", "Procedure", "Inkomenseis", "Beroep", "Huwelijk"];
+const categories = ["Alle", "Tips", "Procedure", "Inkomenseis", "Kosten", "Wetgeving", "Beroep", "Huwelijk"];
 
 const categoryColors = {
   Tips: "bg-blue-100 text-blue-700",
@@ -10,6 +10,8 @@ const categoryColors = {
   Inkomenseis: "bg-yellow-100 text-yellow-700",
   Beroep: "bg-red-100 text-red-700",
   Huwelijk: "bg-rust-500/10 text-rust-600",
+  Kosten: "bg-primary-100 text-primary-700",
+  Wetgeving: "bg-gray-200 text-gray-800",
 };
 
 export default function Blog() {

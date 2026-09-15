@@ -11,15 +11,15 @@ const tabs = [
 const faqs = [
   {
     q: "Hoelang duurt een procedure voor gezinshereniging?",
-    a: "Gemiddeld 4 tot 6 maanden. De Dienst Vreemdelingenzaken heeft wettelijk 6 maanden de tijd (voor Belgen) of 5 maanden (voor EU-burgers) om te beslissen. Reageert DVZ niet op tijd, dan kunt u juridische stappen zetten. Een volledig en correct ingediend dossier helpt de doorlooptijd te beperken.",
+    a: "Dat hangt af van uw situatie. Bij een aanvraag in België beslist DVZ binnen 6 maanden, zowel voor familie van een Belg als van een EU-burger. Bij een visum vanuit het buitenland is dat 6 maanden voor familie van een Belg en 9 maanden (maximaal 15 maanden) voor familie van een derdelander. Een volledig en correct ingediend dossier helpt vertraging te vermijden.",
   },
   {
     q: "Moet ik getrouwd zijn om gezinshereniging als partner aan te vragen?",
-    a: "U moet officieel gehuwd of wettelijk samenwonend zijn. Een feitelijke samenwoning of langdurige relatie zonder officiële erkenning geeft geen recht op gezinshereniging als partner. Wilt u trouwen met een partner van buiten de EU? Dan is er een aparte huwelijksprocedure voorzien.",
+    a: "U moet gehuwd zijn of een geregistreerd partnerschap hebben, zoals een wettelijke samenwoning. Als geregistreerde partner moet u ook bewijzen dat uw relatie duurzaam is: bijvoorbeeld 1 jaar samenwonen, of elkaar 2 jaar kennen met minstens 3 ontmoetingen van samen 45 dagen, of een gemeenschappelijk kind. Een feitelijke samenwoning zonder registratie geeft geen recht op gezinshereniging als partner.",
   },
   {
     q: "Welk inkomen heb ik nodig?",
-    a: "Tot 18 augustus 2027 heeft u minstens €2.173,88 netto per maand nodig. Vanaf 18 augustus 2027 stijgt dit naar €2.408,79, met een toeslag van 10% per extra gezinslid dat overkomt. Niet elk inkomen telt mee. Leefloon, OCMW-bijstand en kindergeld tellen bijvoorbeeld niet.",
+    a: "Voor familie van een Belg is het referentiebedrag vandaag €2.217,47 netto per maand (sinds 1 september 2026). Voor aanvragen vanaf 18 augustus 2027 wordt dat 110% van het GGMMI: vandaag €2.456,97, verhoogd met 10% per gezinslid ten laste. Voor familie van een derdelander die zijn verblijfsrecht kreeg op of na 18 augustus 2025 geldt dat hogere bedrag nu al. Niet elk inkomen telt mee: leefloon, OCMW-steun en kindergeld tellen bijvoorbeeld niet. Het stabiele inkomen van uw partner kan wel meetellen.",
   },
   {
     q: "Wat als mijn inkomen net niet volstaat?",
@@ -39,15 +39,15 @@ const faqs = [
   },
   {
     q: "Kan ik mijn minderjarige kinderen laten overkomen?",
-    a: "In principe wel. Voor minderjarige kinderen (jonger dan 18) geldt de inkomenseis in principe niet, als u het ouderlijk gezag heeft. Let op: als er tegelijk ook andere gezinsleden overkomen voor wie de inkomenseis wel geldt, kan de situatie anders liggen.",
+    a: "In principe wel, als u het ouderlijk gezag heeft. Deelt u het gezag met de andere ouder, dan is diens schriftelijke toestemming nodig. Komt enkel uw minderjarig kind over (of samen met andere minderjarige kinderen), dan geldt er voor kinderen van een Belg geen inkomenseis. Komt tegelijk uw partner of een meerderjarig kind mee, dan geldt die wel.",
   },
   {
     q: "Kan ik mijn meerderjarig kind laten overkomen?",
-    a: "Dat is mogelijk als uw kind aantoonbaar financieel afhankelijk is van u en in het herkomstland niet zelfstandig kan voorzien in zijn of haar levensonderhoud. De voorwaarden zijn strenger dan voor minderjarige kinderen en de inkomenseis geldt wel.",
+    a: "Dat is mogelijk als uw kind in het herkomstland 'ten laste' is: financieel afhankelijk van uw steun om rond te komen. Voor kinderen van een Belg geldt dat vanaf 18 jaar, en ook de inkomenseis geldt dan. Bent u EU-burger, dan hoeft een kind jonger dan 21 niet ten laste te zijn.",
   },
   {
     q: "Kan ik een ouder, broer of zus laten overkomen?",
-    a: "Voor ouders, broers of zussen bestaat er geen automatisch recht op gezinshereniging als u een Belg bent die altijd in België heeft gewoond. In uitzonderlijke omstandigheden, bij bewezen medische of financiële afhankelijkheid, zijn er soms mogelijkheden. Elke situatie is anders.",
+    a: "Voor ouders, broers of zussen van een meerderjarige Belg die altijd in België woonde, bestaat er geen recht op gezinshereniging. Uitzondering: de vader of moeder van een minderjarig Belgisch kind kan wel verblijf aanvragen. Bent u EU-burger en werkt u in België, dan kan een ouder die ten laste is wel in aanmerking komen. In andere gevallen blijft soms een humanitair visum mogelijk.",
   },
   {
     q: "Wat is een humanitair visum?",
@@ -67,7 +67,7 @@ const faqs = [
   },
   {
     q: "Wat is het verschil tussen wettelijke en feitelijke samenwoning?",
-    a: "Wettelijke samenwoning is een officieel geregistreerde samenlevingsvorm die u via de gemeente afsluit. Dit geeft recht op gezinshereniging als partner, net als een huwelijk. Feitelijke samenwoning, waarbij u zonder officiële registratie samenleeft, geeft dat recht niet. Voor DVZ telt enkel de officieel erkende relatievorm.",
+    a: "Wettelijke samenwoning is een officieel geregistreerde samenlevingsvorm die u via de gemeente afsluit. Dit kan recht geven op gezinshereniging als partner, maar anders dan bij een huwelijk moet u dan ook bewijzen dat uw relatie duurzaam en stabiel is. Feitelijke samenwoning, zonder officiële registratie, geeft dat recht niet.",
   },
   {
     q: "Wat is een schijnhuwelijk en hoe wordt dit onderzocht?",
@@ -75,7 +75,7 @@ const faqs = [
   },
   {
     q: "Kan ik als zelfstandige gezinshereniging aanvragen?",
-    a: "Ja, maar de bewijslast is zwaarder dan voor werknemers. U kunt geen loonfiches voorleggen. DVZ kijkt naar uw belastingaangiften van de afgelopen jaren, uw jaarrekeningen en uw netto-inkomen na aftrek van sociale bijdragen en belastingen. Een stabiel en voldoende inkomen over meerdere jaren weegt sterk mee.",
+    a: "Ja, maar de bewijslast is zwaarder dan voor werknemers. DVZ vraagt specifieke documenten, zowel fiscaal (zoals uw aanslagbiljet) als over uw sociale bijdragen. Loonfiches die u als zaakvoerder aan uzelf uitreikt, volstaan op zich niet. Een stabiel en voldoende inkomen over een langere periode weegt sterk mee.",
   },
   {
     q: "Wat als ik de beroepstermijn van 30 dagen heb gemist?",
@@ -166,29 +166,30 @@ export default function Info() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Basisvoorwaarden voor gezinshereniging</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Gezinshereniging in België is geregeld via twee hoofdartikelen:
+                Welke regels gelden, hangt af van wie de persoon in België is. De belangrijkste artikels:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                   <div className="font-bold text-blue-900 mb-1">Artikel 40ter Verblijfswet</div>
-                  <div className="text-blue-700 text-sm">Voor Belgen en niet-EU burgers die gezinsleden willen laten overkomen.</div>
+                  <div className="text-blue-700 text-sm">Voor Belgen die familieleden naar België halen. Voor EU-burgers geldt artikel 40bis.</div>
                 </div>
                 <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
                   <div className="font-bold text-emerald-900 mb-1">Artikel 10 Verblijfswet</div>
-                  <div className="text-emerald-700 text-sm">Voor EU-burgers die hun familieleden naar België halen.</div>
+                  <div className="text-emerald-700 text-sm">Voor derdelanders (geen Belg of EU-burger) met verblijfsrecht in België.</div>
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">1. Partners (Art. 40ter)</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">1. Partner van een Belg</h3>
               <div className="space-y-2">
                 {[
-                  { ok: true, text: "Getrouwde partners of wettelijk samenwonenden" },
-                  { ok: true, text: "Beide partijen minstens 21 jaar oud" },
-                  { ok: null, text: "Stabiel, regelmatig en voldoende inkomen (~€1.487 netto/mnd in 2026)", warn: true },
-                  { ok: null, text: "Toereikende huisvesting voor het hele gezin", warn: true },
-                  { ok: null, text: "Ziekteverzekering voor het gezinslid", warn: true },
+                  { ok: true, text: "Gehuwd, of geregistreerd partner met bewijs van een duurzame relatie" },
+                  { ok: true, text: "Gehuwd: beiden ouder dan 18 jaar. Geregistreerd partner: ouder dan 21 jaar, of 18 jaar na 1 jaar samenwonen" },
+                  { ok: null, text: "Stabiel, regelmatig en voldoende inkomen (referentiebedrag €2.217,47 netto per maand sinds 1 september 2026)", warn: true },
+                  { ok: null, text: "Voldoende huisvesting", warn: true },
+                  { ok: null, text: "Ziekteverzekering voor u beiden", warn: true },
+                  { ok: null, text: "Retributie van €218", warn: true },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.warn ? "bg-yellow-50" : "bg-green-50"}`}>
                     <span className={`mg-bullet ${item.warn ? "" : "mg-bullet-ok"}`} aria-hidden="true"></span>
@@ -202,10 +203,10 @@ export default function Info() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Kinderen</h3>
               <div className="space-y-2">
                 {[
-                  { icon: "✅", text: "Minderjarigen (0 tot 18 jaar), meest haalbaar" },
-                  { icon: "✅", text: "Economisch afhankelijke kinderen (18 tot 25) die studeren" },
-                  { icon: "⚠️", text: "U moet kunnen aantonen dat u voor het kind kunt zorgen (financieel en huisvesting)" },
-                  { icon: "⚠️", text: "Als de andere ouder gezag heeft, kan dit complicaties geven" },
+                  { icon: "✅", text: "Minderjarige kinderen: geen inkomenseis als enkel kinderen overkomen, geen retributie" },
+                  { icon: "✅", text: "Kinderen van 18 jaar of ouder: mogelijk als ze in het herkomstland ten laste zijn van u (bij een EU-burger vanaf 21 jaar)" },
+                  { icon: "⚠️", text: "U heeft het ouderlijk gezag nodig. Bij gedeeld gezag: schriftelijke toestemming van de andere ouder" },
+                  { icon: "⚠️", text: "Bewijs van huisvesting en ziekteverzekering" },
                 ].map((item, i) => (
                   <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "✅" ? "bg-green-50" : "bg-yellow-50"}`}>
                     <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
@@ -219,11 +220,12 @@ export default function Info() {
               <h3 className="text-xl font-bold text-gray-900 mb-4">3. (Groot)ouders</h3>
               <div className="space-y-2">
                 {[
-                  { icon: "❌", text: "Alleen mogelijk in uitzonderlijke humanitaire omstandigheden" },
-                  { icon: "❌", text: "Zeer strenge voorwaarden, zelden toegekend" },
-                  { icon: "⚠️", text: "U moet bewijzen dat u de enige persoon bent die voor de ouder kan zorgen" },
+                  { icon: "❌", text: "Meerderjarige Belg: geen recht op gezinshereniging met (groot)ouders" },
+                  { icon: "✅", text: "Vader of moeder van een minderjarig Belgisch kind: wel mogelijk" },
+                  { icon: "⚠️", text: "EU-burger die werkt in België: (groot)ouder die ten laste is, kan in aanmerking komen" },
+                  { icon: "⚠️", text: "In andere gevallen soms een humanitair visum, zonder automatisch recht" },
                 ].map((item, i) => (
-                  <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "❌" ? "bg-red-50" : "bg-yellow-50"}`}>
+                  <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "❌" ? "bg-red-50" : item.icon === "✅" ? "bg-green-50" : "bg-yellow-50"}`}>
                     <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
                     <span className="text-gray-700 text-sm">{item.text}</span>
                   </div>
@@ -259,34 +261,34 @@ export default function Info() {
                     title: "Voorbereiding (2 tot 3 maanden)",
                     color: "bg-blue-500",
                     items: [
-                      "Bewijs van relatie (huwelijksakte / verklaring samenwoning)",
-                      "Inkomstbewijzen: loonfiches van de laatste 3 maanden",
-                      "Aanslagbiljet / belastingbrief van het laatste jaar",
-                      "Huisvestingbewijs: huurcontract of eigendomsakte",
-                      "Bewijs van ziekteverzekering voor het gezinslid",
-                      "Medische verklaring gezinslid (indien vereist)",
+                      "Bewijs van de familieband (huwelijksakte, partnerschapsakte of geboorteakte), gelegaliseerd en vertaald waar nodig",
+                      "Bewijs van inkomen, bij voorkeur van de laatste 12 maanden",
+                      "Meest recent aanslagbiljet",
+                      "Bewijs van huisvesting (bij een derdelander: geregistreerd huurcontract of notariële eigendomsakte)",
+                      "Bewijs van ziekteverzekering",
+                      "Bij een visum met een derdelander: medisch attest en uittreksel strafregister (max. 6 maanden oud)",
                     ],
                   },
                   {
                     step: "2",
-                    title: "Indiening aanvraag bij DVZ",
+                    title: "Indiening van de aanvraag",
                     color: "bg-primary-500",
                     items: [
-                      "Aanvraag indienen via balie Dienst Vreemdelingenzaken (DVZ) of online portaal",
-                      "Betaling retributie (bijdrage verwerking dossier)",
-                      "DVZ geeft bevestiging van ontvangst",
-                      "Start van de onderzoekstermijn",
+                      "Gezinslid in het buitenland: visumaanvraag bij de Belgische ambassade of het visumcentrum",
+                      "Gezinslid al in België: aanvraag bij de gemeente (familie van een Belg of EU-burger: bijlage 19ter)",
+                      "Bewijs van betaling van de retributie (€218), tenzij vrijgesteld",
+                      "De datum van de aanvraag doet de beslissingstermijn lopen",
                     ],
                   },
                   {
                     step: "3",
-                    title: "Beoordeling door DVZ (3 tot 6 maanden)",
+                    title: "Beoordeling door DVZ",
                     color: "bg-yellow-500",
                     items: [
                       "DVZ controleert alle ingediende documenten",
                       "Mogelijk bijkomende onderzoeken of verzoeken om aanvullende info",
                       "DVZ kan een interview afnemen bij u of het gezinslid",
-                      "Gemiddelde doorlooptijd: 4 tot 6 maanden",
+                      "Termijn: 6 maanden (familie van Belg of EU-burger), 9 tot max. 15 maanden (visum met derdelander)",
                     ],
                   },
                   {
@@ -294,10 +296,10 @@ export default function Info() {
                     title: "Uitkomst en beslissing",
                     color: "bg-green-500",
                     items: [
-                      "✅ Goedkeuring → Gezinslid ontvangt visum type D en kan naar België reizen",
-                      "❌ Afwijzing → U heeft 30 dagen om beroep aan te tekenen bij RvV",
-                      "Bij goedkeuring: gezinslid meldt zich aan bij gemeente",
-                      "Verblijfskaart wordt uitgereikt na aankomst",
+                      "Goedkeuring vanuit het buitenland: gezinslid krijgt een visum en reist naar België",
+                      "Na aankomst: binnen 8 werkdagen aanmelden bij de gemeente, daarna volgt een woonstcontrole",
+                      "Verblijfskaart wordt uitgereikt na een positieve woonstcontrole",
+                      "Weigering: in de meeste gevallen 30 dagen om beroep in te dienen bij de RvV",
                     ],
                   },
                 ].map((s, i) => (
@@ -355,11 +357,11 @@ export default function Info() {
                 <ul className="space-y-2 text-sm text-green-800">
                   {[
                     "Loon uit een vaste arbeidsovereenkomst",
-                    "Inkomsten als zelfstandige (via belastingbrief, gemiddeld 3 jaar)",
+                    "Inkomsten als zelfstandige (met fiscale en sociale documenten)",
                     "Werkloosheidsuitkering (mits actief werkzoekend)",
                     "Pensioenuitkering (ouderdomspensioen of vervroegd)",
-                    "Alimentatie (indien stabiel en aanwijsbaar)",
-                    "Inkomsten uit verhuur (mits stabiel)",
+                    "Stabiel inkomen van uw partner (Grondwettelijk Hof, april 2026)",
+                    "Netto huurinkomsten en maaltijdcheques",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <svg className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -377,12 +379,12 @@ export default function Info() {
                 </h3>
                 <ul className="space-y-2 text-sm text-red-800">
                   {[
-                    "Leefloon (OCMW-uitkering / bijstand)",
-                    "Kinderopvangtoeslag / kinderbijslag",
-                    "Financiële steun van familieleden",
+                    "Leefloon en maatschappelijke dienstverlening (OCMW)",
+                    "Gezinsbijslag (kindergeld)",
+                    "Wachtuitkering en overbruggingsuitkering",
+                    "Werkloosheidsuitkering zonder bewijs van actief zoeken naar werk",
                     "Onregelmatige, wisselende inkomsten",
-                    "Inkomen van het gezinslid dat nog niet in België is",
-                    "Tijdelijke of interimcontracten (met voorbehoud)",
+                    "Interim, tijdelijke contracten of artikel 60 (vaak geweigerd)",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <svg className="w-4 h-4 text-red-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -397,9 +399,9 @@ export default function Info() {
 
             {/* Bedragen */}
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-6">
-              <h3 className="font-bold text-yellow-900 mb-1">💰 Inkomensgrens, vanaf 18 augustus 2027</h3>
+              <h3 className="font-bold text-yellow-900 mb-1">Inkomensgrens: welk bedrag geldt voor u?</h3>
               <p className="text-yellow-800 text-sm mb-4 leading-relaxed">
-                Vanaf 18 augustus 2027 geldt een nieuw referentiebedrag gebaseerd op het <strong>Gewaarborgd Gemiddeld Minimum Maandinkomen (GGMMI)</strong>.
+                Welk referentiebedrag geldt, hangt af van wie de persoon in België is en van de datum van de aanvraag of van het verblijfsrecht. Het nieuwe bedrag is gebaseerd op het <strong>gewaarborgd gemiddeld minimummaandinkomen (GGMMI)</strong>.
               </p>
               <div className="overflow-x-auto mb-4">
                 <table className="w-full text-sm">
@@ -411,9 +413,10 @@ export default function Info() {
                   </thead>
                   <tbody className="divide-y divide-yellow-100">
                     {[
-                      ["1 gezinslid doet aanvraag (110% GGMMI)", "€2.408,79"],
-                      ["+ 1 extra ten laste (+10%)", "€2.649,67"],
-                      ["+ 2 extra ten laste (+20%)", "€2.890,55"],
+                      ["Familie van een Belg, aanvraag vóór 18 augustus 2027 (120% leefloon)", "€2.217,47"],
+                      ["Familie van een derdelander met verblijfsrecht vóór 18 augustus 2025 (120% leefloon)", "€2.217,47"],
+                      ["Familie van een derdelander met verblijfsrecht vanaf 18 augustus 2025 (110% GGMMI, 1 gezinslid)", "€2.456,97"],
+                      ["Familie van een Belg, aanvraag vanaf 18 augustus 2027 (110% GGMMI, 1 gezinslid)", "€2.456,97*"],
                     ].map(([situatie, bedrag], i) => (
                       <tr key={i} className="bg-white/50">
                         <td className="px-4 py-2.5 text-gray-700">{situatie}</td>
@@ -424,11 +427,10 @@ export default function Info() {
                 </table>
               </div>
               <div className="bg-white rounded-xl p-4 text-sm text-gray-600 leading-relaxed">
-                <strong className="text-gray-800">Voorbeeld:</strong> U woont alleen in België en uw partner + 2 kinderen vragen gezinshereniging aan.
-                Het referentiebedrag is 110% (partner) + 20% van 110% (2 kinderen × 10%) van het GGMMI.
+                <strong className="text-gray-800">Let op:</strong> bij het GGMMI-bedrag komt er 10% bij per gezinslid ten laste. Hoe groter het gezin, hoe hoger het bedrag. Zit u onder het bedrag, dan mag DVZ niet automatisch weigeren.
               </div>
               <p className="text-xs text-yellow-700 mt-3">
-                * Bedragen zijn gebaseerd op het GGMMI en worden periodiek geïndexeerd. Raadpleeg het Agentschap Integratie en Inburgering voor de meest actuele cijfers.
+                Leefloonbedrag sinds 1 september 2026, GGMMI-bedrag sinds 1 juli 2026. * Het bedrag in 2027 kan nog geïndexeerd worden. Bron: Agentschap Integratie en Inburgering.
               </p>
             </div>
 

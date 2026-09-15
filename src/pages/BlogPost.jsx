@@ -8,6 +8,8 @@ const categoryColors = {
   Inkomenseis: "bg-yellow-100 text-yellow-700",
   Beroep: "bg-red-100 text-red-700",
   Huwelijk: "bg-rust-500/10 text-rust-600",
+  Kosten: "bg-primary-100 text-primary-700",
+  Wetgeving: "bg-gray-200 text-gray-800",
 };
 
 function parseInline(text) {
@@ -142,6 +144,13 @@ function renderBlock(block, i) {
             ))}
           </div>
         </div>
+      );
+
+    case "source":
+      return (
+        <p key={i} className="text-xs text-gray-500 border-t border-gray-100 pt-6 mt-6">
+          Bron: <a href={block.href} target="_blank" rel="noopener noreferrer" className="underline hover:text-primary-600">{block.label}</a>{block.checked ? `, geraadpleegd op ${block.checked}` : ""}.
+        </p>
       );
 
     case "note":
