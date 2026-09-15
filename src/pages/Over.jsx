@@ -40,7 +40,7 @@ export default function Over() {
                   Daarom is er <span translate="no" className="notranslate">MijnGezinshereniging.be</span>. Wij leggen u in eenvoudige woorden uit wat u nodig heeft en wat u moet doen, stap voor stap. U weet vooraf wat het kost en wat u kunt verwachten. Zo staat uw aanvraag zo sterk mogelijk.
                 </p>
                 <p>
-                  Waar u ook woont in België: een gesprek kan online. Liever iemand in levenden lijve spreken? Dat kan op kantoor in Oost- en West-Vlaanderen.
+                  Waar u ook woont: het gesprek verloopt via video. U heeft enkel een smartphone, tablet of computer met internet nodig.
                 </p>
               </div>
               <Link

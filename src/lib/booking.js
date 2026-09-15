@@ -1,7 +1,8 @@
 // Eigen afsprakenagenda op basis van Cal.com: beschikbaarheid, buffers en boekingen komen uit Cal.com.
 // Overgenomen van de website van JONES advocaten, zodat beide sites dezelfde agenda en dezelfde werking hebben.
 /* eslint-disable */
-export function startBooking(embed, CAL_LINK){
+export function startBooking(embed, CAL_LINK, opts){
+    var videoOnly = !!(opts && opts.videoOnly);
     if (!embed || !CAL_LINK || embed.dataset.bkStarted) return;
     embed.dataset.bkStarted = '1';
 
@@ -98,7 +99,7 @@ export function startBooking(embed, CAL_LINK){
           } catch (e) {}
         }
         return l;
-      }).filter(function(l){ return l.type !== 'unknown'; }).map(function(l, idx){
+      }).filter(function(l){ return l.type !== 'unknown' && (!videoOnly || l.type === 'integration'); }).map(function(l, idx){
         var label = l.type === 'integration' ? (vid[l.integration] || 'Videogesprek') : (map[l.type] || 'Afspraak');
         return { idx: idx, loc: l, label: label };
       }).sort(function(a, b){
@@ -144,7 +145,7 @@ export function startBooking(embed, CAL_LINK){
       } else {
         html += '<p class="bk-muted bk-empty">' + (firstDayIn(m) ? 'Kies een dag met een stipje om de vrije uren te zien.' : 'Geen vrije momenten in deze maand. Bekijk de volgende maand.') + '</p>';
       }
-      html += '</div></div><p class="bk-foot">Eerste consultatie &middot; ' + (state.event.lengthInMinutes || 30) + ' minuten &middot; &euro;75 excl. btw &middot; tijden in Belgische tijd</p></div>';
+      html += '</div></div><p class="bk-foot">' + (videoOnly ? 'Videogesprek' : 'Eerste consultatie') + ' &middot; ' + (state.event.lengthInMinutes || 30) + ' minuten &middot; &euro;75 excl. btw &middot; tijden in Belgische tijd</p></div>';
       embed.innerHTML = html;
     }
 
@@ -251,7 +252,7 @@ export function startBooking(embed, CAL_LINK){
         '<h3 class="bk-title">' + (pending ? 'Uw aanvraag is ontvangen' : 'Uw afspraak staat vast') + '</h3>' +
         '<div class="bk-summary"><span class="bk-summary-date">' + fmtLong.format(start) + '</span><span class="bk-summary-time">' + fmtTime.format(start) + (o ? ' &middot; ' + o.label : '') + '</span></div>' +
         '<p class="bk-muted">' + (pending ? 'U krijgt een e-mail zodra de afspraak bevestigd is.' : 'U ontvangt een bevestiging op ' + esc(body.attendee.email) + ', met de mogelijkheid om te verplaatsen of te annuleren.') + '</p>' +
-        '<p class="bk-muted">Breng naar de consultatie alle documenten mee die met uw vraag te maken hebben.</p></div>';
+        '<p class="bk-muted">' + (videoOnly ? 'U krijgt de link naar het videogesprek in de bevestiging. Houd de documenten die met uw vraag te maken hebben bij de hand.' : 'Breng naar de consultatie alle documenten mee die met uw vraag te maken hebben.') + '</p></div>';
       try { sessionStorage.removeItem('mgz-contact'); } catch (e) {}
     }
 
