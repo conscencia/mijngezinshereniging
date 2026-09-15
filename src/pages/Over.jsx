@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { BOOKING_URL } from "../config";
 
 
 export default function Over() {
@@ -64,7 +63,7 @@ export default function Over() {
             <p className="mg-lead text-primary-100 mt-5">In een eerste gesprek krijgt u een eerlijk beeld van uw mogelijkheden en de volgende stappen.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-btn mg-btn-rust">Plan een gesprek</a>
+            <Link to="/afspraak" className="mg-btn mg-btn-rust">Maak een afspraak</Link>
             <Link to="/tool" className="mg-btn mg-btn-ghost">Kom ik in aanmerking?</Link>
           </div>
         </div>

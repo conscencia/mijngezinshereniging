@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { BOOKING_URL } from "../config";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -66,16 +65,9 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Intakegesprek inboeken</h3>
                 <div className="rounded-xl border-2 border-primary-200 bg-primary-50 p-5">
                   <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    Boek rechtstreeks een videocall van 30 minuten. Betaling gebeurt bij bevestiging.
+                    Kies zelf een moment voor een gesprek van 30 minuten (€75 excl. btw).
                   </p>
-                  <a
-                    href={BOOKING_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
-                  >
-                    Direct inboeken (€75)
-                  </a>
+                  <Link to="/afspraak" className="mg-btn mg-btn-rust w-full">Maak een afspraak</Link>
                 </div>
                 <div className="mt-4">
                   <Link to="/tarieven" className="inline-flex items-center gap-1.5 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors">

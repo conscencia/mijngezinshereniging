@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { BOOKING_URL } from "../config";
 
 const QUESTIONS = {
   nationaliteit: {
@@ -25,11 +24,11 @@ const QUESTIONS = {
   "belg-type": {
     id: "belg-type",
     label: "Stap 2",
-    title: "Woonde u als Belg ooit in een ander EU-land?",
-    help: "Heeft u als Belg een tijd in een ander EU-land gewoond, gewerkt of gestudeerd? Dan gelden vaak de Europese regels. Die zijn soepeler dan de regels voor een Belg die altijd in België woonde.",
+    title: "Woonde u samen met uw gezinslid in een ander EU-land?",
+    help: "Woonde u als Belg langer dan 3 maanden in een ander EU-land, bijvoorbeeld om er te werken of te studeren, en had u daar al een gezinsleven met het familielid dat nu wil overkomen? Dan gelden de soepelere Europese regels. Een vakantie of een verblijf zonder uw gezinslid telt niet.",
     options: [
-      { value: "statisch", label: "Nee, ik heb altijd in België gewoond" },
-      { value: "actief", label: "Ja, ik heb in een ander EU-land gewoond, gewerkt of gestudeerd" },
+      { value: "statisch", label: "Nee" },
+      { value: "actief", label: "Ja, wij woonden daar samen en keerden daarna terug naar België" },
     ],
     next: (answers) => answers["belg-type"] === "actief" ? "eu-type" : "gezinslid",
   },
@@ -251,9 +250,8 @@ function calculateResult(answers) {
       return {
         status: "groen",
         title: "U komt waarschijnlijk in aanmerking",
-        summary: "Als EU-burger, of als Belg die in een ander EU-land woonde, mag u uw echtgenoot of echtgenote naar België halen volgens de Europese regels. Er geldt geen vast inkomensbedrag.",
+        summary: "Als EU-burger, of als Belg die samen met uw partner in een ander EU-land woonde, mag u uw echtgenoot of echtgenote naar België halen volgens de Europese regels. Werkt u of zoekt u werk, dan geldt er geen inkomensvoorwaarde.",
         points: [
-          { text: "Er is geen minimumbedrag. U moet wel aantonen dat uw gezin geen onredelijke last wordt voor de Belgische sociale bijstand." },
           { text: "Nodig: een geldig paspoort van uw partner, de huwelijksakte (gelegaliseerd en vertaald waar nodig) en een bewijs van uw verblijfsrecht in België." },
           ...extraVereisten,
           { text: "DVZ kan nagaan of het om een schijnhuwelijk gaat. Bewijzen van uw relatie, zoals foto's, berichten en gezamenlijke reizen, versterken uw dossier." },
@@ -661,7 +659,7 @@ function calculateResult(answers) {
 
 const SHORT_LABELS = {
   nationaliteit: "Uw statuut",
-  "belg-type": "Vrij verkeer in de EU",
+  "belg-type": "Samen in een ander EU-land",
   "eu-type": "Uw situatie in België",
   "gezinslid-eu": "Wie komt over",
   gezinslid: "Wie komt over",
@@ -984,7 +982,7 @@ export default function Tool() {
                     In een videogesprek van 30 minuten krijgt u een eerlijk beeld van uw kansen en de volgende stappen. Een gesprek kost €75 excl. btw.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 mt-8">
-                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-btn mg-btn-rust">Plan een gesprek</a>
+                    <Link to="/afspraak" className="mg-btn mg-btn-rust">Maak een afspraak</Link>
                     <button type="button" onClick={() => setShowForm(!showForm)} aria-expanded={showForm} className="mg-btn mg-btn-ghost">
                       {showForm ? "Formulier sluiten" : "Laat uw gegevens achter"}
                     </button>

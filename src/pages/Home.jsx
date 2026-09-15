@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Scroller } from "../components/ui/Scroller";
-import { BOOKING_URL } from "../config";
 
 const faqs = [
   {
@@ -228,7 +227,7 @@ export default function Home() {
             <p className="mg-lead text-primary-100 mt-5">Stel eerst uw vraag, of plan meteen een gesprek van 30 minuten.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-btn mg-btn-rust">Plan een gesprek</a>
+            <Link to="/afspraak" className="mg-btn mg-btn-rust">Maak een afspraak</Link>
             <Link to="/contact" className="mg-btn mg-btn-ghost">Stel uw vraag</Link>
           </div>
         </div>

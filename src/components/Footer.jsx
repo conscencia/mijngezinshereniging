@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { BOOKING_URL } from "../config";
 
 export default function Footer() {
   return (
@@ -20,7 +19,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2">
             <p className="mg-footer-h">Contact</p>
             <Link to="/contact" className="mg-footer-link">Stel uw vraag</Link>
-            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-footer-link">Plan een gesprek</a>
+            <Link to="/afspraak" className="mg-footer-link">Maak een afspraak</Link>
             <a href="mailto:advocaat@mijngezinshereniging.be" translate="no" className="mg-footer-link break-all notranslate">advocaat@mijngezinshereniging.be</a>
           </div>
         </div>

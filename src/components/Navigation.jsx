@@ -7,6 +7,7 @@ const LINKS = [
   { to: "/informatie", label: "Informatie" },
   { to: "/over-ons", label: "Over ons" },
   { to: "/tarieven", label: "Tarieven" },
+  { to: "/contact", label: "Contact" },
 ];
 
 const INFO = [
@@ -37,12 +38,12 @@ export default function Navigation() {
   return (
     <nav className={`mg-nav ${scrolled ? "is-scrolled" : ""}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="flex items-center justify-between h-[72px]">
+        <div className="flex items-center justify-between gap-6 h-[72px]">
           <Link to="/" translate="no" className="mg-wordmark notranslate" aria-label="MijnGezinshereniging.be, naar de startpagina">
             mijn<em>gezinshereniging</em>
           </Link>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden xl:flex items-center gap-6 shrink-0">
             {LINKS.map((l) =>
               l.to === "/informatie" ? (
                 <div key={l.to} className="relative" onMouseLeave={() => setInfoOpen(false)}>
@@ -69,12 +70,14 @@ export default function Navigation() {
               )
             )}
             <LanguageSwitcher />
-            <Link to="/contact" className="mg-btn mg-btn-rust mg-btn-sm">Contact</Link>
+            <Link to="/afspraak" className="mg-btn mg-btn-rust mg-btn-sm">Maak een afspraak</Link>
           </div>
 
+          <div className="xl:hidden flex items-center gap-2">
+          <Link to="/afspraak" className="mg-btn mg-btn-rust mg-btn-sm mg-btn-xs">Afspraak</Link>
           <button
             type="button"
-            className="md:hidden mg-iconbtn"
+            className="mg-iconbtn"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Menu sluiten" : "Menu openen"}
             aria-expanded={menuOpen}
@@ -85,16 +88,17 @@ export default function Navigation() {
                 : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M4 8h16M4 16h16" />}
             </svg>
           </button>
+          </div>
         </div>
 
-        <div className={`md:hidden mg-mobilemenu ${menuOpen ? "is-open" : ""}`}>
+        <div className={`xl:hidden mg-mobilemenu ${menuOpen ? "is-open" : ""}`}>
           <div className="flex flex-col py-4">
             {[{ to: "/", label: "Home" }, ...LINKS, { to: "/blog", label: "Blog" }].map((l) => (
               <Link key={l.to} to={l.to} className={`mg-mobilelink ${isActive(l.to) ? "is-current" : ""}`}>{l.label}</Link>
             ))}
             <div className="flex items-center justify-between gap-4 pt-5">
               <LanguageSwitcher />
-              <Link to="/contact" className="mg-btn mg-btn-rust mg-btn-sm">Contact</Link>
+              <Link to="/afspraak" className="mg-btn mg-btn-rust mg-btn-sm">Maak een afspraak</Link>
             </div>
           </div>
         </div>

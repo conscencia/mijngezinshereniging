@@ -10,6 +10,7 @@ import BlogPost from "./pages/BlogPost";
 import Privacy from "./pages/Privacy";
 import Over from "./pages/Over";
 import Tarieven from "./pages/Tarieven";
+import Afspraak from "./pages/Afspraak";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/over-ons" element={<Over />} />
             <Route path="/tarieven" element={<Tarieven />} />
+            <Route path="/afspraak" element={<Afspraak />} />
           </Routes>
         </main>
         <Footer />
