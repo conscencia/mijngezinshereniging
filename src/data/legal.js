@@ -4,179 +4,243 @@ export const legal = {
  "docs": {
   "privacy": {
    "title": "Privacyverklaring",
-   "intro": "In deze privacyverklaring leest u hoe de advocaat achter MijnGezinshereniging.be met uw persoonsgegevens omgaat. Wij verwerken uw gegevens zorgvuldig, met respect voor het beroepsgeheim van de advocaat en in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG).",
+   "intro": "Versie van toepassing vanaf 15 september 2026.",
    "sections": [
     [
-     "1. Wie is verantwoordelijk voor uw gegevens?",
+     "Inleiding",
      [
       [
        "p",
-       "De juridische dienstverlening via MijnGezinshereniging.be wordt verleend door een advocaat die ingeschreven is bij een Nederlandstalige balie in België en lid is van de Orde van Vlaamse Balies. Vóór u een opdracht geeft, ontvangt u schriftelijk de volledige identificatiegegevens van de advocaat, zoals naam, kantooradres, ondernemingsnummer en balie."
+       "Uw privacy is belangrijk. Alle persoonsgegevens die de advocaat van u ontvangt als (contactpersoon van een) cliënt, als websitebezoeker of als derde, worden verwerkt in overeenstemming met de toepasselijke regelgeving inzake gegevensbescherming, in het bijzonder de Algemene Verordening Gegevensbescherming (EU) 2016/679 van 27 april 2016 (\"AVG\"), de wet van 30 juli 2018 betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens, en het beroepsgeheim van de advocaat."
       ],
       [
        "p",
-       "De advocaat is verwerkingsverantwoordelijke voor uw persoonsgegevens. Voor vragen over uw gegevens kunt u terecht per e-mail via advocaat@mijngezinshereniging.be."
+       "Deze privacyverklaring bezorgt u informatie over welke persoonsgegevens worden verwerkt, waarom, op welke rechtsgrond, hoe ze worden verkregen, hoe lang ze worden bewaard en met wie ze worden gedeeld. Daarnaast krijgt u informatie over de uitoefening van uw rechten."
       ]
      ]
     ],
     [
-     "2. Welke gegevens verwerken wij?",
+     "1. Identiteit en contactgegevens van de verwerkingsverantwoordelijke",
      [
       [
        "p",
-       "Welke gegevens wij verwerken, hangt af van uw vraag en van de manier waarop u contact met ons opneemt. Het kan gaan om:"
+       "De verwerkingsverantwoordelijke voor uw persoonsgegevens is:"
       ],
       [
        "ul",
        [
-        "identificatiegegevens, zoals uw naam, geboortedatum, nationaliteit en de gegevens van uw identiteitsdocument;",
-        "contactgegevens, zoals uw e-mailadres, telefoonnummer en adres;",
-        "gegevens over uw gezin en uw verblijfssituatie, zoals huwelijks-, partnerschaps- en geboorteakten, verblijfsdocumenten en beslissingen van overheden;",
-        "financiële gegevens, zoals inkomsten, loonfiches, rekeningnummers en facturatiegegevens;",
-        "de antwoorden die u invult in de checks op de website en de berichten die u ons stuurt;",
-        "technische gegevens, zoals uw IP-adres, wanneer u de website bezoekt."
+        "De advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, ingeschreven bij een Nederlandstalige balie in België",
+        "E-mail: advocaat@mijngezinshereniging.be"
        ]
       ],
       [
        "p",
-       "Bij de behandeling van een dossier kunnen ook gevoelige gegevens nodig zijn, zoals gegevens over uw gezondheid, uw afkomst, uw religieuze overtuiging of een strafrechtelijk verleden. Wij verwerken zulke gegevens alleen als dat nodig is voor uw vraag of uw dossier, of om rechten in rechte vast te stellen, uit te oefenen of te verdedigen (artikel 9, 2, f) en artikel 10 AVG)."
-      ]
-     ]
-    ],
-    [
-     "3. Waarvoor gebruiken wij uw gegevens, en op welke grond?",
-     [
-      [
-       "ul",
-       [
-        "Om uw vraag te beantwoorden en een afspraak te plannen: op uw verzoek, met het oog op een overeenkomst (artikel 6, 1, b) AVG).",
-        "Om u juridisch bij te staan en uw dossier te behandelen: voor de uitvoering van de overeenkomst (artikel 6, 1, b) AVG).",
-        "Om wettelijke en deontologische verplichtingen na te komen, zoals de boekhouding en de witwaspreventiewetgeving: wettelijke verplichting (artikel 6, 1, c) AVG).",
-        "Om belangenconflicten te vermijden, onze rechten te verdedigen bij een geschil en de website veilig en goed te laten werken: gerechtvaardigd belang (artikel 6, 1, f) AVG).",
-        "Voor andere doeleinden alleen als u daarvoor uitdrukkelijk toestemming geeft (artikel 6, 1, a) AVG). U kunt die toestemming altijd intrekken."
-       ]
+       "De volledige identificatiegegevens van de advocaat, waaronder naam, zetel en ondernemingsnummer, worden aan de cliënt schriftelijk meegedeeld vóór de totstandkoming van de overeenkomst."
       ],
       [
        "p",
-       "Wij verkopen uw gegevens niet en gebruiken ze niet voor reclame of nieuwsbrieven zonder uw toestemming."
-      ]
-     ]
-    ],
-    [
-     "4. Van wie krijgen wij uw gegevens?",
-     [
-      [
-       "p",
-       "Meestal krijgen wij uw gegevens van uzelf. Soms ontvangen wij ze van derden, zoals een overheid, een ambassade, de tegenpartij of haar advocaat, een vertaler of een familielid dat u bijstaat."
-      ]
-     ]
-    ],
-    [
-     "5. Met wie delen wij uw gegevens?",
-     [
-      [
-       "p",
-       "Uw gegevens vallen onder het beroepsgeheim. Wij delen ze alleen als dat nodig is voor uw dossier, als de wet ons daartoe verplicht of als u daarvoor toestemming geeft. Het kan gaan om:"
+       "Voor vragen over de verwerking van uw persoonsgegevens kunt u contact opnemen:"
       ],
       [
        "ul",
        [
-        "overheden en instanties die bij uw dossier betrokken zijn, zoals de Dienst Vreemdelingenzaken, gemeenten, ambassades, de Raad voor Vreemdelingenbetwistingen en rechtbanken;",
-        "beëdigd vertalers, gerechtsdeurwaarders en andere advocaten die bij uw dossier betrokken zijn;",
-        "de stafhouder van de balie waarbij de advocaat is ingeschreven, als de wet of de deontologie dat vereist."
-       ]
-      ],
-      [
-       "p",
-       "Daarnaast werken wij met dienstverleners die gegevens in onze opdracht verwerken:"
-      ],
-      [
-       "ul",
-       [
-        "de aanbieder van ons e-mailsysteem;",
-        "Cal.com, Inc. (Verenigde Staten), voor het plannen van afspraken en videogesprekken;",
-        "de hostingpartner van de website;",
-        "Google (Google Fonts voor lettertypes en Google Translate als u de vertaalfunctie gebruikt)."
-       ]
-      ],
-      [
-       "p",
-       "Met deze dienstverleners maken wij afspraken over beveiliging en vertrouwelijkheid. Sommige van hen zijn gevestigd buiten de Europese Economische Ruimte. Gegevens worden dan alleen doorgegeven met de passende waarborgen die de AVG voorschrijft."
-      ]
-     ]
-    ],
-    [
-     "6. Hoe lang bewaren wij uw gegevens?",
-     [
-      [
-       "ul",
-       [
-        "Een contactaanvraag of antwoorden op een check die niet tot een opdracht leiden: maximaal 1 jaar.",
-        "Uw dossier: 5 jaar na het einde van de opdracht, of langer als dat nodig is voor een lopend geschil.",
-        "Gegevens die wij bewaren voor de witwaspreventie: 10 jaar na het einde van de zakelijke relatie, zoals de wet voorschrijft.",
-        "Facturen en boekhoudkundige stukken: 10 jaar, zoals de boekhoudwetgeving voorschrijft."
+        "Per e-mail: advocaat@mijngezinshereniging.be, met onderwerp \"Privacy\""
        ]
       ]
      ]
     ],
     [
-     "7. Hoe beveiligen wij uw gegevens?",
+     "2. Welke persoonsgegevens worden verwerkt?",
      [
       [
        "p",
-       "Wij nemen passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen verlies, misbruik en onbevoegde toegang. Digitale gegevens worden bewaard in beveiligde systemen met een persoonlijk wachtwoord en tweestapsverificatie."
-      ]
-     ]
-    ],
-    [
-     "8. Uw rechten",
-     [
-      [
-       "p",
-       "U heeft het recht om:"
+       "Afhankelijk van uw relatie met de advocaat en de aard van uw dossier worden onder meer de volgende categorieën van persoonsgegevens verwerkt:"
       ],
       [
        "ul",
        [
-        "uw gegevens in te kijken en er een kopie van te krijgen;",
-        "onjuiste gegevens te laten verbeteren;",
-        "uw gegevens te laten wissen, voor zover wij ze niet moeten bewaren;",
-        "de verwerking te laten beperken;",
-        "bezwaar te maken tegen een verwerking op basis van ons gerechtvaardigd belang;",
-        "uw gegevens over te laten dragen;",
-        "een gegeven toestemming in te trekken."
+        "Contactgegevens: zoals naam, e-mailadres, telefoonnummer en adres.",
+        "Identificatiegegevens: zoals rijksregisternummer, identiteitskaart- of paspoortnummer, ondernemingsnummer en btw-nummer.",
+        "Persoonlijke kenmerken: zoals geslacht, geboortedatum, geboorteplaats, nationaliteit, burgerlijke staat, gezinssamenstelling en taal.",
+        "Financiële gegevens: zoals bankrekeningnummer, inkomensgegevens, facturatie- en betalingsgegevens.",
+        "Gerechtelijke en administratieve gegevens: zoals informatie over procedures, beslissingen van overheden en, waar nodig, strafrechtelijke veroordelingen.",
+        "Bijzondere categorieën van persoonsgegevens: zoals gegevens over gezondheid, etnische afkomst of religieuze overtuiging, uitsluitend voor zover noodzakelijk voor het dossier.",
+        "Berichten en inhoud: de inhoud van berichten en documenten die u via het contactformulier, de agenda of e-mail bezorgt.",
+        "Technische gegevens: zoals IP-adres, browsertype en -versie, en andere gegevens die nodig zijn voor de goede werking van de website."
+       ]
+      ]
+     ]
+    ],
+    [
+     "3. Doeleinden van de verwerking",
+     [
+      [
+       "p",
+       "Hieronder vindt u per doeleinde welke persoonsgegevens worden verwerkt, waarom, op welke rechtsgrond, hoe ze worden verkregen, hoe lang ze worden bewaard en met wie ze worden gedeeld."
+      ],
+      [
+       "h",
+       "Juridische dienstverlening aan cliënten"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: identificatiegegevens, contactgegevens, persoonlijke kenmerken, financiële gegevens, gerechtelijke en administratieve gegevens en andere informatie die noodzakelijk is voor de juridische bijstand, met inbegrip van bijzondere categorieën van persoonsgegevens voor zover noodzakelijk.",
+        "Waarom: het verstrekken van juridisch advies, het opstellen van documenten, de bijstand bij aanvragen en de vertegenwoordiging in rechte.",
+        "Rechtsgrond: de uitvoering van de overeenkomst (artikel 6.1.b AVG); voor bijzondere categorieën van persoonsgegevens en gerechtelijke gegevens de noodzaak voor de instelling, uitoefening of onderbouwing van een rechtsvordering (artikel 9.2.f en artikel 10 AVG).",
+        "Hoe verkregen: rechtstreeks van de cliënt of via derden, zoals overheden, gerechtelijke instanties, tegenpartijen en hun advocaten.",
+        "Bewaartermijn: tot 5 jaar na afsluiting van het dossier, of langer indien noodzakelijk voor een lopend geschil.",
+        "Met wie gedeeld: De Dienst Vreemdelingenzaken, gemeenten, ambassades en consulaten, de Raad voor Vreemdelingenbetwistingen, hoven en rechtbanken, beëdigd vertalers, gerechtsdeurwaarders en andere advocaten."
+       ]
+      ],
+      [
+       "h",
+       "Contact, situatiecheck en afspraken"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: Contactgegevens, de inhoud van uw bericht, uw antwoorden op de situatiecheck en de gegevens die u bij het boeken van een afspraak invult.",
+        "Waarom: Het beantwoorden van vragen via het contactformulier of e-mail, het verwerken van de antwoorden op de situatiecheck en het plannen van afspraken via de online agenda.",
+        "Rechtsgrond: de uitvoering van precontractuele maatregelen op uw verzoek (artikel 6.1.b AVG) en het gerechtvaardigd belang om vragen te beantwoorden (artikel 6.1.f AVG).",
+        "Hoe verkregen: rechtstreeks van u.",
+        "Bewaartermijn: tot 1 jaar na het laatste contact indien er geen opdracht volgt; daarna gelden de bewaartermijnen van het dossier.",
+        "Met wie gedeeld: IT-dienstverleners, waaronder de aanbieder van het e-mailsysteem, de hostingpartner van de website en Cal.com, Inc. (afsprakenagenda)."
+       ]
+      ],
+      [
+       "h",
+       "Naleving van witwaspreventie- en anti-fraudewetgeving"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: identificatiegegevens, persoonlijke kenmerken, financiële gegevens en gerechtelijke gegevens.",
+        "Waarom: het nakomen van de wettelijke verplichtingen inzake de voorkoming van het witwassen van geld en de financiering van terrorisme.",
+        "Rechtsgrond: de wettelijke verplichting (artikel 6.1.c AVG) op grond van de wet van 18 september 2017.",
+        "Hoe verkregen: rechtstreeks van de cliënt of via overheidsbronnen.",
+        "Bewaartermijn: 10 jaar na het beëindigen van de zakelijke relatie of na de laatste occasionele verrichting.",
+        "Met wie gedeeld: De stafhouder van de balie waarbij de advocaat is ingeschreven, indien de wet dat vereist."
+       ]
+      ],
+      [
+       "h",
+       "Facturatie en boekhouding"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: identificatiegegevens, contactgegevens en financiële gegevens (bankrekeningnummer, btw-nummer, facturatiegegevens).",
+        "Waarom: het opmaken van facturen en de naleving van boekhoudkundige en fiscale verplichtingen.",
+        "Rechtsgrond: de wettelijke verplichting (artikel 6.1.c AVG).",
+        "Hoe verkregen: rechtstreeks van de cliënt.",
+        "Bewaartermijn: 10 jaar vanaf de eerste januari van het jaar volgend op de afsluiting van het boekjaar.",
+        "Met wie gedeeld: de boekhouder, de fiscale overheid en banken."
+       ]
+      ],
+      [
+       "h",
+       "Geschillenbeheer"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: identificatiegegevens, contactgegevens, financiële gegevens, gerechtelijke gegevens en relevante dossierinformatie.",
+        "Waarom: het vrijwaren van de rechten van de advocaat in geval van een geschil, zoals een ereloongeschil of een aansprakelijkheidsvordering.",
+        "Rechtsgrond: het gerechtvaardigd belang (artikel 6.1.f AVG).",
+        "Hoe verkregen: rechtstreeks van de cliënt of via gerechtelijke instanties en andere betrokkenen.",
+        "Bewaartermijn: tot 5 jaar na de laatste termijn tot hogere voorziening.",
+        "Met wie gedeeld: gerechtelijke instanties, advocaten, gerechtsdeurwaarders, de stafhouder en de beroepsaansprakelijkheidsverzekeraar."
+       ]
+      ],
+      [
+       "h",
+       "Beheer en beveiliging van de website"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: technische gegevens zoals IP-adres en browsergegevens.",
+        "Waarom: het veilig en correct laten functioneren van de website.",
+        "Rechtsgrond: het gerechtvaardigd belang (artikel 6.1.f AVG).",
+        "Hoe verkregen: automatisch bij het bezoek aan de website.",
+        "Bewaartermijn: niet langer dan noodzakelijk voor het doeleinde; zie ook het cookiebeleid.",
+        "Met wie gedeeld: de hostingpartner en IT-dienstverleners."
+       ]
+      ]
+     ]
+    ],
+    [
+     "4. Beroepsgeheim",
+     [
+      [
+       "p",
+       "De advocaat is gebonden door het beroepsgeheim overeenkomstig artikel 458 van het Strafwetboek. Persoonsgegevens worden slechts aan derden meegedeeld voor zover dit noodzakelijk is voor de behandeling van het dossier, wettelijk verplicht is of met toestemming van de betrokkene gebeurt. Persoonsgegevens worden nooit verkocht of voor commerciële doeleinden aan derden doorgegeven."
+      ]
+     ]
+    ],
+    [
+     "5. Verwerkers en doorgifte buiten de Europese Economische Ruimte",
+     [
+      [
+       "p",
+       "De advocaat doet voor bepaalde verwerkingen een beroep op verwerkers, zoals IT-dienstverleners. Met deze verwerkers worden afspraken gemaakt die een passend niveau van beveiliging en vertrouwelijkheid waarborgen, overeenkomstig artikel 28 AVG."
+      ],
+      [
+       "p",
+       "Sommige verwerkers, zoals Cal.com, Inc., zijn gevestigd buiten de Europese Economische Ruimte. Persoonsgegevens worden slechts buiten de Europese Economische Ruimte doorgegeven met passende waarborgen overeenkomstig hoofdstuk V van de AVG, zoals een adequaatheidsbesluit of standaardcontractbepalingen van de Europese Commissie."
+      ]
+     ]
+    ],
+    [
+     "6. Beveiliging van uw gegevens",
+     [
+      [
+       "p",
+       "De advocaat neemt passende technische en organisatorische maatregelen om persoonsgegevens te beschermen tegen verlies, misbruik, ongeoorloofde toegang, openbaarmaking en wijziging. Digitale gegevens worden bewaard in beveiligde systemen die toegankelijk zijn met een persoonlijk wachtwoord en tweestapsverificatie."
+      ]
+     ]
+    ],
+    [
+     "7. Uw rechten",
+     [
+      [
+       "p",
+       "Overeenkomstig de AVG beschikt u over de volgende rechten:"
+      ],
+      [
+       "ul",
+       [
+        "het recht op inzage in uw persoonsgegevens (artikel 15 AVG);",
+        "het recht op rectificatie van onjuiste of onvolledige gegevens (artikel 16 AVG);",
+        "het recht op wissing, voor zover er geen wettelijke of deontologische bewaarplicht geldt (artikel 17 AVG);",
+        "het recht op beperking van de verwerking (artikel 18 AVG);",
+        "het recht op overdraagbaarheid van uw gegevens (artikel 20 AVG);",
+        "het recht om bezwaar te maken tegen een verwerking op basis van het gerechtvaardigd belang (artikel 21 AVG);",
+        "het recht om een gegeven toestemming op elk moment in te trekken."
        ]
       ],
       [
        "p",
-       "U kunt deze rechten uitoefenen per e-mail via advocaat@mijngezinshereniging.be. Om misbruik te voorkomen, kunnen wij u vragen uw identiteit aan te tonen. Wij antwoorden binnen een maand. Sommige rechten kunnen beperkt zijn door het beroepsgeheim of door een wettelijke bewaarplicht."
+       "Een verzoek kan worden gericht via de contactgegevens onder punt 1. De advocaat kan vragen uw identiteit aan te tonen. Er wordt binnen een termijn van één maand gemotiveerd geantwoord; afhankelijk van de complexiteit en het aantal verzoeken kan die termijn met twee maanden worden verlengd. De uitoefening van sommige rechten kan beperkt zijn door het beroepsgeheim of een wettelijke bewaarplicht."
       ]
      ]
     ],
     [
-     "9. Klacht",
+     "8. Klacht",
      [
       [
        "p",
-       "Bent u niet tevreden over de manier waarop wij met uw gegevens omgaan? Laat het ons eerst weten. U kunt ook een klacht indienen bij de Gegevensbeschermingsautoriteit, Drukpersstraat 35, 1000 Brussel, www.gegevensbeschermingsautoriteit.be."
+       "U heeft het recht een klacht in te dienen bij de Gegevensbeschermingsautoriteit, Drukpersstraat 35, 1000 Brussel, contact@apd-gba.be, www.gegevensbeschermingsautoriteit.be."
       ]
      ]
     ],
     [
-     "10. Minderjarigen",
+     "9. Wijzigingen in deze privacyverklaring",
      [
       [
        "p",
-       "Gaat een dossier over een minderjarige, dan verwerken wij diens gegevens in overleg met de ouders of de wettelijke vertegenwoordiger."
-      ]
-     ]
-    ],
-    [
-     "11. Wijzigingen",
-     [
-      [
-       "p",
-       "Wij kunnen deze privacyverklaring aanpassen. De meest recente versie staat altijd op www.mijngezinshereniging.be."
+       "De advocaat behoudt zich het recht voor deze privacyverklaring op elk moment te wijzigen. Wijzigingen worden op deze pagina gepubliceerd. De meest recente versie is steeds beschikbaar op www.mijngezinshereniging.be."
       ]
      ]
     ]
@@ -641,67 +705,140 @@ export const legal = {
   },
   "witwas": {
    "title": "Witwaspreventie",
-   "intro": "Als advocaat moeten wij in bepaalde situaties de regels volgen die het witwassen van geld en de financiering van terrorisme tegengaan. Die regels staan in de wet van 18 september 2017 en in de deontologische regels van de Orde van Vlaamse Balies.",
+   "intro": "Versie van toepassing vanaf 15 september 2026.",
    "sections": [
     [
-     "Wanneer gelden deze regels?",
+     "1. Wettelijk kader",
      [
       [
        "p",
-       "De verplichtingen gelden vooral wanneer een advocaat meewerkt aan financiële verrichtingen of verrichtingen in verband met onroerend goed, zoals de aankoop of verkoop van een woning of een onderneming, het beheren van geld of effecten of het oprichten van een vennootschap. Bij de meeste dossiers over gezinshereniging en verblijfsrecht is dat niet het geval. Toch kunnen wij ook in andere dossiers vragen om uw identiteit aan te tonen."
-      ]
-     ]
-    ],
-    [
-     "Uw identiteit en uw opdracht",
-     [
-      [
-       "p",
-       "Vallen uw opdracht of een deel ervan onder de wet, dan moeten wij vóór de start uw identiteit controleren en die van eventuele vertegenwoordigers en uiteindelijke begunstigden. Wij moeten ook het doel en de aard van de opdracht beoordelen, en tijdens de opdracht waakzaam blijven."
+       "1.1. De advocaat is onderworpen aan de wet van 18 september 2017 tot voorkoming van het witwassen van geld en de financiering van terrorisme en tot beperking van het gebruik van contanten (hierna: de witwaspreventiewet), en aan de reglementen van de Orde van Vlaamse Balies ter uitvoering daarvan."
       ],
       [
        "p",
-       "U bezorgt ons daarvoor meteen de gevraagde informatie en documenten. Verandert er iets aan uw situatie, dan meldt u dat uit eigen beweging. Zonder die informatie mogen wij de opdracht niet aanvaarden of moeten wij ze beëindigen. Wij zijn niet aansprakelijk voor schade die daaruit voortvloeit."
+       "1.2. Overeenkomstig artikel 64, § 3 van de witwaspreventiewet wordt de Cliënt vóór het aangaan van een zakelijke relatie of het uitvoeren van een verrichting geïnformeerd over deze verplichtingen en over de verwerking van persoonsgegevens die daarmee gepaard gaat."
       ]
      ]
     ],
     [
-     "Bewaring",
+     "2. Toepassingsgebied",
      [
       [
        "p",
-       "De informatie die wij hiervoor ontvangen, bewaren wij 10 jaar na het einde van de zakelijke relatie of van de laatste opdracht. Meer over uw rechten leest u in onze privacyverklaring."
-      ]
-     ]
-    ],
-    [
-     "Melding aan de stafhouder",
-     [
+       "2.1. De verplichtingen van de witwaspreventiewet zijn van toepassing wanneer de advocaat de Cliënt bijstaat bij het voorbereiden of uitvoeren van verrichtingen met betrekking tot:"
+      ],
       [
-       "p",
-       "Stellen wij feiten vast waarvan wij weten of vermoeden dat ze verband houden met witwassen of terrorismefinanciering, dan moeten wij dat melden aan de stafhouder. Dat geldt niet wanneer wij u juridisch advies geven of u verdedigen of vertegenwoordigen in een procedure. De stafhouder beslist of de melding wordt doorgegeven aan de Cel voor Financiële Informatieverwerking (CFI)."
+       "ul",
+       [
+        "de aankoop of verkoop van onroerende goederen of handelszaken;",
+        "het beheren van geld, effecten of andere activa van de Cliënt;",
+        "het openen of beheren van bankrekeningen, spaarrekeningen of effectenrekeningen;",
+        "het organiseren van de inbreng die nodig is voor de oprichting, de exploitatie of het bestuur van vennootschappen;",
+        "de oprichting, de exploitatie of het bestuur van trusts, vennootschappen, stichtingen of soortgelijke juridische constructies;"
+       ]
       ],
       [
        "p",
-       "Na een melding moeten wij de opdracht beëindigen. De wet verbiedt ons u te vertellen waarom. Voor meldingen die wij te goeder trouw doen, kunnen wij niet aansprakelijk worden gesteld."
+       "2.2. De verplichtingen gelden eveneens wanneer de advocaat namens en voor rekening van de Cliënt optreedt in een financiële verrichting of een verrichting met betrekking tot onroerend goed."
+      ],
+      [
+       "p",
+       "2.3. Bij de meeste dossiers inzake gezinshereniging, verblijfsrecht en procedures voor hoven en rechtbanken is dit niet het geval. Ook buiten het toepassingsgebied kan de advocaat evenwel de identiteit van de Cliënt controleren, onder meer ter voorkoming van belangenconflicten."
       ]
      ]
     ],
     [
-     "Betalingen in contanten",
+     "3. Cliëntenonderzoek",
      [
       [
        "p",
-       "Betalingen in contanten zijn wettelijk beperkt tot 3.000 euro per verrichting of reeks van verrichtingen die met elkaar verband houden. Wij vragen u daarom om bij voorkeur via overschrijving te betalen."
+       "3.1. Valt een opdracht onder het toepassingsgebied, dan identificeert de advocaat vóór het aangaan van de zakelijke relatie of het uitvoeren van de verrichting de Cliënt, zijn eventuele lasthebbers en uiteindelijke begunstigden. Hun identiteit wordt geverifieerd aan de hand van bewijskrachtige documenten."
+      ],
+      [
+       "p",
+       "3.2. De advocaat beoordeelt daarnaast de kenmerken van de Cliënt en het doel en de beoogde aard van de zakelijke relatie of de verrichting."
+      ],
+      [
+       "p",
+       "3.3. Gedurende de volledige duur van de zakelijke relatie oefent de advocaat een doorlopende waakzaamheid uit, die in verhouding staat tot het vastgestelde risico."
       ]
      ]
     ],
     [
-     "Beroepsgeheim",
+     "4. Medewerkingsplicht van de Cliënt",
      [
       [
        "p",
-       "Deze verplichtingen doen geen afbreuk aan het beroepsgeheim dat de relatie tussen u en uw advocaat beschermt."
+       "4.1. De Cliënt verbindt zich ertoe de advocaat op eerste verzoek alle informatie en documenten te bezorgen die noodzakelijk zijn voor het cliëntenonderzoek, waaronder een kopie van zijn identiteitsdocument en, voor rechtspersonen, de gegevens van de uiteindelijke begunstigden."
+      ],
+      [
+       "p",
+       "4.2. De Cliënt brengt de advocaat uit eigen beweging en onverwijld op de hoogte van elke wijziging die zijn status of de beoordeling van het risico kan beïnvloeden."
+      ]
+     ]
+    ],
+    [
+     "5. Weigering en beëindiging",
+     [
+      [
+       "p",
+       "5.1. Indien de Cliënt nalaat de gevraagde informatie te bezorgen, of indien de advocaat niet in staat is aan de waakzaamheidsverplichtingen te voldoen, kan de advocaat de opdracht niet aanvaarden of is de advocaat gehouden de zakelijke relatie onmiddellijk te beëindigen."
+      ],
+      [
+       "p",
+       "5.2. De advocaat is niet aansprakelijk voor enige schade die daaruit voortvloeit. De beëindiging doet geen afbreuk aan de verschuldigdheid van de reeds geleverde prestaties en gemaakte kosten."
+      ]
+     ]
+    ],
+    [
+     "6. Bewaring van gegevens",
+     [
+      [
+       "p",
+       "6.1. De identificatiegegevens, de kopieën van de bewijsstukken en de documenten met betrekking tot de verrichtingen worden bewaard gedurende 10 jaar na het beëindigen van de zakelijke relatie of na de datum van de occasionele verrichting, overeenkomstig de witwaspreventiewet."
+      ],
+      [
+       "p",
+       "6.2. Deze persoonsgegevens worden uitsluitend verwerkt voor de voorkoming van het witwassen van geld en de financiering van terrorisme, en niet voor andere doeleinden die daarmee onverenigbaar zijn. Meer informatie over de verwerking van persoonsgegevens staat in de privacyverklaring."
+      ]
+     ]
+    ],
+    [
+     "7. Meldingsplicht",
+     [
+      [
+       "p",
+       "7.1. Stelt de advocaat bij de uitvoering van een opdracht die onder het toepassingsgebied valt feiten vast waarvan geweten of vermoed wordt dat zij verband houden met het witwassen van geld of de financiering van terrorisme, dan is de advocaat verplicht dit onmiddellijk te melden aan de stafhouder van de balie waarbij de advocaat is ingeschreven. De stafhouder beoordeelt of de melding aan de Cel voor Financiële Informatieverwerking (CFI) wordt overgemaakt."
+      ],
+      [
+       "p",
+       "7.2. Deze meldingsplicht geldt niet voor informatie die de advocaat ontvangt bij het bepalen van de rechtspositie van de Cliënt, of bij de verdediging of vertegenwoordiging van de Cliënt in of in verband met een rechtsgeding, met inbegrip van advies over het instellen of vermijden van een rechtsgeding."
+      ],
+      [
+       "p",
+       "7.3. Het is de advocaat wettelijk verboden de Cliënt of derden in te lichten over een melding of over de omstandigheid dat een onderzoek naar witwassen of terrorismefinanciering loopt of zou kunnen worden ingesteld. In geval van een melding kan de advocaat gehouden zijn de opdracht te beëindigen zonder opgave van reden."
+      ],
+      [
+       "p",
+       "7.4. Een melding die te goeder trouw gebeurt, kan geen aanleiding geven tot enige aansprakelijkheid van de advocaat."
+      ]
+     ]
+    ],
+    [
+     "8. Beperking van betalingen in contanten",
+     [
+      [
+       "p",
+       "Overeenkomstig de witwaspreventiewet kan een betaling in contanten niet meer bedragen dan 3.000 euro per verrichting of per geheel van verrichtingen die met elkaar verband lijken te houden. Betalingen gebeuren bij voorkeur per overschrijving."
+      ]
+     ]
+    ],
+    [
+     "9. Beroepsgeheim",
+     [
+      [
+       "p",
+       "Voormelde verplichtingen doen geen afbreuk aan het beroepsgeheim dat de relatie tussen de Cliënt en de advocaat beheerst, behoudens de wettelijke uitzonderingen die hierboven zijn beschreven."
       ]
      ]
     ]
