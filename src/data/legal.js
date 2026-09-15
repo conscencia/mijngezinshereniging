@@ -278,11 +278,26 @@ export const legal = {
       ],
       [
        "p",
-       "Kosten van derden, zoals de retributie van de Dienst Vreemdelingenzaken, legalisaties, vertalingen, DNA-onderzoek of rolrechten, zijn niet inbegrepen en betaalt u apart."
+       "Het uurtarief kan hoger liggen als een zaak bijzonder dringend of complex is, of als ze buiten de gewone werkuren behandeld moet worden. Dat wordt altijd vooraf met u besproken."
       ],
       [
        "p",
-       "Wij kunnen vóór de start of tijdens de opdracht een voorschot (provisie) vragen. Dat voorschot wordt verrekend in de eindafrekening."
+       "Er wordt geen afzonderlijke dossierkost aangerekend. Naast het ereloon worden wel de volgende uitgaven apart aangerekend:"
+      ],
+      [
+       "ul",
+       [
+        "verplaatsingen, bijvoorbeeld naar een zitting: 0,50 euro per kilometer (niet voor videogesprekken);",
+        "kosten van derden, zoals retributies, legalisaties, vertalingen, DNA-onderzoek, rolrechten, gerechtsdeurwaarders, aangetekende zendingen en koeriers: tegen kostprijs."
+       ]
+      ],
+      [
+       "p",
+       "Bij de start en tijdens de behandeling van uw dossier kunnen wij een voorschot (provisie) vragen. Het bedrag hangt af van het verwachte werk en de verwachte kosten. Voorschotten worden verrekend in de eindafrekening."
+      ],
+      [
+       "p",
+       "Bij het afsluiten van uw dossier ontvangt u een gedetailleerde en duidelijke eindafrekening van het ereloon, de kosten en de betaalde voorschotten."
       ]
      ]
     ],
@@ -300,19 +315,26 @@ export const legal = {
      [
       [
        "p",
-       "Facturen zijn betaalbaar binnen 14 dagen na de factuurdatum. Heeft u een opmerking over een factuur, laat het ons dan binnen 14 dagen schriftelijk weten."
+       "Facturen zijn betaalbaar binnen 14 dagen na de factuurdatum, op de rekening die op de factuur vermeld staat. Heeft u een opmerking over een factuur, laat het ons dan binnen 14 dagen schriftelijk en gemotiveerd weten."
       ],
       [
        "p",
-       "Bent u consument en betaalt u niet op tijd, dan ontvangt u eerst een kosteloze herinnering met een termijn van 14 kalenderdagen. Betaalt u daarna nog niet, dan zijn verwijlinteresten verschuldigd tegen de wettelijke rentevoet en een forfaitaire schadevergoeding volgens de wettelijke grenzen van boek XIX van het Wetboek van economisch recht: 20 euro voor een openstaand bedrag tot 150 euro, 30 euro plus 10% van het bedrag tussen 150,01 en 500 euro, en 65 euro plus 5% van het bedrag boven 500 euro, met een maximum van 2.000 euro."
+       "Bent u consument en betaalt u een factuur geheel of gedeeltelijk niet op tijd, dan zijn de regels van boek XIX van het Wetboek van economisch recht van toepassing. U ontvangt eerst een kosteloze herinnering met een termijn van 14 kalenderdagen om te betalen. Betaalt u niet binnen die termijn, dan zijn verschuldigd:"
+      ],
+      [
+       "ul",
+       [
+        "een nalatigheidsinterest op het openstaande bedrag, berekend tegen de referentie-interestvoet vermeerderd met acht procentpunten (artikel 5, tweede lid, van de wet van 2 augustus 2002 betreffende de bestrijding van de betalingsachterstand bij handelstransacties), vanaf de dag na het verstrijken van de termijn in de herinnering;",
+        "een forfaitaire schadevergoeding van 20 euro als het openstaande bedrag 150 euro of minder is; 30 euro vermeerderd met 10% van het bedrag tussen 150,01 en 500 euro als het openstaande bedrag tussen 150,01 en 500 euro ligt; of 65 euro vermeerderd met 5% van het bedrag boven 500 euro, met een maximum van 2.000 euro, als het openstaande bedrag hoger is dan 500 euro."
+       ]
       ],
       [
        "p",
-       "Bent u een onderneming, dan is bij niet-tijdige betaling van rechtswege en zonder ingebrekestelling een interest verschuldigd volgens de wet van 2 augustus 2002 betreffende de bestrijding van de betalingsachterstand bij handelstransacties, en een forfaitaire schadevergoeding van 10% met een minimum van 150 euro."
+       "Bent u een onderneming of handelt u beroepsmatig, dan is bij niet-tijdige betaling van rechtswege en zonder ingebrekestelling een nalatigheidsinterest van 10% per jaar verschuldigd vanaf de vervaldag, en een forfaitaire schadevergoeding van 10% van het openstaande bedrag met een minimum van 65 euro."
       ],
       [
        "p",
-       "Bij een betalingsachterstand kunnen wij het werk in uw dossier opschorten, na u daarvan tijdig op de hoogte te brengen, zodat uw belangen niet geschaad worden."
+       "Bij een betalingsachterstand mag de advocaat het werk in uw lopende dossiers opschorten tot de achterstand is ingehaald. U wordt daarvan vooraf verwittigd, zodat uw belangen en lopende termijnen niet in gevaar komen. Wordt een factuur niet op de vervaldag betaald, dan worden ook alle andere openstaande facturen onmiddellijk opeisbaar."
       ]
      ]
     ],
