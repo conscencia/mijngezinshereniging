@@ -29,7 +29,7 @@ export const legal = {
       [
        "ul",
        [
-        "De advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, ingeschreven bij een Nederlandstalige balie in België",
+        "De advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, ingeschreven aan de balie West-Vlaanderen",
         "E-mail: advocaat@mijngezinshereniging.be"
        ]
       ],
@@ -120,7 +120,7 @@ export const legal = {
         "Rechtsgrond: de wettelijke verplichting (artikel 6.1.c AVG) op grond van de wet van 18 september 2017.",
         "Hoe verkregen: rechtstreeks van de cliënt of via overheidsbronnen.",
         "Bewaartermijn: 10 jaar na het beëindigen van de zakelijke relatie of na de laatste occasionele verrichting.",
-        "Met wie gedeeld: De stafhouder van de balie waarbij de advocaat is ingeschreven, indien de wet dat vereist."
+        "Met wie gedeeld: De stafhouder van de Orde van Advocaten West-Vlaanderen, indien de wet dat vereist."
        ]
       ],
       [
@@ -255,7 +255,7 @@ export const legal = {
      [
       [
        "p",
-       "1.1. De dienstverlener is de advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, hierna: de advocaat. De advocaat is ingeschreven bij een Nederlandstalige balie in België en is onderworpen aan de regels van de Orde van Vlaamse Balies (www.advocaat.be) en van de balie waarbij hij of zij is ingeschreven."
+       "1.1. De dienstverlener is de advocaat die de juridische dienstverlening via MijnGezinshereniging.be verleent, hierna: de advocaat. De advocaat is ingeschreven bij de balie West-Vlaanderen en is onderworpen aan de regels van de Orde van Vlaamse Balies (www.advocaat.be) en van de Orde van Advocaten West-Vlaanderen."
       ],
       [
        "p",
@@ -442,7 +442,7 @@ export const legal = {
      [
       [
        "p",
-       "De Cliënt neemt kennis van de toepasselijkheid van de wet van 18 september 2017 tot voorkoming van het witwassen van geld en de financiering van terrorisme. Deze wet houdt voor de advocaat in voorkomend geval de verplichting in tot identificatie van de Cliënt en tot melding aan de stafhouder van de balie waarbij de advocaat is ingeschreven. Meer informatie staat in de afzonderlijke verklaring over witwaspreventie."
+       "De Cliënt neemt kennis van de toepasselijkheid van de wet van 18 september 2017 tot voorkoming van het witwassen van geld en de financiering van terrorisme. Deze wet houdt voor de advocaat in voorkomend geval de verplichting in tot identificatie van de Cliënt en tot melding aan de stafhouder van de Orde van Advocaten West-Vlaanderen. Meer informatie staat in de afzonderlijke verklaring over witwaspreventie."
       ]
      ]
     ],
@@ -534,7 +534,7 @@ export const legal = {
       ],
       [
        "p",
-       "12.3. Klachten over de naleving van de beroepsregels kunnen worden gericht aan de stafhouder van de balie waarbij de advocaat is ingeschreven, die in geval van een ereloongeschil ook een niet-bindend taxatieadvies kan verlenen."
+       "12.3. Klachten over de naleving van de beroepsregels kunnen worden gericht aan de stafhouder van de Orde van Advocaten West-Vlaanderen, die in geval van een ereloongeschil ook een niet-bindend taxatieadvies kan verlenen."
       ]
      ]
     ],
@@ -808,7 +808,7 @@ export const legal = {
      [
       [
        "p",
-       "7.1. Stelt de advocaat bij de uitvoering van een opdracht die onder het toepassingsgebied valt feiten vast waarvan geweten of vermoed wordt dat zij verband houden met het witwassen van geld of de financiering van terrorisme, dan is de advocaat verplicht dit onmiddellijk te melden aan de stafhouder van de balie waarbij de advocaat is ingeschreven. De stafhouder beoordeelt of de melding aan de Cel voor Financiële Informatieverwerking (CFI) wordt overgemaakt."
+       "7.1. Stelt de advocaat bij de uitvoering van een opdracht die onder het toepassingsgebied valt feiten vast waarvan geweten of vermoed wordt dat zij verband houden met het witwassen van geld of de financiering van terrorisme, dan is de advocaat verplicht dit onmiddellijk te melden aan de stafhouder van de Orde van Advocaten West-Vlaanderen. De stafhouder beoordeelt of de melding aan de Cel voor Financiële Informatieverwerking (CFI) wordt overgemaakt."
       ],
       [
        "p",

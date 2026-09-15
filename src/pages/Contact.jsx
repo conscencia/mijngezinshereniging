@@ -212,6 +212,7 @@ export default function Contact() {
                     </div>
                     {errors.privacy && <p className="text-red-500 text-xs -mt-3">{errors.privacy}</p>}
 
+                    <p className="text-xs text-gray-500 leading-relaxed">Uw vraag wordt behandeld door een advocaat ingeschreven aan de balie West-Vlaanderen. U ontvangt de volledige gegevens van de advocaat in de eerste reactie, vóór er een opdracht is.</p>
                     <button type="submit" className="w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-3.5 rounded-xl transition-colors text-base">
                       Verstuur bericht
                     </button>

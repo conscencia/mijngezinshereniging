@@ -173,7 +173,7 @@ export function startBooking(embed, CAL_LINK, opts){
       html += '<label class="field"><span class="field-label">Korte omschrijving van uw vraag <em>*</em></span><textarea name="omschrijving" rows="4" required placeholder="Waarover gaat het?">' + (prev ? esc((prev.onderwerp ? prev.onderwerp + ': ' : '') + prev.bericht) : '') + '</textarea></label>' +
         '<p class="form-error" role="alert" hidden></p>' +
         '<button type="submit" class="mg-btn mg-btn-rust form-submit">Bevestig afspraak</button>' +
-        '<p class="form-note">U ontvangt meteen een bevestiging per e-mail. Annuleren of verplaatsen kan via de link in die e-mail.</p>' +
+        '<p class="form-note">U ontvangt meteen een bevestiging per e-mail. Annuleren of verplaatsen kan via de link in die e-mail.' + (videoOnly ? ' Het gesprek wordt gevoerd door een advocaat ingeschreven aan de balie West-Vlaanderen; u ontvangt de volledige gegevens van de advocaat vóór er een opdracht is.' : '') + '</p>' +
         '</form></div>';
       embed.innerHTML = html;
       var form = embed.querySelector('form');

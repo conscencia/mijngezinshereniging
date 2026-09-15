@@ -787,6 +787,7 @@ function ContactForm({ result, answers }) {
         {errors.privacy && <span className="mg-field-error">{errors.privacy}</span>}
       </div>
 
+      <p className="mg-disclaimer">Uw vraag wordt behandeld door een advocaat ingeschreven aan de balie West-Vlaanderen. U ontvangt de volledige gegevens van de advocaat in de eerste reactie, vóór er een opdracht is.</p>
       <button type="submit" className="mg-btn mg-btn-rust">Verstuur mijn gegevens</button>
     </form>
   );

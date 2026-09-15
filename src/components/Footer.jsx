@@ -8,6 +8,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Link to="/" translate="no" className="mg-wordmark mg-wordmark-light notranslate">mijn<em>gezinshereniging</em></Link>
             <p className="mg-footer-text">Heldere uitleg en persoonlijke begeleiding bij gezinshereniging in België.</p>
+            <p className="mg-footer-text" style={{ fontSize: "0.78rem", opacity: 0.7, textAlign: "left" }}>Advocaat ingeschreven aan de balie West-Vlaanderen.</p>
           </div>
           <div className="flex flex-col gap-2">
             <p className="mg-footer-h">Informatie</p>
