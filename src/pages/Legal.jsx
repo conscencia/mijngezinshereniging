@@ -4,7 +4,7 @@ import { legal } from "../data/legal";
 const PAGES = [
   { key: "privacy", to: "/privacy", label: "Privacyverklaring" },
   { key: "voorwaarden", to: "/algemene-voorwaarden", label: "Algemene voorwaarden" },
-  { key: "cookies", to: "/cookies", label: "Cookieverklaring" },
+  { key: "cookies", to: "/cookies", label: "Cookiebeleid" },
   { key: "witwas", to: "/witwaspreventie", label: "Witwaspreventie" },
 ];
 

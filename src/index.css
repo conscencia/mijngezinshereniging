@@ -465,7 +465,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-legal-nav a { display: block; padding: 12px 0; border-bottom: 1px solid rgba(51,61,36,0.14); font-size: 0.95rem; color: var(--olive-deep); text-decoration: none; }
 .mg-legal-nav a.is-current { color: var(--rust-deep); font-weight: 500; }
 @media (hover: hover) { .mg-legal-nav a:hover { color: var(--rust-deep); } }
-.mg-legal > .mg-lead { color: #55513F; }
+.mg-legal > .mg-lead { color: #55513F; text-align: left; }
 .mg-legal h2 { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--olive-deep); margin: 2.6rem 0 0.8rem; }
 .mg-legal p, .mg-legal li { font-size: 0.98rem; line-height: 1.75; color: #55513F; }
 .mg-legal p + p { margin-top: 0.8rem; }

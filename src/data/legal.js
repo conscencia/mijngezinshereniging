@@ -525,69 +525,115 @@ export const legal = {
    ]
   },
   "cookies": {
-   "title": "Cookieverklaring",
-   "intro": "Een cookie is een klein tekstbestand dat een website op uw computer, tablet of smartphone bewaart. Hieronder leest u welke cookies en vergelijkbare technieken deze website gebruikt.",
+   "title": "Cookiebeleid",
+   "intro": "Dit cookiebeleid legt uit welke cookies en vergelijkbare technieken worden gebruikt op de website www.mijngezinshereniging.be, met als verantwoordelijke de advocaat die de dienstverlening via MijnGezinshereniging.be verleent.",
    "sections": [
     [
-     "Geen analytische of advertentiecookies",
+     "1. Wat zijn cookies?",
      [
       [
        "p",
-       "Wij meten uw surfgedrag niet en tonen geen advertenties. Er worden dus geen analytische, advertentie- of socialemediacookies geplaatst."
+       "Cookies zijn kleine tekstbestanden die door een website op uw computer of mobiele apparaat worden geplaatst wanneer u de website bezoekt. Cookies kunnen bijvoorbeeld uw voorkeuren onthouden of informatie over uw bezoek verzamelen. Vergelijkbare technieken, zoals de lokale opslag van uw browser, werken op een gelijkaardige manier."
       ]
      ]
     ],
     [
-     "Vertaalfunctie (Google Translate)",
+     "2. Welke cookies gebruiken wij?",
      [
       [
        "p",
-       "Kiest u bovenaan een andere taal, dan gebruikt de website de vertaaldienst van Google. Google plaatst dan een functionele cookie (googtrans) die uw taalkeuze onthoudt, en kan technische gegevens zoals uw IP-adres verwerken. Gebruikt u de vertaalfunctie niet, dan wordt die taalcookie niet geplaatst."
+       "Op onze website gebruiken wij de volgende soorten cookies en technieken:"
+      ],
+      [
+       "h",
+       "Noodzakelijke cookies"
+      ],
+      [
+       "p",
+       "Onze website plaatst zelf geen noodzakelijke cookies. De website werkt zonder dat u cookies moet aanvaarden."
+      ],
+      [
+       "h",
+       "Voorkeurscookies"
+      ],
+      [
+       "p",
+       "Kiest u bovenaan de website een andere taal, dan gebruikt de website de vertaaldienst van Google Translate. Daarbij wordt een voorkeurscookie (googtrans) geplaatst die uw taalkeuze onthoudt. Kiest u geen andere taal, dan wordt deze cookie niet geplaatst. Om formulieren goed te laten werken, kan de website daarnaast gegevens tijdelijk bewaren in de opslag van uw eigen browser (sessionStorage of localStorage). Die gegevens blijven op uw toestel."
+      ],
+      [
+       "h",
+       "Statistische cookies"
+      ],
+      [
+       "p",
+       "Op dit moment gebruiken wij geen statistische cookies. Wij houden niet bij hoe u de website gebruikt."
+      ],
+      [
+       "h",
+       "Marketingcookies"
+      ],
+      [
+       "p",
+       "Op dit moment gebruiken wij geen marketingcookies. Indien dit verandert, zullen wij u hierover informeren en vooraf uw toestemming vragen."
+      ],
+      [
+       "h",
+       "Diensten van derden"
+      ],
+      [
+       "ul",
+       [
+        "Google Translate: wanneer u de vertaalfunctie gebruikt, kan Google technische gegevens zoals uw IP-adres verwerken.",
+        "Google Fonts: de lettertypes worden geladen via Google Fonts, waarbij Google technische gegevens zoals uw IP-adres ontvangt. Hiervoor wordt geen cookie geplaatst.",
+        "Cal.com: op de afsprakenpagina worden de vrije momenten opgehaald bij Cal.com. Boekt u een afspraak, dan worden de gegevens die u invult aan Cal.com bezorgd. Hiervoor worden geen cookies op onze website geplaatst."
+       ]
       ]
      ]
     ],
     [
-     "Lettertypes (Google Fonts)",
+     "3. Hoe lang worden cookies bewaard?",
      [
       [
        "p",
-       "De lettertypes worden geladen via Google Fonts. Daarbij ontvangt Google technische gegevens zoals uw IP-adres. Er wordt hiervoor geen cookie geplaatst."
+       "Cookies kunnen voor verschillende periodes op uw apparaat worden bewaard, afhankelijk van het type cookie. Sessiecookies worden verwijderd zodra u uw browser sluit, terwijl permanente cookies op uw apparaat blijven tot ze verlopen of tot u ze verwijdert. Gegevens in de sessionStorage van uw browser worden verwijderd wanneer u het tabblad sluit. Gegevens in de localStorage blijven bewaard tot u ze zelf wist via de instellingen van uw browser."
       ]
      ]
     ],
     [
-     "Afsprakenagenda (Cal.com)",
+     "4. Cookies beheren of verwijderen",
      [
       [
        "p",
-       "Op de afsprakenpagina haalt de website de vrije momenten op bij Cal.com. Boekt u een afspraak, dan worden de gegevens die u invult aan Cal.com bezorgd om de afspraak te plannen. Hiervoor worden geen cookies op onze website geplaatst."
+       "De meeste webbrowsers aanvaarden cookies automatisch. U kunt uw browserinstellingen echter aanpassen om cookies te weigeren, om een waarschuwing te krijgen wanneer een cookie wordt geplaatst, of om cookies en opgeslagen websitegegevens te verwijderen. Het uitschakelen van cookies kan invloed hebben op sommige functies van de website, zoals de vertaalfunctie of het automatisch invullen van formulieren."
       ]
      ]
     ],
     [
-     "Opslag in uw browser",
+     "5. Wijzigingen in ons cookiebeleid",
      [
       [
        "p",
-       "Om formulieren goed te laten werken, kan de website tijdelijk gegevens bewaren in de opslag van uw eigen browser (sessionStorage of localStorage). Die gegevens blijven op uw toestel. U kunt ze op elk moment wissen via de instellingen van uw browser."
+       "Wij behouden ons het recht voor om dit cookiebeleid op elk moment te wijzigen. Wijzigingen worden op deze pagina gepubliceerd. Voor cookies waarvoor toestemming nodig is, vragen wij die vooraf via een melding op de website."
       ]
      ]
     ],
     [
-     "Cookies beheren",
+     "6. Contactinformatie",
      [
       [
        "p",
-       "U kunt cookies en opgeslagen websitegegevens op elk moment verwijderen of blokkeren via de instellingen van uw browser. Doet u dat, dan kunnen sommige onderdelen, zoals de vertaalfunctie of het automatisch invullen van formulieren, minder goed werken."
-      ]
-     ]
-    ],
-    [
-     "Meer weten?",
-     [
+       "Als u vragen heeft over dit cookiebeleid, kunt u contact met ons opnemen via:"
+      ],
+      [
+       "ul",
+       [
+        "De advocaat achter MijnGezinshereniging.be",
+        "E-mail: advocaat@mijngezinshereniging.be"
+       ]
+      ],
       [
        "p",
-       "Lees ook onze privacyverklaring. Wij passen deze cookieverklaring aan als de website verandert, bijvoorbeeld als er ooit statistieken zouden worden bijgehouden. Voor cookies die niet strikt noodzakelijk zijn, vragen wij dan eerst uw toestemming."
+       "Meer informatie over de verwerking van uw persoonsgegevens vindt u in onze privacyverklaring."
       ]
      ]
     ]
