@@ -65,7 +65,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Intakegesprek inboeken</h3>
                 <div className="rounded-xl border-2 border-primary-200 bg-primary-50 p-5">
                   <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                    Kies zelf een moment voor een videogesprek van 30 minuten (€75 excl. btw). Gesprekken zijn mogelijk op weekdagen tussen 19 en 20 uur en in het weekend.
+                    Kies zelf een moment voor een videogesprek van 30 minuten (€75 excl. btw).
                   </p>
                   <Link to="/afspraak" className="mg-btn mg-btn-rust w-full">Maak een afspraak</Link>
                 </div>

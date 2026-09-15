@@ -44,7 +44,7 @@ export default function Afspraak() {
               <li><strong>U krijgt een bevestiging</strong> per e-mail, met de link naar het videogesprek.</li>
             </ol>
             <p className="mg-body mg-justify mt-8">
-              In een videogesprek van 30 minuten bekijken we uw situatie en uw kansen. U heeft enkel een smartphone, tablet of computer met internet nodig. Gesprekken zijn voorlopig mogelijk op weekdagen tussen 19 en 20 uur en in het weekend. Beslist u daarna om verder te gaan, dan spreken we een vaste prijs af voor uw dossier.
+              In een videogesprek van 30 minuten bekijken we uw situatie en uw kansen. U heeft enkel een smartphone, tablet of computer met internet nodig. Beslist u daarna om verder te gaan, dan spreken we een vaste prijs af voor uw dossier.
             </p>
             <p className="mg-disclaimer mt-6">
               Liever eerst een vraag stellen? Gebruik dan het <Link to="/contact" className="underline underline-offset-2">contactformulier</Link>.

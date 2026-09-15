@@ -233,7 +233,7 @@ export const legal = {
       ],
       [
        "p",
-       "3.2. Een eerste gesprek verloopt via video en duurt 30 minuten. Gesprekken zijn voorlopig mogelijk op weekdagen tussen 19 en 20 uur en in het weekend."
+       "3.2. Een eerste gesprek verloopt via video en duurt 30 minuten."
       ],
       [
        "p",
