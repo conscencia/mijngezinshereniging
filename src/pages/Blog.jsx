@@ -25,15 +25,16 @@ export default function Blog() {
     <div className="bg-white min-h-screen">
       {/* Header */}
       <div className="mg-pagehead text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-14 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">Alles over gezinshereniging</h1>
-          <p className="text-green-100 text-base max-w-xl mx-auto">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+          <p className="mg-eyebrow mg-eyebrow-light">Blog</p>
+          <h1 className="mg-display text-white max-w-3xl">Alles over <em>gezinshereniging</em></h1>
+          <p className="mg-lead text-primary-100 mt-6 max-w-2xl">
             Duidelijke uitleg zonder moeilijke taal, geschreven door onze advocaat.
           </p>
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
 
         {/* Category filter */}
         <div className="flex flex-wrap gap-2 mb-10">
@@ -78,16 +79,15 @@ export default function Blog() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 bg-primary-600 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-xl sm:text-2xl font-bold mb-2">Heeft u een vraag over uw situatie?</h2>
-          <p className="text-green-100 text-sm mb-6">Doe de Situatiecheck of plan een gesprek met onze advocaat.</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/tool" className="bg-white text-primary-600 hover:bg-gray-50 font-bold px-6 py-3 rounded-xl transition-colors text-sm">
-              Kom ik in aanmerking?
-            </Link>
-            <Link to="/contact" className="border border-white/40 hover:border-white text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-              Plan een gesprek
-            </Link>
+        <div className="mg-cta mg-cta-card mt-16 flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+          <div className="max-w-xl">
+            <p className="mg-eyebrow mg-eyebrow-light">Persoonlijk advies</p>
+            <h2 className="mg-h2 text-white">Heeft u een vraag over uw <em>situatie</em>?</h2>
+            <p className="mg-lead text-primary-100 mt-4">Doe de situatiecheck of plan een gesprek met onze advocaat.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link to="/tool" className="mg-btn mg-btn-rust">Doe de situatiecheck</Link>
+            <Link to="/contact" className="mg-btn mg-btn-ghost">Plan een gesprek</Link>
           </div>
         </div>
       </div>

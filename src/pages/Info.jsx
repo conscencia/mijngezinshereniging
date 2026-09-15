@@ -129,23 +129,22 @@ export default function Info() {
     <div className="bg-primary-50 min-h-screen">
       {/* Header */}
       <div className="mg-pagehead text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 text-center">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
-            Alles wat u moet weten over gezinshereniging in België
-          </h1>
-          <p className="text-green-100 text-base max-w-2xl mx-auto">
-            Begrijpelijke uitleg over voorwaarden, procedure en veelgestelde vragen. In mensentaal.
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-16 sm:pt-20 pb-10">
+          <p className="mg-eyebrow mg-eyebrow-light">Informatie</p>
+          <h1 className="mg-display text-white max-w-3xl">Gezinshereniging in <em>België</em></h1>
+          <p className="mg-lead text-primary-100 mt-6 max-w-2xl">
+            Heldere uitleg over de voorwaarden, de procedure en de vragen die wij het vaakst krijgen.
           </p>
         </div>
 
         {/* Tab Nav */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex overflow-x-auto gap-1 pb-0 -mb-px">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
+          <div className="flex overflow-x-auto gap-6 pb-0 -mb-px">
             {tabs.map(t => (
               <button
                 key={t.id}
                 onClick={() => { setActiveTab(t.id); window.history.replaceState(null, "", "#" + t.id); }}
-                className={`px-5 py-3 text-sm font-semibold whitespace-nowrap border-b-2 transition-all flex-shrink-0 ${
+                className={`py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-all flex-shrink-0 ${
                   activeTab === t.id
                     ? "border-white text-white"
                     : "border-transparent text-green-100 hover:text-white"
@@ -158,7 +157,7 @@ export default function Info() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14"><div className="max-w-4xl">
 
         {/* VOORWAARDEN */}
         {activeTab === "voorwaarden" && (
@@ -182,7 +181,7 @@ export default function Info() {
 
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">1. Partner van een Belg</h3>
-              <div className="space-y-2">
+              <ul className="mg-points">
                 {[
                   { ok: true, text: "Gehuwd, of geregistreerd partner met bewijs van een duurzame relatie" },
                   { ok: true, text: "Gehuwd: beiden ouder dan 18 jaar. Geregistreerd partner: ouder dan 21 jaar, of 18 jaar na 1 jaar samenwonen" },
@@ -191,51 +190,42 @@ export default function Info() {
                   { ok: null, text: "Ziekteverzekering voor u beiden", warn: true },
                   { ok: null, text: "Retributie van €218", warn: true },
                 ].map((item, i) => (
-                  <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.warn ? "bg-yellow-50" : "bg-green-50"}`}>
-                    <span className={`mg-bullet ${item.warn ? "" : "mg-bullet-ok"}`} aria-hidden="true"></span>
-                    <span className="text-gray-700 text-sm">{item.text}</span>
-                  </div>
+                  <li key={i}>{item.text}</li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Kinderen</h3>
-              <div className="space-y-2">
+              <ul className="mg-points">
                 {[
                   { icon: "✅", text: "Minderjarige kinderen: geen inkomenseis als enkel kinderen overkomen, geen retributie" },
                   { icon: "✅", text: "Kinderen van 18 jaar of ouder: mogelijk als ze in het herkomstland ten laste zijn van u (bij een EU-burger vanaf 21 jaar)" },
                   { icon: "⚠️", text: "U heeft het ouderlijk gezag nodig. Bij gedeeld gezag: schriftelijke toestemming van de andere ouder" },
                   { icon: "⚠️", text: "Bewijs van huisvesting en ziekteverzekering" },
                 ].map((item, i) => (
-                  <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "✅" ? "bg-green-50" : "bg-yellow-50"}`}>
-                    <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
-                    <span className="text-gray-700 text-sm">{item.text}</span>
-                  </div>
+                  <li key={i}>{item.text}</li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">3. (Groot)ouders</h3>
-              <div className="space-y-2">
+              <ul className="mg-points">
                 {[
                   { icon: "❌", text: "Meerderjarige Belg: geen recht op gezinshereniging met (groot)ouders" },
                   { icon: "✅", text: "Vader of moeder van een minderjarig Belgisch kind: wel mogelijk" },
                   { icon: "⚠️", text: "EU-burger die werkt in België: (groot)ouder die ten laste is, kan in aanmerking komen" },
                   { icon: "⚠️", text: "In andere gevallen soms een humanitair visum, zonder automatisch recht" },
                 ].map((item, i) => (
-                  <div key={i} className={`flex items-start gap-3 p-3 rounded-lg ${item.icon === "❌" ? "bg-red-50" : item.icon === "✅" ? "bg-green-50" : "bg-yellow-50"}`}>
-                    <span className={`mg-bullet ${item.icon === "✅" ? "mg-bullet-ok" : ""}`} aria-hidden="true"></span>
-                    <span className="text-gray-700 text-sm">{item.text}</span>
-                  </div>
+                  <li key={i}>{item.text}</li>
                 ))}
-              </div>
+              </ul>
             </div>
 
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-4">Niet zeker of u voldoet aan de voorwaarden?</p>
-              <Link to="/tool" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
+            <div className="mg-note-box">
+              <p className="mg-q-sub">Niet zeker of u voldoet aan de voorwaarden?</p>
+              <Link to="/tool" className="mg-btn mg-btn-rust">
                 Kom ik in aanmerking?
               </Link>
             </div>
@@ -329,10 +319,10 @@ export default function Info() {
               </div>
             </div>
 
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-4">Laat uw dossier vooraf controleren om fouten te voorkomen</p>
-              <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
-                Dossierbeoordeling Aanvragen
+            <div className="mg-note-box">
+              <p className="mg-q-sub">Laat uw dossier vooraf controleren om fouten te voorkomen</p>
+              <Link to="/contact" className="mg-btn mg-btn-rust">
+                Laat uw dossier nakijken
               </Link>
             </div>
           </div>
@@ -468,15 +458,15 @@ export default function Info() {
                 ))}
               </div>
               <div className="mt-4 bg-blue-100 rounded-xl p-3 text-xs text-blue-800 leading-relaxed">
-                ⚠️ <strong>Belangrijk:</strong> De bewijslast ligt volledig bij de aanvrager. DVZ is niet meer verplicht om zelf stukken op te vragen. U moet proactief alle bewijzen indienen.
+                <strong>Belangrijk:</strong> wacht niet tot DVZ stukken opvraagt. Bij gezinshereniging met een EU-burger ligt de bewijslast steeds vaker volledig bij de aanvrager. Dien dus meteen alle bewijzen in.
               </div>
             </div>
 
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-2">Twijfel over uw inkomen of behoefteanalyse?</p>
-              <p className="text-primary-700 text-sm mb-4">Een advocate bekijkt uw situatie en zegt u eerlijk wat uw opties zijn.</p>
-              <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
-                Inkomenscheck Aanvragen
+            <div className="mg-note-box">
+              <p className="mg-q-sub">Twijfel over uw inkomen of behoefteanalyse?</p>
+              <p className="mg-body">Onze advocaat bekijkt uw situatie en zegt u eerlijk wat uw opties zijn.</p>
+              <Link to="/contact" className="mg-btn mg-btn-rust">
+                Laat uw inkomen nakijken
               </Link>
             </div>
           </div>
@@ -494,15 +484,15 @@ export default function Info() {
                 <FaqItem key={faq.q} {...faq} />
               ))}
             </div>
-            <div className="bg-primary-50 border border-primary-200 rounded-2xl p-6 text-center">
-              <p className="text-primary-800 font-medium mb-4">Staat uw vraag er niet tussen?</p>
-              <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-8 py-3 rounded-xl transition-colors inline-block">
+            <div className="mg-note-box">
+              <p className="mg-q-sub">Staat uw vraag er niet tussen?</p>
+              <Link to="/contact" className="mg-btn mg-btn-rust">
                 Stel uw vraag
               </Link>
             </div>
           </div>
         )}
-      </div>
+      </div></div>
     </div>
   );
 }

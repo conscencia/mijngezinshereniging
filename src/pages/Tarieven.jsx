@@ -6,17 +6,18 @@ export default function Tarieven() {
     <div className="bg-white min-h-screen">
 
       {/* Header */}
-      <section className="py-16 border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4 leading-tight">Tarieven</h1>
-          <p className="text-gray-500 text-lg leading-relaxed">
-            Transparante prijzen, zonder verrassingen. U ontvangt altijd een volledige prijs vooraf.
+      <section className="mg-pagehead text-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+          <p className="mg-eyebrow mg-eyebrow-light">Tarieven</p>
+          <h1 className="mg-display text-white max-w-3xl">Duidelijke prijzen, <em>vooraf</em></h1>
+          <p className="mg-lead text-primary-100 mt-6 max-w-2xl">
+            Geen verrassingen achteraf. U kent altijd de volledige prijs voor we beginnen.
           </p>
         </div>
       </section>
 
       {/* Pro-deo melding */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-10">
         <div className="bg-gray-50 border border-gray-200 rounded-2xl px-6 py-4 flex items-start gap-3">
           <svg className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -29,7 +30,7 @@ export default function Tarieven() {
 
       {/* Tariefkaarten */}
       <section className="py-10">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
 
             {/* Stap 1: Intakegesprek */}
@@ -141,7 +142,7 @@ export default function Tarieven() {
 
       {/* FAQ */}
       <section className="py-14 bg-primary-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Veelgestelde vragen over tarieven</h2>
           <div className="space-y-5">
             {[

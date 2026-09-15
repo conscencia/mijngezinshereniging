@@ -48,12 +48,12 @@ export default function Contact() {
 
       {/* MAIN — Contact2 layout */}
       <section className="py-20">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
 
             {/* Links: titel + contactgegevens */}
-            <div className="flex flex-col justify-between gap-10 max-w-sm mx-auto lg:mx-0 w-full">
-              <div className="text-center lg:text-left">
+            <div className="flex flex-col justify-between gap-10 max-w-sm w-full">
+              <div>
                 <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3 leading-tight">
                   Hoe kunnen<br />wij u helpen?
                 </h1>
@@ -63,7 +63,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3 text-center lg:text-left">Intakegesprek inboeken</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Intakegesprek inboeken</h3>
                 <div className="rounded-xl border-2 border-primary-200 bg-primary-50 p-5">
                   <p className="text-sm text-gray-600 mb-4 leading-relaxed">
                     Boek rechtstreeks een videocall van 30 minuten. Betaling gebeurt bij bevestiging.
@@ -77,7 +77,7 @@ export default function Contact() {
                     Direct inboeken (€75)
                   </a>
                 </div>
-                <div className="mt-4 text-center lg:text-left">
+                <div className="mt-4">
                   <Link to="/tarieven" className="inline-flex items-center gap-1.5 text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors">
                     Bekijk onze tarieven →
                   </Link>
@@ -85,7 +85,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center lg:text-left">Contactgegevens</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contactgegevens</h3>
                 <ul className="space-y-3 text-sm text-gray-600">
                   <li>
                     <span className="font-semibold text-gray-800">Telefoon: </span>
@@ -246,7 +246,7 @@ export default function Contact() {
 
       {/* FAQ */}
       <section className="py-14 bg-primary-50">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8">
           <h2 className="text-xl font-bold text-gray-900 mb-6">Veelgestelde vragen</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[

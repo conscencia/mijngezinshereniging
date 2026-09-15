@@ -4,13 +4,13 @@ export default function Privacy() {
   return (
     <div className="bg-primary-50 min-h-screen">
       <div className="mg-pagehead text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-2">Privacy & Juridische Informatie</h1>
-          <p className="text-green-100 text-sm">Laatste update: juni 2026</p>
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 py-16">
+          <p className="mg-eyebrow mg-eyebrow-light">Laatste update: juni 2026</p>
+          <h1 className="mg-display text-white">Privacy en <em>voorwaarden</em></h1>
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 py-14 space-y-10">
 
         {/* Privacy Policy */}
         <section>
@@ -120,9 +120,9 @@ export default function Privacy() {
           </div>
         </section>
 
-        <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 text-center">
-          <p className="text-primary-800 font-medium mb-4">Vragen over ons privacybeleid?</p>
-          <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white font-bold px-6 py-2.5 rounded-xl transition-colors inline-block text-sm">
+        <div className="mg-note-box">
+          <p className="mg-q-sub">Vragen over ons privacybeleid?</p>
+          <Link to="/contact" className="mg-btn mg-btn-rust">
             Neem contact op
           </Link>
         </div>

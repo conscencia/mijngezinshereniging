@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { BOOKING_URL } from "../config";
 
@@ -7,7 +7,7 @@ const QUESTIONS = {
     id: "nationaliteit",
     label: "Stap 1",
     title: "Wat is uw huidige nationaliteit of statuut in België?",
-    help: "Deze vraag bepaalt welke voorwaarden voor u gelden. De regels zijn anders per nationaliteit of statuut.",
+    help: "Het gaat om de persoon die al in België woont. Van zijn of haar statuut hangt af welke regels gelden.",
     options: [
       { value: "belg", label: "Ik ben Belg", icon: "🇧🇪" },
       { value: "eu", label: "Ik ben EU-burger (of EER)", icon: "🇪🇺" },
@@ -26,7 +26,7 @@ const QUESTIONS = {
     id: "belg-type",
     label: "Stap 2",
     title: "Heeft u ooit gebruik gemaakt van uw recht op vrij verkeer in de EU?",
-    help: "Dit onderscheid is juridisch cruciaal. Een Belg die gewoond of gewerkt heeft in een andere EU-lidstaat ('actieve Belg') valt onder Europees Unierecht (art. 40bis Vw.) en heeft gunstiger regels dan een Belg die altijd in België bleef ('statische Belg', art. 40ter Vw.).",
+    help: "Woonde, werkte of studeerde u als Belg een tijd in een ander EU-land? Dan gelden vaak de Europese regels, en die zijn soepeler dan de regels voor een Belg die altijd in België woonde.",
     options: [
       { value: "statisch", label: "Nee, ik heb altijd in België gewoond en nooit duurzaam in een andere EU-lidstaat gewerkt of gestudeerd", icon: "🏠" },
       { value: "actief", label: "Ja, ik heb gewoond, gewerkt of gestudeerd in een andere EU-lidstaat", icon: "🇪🇺" },
@@ -37,7 +37,7 @@ const QUESTIONS = {
     id: "eu-type",
     label: "Uw statuut",
     title: "Wat is uw huidige situatie in België?",
-    help: "Dit onderscheid is juridisch cruciaal. Werknemers, zelfstandigen en werkzoekenden genieten de ruimste rechten (art. 40/40bis Verblijfswet). Studenten en beschikkers hebben beperkingen, o.a. voor het overkomen van (groot)ouders.",
+    help: "Wie in België werkt, zelfstandige is of actief werk zoekt, heeft de ruimste rechten. Voor studenten en wie van eigen middelen leeft, gelden beperkingen, bijvoorbeeld om ouders te laten overkomen.",
     options: [
       { value: "economisch-actief", label: "Ik werk, ben zelfstandige of zoek actief werk in België", icon: "💼" },
       { value: "student", label: "Ik studeer in België (ingeschreven aan een erkende instelling)", icon: "🎓" },
@@ -49,7 +49,7 @@ const QUESTIONS = {
     id: "gezinslid-eu",
     label: "Stap 3",
     title: "Wie wilt u naar België halen?",
-    help: "Als EU-burger of actieve Belg valt u onder de Burgerschapsrichtlijn (art. 40/40bis Verblijfswet). Er geldt in principe GEEN inkomenseis voor uw echtgeno(o)t(e) of minderjarige kinderen.",
+    help: "Voor familie van een EU-burger gelden de Europese regels. Voor uw echtgeno(o)t(e) of minderjarige kinderen is er in principe geen vast inkomensbedrag.",
     options: [
       { value: "eu-partner", label: "Mijn echtgeno(o)t(e) of gelijkgestelde partner (al gehuwd of gelijkgesteld)", icon: "💑" },
       { value: "eu-geregistreerd", label: "Mijn wettelijk geregistreerde partner (niet gehuwd)", icon: "📝" },
@@ -63,7 +63,7 @@ const QUESTIONS = {
     id: "gezinslid",
     label: "Stap 2",
     title: "Wie wilt u naar België halen?",
-    help: "Elk gezinslid heeft andere voorwaarden en regels. Kies de categorie die het beste past bij uw situatie.",
+    help: "Voor elk gezinslid gelden andere voorwaarden. Kies wat het best bij uw situatie past.",
     options: [
       { value: "partner", label: "Mijn echtgeno(o)t(e) (wij zijn gehuwd)", icon: "💑" },
       { value: "partner-niet-gehuwd", label: "Mijn geregistreerde partner (wettelijk samenwonend of buitenlands partnerschap)", icon: "📝" },
@@ -147,7 +147,7 @@ const QUESTIONS = {
     id: "kind-extra",
     label: "Stap 4",
     title: "Komen er ook andere gezinsleden mee naar België?",
-    help: "Als u alleen gezinshereniging vraagt voor uw minderjarig kind, is er géén inkomenseis. Vraagt u tegelijk ook voor uw partner of een meerderjarig kind? Dan geldt de inkomenseis wél.",
+    help: "Als u alleen gezinshereniging vraagt voor uw minderjarig kind, is er geen inkomenseis. Vraagt u tegelijk ook gezinshereniging voor uw partner of een meerderjarig kind? Dan geldt die wel.",
     options: [
       { value: "alleen-kind", label: "Nee, enkel voor mijn minderjarig kind", icon: "👶" },
       { value: "ook-anderen", label: "Ja, ook voor mijn partner of een meerderjarig kind", icon: "👨‍👩‍👧" },
@@ -216,7 +216,7 @@ function calculateResult(answers) {
       summary: "Als erkend vluchteling of subsidiair beschermde heeft u in principe recht op gezinshereniging, maar de voorwaarden en procedure zijn sterk afhankelijk van uw specifiek beschermingsstatuut, de termijn van uw aanvraag en de gezinssamenstelling. Een persoonlijk gesprek is aangewezen.",
       points: [
         { icon: "📋", text: "Erkend vluchtelingen en subsidiair beschermden genieten specifieke regels op basis van de Verblijfswet en internationale verdragen (Vluchtelingenverdrag, art. 8 EVRM)." },
-        { icon: "⚠️", text: "De termijn waarbinnen u de aanvraag indient na erkenning is cruciaal: te laat indienen kan uw rechten beperken." },
+        { icon: "⚠️", text: "Wanneer u de aanvraag indient na uw erkenning, kan een groot verschil maken voor de voorwaarden." },
         { icon: "💡", text: "De precieze voorwaarden (inkomens- en huisvestingsvereisten, welke familieleden u kunt laten overkomen) verschillen per statuut. Een advocaat beoordeelt uw volledige situatie." },
       ],
       alternatives: [],
@@ -254,7 +254,7 @@ function calculateResult(answers) {
         status: "groen",
         emoji: "🟢",
         title: "U komt waarschijnlijk in aanmerking",
-        summary: "Als EU-burger of actieve Belg heeft u het recht uw echtgeno(o)t(e) of gelijkgestelde partner naar België te halen op basis van de Burgerschapsrichtlijn (art. 40/40bis Verblijfswet). Er is GEEN klassieke inkomenseis.",
+        summary: "Als EU-burger of actieve Belg heeft u het recht uw echtgeno(o)t(e) of gelijkgestelde partner naar België te halen op basis van de Burgerschapsrichtlijn (art. 40/40bis Verblijfswet). Er is geen vast inkomensbedrag.",
         points: [
           { icon: "✅", text: "Geen klassieke inkomenseis: de Burgerschapsrichtlijn legt geen minimumbedrag op. U moet wel aantonen dat u geen onredelijke belasting vormt voor de Belgische sociale bijstandsstelsels." },
           { icon: "📋", text: "Vereist: geldig paspoort van uw partner, huwelijksakte (gelegaliseerd, vertaald en eventueel erkend in België), bewijs van uw verblijfsrecht in België (EU-kaart of bijlage 19)." },
@@ -272,7 +272,7 @@ function calculateResult(answers) {
         status: "oranje",
         emoji: "🟡",
         title: "Mogelijk in aanmerking, maar bewijs van duurzame relatie is vereist",
-        summary: "Een wettelijk geregistreerde partner van een EU-burger of actieve Belg heeft recht op gezinshereniging mits bewijs van een duurzame en stabiele relatie. Er is GEEN inkomenseis, maar DVZ hanteert strenge bewijscriteria.",
+        summary: "Een wettelijk geregistreerde partner van een EU-burger of actieve Belg heeft recht op gezinshereniging mits bewijs van een duurzame en stabiele relatie. Er is geen vast inkomensbedrag, maar DVZ kijkt streng naar de bewijzen.",
         points: [
           { icon: "✅", text: "Geen inkomenseis op basis van de Burgerschapsrichtlijn." },
           { icon: "📋", text: "Bewijs van duurzame en stabiele relatie vereist: minstens 1 jaar onafgebroken samenwonen, OF minstens 2 jaar kennen met minimaal 3 ontmoetingen van samen 45 dagen, OF een gemeenschappelijk kind." },
@@ -613,7 +613,7 @@ function calculateResult(answers) {
       title: "Uw inkomen is een aandachtspunt, maar geen automatische weigering",
       summary: "Leefloon en OCMW-uitkering tellen niet mee voor gezinshereniging. Dat betekent niet dat u automatisch geweigerd wordt. Via een behoefteanalyse zijn er mogelijkheden. Laat uw situatie bekijken.",
       points: [
-        { icon: "⚠️", text: "Leefloon en OCMW-uitkering tellen NIET mee als bewijs van voldoende inkomen bij DVZ." },
+        { icon: "⚠️", text: "Leefloon en OCMW-uitkering tellen niet mee als bewijs van voldoende inkomen bij DVZ." },
         { icon: "📌", text: "DVZ weigert niet automatisch: via een individuele behoefteanalyse (arrest Chakroun) kunt u op andere manieren aantonen dat uw gezin niet ten laste van de overheid valt." },
         { icon: "💡", text: "Bij een behoefteanalyse kijkt DVZ naar uw volledige situatie: inkomsten, vaste uitgaven, toekomstige inkomsten, alimentatie, co-ouderschap, enz. De bewijslast ligt volledig bij u." },
         ...(kindVoogdij === "ex" ? [{ icon: "⚠️", text: "Extra aandachtspunt: de voogdijsituatie van uw kind vereist ook aandacht (toestemming andere ouder)." }] : []),
@@ -687,7 +687,7 @@ function calculateResult(answers) {
     status: "groen",
     emoji: "🟢",
     title: "U komt waarschijnlijk in aanmerking",
-    summary: "Goed nieuws! Op basis van uw antwoorden voldoet u aan de basisvoorwaarden voor gezinshereniging in België.",
+    summary: "Op basis van uw antwoorden lijkt u te voldoen aan de basisvoorwaarden voor gezinshereniging in België.",
     points: [
       { icon: "✅", text: "Uw inkomen lijkt voldoende (€2.217,47 netto/maand of meer)." },
       { icon: "✅", text: gezinslid === "partner" ? "U bent beiden ouder dan 18 jaar, de leeftijdseis is in orde." : gezinslid === "partner-niet-gehuwd" ? "U kunt een duurzame relatie aantonen en voldoet aan de leeftijdseis." : "Het type gezinslid valt binnen de toegestane categorieën." },
@@ -702,26 +702,41 @@ function calculateResult(answers) {
   };
 }
 
-const statusColors = {
-  groen: {
-    bg: "bg-green-50",
-    border: "border-green-400",
-    badge: "bg-green-100 text-green-800 border-green-300",
-    icon: "text-green-600",
-  },
-  oranje: {
-    bg: "bg-yellow-50",
-    border: "border-yellow-400",
-    badge: "bg-yellow-100 text-yellow-800 border-yellow-300",
-    icon: "text-yellow-600",
-  },
-  rood: {
-    bg: "bg-red-50",
-    border: "border-red-400",
-    badge: "bg-red-100 text-red-800 border-red-300",
-    icon: "text-red-600",
-  },
+const SHORT_LABELS = {
+  nationaliteit: "Uw statuut",
+  "belg-type": "Vrij verkeer in de EU",
+  "eu-type": "Uw situatie in België",
+  "gezinslid-eu": "Wie komt over",
+  gezinslid: "Wie komt over",
+  relatie: "Duurzame relatie",
+  "leeftijd-partner": "Leeftijd",
+  leeftijd: "Leeftijd",
+  "kind-voogdij": "Ouderlijk gezag",
+  "kind-extra": "Andere gezinsleden",
+  "bent-u-minderjarig": "Leeftijd van de Belg",
+  inkomen: "Inkomen",
 };
+
+const STATUS_LABELS = {
+  groen: "Waarschijnlijk in aanmerking",
+  oranje: "Mogelijk, met aandachtspunten",
+  rood: "Nu niet in aanmerking",
+};
+
+function answerLabel(questionId, value) {
+  const opt = QUESTIONS[questionId]?.options.find((o) => o.value === value);
+  return opt ? opt.label : value;
+}
+
+function Field({ label, error, children }) {
+  return (
+    <label className="block">
+      <span className="mg-label">{label}</span>
+      {children}
+      {error && <span className="mg-field-error">{error}</span>}
+    </label>
+  );
+}
 
 function ContactForm({ result, answers }) {
   const [form, setForm] = useState({ naam: "", voornaam: "", email: "", telefoon: "", fase: "", toelichting: "", privacy: false });
@@ -730,12 +745,12 @@ function ContactForm({ result, answers }) {
 
   const validate = () => {
     const e = {};
-    if (!form.naam.trim()) e.naam = "Naam is verplicht";
-    if (!form.voornaam.trim()) e.voornaam = "Voornaam is verplicht";
-    if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = "Geldig e-mailadres verplicht";
-    if (!form.telefoon.trim()) e.telefoon = "Telefoonnummer is verplicht";
-    if (!form.fase) e.fase = "Selecteer een optie";
-    if (!form.privacy) e.privacy = "U moet akkoord gaan met het privacybeleid";
+    if (!form.naam.trim()) e.naam = "Vul uw naam in";
+    if (!form.voornaam.trim()) e.voornaam = "Vul uw voornaam in";
+    if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) e.email = "Vul een geldig e-mailadres in";
+    if (!form.telefoon.trim()) e.telefoon = "Vul uw telefoonnummer in";
+    if (!form.fase) e.fase = "Kies een optie";
+    if (!form.privacy) e.privacy = "Ga akkoord met het privacybeleid om verder te gaan";
     return e;
   };
 
@@ -753,124 +768,71 @@ function ContactForm({ result, answers }) {
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+      <div className="pt-2">
         <div className="mg-check" aria-hidden="true"></div>
-        <h3 className="text-xl font-bold text-green-800 mb-2">Dank u! Wij nemen vandaag nog contact op.</h3>
-        <p className="text-green-700 text-sm leading-relaxed">
-          Uw aanvraag is ontvangen. Een van onze advocaten neemt zo snel mogelijk contact met u op voor een vrijblijvende dossierbeoordeling.
+        <h3 className="mg-q-sub">Dank u, wij hebben uw gegevens goed ontvangen.</h3>
+        <p className="mg-body mg-justify mt-3">
+          Wij nemen zo snel mogelijk contact met u op. Ondertussen kunt u alvast deze documenten verzamelen:
         </p>
-        <div className="mt-4 p-4 bg-white rounded-xl text-sm text-gray-600">
-          <strong>Ondertussen kunt u alvast verzamelen:</strong>
-          <ul className="mt-2 text-left space-y-1 list-disc list-inside">
-            <li>Loonfiches van de laatste 3 maanden</li>
-            <li>Aanslagbiljet (belastingbrief)</li>
-            <li>Huurcontract of eigendomsakte</li>
-            <li>Bewijs van relatie (huwelijksakte, geboorteakte, etc.)</li>
-          </ul>
-        </div>
+        <ul className="mg-points mt-5">
+          <li>Bewijs van inkomen, bij voorkeur van de laatste 12 maanden</li>
+          <li>Uw meest recente aanslagbiljet</li>
+          <li>Huurcontract of eigendomsakte</li>
+          <li>Bewijs van de familieband, zoals een huwelijksakte of geboorteakte</li>
+        </ul>
       </div>
     );
   }
 
+  const set = (key) => (e) => setForm({ ...form, [key]: e.target.value });
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Naam *</label>
-          <input
-            type="text"
-            value={form.naam}
-            onChange={e => setForm({ ...form, naam: e.target.value })}
-            className={`w-full border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 ${errors.naam ? "border-red-400" : "border-gray-300"}`}
-            placeholder="Familienaam"
-          />
-          {errors.naam && <p className="text-red-500 text-xs mt-1">{errors.naam}</p>}
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Voornaam *</label>
-          <input
-            type="text"
-            value={form.voornaam}
-            onChange={e => setForm({ ...form, voornaam: e.target.value })}
-            className={`w-full border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 ${errors.voornaam ? "border-red-400" : "border-gray-300"}`}
-            placeholder="Voornaam"
-          />
-          {errors.voornaam && <p className="text-red-500 text-xs mt-1">{errors.voornaam}</p>}
-        </div>
+    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <Field label="Naam" error={errors.naam}>
+          <input type="text" autoComplete="family-name" value={form.naam} onChange={set("naam")} className={`mg-input ${errors.naam ? "is-invalid" : ""}`} />
+        </Field>
+        <Field label="Voornaam" error={errors.voornaam}>
+          <input type="text" autoComplete="given-name" value={form.voornaam} onChange={set("voornaam")} className={`mg-input ${errors.voornaam ? "is-invalid" : ""}`} />
+        </Field>
+        <Field label="E-mailadres" error={errors.email}>
+          <input type="email" autoComplete="email" value={form.email} onChange={set("email")} className={`mg-input ${errors.email ? "is-invalid" : ""}`} />
+        </Field>
+        <Field label="Telefoonnummer" error={errors.telefoon}>
+          <input type="tel" autoComplete="tel" value={form.telefoon} onChange={set("telefoon")} className={`mg-input ${errors.telefoon ? "is-invalid" : ""}`} placeholder="+32" />
+        </Field>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">E-mailadres *</label>
-          <input
-            type="email"
-            value={form.email}
-            onChange={e => setForm({ ...form, email: e.target.value })}
-            className={`w-full border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 ${errors.email ? "border-red-400" : "border-gray-300"}`}
-            placeholder="uw@email.be"
-          />
-          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
-        </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Telefoonnummer *</label>
-          <input
-            type="tel"
-            value={form.telefoon}
-            onChange={e => setForm({ ...form, telefoon: e.target.value })}
-            className={`w-full border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 ${errors.telefoon ? "border-red-400" : "border-gray-300"}`}
-            placeholder="+32 4XX XX XX XX"
-          />
-          {errors.telefoon && <p className="text-red-500 text-xs mt-1">{errors.telefoon}</p>}
-        </div>
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">In welke fase zit uw aanvraag? *</label>
-        <select
-          value={form.fase}
-          onChange={e => setForm({ ...form, fase: e.target.value })}
-          className={`w-full border rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 ${errors.fase ? "border-red-400" : "border-gray-300"} bg-white`}
-        >
-          <option value="">Selecteer een optie...</option>
+      <Field label="In welke fase zit uw aanvraag?" error={errors.fase}>
+        <select value={form.fase} onChange={set("fase")} className={`mg-input ${errors.fase ? "is-invalid" : ""}`}>
+          <option value="">Kies een optie</option>
           <option value="nog-niet-begonnen">Ik moet nog beginnen</option>
           <option value="ingediend">Mijn aanvraag is al ingediend</option>
           <option value="weigering">Ik heb een weigering gekregen</option>
         </select>
-        {errors.fase && <p className="text-red-500 text-xs mt-1">{errors.fase}</p>}
-      </div>
+      </Field>
+
+      <Field label="Uw situatie in het kort (niet verplicht)">
+        <textarea value={form.toelichting} onChange={set("toelichting")} rows={4} className="mg-input resize-none" />
+      </Field>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Uw situatie (optioneel)</label>
-        <textarea
-          value={form.toelichting}
-          onChange={e => setForm({ ...form, toelichting: e.target.value })}
-          rows={3}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 resize-none"
-          placeholder="Vertel kort over uw specifieke situatie..."
-        />
-      </div>
-
-      <div className="flex items-start gap-3">
-        <input
-          type="checkbox"
-          id="privacy"
-          checked={form.privacy}
-          onChange={e => setForm({ ...form, privacy: e.target.checked })}
-          className="mt-0.5 w-4 h-4 accent-primary-500"
-        />
-        <label htmlFor="privacy" className="text-sm text-gray-600 leading-relaxed">
-          Ik ga akkoord met de verwerking van mijn gegevens conform het{" "}
-          <Link to="/privacy" className="text-primary-600 underline">privacybeleid</Link>. *
+        <label className="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={form.privacy}
+            onChange={(e) => setForm({ ...form, privacy: e.target.checked })}
+            className="mt-1 w-4 h-4 accent-[#A15C38] flex-shrink-0"
+          />
+          <span className="mg-body text-[0.92rem]">
+            Ik ga akkoord met de verwerking van mijn gegevens volgens het{" "}
+            <Link to="/privacy" className="underline underline-offset-2">privacybeleid</Link>.
+          </span>
         </label>
+        {errors.privacy && <span className="mg-field-error">{errors.privacy}</span>}
       </div>
-      {errors.privacy && <p className="text-red-500 text-xs -mt-2">{errors.privacy}</p>}
 
-      <button
-        type="submit"
-        className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3.5 rounded-xl transition-colors text-sm"
-      >
-        Gegevens versturen, wij nemen contact op
-      </button>
+      <button type="submit" className="mg-btn mg-btn-rust">Verstuur mijn gegevens</button>
     </form>
   );
 }
@@ -885,45 +847,52 @@ export default function Tool() {
   const [history, setHistory] = useState(preNationaliteit ? ["nationaliteit"] : []);
   const [result, setResult] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const topRef = useRef(null);
 
   const question = QUESTIONS[currentQ];
   const progress = history.length + 1;
-  const expectedSteps = getExpectedSteps(answers);
+  const expectedSteps = Math.max(getExpectedSteps(answers), progress);
+  const isLast = selected && question && question.next({ ...answers, [currentQ]: selected }) === null;
 
-  const handleSelect = (value) => {
-    setSelected(value);
+  const scrollToTop = () => {
+    const el = topRef.current;
+    if (el && el.getBoundingClientRect().top < 0) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleNext = () => {
     if (!selected) return;
-
     const newAnswers = { ...answers, [currentQ]: selected };
     setAnswers(newAnswers);
     setHistory([...history, currentQ]);
 
     const nextQ = question.next(newAnswers);
     if (!nextQ) {
-      const r = calculateResult(newAnswers);
-      setResult(r);
+      setResult(calculateResult(newAnswers));
       setCurrentQ(null);
     } else {
       setCurrentQ(nextQ);
-      setSelected(null);
+      setSelected(newAnswers[nextQ] ?? null);
     }
+    scrollToTop();
+  };
+
+  const goToStep = (index) => {
+    const target = history[index];
+    const kept = history.slice(0, index);
+    const newAnswers = {};
+    kept.forEach((q) => { newAnswers[q] = answers[q]; });
+    setHistory(kept);
+    setCurrentQ(target);
+    setSelected(answers[target] ?? null);
+    setAnswers(newAnswers);
+    setResult(null);
+    setShowForm(false);
+    scrollToTop();
   };
 
   const handleBack = () => {
     if (history.length === 0) return;
-    const prev = history[history.length - 1];
-    const newHistory = history.slice(0, -1);
-    const newAnswers = { ...answers };
-    delete newAnswers[currentQ || "result"];
-    setHistory(newHistory);
-    setCurrentQ(prev);
-    setSelected(answers[prev]);
-    setAnswers(newAnswers);
-    setResult(null);
-    setShowForm(false);
+    goToStep(history.length - 1);
   };
 
   const handleReset = () => {
@@ -933,239 +902,173 @@ export default function Tool() {
     setHistory([]);
     setResult(null);
     setShowForm(false);
+    scrollToTop();
   };
 
-  const colors = result ? statusColors[result.status] : null;
-
   return (
-    <div className="bg-primary-50 min-h-screen">
-      {/* Page Header */}
-      <div className="bg-white border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 text-center">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-            Situatiecheck
-          </h1>
-          <p className="text-gray-500 text-base">
-            Kom ik in aanmerking voor gezinshereniging? Beantwoord een paar vragen en zie het meteen.
+    <div className="bg-white">
+      {/* Kop */}
+      <section className="mg-pagehead text-white">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+          <p className="mg-eyebrow mg-eyebrow-light">Situatiecheck</p>
+          <h1 className="mg-display text-white max-w-3xl">Komt u in aanmerking voor <em>gezinshereniging</em>?</h1>
+          <p className="mg-lead text-primary-100 mt-6 max-w-2xl">
+            Beantwoord een paar korte vragen. U krijgt meteen een eerste inschatting van uw situatie.
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-1.5 text-xs text-yellow-800">
-            ⚠️ Deze tool is indicatief en vormt geen juridisch advies
-          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10">
-        {/* Wizard */}
-        {!result && question && (
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
-            {/* Progress */}
-            <div className="mb-6">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-medium text-primary-600 uppercase tracking-wider">{question.label}</span>
-                <span className="text-xs text-gray-400">{progress} van {expectedSteps}</span>
-              </div>
-              <div className="flex gap-1.5">
-                {Array.from({ length: expectedSteps }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`h-1.5 rounded-full flex-1 transition-colors ${i < progress ? "bg-primary-500" : "bg-gray-200"}`}
-                  />
-                ))}
-              </div>
-            </div>
+      <section ref={topRef} className="py-16 sm:py-20 scroll-mt-24">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-16">
 
-            {/* Question */}
-            <h2 className="text-xl font-bold text-gray-900 mb-2">{question.title}</h2>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6 bg-blue-50 border border-blue-100 rounded-lg p-3">
-              💡 {question.help}
-            </p>
-
-            {/* Options */}
-            <div className="space-y-2 mb-6">
-              {question.options.map((opt) => (
-                <button
-                  key={opt.value}
-                  onClick={() => handleSelect(opt.value)}
-                  className={`w-full flex items-center gap-3 p-4 border-2 rounded-xl text-left transition-all text-sm ${
-                    selected === opt.value
-                      ? "border-primary-500 bg-primary-50 text-primary-900 font-semibold"
-                      : "border-gray-200 bg-white text-gray-700 font-medium hover:border-primary-300 hover:bg-gray-50"
-                  }`}
-                >
-                  <div className={`w-4 h-4 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-all ${selected === opt.value ? "border-primary-500 bg-primary-500" : "border-gray-300"}`}>
-                    {selected === opt.value && <div className="w-1.5 h-1.5 bg-white rounded-full"></div>}
-                  </div>
-                  <span>{opt.label}</span>
-                </button>
-              ))}
-            </div>
-
-            {/* Navigation */}
-            <div className="flex items-center gap-3">
-              {history.length > 0 && (
-                <button
-                  onClick={handleBack}
-                  className="px-5 py-2.5 border border-gray-300 text-gray-600 hover:border-gray-400 font-medium rounded-xl transition-colors text-sm"
-                >
-                  ← Terug
-                </button>
-              )}
-              <button
-                onClick={handleNext}
-                disabled={!selected}
-                className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${
-                  selected
-                    ? "bg-primary-500 hover:bg-primary-600 text-white"
-                    : "bg-gray-100 text-gray-400 cursor-not-allowed"
-                }`}
-              >
-                {selected && question.next({ ...answers, [currentQ]: selected }) === null ? "Bekijk resultaat →" : "Volgende vraag →"}
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Result Screen */}
-        {result && (
-          <div className="space-y-6">
-
-            {/* Huwelijksprocedure: enkel voor partners die nog niet gehuwd of geregistreerd zijn */}
-            {answers.gezinslid === "partner-toekomst" && (
-              <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-6 sm:p-8">
-                <div className="mb-4">
-                  <h3 className="font-bold text-amber-900 text-base mb-2">⚠️ Eerste stap: de huwelijksprocedure</h3>
-                  <p className="text-amber-800 text-sm leading-relaxed">
-                    Voordat u gezinshereniging kunt aanvragen, moeten u en uw partner eerst gehuwd zijn of een geregistreerd partnerschap hebben. Voor wie in België wil trouwen of wettelijk samenwonen met een partner uit het buitenland, bestaat een specifieke procedure.
-                  </p>
+          {/* Hoofdkolom */}
+          <div className="lg:col-span-8">
+            {!result && question && (
+              <div key={currentQ} className="mg-fade">
+                <div className="flex items-baseline justify-between gap-4">
+                  <p className="mg-eyebrow mb-0">Vraag {progress} van {expectedSteps}</p>
                 </div>
-                <Link
-                  to="/blog/trouwen-met-buitenlandse-partner"
-                  className="inline-flex items-center gap-2 bg-amber-700 hover:bg-amber-800 text-white font-semibold py-2.5 px-5 rounded-xl transition-colors text-sm"
-                >
-                  Ik wil trouwen met iemand uit het buitenland. Wat moet ik doen? →
-                </Link>
+                <div className="mg-progress mt-4" aria-hidden="true">
+                  <span style={{ width: `${(progress / expectedSteps) * 100}%` }} />
+                </div>
+
+                <h2 className="mg-q-title mt-10">{question.title}</h2>
+                <p className="mg-body mg-justify mt-5 max-w-2xl">{question.help}</p>
+
+                <div className="mg-options mt-10" role="radiogroup" aria-label={question.title}>
+                  {question.options.map((opt, i) => {
+                    const isSel = selected === opt.value;
+                    return (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        role="radio"
+                        aria-checked={isSel}
+                        onClick={() => setSelected(opt.value)}
+                        className={`mg-option ${isSel ? "is-selected" : ""}`}
+                      >
+                        <span className="mg-option-num">{String.fromCharCode(65 + i)}</span>
+                        <span className="mg-option-label">{opt.label}</span>
+                        <span className="mg-option-dot" aria-hidden="true" />
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <div className="mt-10 flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-6">
+                  {history.length > 0 ? (
+                    <button type="button" onClick={handleBack} className="mg-textlink mg-textlink-back">
+                      <span aria-hidden="true">&larr;</span> Vorige vraag
+                    </button>
+                  ) : <span />}
+                  <button type="button" onClick={handleNext} disabled={!selected} className="mg-btn mg-btn-rust w-full sm:w-auto disabled:opacity-40 disabled:shadow-none disabled:cursor-not-allowed">
+                    {isLast ? "Bekijk mijn resultaat" : "Volgende vraag"} <span aria-hidden="true">&rarr;</span>
+                  </button>
+                </div>
               </div>
             )}
 
-            {/* Result card */}
-            <div className={`rounded-2xl border-2 p-6 sm:p-8 ${colors.bg} ${colors.border}`}>
-              {answers.gezinslid === "partner-toekomst" && (
-                <p className="text-xs font-semibold uppercase tracking-widest text-amber-700 mb-3">
-                  Uw situatie nu
-                </p>
-              )}
-              <div className="flex items-start gap-4 mb-4">
-                <div className={`w-3 h-3 rounded-full flex-shrink-0 mt-2 ${result.status === "groen" ? "bg-green-500" : result.status === "oranje" ? "bg-yellow-500" : "bg-red-500"}`}></div>
-                <div>
-                  <div className={`inline-flex items-center text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border mb-2 ${colors.badge}`}>
-                    {result.title}
+            {result && (
+              <div className="mg-fade">
+                <p className="mg-eyebrow">Uw resultaat</p>
+                <p className={`mg-status mg-status-${result.status}`}>{STATUS_LABELS[result.status]}</p>
+                <h2 className="mg-q-title mt-4">{result.title}</h2>
+                <p className="mg-lead mg-justify mt-6">{result.summary}</p>
+
+                {answers.gezinslid === "partner-toekomst" && (
+                  <div className="mg-note mt-10">
+                    <p className="mg-q-sub">Eerst trouwen of samenwonen</p>
+                    <p className="mg-body mg-justify mt-2">
+                      Voor wie in België wil trouwen of wettelijk samenwonen met een partner uit het buitenland, bestaat een specifieke procedure. Wij leggen de stappen uit in een apart artikel.
+                    </p>
+                    <Link to="/blog/trouwen-met-buitenlandse-partner" className="mg-textlink inline-block mt-4">
+                      Lees hoe u dat aanpakt <span aria-hidden="true">&rarr;</span>
+                    </Link>
                   </div>
-                  <p className="text-gray-800 text-base leading-relaxed font-medium">
-                    {result.summary}
+                )}
+
+                <h3 className="mg-q-sub mt-14">Wat dit voor u betekent</h3>
+                <ul className="mg-points mt-6">
+                  {result.points.map((p, i) => <li key={i}>{p.text}</li>)}
+                </ul>
+
+                {result.alternatives && result.alternatives.length > 0 && (
+                  <>
+                    <h3 className="mg-q-sub mt-14">Wat kunt u wel doen?</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10 mt-8">
+                      {result.alternatives.map((alt, i) => (
+                        <div key={i} className="mg-step">
+                          <span className="mg-step-num">{String(i + 1).padStart(2, "0")}</span>
+                          <h4 className="mg-step-title">{alt.title}</h4>
+                          <p className="mg-body mg-justify">{alt.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                <div className="mt-10">
+                  <button type="button" onClick={handleReset} className="mg-textlink">
+                    Opnieuw beginnen <span aria-hidden="true">&#8635;</span>
+                  </button>
+                </div>
+
+                {/* Oproep */}
+                <div className="mg-cta mg-cta-card mt-16">
+                  <p className="mg-eyebrow mg-eyebrow-light">Persoonlijk advies</p>
+                  <h3 className="mg-h2 text-white max-w-xl">Laat uw dossier <em>nakijken</em></h3>
+                  <p className="mg-lead mg-justify text-primary-100 mt-5 max-w-xl">
+                    In een videogesprek van 30 minuten krijgt u een eerlijk beeld van uw kansen en de volgende stappen. Een gesprek kost €75 excl. btw.
                   </p>
-                </div>
-              </div>
-
-              <div className="space-y-2 mt-5">
-                {result.points.map((p, i) => (
-                  <div key={i} className="flex items-start gap-3 bg-white/60 rounded-xl p-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0 mt-2"></div>
-                    <p className="text-gray-700 text-sm leading-relaxed">{p.text}</p>
-                  </div>
-                ))}
-              </div>
-
-              {result.alternatives && result.alternatives.length > 0 && (
-                <div className="mt-6 pt-5 border-t border-black/10">
-                  <h3 className="font-bold text-gray-900 mb-3 text-base">
-                    Wat kunt u wél doen?
-                  </h3>
-                  <div className="space-y-3">
-                    {result.alternatives.map((alt, i) => (
-                      <div key={i} className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
-                        <div className="font-semibold text-gray-900 text-sm mb-1">{alt.title}</div>
-                        <p className="text-gray-500 text-sm leading-relaxed">{alt.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              <div className="mt-6 flex justify-end">
-                <button
-                  onClick={handleReset}
-                  className="px-5 py-2.5 border border-gray-300 text-gray-600 hover:border-gray-400 font-medium rounded-xl transition-colors text-sm"
-                >
-                  Opnieuw beginnen
-                </button>
-              </div>
-            </div>
-
-            {/* Intake — altijd zichtbaar na resultaat */}
-            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-primary-700 px-6 py-5 text-white">
-                <h2 className="text-lg font-bold mb-1">Laat uw dossier beoordelen door een advocaat</h2>
-                <p className="text-green-100 text-sm">Neem contact op of boek meteen een afspraak.</p>
-              </div>
-
-              <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Optie 1: gegevens achterlaten */}
-                <div className={`rounded-xl border-2 p-5 transition-all ${showForm ? "border-primary-500 bg-primary-50" : "border-gray-200 hover:border-primary-300"}`}>
-                  <div className="font-bold text-gray-900 mb-1 text-sm">Gegevens achterlaten</div>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Laat uw gegevens achter. Wij nemen zo snel mogelijk contact op.</p>
-                  {!showForm ? (
-                    <button
-                      onClick={() => setShowForm(true)}
-                      className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-2.5 rounded-lg transition-colors text-sm"
-                    >
-                      Gegevens invullen →
+                  <div className="flex flex-col sm:flex-row gap-3 mt-8">
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="mg-btn mg-btn-rust">Plan een gesprek</a>
+                    <button type="button" onClick={() => setShowForm(!showForm)} aria-expanded={showForm} className="mg-btn mg-btn-ghost">
+                      {showForm ? "Formulier sluiten" : "Laat uw gegevens achter"}
                     </button>
-                  ) : (
-                    <span className="text-primary-600 text-xs font-medium">Vul het formulier hieronder in</span>
-                  )}
+                  </div>
                 </div>
 
-                {/* Optie 2: gesprek inplannen */}
-                <div className="rounded-xl border-2 border-gray-200 hover:border-primary-300 p-5 transition-all">
-                  <div className="font-bold text-gray-900 mb-1 text-sm">Gesprek inplannen</div>
-                  <p className="text-gray-500 text-xs leading-relaxed mb-4">Videocall van 30 minuten met een advocaat. U betaalt <strong>€75 excl. btw</strong>. Direct inboeken.</p>
-                  <a
-                    href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
-                    className="block w-full text-center bg-white border-2 border-primary-600 text-primary-700 hover:bg-primary-50 font-semibold py-2.5 rounded-lg transition-colors text-sm"
-                  >
-                    Gesprek inplannen (€75 excl. btw)
-                  </a>
+                <div className={`mg-collapse ${showForm ? "is-open" : ""}`}>
+                  <div>
+                    <div className="mg-formpanel mt-6">
+                      <p className="mg-body mg-justify mb-8">Laat uw gegevens achter. Wij nemen zo snel mogelijk contact met u op.</p>
+                      <ContactForm result={result} answers={answers} />
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Inline form */}
-              {showForm && (
-                <div className="px-6 pb-6 border-t border-gray-100 pt-5">
-                  <p className="text-sm text-gray-500 mb-4">Vul uw gegevens in. Wij nemen vandaag nog contact op.</p>
-                  <ContactForm result={result} answers={answers} />
-                </div>
-              )}
-            </div>
+            )}
           </div>
-        )}
 
-        {/* Disclaimer */}
-        <div className="mt-10 bg-gray-100 rounded-xl p-5 text-xs text-gray-500 leading-relaxed">
-          <div className="font-semibold text-gray-700 mb-2">⚠️ Juridische Disclaimer</div>
-          <p>
-            Deze online tool is louter <strong>INDICATIEF</strong> en gebaseerd op algemene criteria van de Belgische Verblijfswet
-            (in het bijzonder artikelen 10 en 40ter) en de rechtspraak van het Hof van Justitie (arrest Chakroun). Deze tool vervangt <strong>geen</strong> officieel juridisch consult en
-            vormt <strong>geen</strong> juridisch bindend advies. Er kunnen geen rechten aan de uitkomst worden ontleend.
-            Elk dossier is uniek en DVZ maakt uiteindelijk de beslissing.
-          </p>
-          <p className="mt-2">
-            Voor een volledige, juridisch verantwoorde beoordeling van uw dossier: neem contact op met onze advocaten.{" "}
-            <Link to="/privacy" className="text-primary-600 underline">Lees het volledige privacybeleid</Link>.
-          </p>
+          {/* Zijkolom: antwoorden en disclaimer */}
+          <aside className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <p className="mg-eyebrow">Uw antwoorden</p>
+              {history.length === 0 ? (
+                <p className="mg-body mg-justify">Uw antwoorden verschijnen hier. U kunt ze op elk moment aanpassen.</p>
+              ) : (
+                <ol className="mg-answers">
+                  {history.map((q, i) => (
+                    <li key={q}>
+                      <div className="min-w-0">
+                        <span className="mg-answers-q">{SHORT_LABELS[q] || QUESTIONS[q].title}</span>
+                        <span className="mg-answers-a">{answerLabel(q, answers[q])}</span>
+                      </div>
+                      <button type="button" onClick={() => goToStep(i)} className="mg-answers-edit" aria-label={`Wijzig: ${SHORT_LABELS[q] || QUESTIONS[q].title}`}>
+                        Wijzig
+                      </button>
+                    </li>
+                  ))}
+                </ol>
+              )}
+
+              <p className="mg-disclaimer mg-justify mt-10">
+                Deze situatiecheck geeft een eerste inschatting op basis van de algemene regels van de Verblijfswet. Het is geen juridisch advies: elk dossier is anders en de Dienst Vreemdelingenzaken neemt de beslissing. Lees ook ons <Link to="/privacy" className="underline underline-offset-2">privacybeleid</Link>.
+              </p>
+            </div>
+          </aside>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
-
-

@@ -138,7 +138,7 @@ function renderBlock(block, i) {
           <p className="text-sm font-semibold text-primary-800 mb-3">{block.text}</p>
           <div className="flex flex-col sm:flex-row gap-2">
             {block.links.map((link, j) => (
-              <Link key={j} to={link.to} className={`text-sm font-semibold px-4 py-2 rounded-lg text-center transition-colors ${j === 0 ? "bg-primary-500 text-white hover:bg-primary-600" : "border border-primary-400 text-primary-700 hover:bg-primary-100"}`}>
+              <Link key={j} to={link.to} className={`mg-btn mg-btn-sm ${j === 0 ? "mg-btn-rust" : "mg-btn-outline"}`}>
                 {link.label}
               </Link>
             ))}
@@ -216,23 +216,22 @@ export default function BlogPost() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 bg-primary-600 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-lg font-bold mb-2">Heeft u een vraag over uw situatie?</h2>
-          <p className="text-green-100 text-sm mb-5">Doe de Situatiecheck of plan een gesprek met onze advocaat.</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link to="/tool" className="bg-white text-primary-600 hover:bg-gray-50 font-bold px-6 py-3 rounded-xl transition-colors text-sm">
-              Kom ik in aanmerking?
-            </Link>
-            <Link to="/contact" className="border border-white/40 hover:border-white text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
-              Plan een gesprek
-            </Link>
+        <div className="mg-cta mg-cta-card mt-14 flex flex-col justify-between gap-8">
+          <div className="max-w-xl">
+            <p className="mg-eyebrow mg-eyebrow-light">Persoonlijk advies</p>
+            <h2 className="mg-h2 text-white">Heeft u een vraag over uw <em>situatie</em>?</h2>
+            <p className="mg-lead text-primary-100 mt-4">Doe de situatiecheck of plan een gesprek met onze advocaat.</p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link to="/tool" className="mg-btn mg-btn-rust">Doe de situatiecheck</Link>
+            <Link to="/contact" className="mg-btn mg-btn-ghost">Plan een gesprek</Link>
           </div>
         </div>
 
         {/* Back link */}
-        <div className="mt-8 text-center">
-          <Link to="/blog" className="text-sm text-gray-400 hover:text-primary-600 transition-colors">
-            ← Terug naar alle artikels
+        <div className="mt-10">
+          <Link to="/blog" className="mg-textlink mg-textlink-back">
+            <span aria-hidden="true">&larr;</span> Terug naar alle artikels
           </Link>
         </div>
       </article>
