@@ -1,1 +1,3 @@
-/*    /index.html    200
+# Onbekende adressen krijgen de pagina 404.html met een echte "niet gevonden"-status.
+# Elke pagina heeft nu een eigen HTML-bestand (zie scripts/prerender.mjs), dus de oude
+# regel die alles naar index.html stuurde is niet meer nodig.
