@@ -1,3 +1,5 @@
+import { articleMeta } from "./articleMeta.js";
+
 export const articles = [
   {
     "id": 14,
@@ -1239,3 +1241,6 @@ export const articles = [
     ],
   },
 ];
+
+// Kortere zoektitel en verwante artikels toevoegen (zie articleMeta.js).
+for (const a of articles) Object.assign(a, articleMeta[a.slug]);

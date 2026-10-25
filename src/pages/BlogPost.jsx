@@ -169,7 +169,7 @@ export default function BlogPost() {
 
   useSeo({
     path: article ? `/blog/${article.slug}` : "/blog",
-    title: article ? article.title : "Artikels over gezinshereniging",
+    title: article ? article.seoTitle || article.title : "Artikels over gezinshereniging",
     description: article ? article.excerpt : "Uitleg over gezinshereniging in België, in begrijpelijke taal.",
     type: "article",
     jsonLd: article
@@ -178,6 +178,8 @@ export default function BlogPost() {
   });
 
   if (!article) return <Navigate to="/blog" replace />;
+
+  const verwant = (article.related || []).map((slug) => articles.find((a) => a.slug === slug)).filter(Boolean);
 
   return (
     <div className="bg-white min-h-screen">
@@ -225,6 +227,23 @@ export default function BlogPost() {
         <div className="space-y-4">
           {article.content.map((block, i) => renderBlock(block, i))}
         </div>
+
+        {/* Verwante artikels */}
+        {verwant.length > 0 && (
+          <aside className="mt-12 pt-8 border-t border-gray-100" aria-labelledby="lees-ook">
+            <h2 id="lees-ook" className="text-xl font-bold text-gray-900 mb-4">Lees ook</h2>
+            <ul className="space-y-3">
+              {verwant.map((v) => (
+                <li key={v.slug}>
+                  <Link to={`/blog/${v.slug}`} className="group block">
+                    <span className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">{v.title}</span>
+                    <span className="block text-sm text-gray-500 mt-0.5">{v.excerpt}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        )}
 
         {/* CTA */}
         <div className="mg-cta mg-cta-card mt-14 flex flex-col justify-between gap-8">
