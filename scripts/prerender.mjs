@@ -33,7 +33,9 @@ const paginas = [
 
 let totaal = 0;
 for (const p of paginas) {
-  const bestand = p.path === "/" ? path.join(dist, "index.html") : path.join(dist, p.path, "index.html");
+  // Als "contact.html" en niet "contact/index.html": Netlify bedient dan /contact zonder
+  // door te sturen naar /contact/ (zo blijven de adressen exact zoals in de canonieke links).
+  const bestand = p.path === "/" ? path.join(dist, "index.html") : path.join(dist, `${p.path}.html`);
   const n = schrijfPagina(p.path, bestand);
   totaal += n;
   console.log(`${p.path.padEnd(60)} ${String(n).padStart(7)} tekens`);

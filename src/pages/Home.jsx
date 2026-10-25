@@ -51,10 +51,10 @@ export default function Home() {
         </video>
         <div className="absolute inset-0 mg-hero-shade" />
         <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 py-24 sm:py-32">
-          <div className="max-w-2xl">
-            <p className="mg-eyebrow mg-eyebrow-light">Gezinshereniging in België</p>
-            <h1 className="mg-display text-white">
-              Samen zijn met <em>uw dierbaren</em>
+          <div className="max-w-3xl">
+            <p className="mg-eyebrow mg-eyebrow-light">Samen zijn met uw dierbaren</p>
+            <h1 className="mg-display mg-display-sm text-white">
+              Gezinshereniging in België: <em>voorwaarden, inkomen en procedure</em>
             </h1>
             <p className="mg-lead text-primary-50 mt-6 max-w-xl">
               Uw partner, kinderen of ouders naar België laten overkomen. Wij leggen u uit wat er nodig is en begeleiden u stap voor stap.

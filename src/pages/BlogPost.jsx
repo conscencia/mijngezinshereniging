@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { articles } from "../data/articles";
-import { useSeo, artikelSchema, kruimels } from "../lib/seo";
+import { useSeo, artikelSchema, kruimels, isoDatum } from "../lib/seo";
 
 const categoryColors = {
   Tips: "bg-blue-100 text-blue-700",
@@ -209,7 +209,10 @@ export default function BlogPost() {
           <span className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full ${categoryColors[article.category]}`}>
             {article.category}
           </span>
-          <span className="text-sm text-gray-400">{article.date}</span>
+          <span className="text-sm text-gray-400">Gepubliceerd op <time dateTime={isoDatum(article.date)}>{article.date}</time></span>
+          {article.updated && (
+            <span className="text-sm text-gray-400">· Bijgewerkt op <time dateTime={isoDatum(article.updated)}>{article.updated}</time></span>
+          )}
           <span className="text-sm text-gray-400">· {article.readTime} leestijd</span>
         </div>
 

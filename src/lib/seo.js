@@ -14,10 +14,13 @@ function registreerVoorServer(h) {
   if (!inBrowser) seoVerzamelaar.huidig = h;
 }
 
-// Sitenaam achter de titel, zoals voorheen. (Voorstel uit het vindbaarheidsplan, nog niet
-// toegepast: de sitenaam weglaten als de titel daarmee langer wordt dan 60 tekens.)
+// Google toont ongeveer 60 tekens van een titel en voegt de sitenaam zelf toe.
+// De sitenaam komt er dus alleen achter als de titel daarmee niet te lang wordt.
+const MAX_TITEL = 60;
 export function volledigeTitel(title) {
-  return title.includes(MERK) ? title : `${title} | ${MERK}`;
+  if (title.includes(MERK)) return title;
+  const met = `${title} | ${MERK}`;
+  return met.length <= MAX_TITEL ? met : title;
 }
 
 // Alles wat in de <head> van een pagina hoort, als één object (gebruikt in de browser én bij het bouwen).

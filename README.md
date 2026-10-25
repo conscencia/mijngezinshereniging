@@ -9,7 +9,7 @@ Website van Mijn Gezinshereniging. Gebouwd met React en Vite, gehost op Netlify.
 1. De gewone Vite-build (map `dist`).
 2. Een server-build van `src/entry-server.jsx` (tijdelijke map `dist/.server`).
 3. `scripts/prerender.mjs`: schrijft voor elke pagina een eigen HTML-bestand met de echte titel,
-   omschrijving en tekst (`dist/contact/index.html`, `dist/blog/<slug>/index.html`, ...), plus
+   omschrijving en tekst (`dist/contact.html`, `dist/blog/<slug>.html`, ...), plus
    `404.html`, `sitemap.xml` en `llms.txt`.
 
 Daardoor zien Google en AI-bots de inhoud meteen, zonder JavaScript uit te voeren. In de browser

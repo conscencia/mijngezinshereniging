@@ -141,6 +141,8 @@ h1 em, h2 em, h3 em { font-style: italic; font-weight: 400; color: var(--rust-de
 .mg-eyebrow-light { color: var(--moss-soft); }
 .mg-display { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.03em; }
 .mg-display em { color: #E7B08E; }
+/* Iets kleinere variant voor een langere kop, zoals op de startpagina. */
+.mg-display-sm { font-size: clamp(2.2rem, 4.6vw, 3.5rem); }
 .mg-h2 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-optical-sizing: auto; font-weight: 600; font-size: clamp(1.9rem, 3.6vw, 2.8rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--olive-deep); }
 .mg-cta .mg-h2, .mg-pagehead h1, .mg-pagehead h2 { color: var(--vanilla); }
 .mg-cta .mg-h2 em { color: #E7B08E; }
