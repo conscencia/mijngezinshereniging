@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,10 +14,15 @@ import Tarieven from "./pages/Tarieven";
 import Afspraak from "./pages/Afspraak";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import NotFound from "./pages/NotFound";
+import { startHyphenation } from "./lib/hyphenate.js";
 
 export default function App() {
+  // Woordafbreking pas starten nadat React de pagina heeft overgenomen (anders botst het met de vooraf gebouwde HTML).
+  useEffect(() => { startHyphenation(); }, []);
+
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navigation />
@@ -35,11 +41,12 @@ export default function App() {
             <Route path="/over-ons" element={<Over />} />
             <Route path="/tarieven" element={<Tarieven />} />
             <Route path="/afspraak" element={<Afspraak />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
         <CookieBanner />
       </div>
-    </BrowserRouter>
+    </>
   );
 }
