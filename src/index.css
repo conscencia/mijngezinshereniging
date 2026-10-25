@@ -465,7 +465,7 @@ a[class~="bg-primary-500"]:active, a[class~="bg-primary-600"]:active, button[cla
 .mg-legal-nav a { display: block; padding: 12px 0; border-bottom: 1px solid rgba(51,61,36,0.14); font-size: 0.95rem; color: var(--olive-deep); text-decoration: none; }
 .mg-legal-nav a.is-current { color: var(--rust-deep); font-weight: 500; }
 @media (hover: hover) { .mg-legal-nav a:hover { color: var(--rust-deep); } }
-.mg-legal > .mg-lead { color: #55513F; text-align: left; }
+.mg-legal > .mg-lead { color: #55513F; text-align: justify; }
 .mg-legal h2 { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.3rem; line-height: 1.25; color: var(--olive-deep); margin: 2.6rem 0 0.8rem; }
 .mg-legal p, .mg-legal li { font-size: 0.98rem; line-height: 1.75; color: #55513F; }
 .mg-legal p + p { margin-top: 0.8rem; }
@@ -506,3 +506,14 @@ body { font-weight: 300; }
 
 /* Stappen van de procedure: één kleur */
 .mg-proc-num { background: var(--olive); color: #fff; }
+
+/* Cookiemelding: venster in het midden, de bezoeker kiest voor hij verder kan */
+.mg-cookieoverlay { position: fixed; inset: 0; z-index: 70; display: grid; place-items: center; padding: 20px; background: rgba(31, 30, 25, 0.55); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); animation: mg-cookiefade 220ms ease-out; }
+.mg-cookiekaart { width: min(100%, 30rem); background: var(--vanilla); border-radius: 18px; padding: 28px 28px 24px; box-shadow: 0 24px 60px rgba(43,42,34,0.28); display: grid; gap: 14px; }
+.mg-cookiebar-title { font-family: 'Poppins', 'Segoe UI', sans-serif; font-weight: 600; font-size: 1.12rem; line-height: 1.3; color: var(--olive-deep); text-align: left; hyphens: none; }
+.mg-cookiebar-text { font-size: 0.9rem; line-height: 1.6; color: var(--ink); text-align: left; hyphens: none; }
+.mg-cookiebar-link { color: var(--rust-deep); text-decoration: underline; }
+.mg-cookiebar-buttons { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 2px; }
+.mg-cookiebar-buttons .mg-btn { flex: 1; justify-content: center; }
+@keyframes mg-cookiefade { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .mg-cookieoverlay { animation: none; } }

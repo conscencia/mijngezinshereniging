@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { articles } from "../data/articles";
+import { useSeo, kruimels } from "../lib/seo";
 
 const categories = ["Alle", "Tips", "Procedure", "Inkomenseis", "Kosten", "Wetgeving", "Beroep", "Huwelijk"];
 
@@ -15,6 +16,13 @@ const categoryColors = {
 };
 
 export default function Blog() {
+  useSeo({
+    path: "/blog",
+    title: "Artikels over gezinshereniging",
+    description: "Uitleg bij de inkomenseis, de documenten, de wachttijden, een weigering en de wetswijziging van 2025 en 2027, in begrijpelijke taal.",
+    jsonLd: kruimels([{ naam: "Home", pad: "/" }, { naam: "Blog", pad: "/blog" }]),
+  });
+
   const [activeCategory, setActiveCategory] = useState("Alle");
 
   const filtered = activeCategory === "Alle"

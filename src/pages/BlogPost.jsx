@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { articles } from "../data/articles";
+import { useSeo, artikelSchema, kruimels } from "../lib/seo";
 
 const categoryColors = {
   Tips: "bg-blue-100 text-blue-700",
@@ -165,6 +166,16 @@ function renderBlock(block, i) {
 export default function BlogPost() {
   const { slug } = useParams();
   const article = articles.find((a) => a.slug === slug);
+
+  useSeo({
+    path: article ? `/blog/${article.slug}` : "/blog",
+    title: article ? article.title : "Artikels over gezinshereniging",
+    description: article ? article.excerpt : "Uitleg over gezinshereniging in België, in begrijpelijke taal.",
+    type: "article",
+    jsonLd: article
+      ? [artikelSchema(article), kruimels([{ naam: "Home", pad: "/" }, { naam: "Blog", pad: "/blog" }, { naam: article.title, pad: `/blog/${article.slug}` }])]
+      : null,
+  });
 
   if (!article) return <Navigate to="/blog" replace />;
 

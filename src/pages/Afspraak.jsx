@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { CAL_LINK } from "../config";
 import { startBooking } from "../lib/booking";
+import { useSeo } from "../lib/seo";
 
 // Voorlopig enkel gesprekken in het weekend, op dinsdag en donderdag tussen 19 en 21 uur,
 // en op de andere weekdagen tussen 19 en 20 uur (Belgische tijd). Boeken kan tot en met LAST_DATE.
@@ -19,6 +20,12 @@ function isConsultMoment(startIso) {
 }
 
 export default function Afspraak() {
+  useSeo({
+    path: "/afspraak",
+    title: "Afspraak met een advocaat gezinshereniging",
+    description: "Plan een videogesprek van 30 minuten met een advocaat over uw dossier gezinshereniging. U kiest zelf een moment in de agenda.",
+  });
+
   const embedRef = useRef(null);
 
   useEffect(() => {

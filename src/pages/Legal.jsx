@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { legal } from "../data/legal";
+import { useSeo } from "../lib/seo";
+
+const SEO = {"privacy": ["Privacyverklaring", "Welke persoonsgegevens worden verwerkt bij een vraag, de situatiecheck of een afspraak, waarom, hoe lang ze bewaard blijven en welke rechten u heeft."], "voorwaarden": ["Algemene voorwaarden", "De voorwaarden van de dienstverlening: het ereloon, de kosten, de betaling, de aansprakelijkheid en de beëindiging van de opdracht."], "cookies": ["Cookiebeleid", "Welke cookies de website gebruikt, waarvoor ze dienen, hoe lang ze bewaard blijven en hoe u uw keuze op elk moment kunt wijzigen."], "witwas": ["Witwaspreventie", "Wanneer de witwaspreventiewet van toepassing is op een advocaat, welk cliëntenonderzoek daarbij hoort en welke gegevens bewaard worden."]};
 
 const PAGES = [
   { key: "privacy", to: "/privacy", label: "Privacyverklaring" },
@@ -9,6 +12,12 @@ const PAGES = [
 ];
 
 export default function Legal({ doc }) {
+  useSeo({
+    path: PAGES.find((p) => p.key === doc)?.to || "/privacy",
+    title: SEO[doc][0],
+    description: SEO[doc][1],
+  });
+
   const d = legal.docs[doc];
 
   return (

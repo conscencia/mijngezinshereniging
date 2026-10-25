@@ -12,6 +12,7 @@ import Over from "./pages/Over";
 import Tarieven from "./pages/Tarieven";
 import Afspraak from "./pages/Afspraak";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        <CookieBanner />
       </div>
     </BrowserRouter>
   );

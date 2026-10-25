@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Scroller } from "../components/ui/Scroller";
+import { useSeo, organisatie, faqSchema } from "../lib/seo";
 
 const faqs = [
   {
@@ -32,6 +33,13 @@ function FaqItem({ q, a }) {
 }
 
 export default function Home() {
+  useSeo({
+    path: "/",
+    title: "Gezinshereniging in België | mijngezinshereniging.be",
+    description: "Uw partner, kind of ouder naar België laten overkomen. Heldere uitleg over de voorwaarden, het inkomen en de procedure, plus een gratis situatiecheck.",
+    jsonLd: [organisatie, faqSchema(faqs)],
+  });
+
   const navigate = useNavigate();
 
   return (

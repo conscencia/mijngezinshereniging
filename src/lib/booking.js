@@ -268,6 +268,7 @@ export function startBooking(embed, CAL_LINK, opts){
         '<p class="bk-muted">' + (pending ? 'U krijgt een e-mail zodra de afspraak bevestigd is.' : 'U ontvangt een bevestiging op ' + esc(body.attendee.email) + ', met de mogelijkheid om te verplaatsen of te annuleren.') + '</p>' +
         '<p class="bk-muted">' + (videoOnly ? 'U krijgt de link naar het videogesprek in de bevestiging. Houd de documenten die met uw vraag te maken hebben bij de hand.' : 'Breng naar de consultatie alle documenten mee die met uw vraag te maken hebben.') + '</p></div>';
       try { sessionStorage.removeItem('mgz-contact'); } catch (e) {}
+      if (window.__mgzGaGeladen && typeof window.gtag === 'function') window.gtag('event', 'afspraak_geboekt', { status: pending ? 'aanvraag' : 'bevestigd' });
     }
 
     embed.addEventListener('click', function(e){

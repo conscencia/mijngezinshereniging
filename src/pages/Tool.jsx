@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cleanPhone, isValidPhone } from "../lib/phone";
 import { sendForm } from "../lib/sendForm";
+import { useSeo, kruimels } from "../lib/seo";
 
 const QUESTIONS = {
   nationaliteit: {
@@ -820,6 +821,13 @@ function ContactForm({ result, answers }) {
 }
 
 export default function Tool() {
+  useSeo({
+    path: "/tool",
+    title: "Gratis situatiecheck gezinshereniging",
+    description: "Beantwoord enkele vragen en ontdek in twee minuten of u in aanmerking komt voor gezinshereniging in België, en welke voorwaarden voor u gelden.",
+    jsonLd: kruimels([{ naam: "Home", pad: "/" }, { naam: "Situatiecheck", pad: "/tool" }]),
+  });
+
   const location = useLocation();
   const preNationaliteit = location.state?.nationaliteit ?? null;
 

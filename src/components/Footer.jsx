@@ -30,6 +30,7 @@ export default function Footer() {
             <Link to="/privacy" className="mg-footer-link">Privacy</Link>
             <Link to="/algemene-voorwaarden" className="mg-footer-link">Algemene voorwaarden</Link>
             <Link to="/cookies" className="mg-footer-link">Cookies</Link>
+            <button type="button" className="mg-footer-link" style={{ background: "none", border: 0, padding: 0, textAlign: "left", cursor: "pointer" }} onClick={() => window.dispatchEvent(new Event("mgz-cookievoorkeuren"))}>Cookievoorkeuren</button>
             <Link to="/witwaspreventie" className="mg-footer-link">Witwaspreventie</Link>
           </div>
         </div>

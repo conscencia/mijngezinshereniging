@@ -1,10 +1,10 @@
-// Juridische pagina's (gegenereerd). Laatste update: 15 september 2026
+// Juridische pagina's (gegenereerd). Laatste update: 20 september 2026
 export const legal = {
- "updated": "15 september 2026",
+ "updated": "20 september 2026",
  "docs": {
   "privacy": {
    "title": "Privacyverklaring",
-   "intro": "Versie van toepassing vanaf 15 september 2026.",
+   "intro": "Versie van toepassing vanaf 20 september 2026.",
    "sections": [
     [
      "Inleiding",
@@ -105,7 +105,7 @@ export const legal = {
         "Rechtsgrond: de uitvoering van precontractuele maatregelen op uw verzoek (artikel 6.1.b AVG) en het gerechtvaardigd belang om vragen te beantwoorden (artikel 6.1.f AVG).",
         "Hoe verkregen: rechtstreeks van u.",
         "Bewaartermijn: tot 1 jaar na het laatste contact indien er geen opdracht volgt; daarna gelden de bewaartermijnen van het dossier.",
-        "Met wie gedeeld: IT-dienstverleners, waaronder de aanbieder van het e-mailsysteem, Netlify, Inc. (hosting van de website en ontvangst van de formulieren, met eventuele bijlagen) en Cal.com, Inc. (afsprakenagenda)."
+        "Met wie gedeeld: IT-dienstverleners, waaronder de aanbieder van het e-mailsysteem, Netlify, Inc. (hosting van de website en ontvangst van de formulieren, met eventuele bijlagen), Cal.com, Inc. (afsprakenagenda) en, met uw toestemming, Google (websitestatistieken)."
        ]
       ],
       [
@@ -167,6 +167,21 @@ export const legal = {
         "Bewaartermijn: niet langer dan noodzakelijk voor het doeleinde; zie ook het cookiebeleid.",
         "Met wie gedeeld: de hostingpartner en IT-dienstverleners."
        ]
+      ],
+      [
+       "h",
+       "Statistieken over het gebruik van de website"
+      ],
+      [
+       "ul",
+       [
+        "Welke gegevens: technische gegevens zoals uw ingekorte IP-adres, de bezochte pagina’s, het tijdstip van het bezoek, de verwijzende website en gegevens over uw browser en toestel.",
+        "Waarom: het meten hoeveel mensen de website bezoeken en welke pagina’s zij raadplegen, om de website te verbeteren.",
+        "Rechtsgrond: uw toestemming (artikel 6.1.a AVG), die u op elk moment kunt intrekken via de link “Cookievoorkeuren” onderaan de website.",
+        "Hoe verkregen: via Google Analytics, uitsluitend nadat u daarvoor toestemming hebt gegeven.",
+        "Bewaartermijn: maximaal 14 maanden na uw bezoek.",
+        "Met wie gedeeld: Google Ireland Limited en Google LLC (Verenigde Staten)."
+       ]
       ]
      ]
     ],
@@ -188,7 +203,7 @@ export const legal = {
       ],
       [
        "p",
-       "Sommige verwerkers, zoals Netlify, Inc. en Cal.com, Inc., zijn gevestigd buiten de Europese Economische Ruimte. Persoonsgegevens worden slechts buiten de Europese Economische Ruimte doorgegeven met passende waarborgen overeenkomstig hoofdstuk V van de AVG, zoals een adequaatheidsbesluit of standaardcontractbepalingen van de Europese Commissie."
+       "Sommige verwerkers, zoals Netlify, Inc., Cal.com, Inc. en Google LLC, zijn gevestigd buiten de Europese Economische Ruimte. Persoonsgegevens worden slechts buiten de Europese Economische Ruimte doorgegeven met passende waarborgen overeenkomstig hoofdstuk V van de AVG, zoals een adequaatheidsbesluit of standaardcontractbepalingen van de Europese Commissie."
       ]
      ]
     ],
@@ -248,7 +263,7 @@ export const legal = {
   },
   "voorwaarden": {
    "title": "Algemene voorwaarden",
-   "intro": "Versie van toepassing vanaf 15 september 2026.",
+   "intro": "Versie van toepassing vanaf 20 september 2026.",
    "sections": [
     [
      "1. Definities",
@@ -630,7 +645,7 @@ export const legal = {
       ],
       [
        "p",
-       "Op dit moment gebruiken wij geen statistische cookies. Wij houden niet bij hoe u de website gebruikt."
+       "Wij gebruiken Google Analytics 4 om te zien welke pagina’s bezocht worden en hoe bezoekers de website gebruiken. Dit gebeurt uitsluitend nadat u daarvoor toestemming geeft via de cookiemelding. Weigert u, dan wordt Google Analytics niet geladen en worden geen statistische cookies geplaatst. Geeft u toestemming, dan plaatst Google de cookies _ga en _ga_0KVCHX0Q48. Deze blijven maximaal 2 jaar bewaard. Uw IP-adres wordt daarbij ingekort en er worden geen advertentiecookies geplaatst. Uw keuze wordt bewaard in de opslag van uw eigen browser; u kunt ze op elk moment wijzigen via de link “Cookievoorkeuren” onderaan de website."
       ],
       [
        "h",
@@ -649,7 +664,8 @@ export const legal = {
        [
         "Google Translate: wanneer u de vertaalfunctie gebruikt, kan Google technische gegevens zoals uw IP-adres verwerken.",
         "Google Fonts: de lettertypes worden geladen via Google Fonts, waarbij Google technische gegevens zoals uw IP-adres ontvangt. Hiervoor wordt geen cookie geplaatst.",
-        "Cal.com: op de afsprakenpagina worden de vrije momenten opgehaald bij Cal.com. Boekt u een afspraak, dan worden de gegevens die u invult aan Cal.com bezorgd. Hiervoor worden geen cookies op onze website geplaatst."
+        "Cal.com: op de afsprakenpagina worden de vrije momenten opgehaald bij Cal.com. Boekt u een afspraak, dan worden de gegevens die u invult aan Cal.com bezorgd. Hiervoor worden geen cookies op onze website geplaatst.",
+        "Google Analytics: enkel met uw toestemming. Google ontvangt dan gegevens over uw bezoek, zoals de bezochte pagina’s, het tijdstip, uw ingekorte IP-adres en technische gegevens over uw toestel."
        ]
       ]
      ]
@@ -659,7 +675,7 @@ export const legal = {
      [
       [
        "p",
-       "Cookies kunnen voor verschillende periodes op uw apparaat worden bewaard, afhankelijk van het type cookie. Sessiecookies worden verwijderd zodra u uw browser sluit, terwijl permanente cookies op uw apparaat blijven tot ze verlopen of tot u ze verwijdert. Gegevens in de sessionStorage van uw browser worden verwijderd wanneer u het tabblad sluit. Gegevens in de localStorage blijven bewaard tot u ze zelf wist via de instellingen van uw browser."
+       "Cookies kunnen voor verschillende periodes op uw apparaat worden bewaard, afhankelijk van het type cookie. Sessiecookies worden verwijderd zodra u uw browser sluit, terwijl permanente cookies op uw apparaat blijven tot ze verlopen of tot u ze verwijdert. Gegevens in de sessionStorage van uw browser worden verwijderd wanneer u het tabblad sluit. Gegevens in de localStorage blijven bewaard tot u ze zelf wist via de instellingen van uw browser. De cookies van Google Analytics blijven maximaal 2 jaar bewaard, tenzij u ze eerder verwijdert of uw toestemming intrekt."
       ]
      ]
     ],
@@ -705,7 +721,7 @@ export const legal = {
   },
   "witwas": {
    "title": "Witwaspreventie",
-   "intro": "Versie van toepassing vanaf 15 september 2026.",
+   "intro": "Versie van toepassing vanaf 20 september 2026.",
    "sections": [
     [
      "1. Wettelijk kader",

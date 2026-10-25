@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import { useSeo } from "../lib/seo";
 
 export default function Tarieven() {
+  useSeo({
+    path: "/tarieven",
+    title: "Wat kost een advocaat bij gezinshereniging?",
+    description: "Duidelijke prijzen: een videogesprek van 30 minuten aan 75 euro excl. btw, daarna een vaste prijs voor uw dossier. Geen kost voor dossieropening.",
+  });
+
   return (
     <div className="bg-white min-h-screen">
 

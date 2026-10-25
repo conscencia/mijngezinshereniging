@@ -1,12 +1,550 @@
 export const articles = [
   {
+    "id": 14,
+    "title": "Voldoende huisvesting bij gezinshereniging: welk bewijs volstaat?",
+    "slug": "huisvesting-gezinshereniging",
+    "category": "Procedure",
+    "date": "20 september 2026",
+    "readTime": "5 min",
+    "image": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "Een huurcontract, een eigendomsakte of een attest van de sociale huisvestingsmaatschappij: dit aanvaardt de Dienst Vreemdelingenzaken als bewijs van huisvesting, en dit niet.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Wie een gezinslid naar België laat overkomen, moet aantonen dat hij over **voldoende huisvesting** beschikt om dat gezinslid op te vangen. Wat 'voldoende' precies betekent, staat nergens in een uitvoeringsbesluit: dat besluit is nooit genomen. Daardoor aanvaardt de Dienst Vreemdelingenzaken (DVZ) in de praktijk elk bewijsmiddel."
+      },
+      {
+        "type": "h2",
+        "text": "Welke documenten worden aanvaard?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "een kopie van uw huurcontract, bij voorkeur geregistreerd",
+          "een plaatsbeschrijving of een attest van MyRent",
+          "een notariële eigendomsakte",
+          "een bankattest over uw hypothecaire lening",
+          "een attest van betaling van de onroerende voorheffing"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Het is **DVZ** die oordeelt of de huisvesting volstaat, niet de gemeente. De gemeente gaat enkel na of u de gevraagde documenten hebt afgegeven wanneer u de aanvraag in België indient."
+      },
+      {
+        "type": "h2",
+        "text": "Drie fouten die vaak gemaakt worden"
+      },
+      {
+        "type": "numbered-list",
+        "items": [
+          "**Bewijzen van een toekomstige woning.** Leg documenten voor van het adres waar u op het moment van de aanvraag effectief woont. Een ruimere woning waar u pas later intrekt, telt niet, ook al is ze beter geschikt.",
+          "**Verouderde stukken.** Zorg dat uw bewijzen actueel zijn op het ogenblik van de aanvraag.",
+          "**Een onbewoonbaar verklaarde woning.** Is uw woning onbewoonbaar verklaard, dan weigert DVZ de aanvraag."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "U huurt niet zelf, of u woont bij familie"
+      },
+      {
+        "type": "p",
+        "text": "In de praktijk eist DVZ niet dat u zelf als huurder in het huurcontract of als eigenaar in de akte staat. Het volstaat dat u op dat adres woont en dat dit blijkt uit het rijksregister. De persoon die wel als huurder of eigenaar vermeld staat, moet dan een familielid zijn van het gezinslid dat u komt vervoegen."
+      },
+      {
+        "type": "h2",
+        "text": "U woont in een te kleine sociale woning"
+      },
+      {
+        "type": "p",
+        "text": "Op een wachtlijst staan voor een sociale woning volstaat niet als bewijs. Woont u al in een te kleine sociale woning, dan kunt u wel een **attest van de sociale huisvestingsmaatschappij** vragen waarin staat dat uw gezin na aankomst van uw familieleden voorrang krijgt op een aangepaste woning. Dat attest aanvaardt DVZ. U moet de huisvestingsmaatschappij dan uiteraard wel informeren over uw aanvraag of uw intentie om er een in te dienen."
+      },
+      {
+        "type": "h2",
+        "text": "Let op: de regels veranderen"
+      },
+      {
+        "type": "p",
+        "text": "De wet van 18 juli 2025 hervormt de huisvestingsvoorwaarde. De concrete invulling moet nog bepaald worden in een koninklijk besluit, dat op vandaag niet gepubliceerd is. Tot dan blijft de praktijk hierboven gelden."
+      },
+      {
+        "type": "inline-cta",
+        "text": "Twijfelt u of uw woning volstaat?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: voorwaarden gezinshereniging echtgenoot of gelijkgestelde partner Belg",
+        "href": "https://www.vreemdelingenrecht.be/verblijfsrecht/reguliere-migratie/gezinshereniging/gezinshereniging-met-belg/gezinshereniging-met-statische-belg/voorwaarden-gezinshereniging-echtgenoot",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Ziekteverzekering bij gezinshereniging: welk bewijs heeft u nodig?",
+    "slug": "ziekteverzekering-gezinshereniging",
+    "category": "Procedure",
+    "date": "20 september 2026",
+    "readTime": "4 min",
+    "image": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "U en uw gezinslid moeten allebei verzekerd zijn voor ziektekosten in België. Welk attest u nodig heeft, hangt af van waar de aanvraag wordt ingediend.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Bij gezinshereniging moet u aantonen dat **zowel u als uw gezinslid** verzekerd zijn voor ziektekosten in België. Dat is een aparte voorwaarde, los van de inkomenseis. De bewijzen verschillen naargelang de aanvraag in België of bij een ambassade in het buitenland wordt ingediend."
+      },
+      {
+        "type": "h2",
+        "text": "Aanvraag in België"
+      },
+      {
+        "type": "list",
+        "items": [
+          "een bewijs van aansluiting bij een Belgisch ziekenfonds, van u en van uw gezinslid;",
+          "of een privéziekteverzekering die de risico's in België dekt gedurende minstens 3 maanden en voor minstens 30.000 euro, samen met het bewijs dat u zelf aangesloten bent bij een Belgisch ziekenfonds;",
+          "of een buitenlandse ziekteverzekering die de risico's in België dekt, opnieuw samen met het bewijs van uw eigen aansluiting. DVZ vermeldt die mogelijkheid niet op zijn website, maar de Verblijfswet sluit ze niet uit."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Aanvraag bij de ambassade"
+      },
+      {
+        "type": "p",
+        "text": "Vraagt uw gezinslid een visum aan vanuit het buitenland, dan is het **modelattest van uw Belgisch ziekenfonds** de eenvoudigste weg. Daarin bevestigt het ziekenfonds dat uw gezinslid zich kan aansluiten zodra het in België aankomt."
+      },
+      {
+        "type": "p",
+        "text": "Let op: dat modelattest is enkel mogelijk voor de **echtgenoot ten laste** en voor **kinderen jonger dan 25 jaar** van wie verzekerd is. Valt uw gezinslid daarbuiten, dan werkt u met een privéziekteverzekering of een buitenlandse verzekering, telkens samen met het bewijs van uw eigen aansluiting."
+      },
+      {
+        "type": "h2",
+        "text": "Praktisch"
+      },
+      {
+        "type": "numbered-list",
+        "items": [
+          "Vraag het attest tijdig aan bij uw ziekenfonds; sommige kantoren hebben enkele werkdagen nodig.",
+          "Kijk na of de dekking van een privéverzekering effectief 30.000 euro bedraagt en in België geldt.",
+          "Houd het attest actueel: een verlopen attest is een klassieke reden om bijkomende stukken te moeten nasturen."
+        ]
+      },
+      {
+        "type": "inline-cta",
+        "text": "Niet zeker welk attest u nodig heeft?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: voorwaarden gezinshereniging echtgenoot of gelijkgestelde partner Belg",
+        "href": "https://www.vreemdelingenrecht.be/verblijfsrecht/reguliere-migratie/gezinshereniging/gezinshereniging-met-belg/gezinshereniging-met-statische-belg/voorwaarden-gezinshereniging-echtgenoot",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Onderzoek naar schijnhuwelijk: hoe verloopt het en wat zijn uw rechten?",
+    "slug": "schijnhuwelijk-onderzoek",
+    "category": "Huwelijk",
+    "date": "20 september 2026",
+    "readTime": "6 min",
+    "image": "https://images.unsplash.com/photo-1553915632-175f60dd8e36?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "De ambtenaar van de burgerlijke stand kan uw huwelijk uitstellen en zelfs weigeren. Dit zijn de termijnen, de vragen die gesteld worden en de manier om beroep aan te tekenen.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Huwt u met iemand van buiten de Europese Unie, dan kan de ambtenaar van de burgerlijke stand nagaan of het geen schijnhuwelijk betreft. Dat onderzoek verloopt volgens vaste termijnen, en tegen een weigering bestaat een duidelijke beroepsweg."
+      },
+      {
+        "type": "h2",
+        "text": "Wat is een schijnhuwelijk?"
+      },
+      {
+        "type": "p",
+        "text": "Artikel 146bis van het Burgerlijk Wetboek omschrijft het als een huwelijk waarbij, ondanks de formele toestemmingen, uit het geheel van de omstandigheden blijkt dat de intentie van minstens één van beide echtgenoten **kennelijk niet gericht is op een duurzame levensgemeenschap**, maar enkel op het bekomen van een verblijfsrechtelijk voordeel."
+      },
+      {
+        "type": "p",
+        "text": "Een schijnhuwelijk is iets anders dan een gedwongen huwelijk, dat eveneens verboden is, en dan een gearrangeerd huwelijk of een verstandshuwelijk, die niet verboden zijn. Het recht om te huwen is bovendien een grondrecht: de ambtenaar mag een huwelijk niet weigeren enkel omdat een van beiden geen wettig verblijf heeft."
+      },
+      {
+        "type": "h2",
+        "text": "De termijnen: maximaal vijf maanden uitstel"
+      },
+      {
+        "type": "numbered-list",
+        "items": [
+          "**Uitstel door de ambtenaar: maximaal 2 maanden.** Bij een ernstig vermoeden kan de ambtenaar de gekozen huwelijksdatum uitstellen om bijkomend onderzoek te doen en advies te vragen aan het parket.",
+          "**Bijkomend uitstel door het parket: maximaal 3 maanden.** Het parket brengt de ambtenaar op de hoogte, die u verwittigt.",
+          "**Geen beslissing binnen die termijn?** Dan moet de ambtenaar het huwelijk onmiddellijk voltrekken."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Houd er rekening mee dat het huwelijk moet plaatsvinden binnen 6 maanden en 14 dagen na de aangifte (artikel 165 Burgerlijk Wetboek). Loopt het onderzoek lang, dan komt die termijn in het gedrang."
+      },
+      {
+        "type": "h2",
+        "text": "Welke factoren wegen mee?"
+      },
+      {
+        "type": "p",
+        "text": "De omzendbrief van 6 september 2013 somt factoren op die, **in combinatie**, een ernstige aanwijzing kunnen vormen. Onder meer:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "u begrijpt elkaar niet of communiceert enkel via een tolk",
+          "u heeft elkaar vóór het huwelijk nooit ontmoet",
+          "u kent elkaars naam, nationaliteit of werk niet",
+          "uw verklaringen over de ontmoeting lopen sterk uiteen",
+          "er is een som geld beloofd, of er trad een tussenpersoon op",
+          "een van beiden opende het recht op gezinshereniging al voor iemand anders"
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Eén enkele factor volstaat niet. Een groot leeftijdsverschil of een taalbarrière maakt van uw huwelijk geen schijnhuwelijk."
+      },
+      {
+        "type": "h2",
+        "text": "Weigering en beroep"
+      },
+      {
+        "type": "p",
+        "text": "Weigert de ambtenaar, dan moet dat met een **gemotiveerde beslissing**, die u per aangetekende zending of tegen ontvangstbewijs wordt meegedeeld, met vermelding van uw beroepsmogelijkheden. De beslissing gaat ook naar DVZ."
+      },
+      {
+        "type": "p",
+        "text": "U kunt binnen **één maand** na de kennisgeving beroep aantekenen bij de familierechtbank, zetelend zoals in kort geding. Vraag in dat verzoekschrift uitdrukkelijk de verlenging van de termijn van zes maanden, anders vervalt uw huwelijksaangifte tijdens de procedure. Tegen een negatieve beslissing kunt u nog naar het hof van beroep."
+      },
+      {
+        "type": "h2",
+        "text": "Registratie in het rijksregister"
+      },
+      {
+        "type": "p",
+        "text": "Beslissingen over uitstel en weigering worden opgenomen in het rijksregister, om te vermijden dat koppels van gemeente veranderen. Die gegevens worden gewist vijf jaar na de kennisgeving van de weigering."
+      },
+      {
+        "type": "inline-cta",
+        "text": "Werd uw huwelijk uitgesteld of geweigerd?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: controle op schijnhuwelijken en wat is een schijnhuwelijk",
+        "href": "https://www.vreemdelingenrecht.be/internationaal-personen-en-familierecht-ipr/huwen/schijnhuwelijk/controle-op-schijnhuwelijken",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Gezinshereniging met een vluchteling of subsidiair beschermde: wat verandert er?",
+    "slug": "gezinshereniging-vluchteling-subsidiair-beschermde",
+    "category": "Wetgeving",
+    "date": "20 september 2026",
+    "readTime": "6 min",
+    "image": "https://images.unsplash.com/photo-1604156523914-f86f308db73f?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "Wie tijdig een aanvraag indient, is vrijgesteld van de inkomens-, huisvestings- en verzekeringsvoorwaarde. De wet van 18 juli 2025 verstrengde die regels, maar het Grondwettelijk Hof schorste een deel ervan.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Voor familieleden van een erkend vluchteling, een subsidiair beschermde of een staatloze gelden soepelere regels dan bij gewone gezinshereniging. Die regels zijn sinds 18 augustus 2025 grondig gewijzigd, en het Grondwettelijk Hof schorste een deel van de nieuwe wet."
+      },
+      {
+        "type": "h2",
+        "text": "De vrijstelling van de materiële voorwaarden"
+      },
+      {
+        "type": "p",
+        "text": "Is aan alle onderstaande voorwaarden voldaan, dan moet u geen inkomen, huisvesting of ziekteverzekering bewijzen:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "het gaat om **gezinshereniging en niet om gezinsvorming**: de gezinsband bestond al vóór uw familielid België binnenkwam;",
+          "de aanvraag wordt tijdig ingediend, binnen de termijn die voor uw situatie geldt;",
+          "DVZ verzet zich niet tegen de vrijstelling, wat in de praktijk zelden gebeurt."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Diende u laattijdig in? Uit de rechtspraak volgt dat de vrijstelling toch kan gelden wanneer de vertraging objectief verschoonbaar is, bijvoorbeeld door zware praktische moeilijkheden om documenten of een reisdocument te bekomen."
+      },
+      {
+        "type": "h2",
+        "text": "Welke termijn geldt voor u?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**Status vóór 18 augustus 2025:** de aanvraag moet binnen het jaar na de erkenning worden ingediend.",
+          "**Status vanaf 18 augustus 2025:** voor erkende vluchtelingen en staatlozen is die periode ingekort tot **6 maanden**. Voor subsidiair beschermden werd ze door de wet afgeschaft."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Het Grondwettelijk Hof schorste een deel van de nieuwe regels"
+      },
+      {
+        "type": "p",
+        "text": "Bij arrest nr. 24/2026 van 26 februari 2026 schorste het Grondwettelijk Hof verschillende bepalingen. Voor **nareizende gezinsleden in het buitenland van subsidiair beschermden die hun status na 18 augustus 2025 kregen** betekent dat:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "zij moeten geen retributie betalen;",
+          "er geldt geen wachttermijn, en de materiële voorwaarden (inkomen, ziekteverzekering, huisvesting) zijn niet van toepassing;",
+          "DVZ moet opnieuw niet-officiële bewijzen van de gezinsband aanvaarden wanneer officiële documenten ontbreken."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Die schorsing geldt tot het Hof ten gronde uitspraak doet. De situatie kan dus opnieuw wijzigen: laat nakijken welke regels op het ogenblik van uw aanvraag gelden."
+      },
+      {
+        "type": "h2",
+        "text": "Wat blijft gelden"
+      },
+      {
+        "type": "p",
+        "text": "Ook met de vrijstelling moet u de gezinsband bewijzen, de identiteit aantonen en, waar vereist, een medisch attest en een uittreksel uit het strafregister voorleggen. Voor wie buiten de vrijstelling valt, gelden de gewone voorwaarden, met het referentiebedrag van 120% van het leefloon of 110% van het GGMMI naargelang de situatie."
+      },
+      {
+        "type": "inline-cta",
+        "text": "Wilt u weten welke regeling op uw dossier van toepassing is?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: voorwaarden gezinshereniging met erkend vluchteling, subsidiair beschermde of staatloze, en gezinshereniging: diverse wijzigingen",
+        "href": "https://www.vreemdelingenrecht.be/nieuws/gezinshereniging-diverse-wijzigingen",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "De behoefteanalyse: wat als uw inkomen onder de grens ligt?",
+    "slug": "behoefteanalyse-gezinshereniging",
+    "category": "Inkomenseis",
+    "date": "20 september 2026",
+    "readTime": "6 min",
+    "image": "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "Onder het referentiebedrag mag DVZ niet automatisch weigeren. Zo bouwt u een behoefteanalyse op, met de stukken die in de praktijk het verschil maken.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Ligt uw inkomen onder het referentiebedrag, dan is uw aanvraag daarmee niet verloren. De Dienst Vreemdelingenzaken mag een aanvraag **niet automatisch weigeren** op die grond. Er moet eerst bekeken worden wat uw gezin concreet nodig heeft om niet ten laste te vallen van de sociale bijstand. Dat volgt uit het arrest Chakroun van het Hof van Justitie."
+      },
+      {
+        "type": "h2",
+        "text": "Om welk bedrag gaat het?"
+      },
+      {
+        "type": "list",
+        "items": [
+          "**120% van het leefloon** voor een persoon met gezin ten laste: 2.217,47 euro netto per maand, voor familie van een Belg en voor wie nog onder de oude regeling valt;",
+          "**110% van het GGMMI**: 2.456,97 euro netto per maand, verhoogd met 10% per gezinslid ten laste, in de situaties waarop de nieuwe regeling al van toepassing is."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Wat legt u voor?"
+      },
+      {
+        "type": "p",
+        "text": "Een behoefteanalyse is een overzicht van uw **inkomsten én uitgaven**, waarmee u aantoont dat uw gezin rondkomt. Verzamel:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "uw gemiddeld maandelijks inkomen, met loonfiches, rekeninguittreksels en uw aanslagbiljet;",
+          "uw vaste uitgaven: huur of hypotheek, verzekeringen, water, gas, elektriciteit, internet en gsm, belastingen;",
+          "uw dagelijkse uitgaven: supermarkt, vervoer, kledij, vrije tijd, blijkend uit rekeninguittreksels;",
+          "een **simulatie van uw werkgever** van uw toekomstige nettoloon: wie personen ten laste krijgt, houdt netto meer over, en DVZ houdt daar rekening mee;",
+          "bij co-ouderschap: de regeling, want kinderen die de helft van de tijd bij de andere ouder verblijven, zijn slechts deels ten laste."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "De bewijslast is verschoven"
+      },
+      {
+        "type": "p",
+        "text": "Onder de nieuwe regeling ligt de bewijslast **volledig bij de aanvrager**. DVZ is niet meer verplicht om stukken op te vragen. Dien alles dus meteen samen met uw aanvraag in; wachten tot DVZ erom vraagt, is geen optie meer."
+      },
+      {
+        "type": "h2",
+        "text": "Wat telt mee als inkomen?"
+      },
+      {
+        "type": "p",
+        "text": "Loon, inkomsten als zelfstandige, pensioen, netto huurinkomsten en maaltijdcheques tellen mee. Een werkloosheidsuitkering telt mee als u bewijst dat u actief werk zoekt. Leefloon, OCMW-steun, kindergeld, wacht- en overbruggingsuitkering tellen niet mee. Sinds een arrest van het Grondwettelijk Hof van april 2026 moet DVZ ook rekening houden met het stabiele inkomen van de partner die overkomt, op voorwaarde dat het effectief op de rekening van de persoon in België terechtkomt."
+      },
+      {
+        "type": "inline-cta",
+        "text": "Wilt u weten of een behoefteanalyse in uw dossier kans maakt?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: bestaansmiddelenvoorwaarde bij gezinshereniging en overzicht referentiebedragen",
+        "href": "https://www.vreemdelingenrecht.be/nieuws/overzicht-referentiebedragen-verblijfsprocedures",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Geen officiële documenten? Zo bewijst u uw gezinsband toch",
+    "slug": "geen-officiele-documenten-gezinshereniging",
+    "category": "Tips",
+    "date": "20 september 2026",
+    "readTime": "5 min",
+    "image": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=800&h=500&auto=format&fit=crop&q=60",
+    "excerpt": "Een ontbrekende of niet-erkende akte betekent niet meteen een weigering. Dit aanvaardt DVZ als alternatief bewijs, en dit zijn de voorwaarden.",
+    "content": [
+      {
+        "type": "p",
+        "text": "Uw huwelijksakte of geboorteakte is het eerste bewijs van uw gezinsband. Komt die uit het buitenland, dan moet ze doorgaans **gelegaliseerd** worden of voorzien van een **apostille**, en vertaald door een beëdigd vertaler als ze niet in het Nederlands, Frans, Duits of Engels is opgesteld. Kijk op de website van de FOD Buitenlandse Zaken na wat voor uw land geldt."
+      },
+      {
+        "type": "h2",
+        "text": "Wanneer aanvaardt DVZ andere bewijzen?"
+      },
+      {
+        "type": "p",
+        "text": "Kunt u geen officiële akte voorleggen, dan kan DVZ rekening houden met **andere geldige bewijzen**. De omzendbrief van 17 juni 2009 geeft voorbeelden:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "de akte van een traditioneel huwelijk",
+          "een notariële akte, gehomologeerd door de bevoegde overheid",
+          "een religieuze akte",
+          "een nationale identiteitskaart die de huwelijksband vermeldt",
+          "een uittreksel van de huwelijksakte",
+          "een vervangend vonnis"
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "De onmogelijkheid moet buiten uw wil liggen"
+      },
+      {
+        "type": "p",
+        "text": "Die alternatieve bewijzen komen pas in beeld wanneer u buiten uw wil geen officiële documenten kunt voorleggen. Dat is onder meer het geval wanneer:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "België het betrokken land niet erkent;",
+          "uw persoonlijke situatie moeilijk verzoenbaar is met een terugkeer naar dat land of met contact met zijn overheden;",
+          "de documenten vernietigd zijn en er geen vervanging mogelijk is;",
+          "de bevoegde overheden niet naar behoren functioneren of niet meer bestaan."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Gesprek en DNA-analyse"
+      },
+      {
+        "type": "p",
+        "text": "Kunt u ook geen alternatieve bewijzen voorleggen, dan kan DVZ of de ambassade u uitnodigen voor een gesprek en elk verder onderzoek doen dat zij nodig achten. Zijn er gemeenschappelijke kinderen, dan stelt DVZ soms een **DNA-analyse** voor om de verwantschap aan te tonen. Dat is een laatste stap, geen vertrekpunt."
+      },
+      {
+        "type": "h2",
+        "text": "Praktische tips"
+      },
+      {
+        "type": "numbered-list",
+        "items": [
+          "Verzamel wat u wel heeft en leg uit waarom het officiële document ontbreekt, met stukken die dat staven.",
+          "Vraag de legalisatie tijdig aan: bij sommige posten duurt dat weken.",
+          "Laat vertalen door een beëdigd vertaler; de Belgische ambassade werkt met een vaste lijst.",
+          "Bewaar altijd een kopie van elk document dat u indient."
+        ]
+      },
+      {
+        "type": "inline-cta",
+        "text": "Ontbreekt er een document in uw dossier?",
+        "links": [
+          {
+            "label": "Doe de situatiecheck",
+            "to": "/tool"
+          },
+          {
+            "label": "Stel uw vraag",
+            "to": "/contact"
+          }
+        ]
+      },
+      {
+        "type": "source",
+        "label": "Agentschap Integratie en Inburgering, vreemdelingenrecht.be: voorwaarden gezinshereniging echtgenoot of gelijkgestelde partner Belg",
+        "href": "https://www.vreemdelingenrecht.be/verblijfsrecht/reguliere-migratie/gezinshereniging/gezinshereniging-met-belg/gezinshereniging-met-statische-belg/voorwaarden-gezinshereniging-echtgenoot",
+        "checked": "20 september 2026"
+      }
+    ]
+  },
+  {
     id: 7,
     title: "Wetswijziging gezinshereniging: wat verandert er in 2025 en 2027?",
     slug: "wetswijziging-gezinshereniging-2025-2027",
     category: "Wetgeving",
     date: "14 september 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1678440515574-0dc75039b8fe?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Sinds 18 augustus 2025 gelden strengere regels. Maar niet voor iedereen meteen. Lees of de oude of de nieuwe regels voor u gelden.",
     content: [
       { type: "intro", text: "Op 18 augustus 2025 veranderden de regels voor gezinshereniging in België. De nieuwe wet is strenger: een hoger inkomen, een hogere minimumleeftijd en strengere bewijsregels. Toch gelden die nieuwe regels niet voor iedereen vanaf dezelfde dag." },
@@ -78,7 +616,7 @@ export const articles = [
     category: "Tips",
     date: "13 september 2026",
     readTime: "7 min",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1554224155-1696413565d3?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Een ontbrekend of te oud document is een van de vaakste redenen voor vertraging of weigering. Gebruik deze checklist voor u uw aanvraag indient.",
     content: [
       { type: "intro", text: "Een aanvraag voor gezinshereniging staat of valt met de documenten. Eén ontbrekend papier kan maanden vertraging betekenen, of zelfs een weigering. Met deze checklist ziet u in één oogopslag wat u nodig heeft." },
@@ -168,7 +706,7 @@ export const articles = [
     category: "Procedure",
     date: "12 september 2026",
     readTime: "5 min",
-    image: "/gezin.jpg",
+    image: "https://images.unsplash.com/photo-1544032659-b51fdffab4c6?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Zes maanden, negen maanden of langer? Hoe lang u wacht, hangt af van waar u de aanvraag indient en wie de persoon in België is.",
     content: [
       { type: "intro", text: "Wie op zijn partner, kind of ouder wacht, wil vooral één ding weten: hoe lang gaat dit duren? Het eerlijke antwoord is dat het afhangt van uw situatie. Maar de wet legt wel termijnen vast. Hieronder vindt u ze allemaal." },
@@ -223,7 +761,7 @@ export const articles = [
     category: "Kosten",
     date: "11 september 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1611125832047-1d7ad1e8e48f?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Retributie, vertalingen, een DNA-test of een beroep: dit zijn de kosten waar u rekening mee moet houden, en wie er vrijgesteld is.",
     content: [
       { type: "intro", text: "Gezinshereniging kost niet alleen tijd, maar ook geld. Sommige kosten staan vast, andere hangen af van het land van uw gezinslid. Hieronder ziet u welke kosten u kunt verwachten." },
@@ -287,7 +825,7 @@ export const articles = [
     category: "Inkomenseis",
     date: "10 september 2026",
     readTime: "4 min",
-    image: "/inkomen.jpg",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Lange tijd telde alleen het inkomen van de Belg. Het Grondwettelijk Hof besliste in 2026 dat ook het stabiele inkomen van de partner meetelt.",
     content: [
       { type: "intro", text: "Wie zijn partner naar België wil halen, moet een voldoende inkomen hebben. Lange tijd keek de Dienst Vreemdelingenzaken daarbij alleen naar het inkomen van de Belg zelf. Verdiende de partner die overkomt ook geld? Dan telde dat niet mee." },
@@ -324,7 +862,7 @@ export const articles = [
     category: "Huwelijk",
     date: "9 september 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1529634597503-139d3726fed5?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Niet getrouwd maar wel samen? Dan kan gezinshereniging ook, maar u moet bewijzen dat uw relatie duurzaam is. Zo werkt het.",
     content: [
       { type: "intro", text: "Niet elk koppel trouwt. Ook als wettelijk samenwonende of geregistreerde partner kunt u gezinshereniging aanvragen. Maar er is een belangrijk verschil met een huwelijk: u moet bewijzen dat uw relatie **duurzaam en stabiel** is." },
@@ -383,7 +921,7 @@ export const articles = [
     category: "Procedure",
     date: "8 september 2026",
     readTime: "6 min",
-    image: "/gezin.jpg",
+    image: "https://images.unsplash.com/photo-1562494794-d59c886e2bf2?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Voor een minderjarig kind gelden andere regels dan voor een kind van 18 of ouder. Lees wat nodig is, wanneer er een inkomenseis geldt en wat een DNA-test inhoudt.",
     content: [
       { type: "intro", text: "Uw kind woont nog in het buitenland en u wilt dat het bij u in België komt wonen. Dat is een van de sterkste vormen van gezinshereniging. Toch zijn er voorwaarden, en die verschillen sterk naargelang de leeftijd van uw kind." },
@@ -446,7 +984,7 @@ export const articles = [
     category: "Tips",
     date: "10 juni 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1554224155-cfa08c2a758f?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Elk jaar worden honderden aanvragen geweigerd om fouten die u kunt vermijden. Lees welke 5 fouten het vaakst voorkomen.",
     content: [
       { type: "intro", text: "Elk jaar worden honderden aanvragen voor gezinshereniging geweigerd. Niet omdat het niet mocht, maar omdat er iets fout liep bij de voorbereiding. Hieronder leest u welke 5 fouten het vaakst voorkomen en hoe u ze vermijdt." },
@@ -469,7 +1007,7 @@ export const articles = [
     category: "Procedure",
     date: "3 juni 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1553697388-94e804e2f0f6?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Uw partner woont in het buitenland en u wilt hem of haar naar België halen? Hier leest u precies wat u moet doen, van begin tot einde.",
     content: [
       { type: "intro", text: "Uw partner woont in het buitenland. U wilt dat hij of zij naar België komt. Dat kan via gezinshereniging. Maar u moet aan een aantal voorwaarden voldoen. Hieronder leest u stap voor stap wat u moet doen." },
@@ -492,7 +1030,7 @@ export const articles = [
     category: "Inkomenseis",
     date: "14 juni 2026",
     readTime: "7 min",
-    image: "/inkomen.jpg",
+    image: "https://images.unsplash.com/photo-1625225233840-695456021cde?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Te weinig inkomen is de meest voorkomende reden van weigering. Lees welk bedrag u nodig hebt, wat wel en niet meetelt en wat er verandert in 2027.",
     content: [
       { type: "intro", text: "Wilt u een familielid naar België halen? Dan kijkt de Dienst Vreemdelingenzaken naar uw inkomen. U moet genoeg verdienen om voor uw gezin te zorgen, zodat u niet afhankelijk wordt van een uitkering." },
@@ -562,7 +1100,7 @@ export const articles = [
     category: "Procedure",
     date: "20 mei 2026",
     readTime: "4 min",
-    image: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1562693772-471c489f5178?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "De Dienst Vreemdelingenzaken beslist over uw aanvraag. Maar wat controleren ze precies? En hoe lang duurt het?",
     content: [
       { type: "intro", text: "De Dienst Vreemdelingenzaken is de federale overheidsdienst die beslist over uw aanvraag voor gezinshereniging. Ze vallen onder de FOD Binnenlandse Zaken. Maar hoe werkt die procedure nu eigenlijk?" },
@@ -583,7 +1121,7 @@ export const articles = [
     category: "Beroep",
     date: "15 mei 2026",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1701605919891-1824e8dae598?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Een weigering is niet het einde. U kunt beroep aantekenen, maar u heeft maar 30 dagen. Lees wat u nu moet doen.",
     content: [
       { type: "intro", text: "U heeft een weigeringsbeslissing ontvangen. Dat is een schok, maar het is niet het einde. U kunt beroep aantekenen. Wat u nu moet doen, leest u hieronder." },
@@ -604,7 +1142,7 @@ export const articles = [
     category: "Huwelijk",
     date: "14 juni 2026",
     readTime: "7 min",
-    image: "/trouwen-header.jpg",
+    image: "https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=800&h=500&auto=format&fit=crop&q=60",
     excerpt: "Wilt u trouwen met uw buitenlandse partner? Lees waar u het best huwt, welke stappen u zet en waarom de regels anders zijn voor een Belg dan voor een EU-burger.",
     content: [
       { type: "intro", text: "U hebt iemand leren kennen die niet in België woont. U wilt trouwen. Maar hoe pakt u dat aan als uw partner van buiten Europa komt? En waar trouwt u dan: hier of in het land van uw partner?" },

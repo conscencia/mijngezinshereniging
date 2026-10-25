@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { cleanPhone, isValidPhone } from "../lib/phone";
 import { sendForm, MAX_FILES, MAX_TOTAL_BYTES } from "../lib/sendForm";
+import { useSeo } from "../lib/seo";
 
 export const ONDERWERPEN = [
   ["gezinshereniging", "Gezinshereniging"],
@@ -14,6 +15,12 @@ export const ONDERWERPEN = [
 ];
 
 export default function Contact() {
+  useSeo({
+    path: "/contact",
+    title: "Stel uw vraag over gezinshereniging",
+    description: "Leg uw situatie voor aan een advocaat ingeschreven aan de balie West-Vlaanderen. U krijgt zo snel mogelijk een antwoord per e-mail.",
+  });
+
   const [params] = useSearchParams();
   const gekozen = params.get("onderwerp");
   const [form, setForm] = useState({

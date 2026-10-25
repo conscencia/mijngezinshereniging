@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
+import { useSeo, organisatie } from "../lib/seo";
 
 
 export default function Over() {
+  useSeo({
+    path: "/over-ons",
+    title: "Over mijngezinshereniging.be",
+    description: "Persoonlijke begeleiding bij gezinshereniging door een advocaat ingeschreven aan de balie West-Vlaanderen. Gesprekken verlopen via video.",
+    jsonLd: organisatie,
+  });
+
   return (
     <div>
       {/* HEADER */}

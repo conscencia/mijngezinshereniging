@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useSeo, faqSchema, kruimels } from "../lib/seo";
 
 const tabs = [
   { id: "voorwaarden", label: "Voorwaarden" },
@@ -120,6 +121,13 @@ function FaqItem({ q, a }) {
 }
 
 export default function Info() {
+  useSeo({
+    path: "/informatie",
+    title: "Voorwaarden en procedure gezinshereniging",
+    description: "De voorwaarden per gezinslid, de stappen van de procedure, de inkomenseis met de bedragen van 2026 en 2027, en antwoorden op de vragen die wij het vaakst krijgen.",
+    jsonLd: [faqSchema(faqs), kruimels([{ naam: "Home", pad: "/" }, { naam: "Informatie", pad: "/informatie" }])],
+  });
+
   const [activeTab, setActiveTab] = useState("voorwaarden");
   const { hash } = useLocation();
 
